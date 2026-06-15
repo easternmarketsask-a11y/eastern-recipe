@@ -2,3 +2,4 @@ node_modules/
 .venv/
 _incoming/
 *.local
+__pycache__/
