@@ -37,21 +37,16 @@
     });
   }
 
-  // ---- 食材行 ----
+  // ---- 食材行（不显示价格；只标用量/分类/是否有货）----
   function ingredientRow(r) {
     if (!r.available) {
       return '<li class="ing ing--out"><span class="ing__name">' + esc(r.label) +
         '</span><span class="ing__qty">' + esc(r.qty) + '</span>' +
         '<span class="ing__tag">暂缺</span></li>';
     }
-    var price = r.market_price
-      ? (r.price_unit === 'lb' ? '市价 · 按需称重' : '市价')
-      : (r.price_unit === 'lb'
-          ? '$' + r.price.toFixed(2) + '/lb · 按需称重'
-          : '$' + r.price.toFixed(2));
     return '<li class="ing"><span class="ing__name">' + esc(r.label) +
       '</span><span class="ing__qty">' + esc(r.qty) + '</span>' +
-      '<span class="ing__price">' + esc(price) + '</span>' +
+      '<span class="ing__tag ing__tag--ok">有货</span>' +
       '<span class="ing__cat">' + esc(r.category || '') + '</span></li>';
   }
 
@@ -64,20 +59,14 @@
   function renderDetail(recipe) {
     var a = RL.associateRecipe(recipe, state.productIndex);
     var d = $('detail');
-    var weighedNote = a.weighed.length
-      ? '<p class="detail__weighed">另含按重量计价：' +
-        a.weighed.map(function (w) { return esc(w.label) + ' $' + w.price.toFixed(2) + '/lb'; }).join('、') +
-        '</p>'
-      : '';
     var faved = isFave(recipe.id);
     d.innerHTML =
       '<button class="back" id="back">← 返回</button>' +
       '<h2 class="detail__title">' + esc(recipe.name_cn) +
         ' <small>' + esc(recipe.name_en || '') + '</small></h2>' +
       '<ul class="ings">' + a.rows.map(ingredientRow).join('') + '</ul>' +
-      '<div class="summary">这道菜共 ' + a.totalCount + ' 样食材，我们有 ' +
-        a.haveCount + ' 样　·　定量食材约 $' + a.refPriceEach.toFixed(2) + ' 起</div>' +
-      weighedNote +
+      '<div class="summary">这道菜共 ' + a.totalCount + ' 样食材，东方超市有 ' +
+        a.haveCount + ' 样　·　备齐就能开做</div>' +
       '<button class="fave-btn' + (faved ? ' is-on' : '') + '" id="fave">' +
         (faved ? '♥ 已加入想做' : '♡ 加入想做') + '</button>' +
       '<h3 class="detail__h3">做法</h3>' +
