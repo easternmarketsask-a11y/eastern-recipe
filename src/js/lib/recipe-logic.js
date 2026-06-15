@@ -79,12 +79,16 @@
                normalizeQuery(p.name_en).indexOf(q) !== -1;
       });
     });
-    return hit.slice().sort(function (a, b) {
-      const av = associateRecipe(a, productIndex);
-      const bv = associateRecipe(b, productIndex);
-      if (bv.haveCount !== av.haveCount) return bv.haveCount - av.haveCount;
-      return av.totalCount - bv.totalCount;
+    // 先算一次每道菜的齐全度，避免在 sort 比较器里反复调用 associateRecipe
+    const scored = hit.map(function (r) {
+      const v = associateRecipe(r, productIndex);
+      return { recipe: r, haveCount: v.haveCount, totalCount: v.totalCount };
     });
+    scored.sort(function (a, b) {
+      if (b.haveCount !== a.haveCount) return b.haveCount - a.haveCount;
+      return a.totalCount - b.totalCount;
+    });
+    return scored.map(function (s) { return s.recipe; });
   }
 
   // 字符串 → 32bit 无符号 hash（确定性，不依赖随机数）
