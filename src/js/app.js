@@ -65,8 +65,6 @@
       '<h2 class="detail__title">' + esc(recipe.name_cn) +
         ' <small>' + esc(recipe.name_en || '') + '</small></h2>' +
       '<ul class="ings">' + a.rows.map(ingredientRow).join('') + '</ul>' +
-      '<div class="summary">这道菜共 ' + a.totalCount + ' 样食材，东方超市有 ' +
-        a.haveCount + ' 样　·　备齐就能开做</div>' +
       '<button class="fave-btn' + (faved ? ' is-on' : '') + '" id="fave">' +
         (faved ? '♥ 已加入想做' : '♡ 加入想做') + '</button>' +
       '<h3 class="detail__h3">做法</h3>' +
