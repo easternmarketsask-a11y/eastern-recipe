@@ -104,3 +104,19 @@ test('todaysPicks: 不同 seed 轮换（多菜时子集不同）', () => {
   const s2 = RecipeLogic.todaysPicks(many, 'day-2', 2).map(x => x.id).join(',');
   assert.notEqual(s1, s2);
 });
+
+test('associateRecipe: 市价(price=0)商品标记 market_price 且不进总价', () => {
+  const idx = RecipeLogic.buildProductIndex(products);
+  const idx2 = JSON.parse(JSON.stringify(idx));
+  // 把豆腐改成 0 价（市价生鲜），仍在售
+  idx2['4011tofu'].price = 0;
+  const res = RecipeLogic.associateRecipe(recipes[0], idx2);
+  const byLabel = {};
+  res.rows.forEach(function (r) { byLabel[r.label] = r; });
+  assert.equal(byLabel['嫩豆腐'].available, true);
+  assert.equal(byLabel['嫩豆腐'].market_price, true);
+  // 豆腐(0) 不计入，只剩豆瓣 5.99
+  assert.equal(res.refPriceEach, 5.99);
+  // 仍然算"我们有"
+  assert.equal(res.haveCount, 2);
+});

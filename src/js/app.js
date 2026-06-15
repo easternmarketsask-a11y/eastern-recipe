@@ -44,9 +44,11 @@
         '</span><span class="ing__qty">' + esc(r.qty) + '</span>' +
         '<span class="ing__tag">暂缺</span></li>';
     }
-    var price = r.price_unit === 'lb'
-      ? '$' + r.price.toFixed(2) + '/lb · 按需称重'
-      : '$' + r.price.toFixed(2);
+    var price = r.market_price
+      ? (r.price_unit === 'lb' ? '市价 · 按需称重' : '市价')
+      : (r.price_unit === 'lb'
+          ? '$' + r.price.toFixed(2) + '/lb · 按需称重'
+          : '$' + r.price.toFixed(2));
     return '<li class="ing"><span class="ing__name">' + esc(r.label) +
       '</span><span class="ing__qty">' + esc(r.qty) + '</span>' +
       '<span class="ing__price">' + esc(price) + '</span>' +

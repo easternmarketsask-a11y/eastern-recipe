@@ -39,12 +39,15 @@
     (recipe.ingredients || []).forEach(function (ing) {
       const p = ing.code ? productIndex[ing.code] : null;
       const available = !!(p && p.on_sale);
+      // 价格为 0 / 空 = 市价商品（多为按重量的生鲜，系统里录成 0），不报具体价
+      const hasPrice = available && typeof p.price === 'number' && p.price > 0;
       const row = {
         label: ing.label,
         qty: ing.qty,
         required: !!ing.required,
         unbound: !ing.code || !p,
         available: available,
+        market_price: available && !hasPrice,
         price: p ? p.price : null,
         price_unit: p ? p.price_unit : null,
         category: p ? p.category : null,
@@ -53,8 +56,10 @@
       rows.push(row);
       if (available) {
         haveCount += 1;
-        if (p.price_unit === 'each') refPriceEach += p.price;
-        else if (p.price_unit === 'lb') weighed.push({ label: ing.label, price: p.price });
+        if (hasPrice) {
+          if (p.price_unit === 'each') refPriceEach += p.price;
+          else if (p.price_unit === 'lb') weighed.push({ label: ing.label, price: p.price });
+        }
       }
     });
     return {
