@@ -4,16 +4,481 @@
       "id": "mapo-tofu",
       "name_cn": "麻婆豆腐",
       "name_en": "Mapo Tofu",
-      "aliases": ["麻婆豆腐", "mapo", "麻辣豆腐", "mapodoufu"],
-      "image": "images/mapo-tofu.jpg",
-      "image_credit": "self",
-      "tags": ["川菜", "下饭", "快手"],
-      "steps": ["豆腐切块焯水", "下豆瓣酱炒香", "加豆腐烧入味", "撒葱花出锅"],
+      "aliases": [
+        "麻婆豆腐",
+        "mapo doufu",
+        "spicy tofu",
+        "麻辣豆腐"
+      ],
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "川菜",
+        "豆腐",
+        "辣",
+        "家常菜",
+        "下饭菜"
+      ],
+      "steps": [
+        "嫩豆腐切约2cm方块，入沸水中加少许盐汆烫1分钟后捞出备用。",
+        "锅中下油，中火炒香猪肉末至变色。",
+        "加入郫县豆瓣酱炒出红油，再加姜末、蒜末翻炒出香味。",
+        "倒入约200ml清水（或高汤），放入豆腐块，轻推不翻炒，小火煮3分钟。",
+        "加生抽、少许盐调味，勾水淀粉芡至汤汁浓稠。",
+        "出锅前淋几滴芝麻油，撒上花椒粉，即可盛盘。"
+      ],
       "ingredients": [
-        { "label": "嫩豆腐", "qty": "1 盒", "code": "4011tofu", "required": true },
-        { "label": "郫县豆瓣酱", "qty": "2 勺", "code": "ddbanjiang", "required": true },
-        { "label": "小葱", "qty": "2 根", "code": "greenonion", "required": false },
-        { "label": "牛肉末", "qty": "200g", "code": null, "required": false }
+        {
+          "label": "嫩豆腐",
+          "qty": "1块（约300g）",
+          "code": "057864000035",
+          "required": true
+        },
+        {
+          "label": "猪肉末",
+          "qty": "100g",
+          "code": "627735189635",
+          "required": true
+        },
+        {
+          "label": "郫县豆瓣酱",
+          "qty": "2汤匙",
+          "code": "6909003888018",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "1小块（约10g）",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "花椒粉",
+          "qty": "1/2茶匙",
+          "code": "6948691110063",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "土豆淀粉（勾芡用）",
+          "qty": "1汤匙+清水2汤匙",
+          "code": "6941837101024",
+          "required": true
+        },
+        {
+          "label": "芝麻油",
+          "qty": "数滴",
+          "code": "742812710905",
+          "required": false
+        },
+        {
+          "label": "料酒",
+          "qty": "1茶匙",
+          "code": "6907592001245",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "2汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "tomato-egg",
+      "name_cn": "番茄炒蛋",
+      "name_en": "Stir-Fried Tomato and Egg",
+      "aliases": [
+        "番茄炒鸡蛋",
+        "西红柿炒蛋",
+        "tomato egg stir fry",
+        "炒鸡蛋"
+      ],
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "家常菜",
+        "快手菜",
+        "下饭菜",
+        "素菜"
+      ],
+      "steps": [
+        "鸡蛋打散，加少许盐搅匀。番茄切块备用。",
+        "锅热油（大火），倒入蛋液炒至半凝固后划散成块，盛出备用。",
+        "锅中再加少许油，下番茄块大火翻炒，炒至出汁软烂（约2分钟）。",
+        "加盐和少许糖调味，可加少许番茄酱提色增味。",
+        "倒回炒好的鸡蛋，翻炒均匀，撒葱花，出锅。"
+      ],
+      "ingredients": [
+        {
+          "label": "番茄",
+          "qty": "3个（约450g）",
+          "code": "1032xhs",
+          "required": true
+        },
+        {
+          "label": "鸡蛋",
+          "qty": "3个",
+          "code": "2008",
+          "required": true
+        },
+        {
+          "label": "葱",
+          "qty": "1根",
+          "code": "10636jcjc",
+          "required": false
+        },
+        {
+          "label": "番茄酱（可选，提色）",
+          "qty": "1茶匙",
+          "code": "057000013165",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "3汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "糖",
+          "qty": "1茶匙",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "pork-green-pepper",
+      "name_cn": "青椒肉丝",
+      "name_en": "Stir-Fried Pork with Green Pepper",
+      "aliases": [
+        "青椒炒肉丝",
+        "肉丝炒青椒",
+        "green pepper pork",
+        "青椒猪肉"
+      ],
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "家常菜",
+        "下饭菜",
+        "快手菜",
+        "猪肉"
+      ],
+      "steps": [
+        "猪肉末（或里脊肉）加生抽、料酒、淀粉、少许油抓匀，腌制10分钟。",
+        "青椒去蒂去子，切丝；姜蒜切末备用。",
+        "锅热油（大火），下肉末炒至变色散开，盛出备用。",
+        "锅中留底油，爆香姜蒜末，下青椒丝大火翻炒约1分钟至断生保留脆感。",
+        "倒回炒好的肉丝，加生抽、少许盐，大火翻炒均匀出锅。"
+      ],
+      "ingredients": [
+        {
+          "label": "猪肉末",
+          "qty": "200g",
+          "code": "627735189635",
+          "required": true
+        },
+        {
+          "label": "青椒",
+          "qty": "3个（约200g）",
+          "code": "ocyqjyqj",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "1小块",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1.5汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "qty": "1汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "土豆淀粉（腌肉用）",
+          "qty": "1茶匙",
+          "code": "6941837101024",
+          "required": true
+        },
+        {
+          "label": "食用油",
+          "qty": "3汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "blanched-choy-sum",
+      "name_cn": "白灼菜心",
+      "name_en": "Blanched Choy Sum with Soy Sauce",
+      "aliases": [
+        "白灼菜心",
+        "油菜心",
+        "you choy sum",
+        "清烫菜心"
+      ],
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "粤菜",
+        "素菜",
+        "快手菜",
+        "蔬菜",
+        "健康"
+      ],
+      "steps": [
+        "菜心择洗干净，较粗茎部可竖切一刀，使受热均匀。",
+        "锅中烧开足量水，加少许盐和几滴油，下菜心汆烫1-2分钟至碧绿断生，捞出摆盘。",
+        "调酱汁：小碗中混合生抽、少许蚝油、糖，搅匀。",
+        "在菜心上铺少许葱丝或姜丝。",
+        "锅中烧少许油至冒烟，迅速淋在葱姜丝上激出香气，再淋上酱汁，即可上桌。"
+      ],
+      "ingredients": [
+        {
+          "label": "菜心（油菜心）",
+          "qty": "400g（约1把）",
+          "code": "Ocycs",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "2汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "蚝油",
+          "qty": "1汤匙",
+          "code": "6922824007468",
+          "required": false
+        },
+        {
+          "label": "葱",
+          "qty": "1根（切丝）",
+          "code": "10636jcjc",
+          "required": false
+        },
+        {
+          "label": "姜",
+          "qty": "2片（切丝）",
+          "code": "1037",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "2汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "少许（焯水用）",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "糖",
+          "qty": "1/2茶匙",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "seaweed-egg-soup",
+      "name_cn": "紫菜蛋花汤",
+      "name_en": "Seaweed Egg Drop Soup",
+      "aliases": [
+        "紫菜汤",
+        "蛋花汤",
+        "seaweed soup",
+        "egg drop soup",
+        "紫菜鸡蛋汤"
+      ],
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "汤",
+        "家常菜",
+        "快手菜",
+        "素菜"
+      ],
+      "steps": [
+        "干紫菜提前用冷水泡发约5分钟，捞出用手撕成小片；鸡蛋打散备用。",
+        "葱切葱花备用。",
+        "锅中加约800ml清水烧沸，放入紫菜片煮1分钟。",
+        "转中小火，缓缓淋入蛋液，边淋边用筷子顺一个方向划圈，形成细腻蛋花。",
+        "加生抽、少许盐、白胡椒粉调味，淋入芝麻油，撒葱花出锅。"
+      ],
+      "ingredients": [
+        {
+          "label": "干紫菜",
+          "qty": "10g（约半张）",
+          "code": "6923647299238",
+          "required": true
+        },
+        {
+          "label": "鸡蛋",
+          "qty": "2个",
+          "code": "2008",
+          "required": true
+        },
+        {
+          "label": "葱",
+          "qty": "1根",
+          "code": "10636jcjc",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "白胡椒粉",
+          "qty": "1/4茶匙",
+          "code": "6948691110094",
+          "required": false
+        },
+        {
+          "label": "芝麻油",
+          "qty": "数滴",
+          "code": "742812710905",
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "cola-chicken-wings",
+      "name_cn": "可乐鸡翅",
+      "name_en": "Cola Braised Chicken Wings",
+      "aliases": [
+        "可乐鸡翅",
+        "cola chicken wings",
+        "braised chicken wings",
+        "焖鸡翅"
+      ],
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "家常菜",
+        "鸡肉",
+        "下饭菜",
+        "儿童喜爱",
+        "红烧"
+      ],
+      "steps": [
+        "鸡全翅洗净，在翅面划两刀以便入味。",
+        "冷水入锅，加料酒，大火焯出血沫（约3分钟），捞出洗净沥干。",
+        "锅热少许油，中火煎鸡翅两面至金黄（约3分钟/面）。",
+        "加姜片、生抽、老抽翻炒，使鸡翅均匀上色。",
+        "倒入可乐（约355ml，正好一罐），没过鸡翅约一半。",
+        "大火烧开转中小火焖煮15-18分钟，期间翻面1-2次。",
+        "转大火收汁至浓稠发亮，出锅撒葱花。"
+      ],
+      "ingredients": [
+        {
+          "label": "鸡全翅",
+          "qty": "8只（约700g）",
+          "code": "9796",
+          "required": true
+        },
+        {
+          "label": "可乐",
+          "qty": "1罐（355ml）",
+          "code": "06782900",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "2汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "老抽",
+          "qty": "1汤匙",
+          "code": "722337817020",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "qty": "1汤匙（焯水用）",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "葱",
+          "qty": "1根",
+          "code": "10636jcjc",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        }
       ]
     }
   ]
