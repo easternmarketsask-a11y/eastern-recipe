@@ -30,8 +30,8 @@
 | `index.html` | 根重定向到 `src/index.html`（对齐 eastern-farm）|
 | `src/index.html` | A 页面骨架：搜索框 + 结果容器 + 菜谱详情容器 |
 | `src/css/app.css` | 移动优先样式，品牌色，菜谱卡 + 食材行 |
-| `src/js/lib/recipe-logic.js` | **纯逻辑**（无 DOM）：`normalizeQuery` / `matchRecipes` / `associateRecipe` / `buildProductIndex`。UMD-lite 双导出（browser global `RecipeLogic` + Node `require`）|
-| `src/js/app.js` | 入口：fetch 两个 JSON → 建索引 → 绑定搜索框 → 渲染（薄 DOM 层，逻辑全调 `RecipeLogic`）|
+| `src/js/lib/recipe-logic.js` | **纯逻辑**（无 DOM）：`normalizeQuery` / `matchRecipes` / `associateRecipe` / `buildProductIndex` / `dishesForIngredient`（以货找菜倒排）/ `todaysPicks`（今晚吃什么每日轮换）。UMD-lite 双导出（browser global `RecipeLogic` + Node `require`）|
+| `src/js/app.js` | 入口：fetch 两个 JSON → 建索引 → 渲染逛发现首页（今晚吃什么/食材 chips/统一搜索/想做清单）→ 菜谱详情。薄 DOM 层，逻辑全调 `RecipeLogic`；收藏用 localStorage |
 | `data/products.json` | 导出器产物（机器生成）|
 | `data/recipes.json` | 菜谱 + 绑定（人审）|
 | `data/_fixtures/products.sample.json` | 测试夹具：小批商品 |
@@ -409,13 +409,145 @@ git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit -m "feat:
 
 ---
 
-## Task 4: 前端 A 页面（骨架 + 渲染接线）
+## Task 3B: `RecipeLogic.dishesForIngredient` + `todaysPicks`（以货找菜 + 今晚吃什么，TDD）
+
+**Files:**
+- Modify: `src/js/lib/recipe-logic.js`
+- Modify: `test/recipe-logic.test.js`
+
+业务规则（spec §5 A2 + 首页）：
+- `dishesForIngredient(query, recipes, productIndex)`：找出所有"用到该食材"的菜——匹配口径 = 食材 `label` 含 query，或该食材绑定商品的 `name_cn`/`name_en` 含 query。结果按"齐全度（在售食材数）降序，食材总数升序"排，让顾客先看到买齐成本低、好做的菜。
+- `todaysPicks(recipes, seed, n)`：按 `seed`（日期串，或日期+「换一批」计数）确定性轮换返回 n 道菜——同 seed 结果稳定，不同 seed 轮换出不同子集。
+
+- [ ] **Step 1: 追加失败测试**
+
+在 `test/recipe-logic.test.js` 末尾追加：
+```js
+test('dishesForIngredient: 按食材 label 命中菜', () => {
+  const idx = RecipeLogic.buildProductIndex(products);
+  const r = RecipeLogic.dishesForIngredient('豆腐', recipes, idx);
+  assert.equal(r.length, 1);
+  assert.equal(r[0].id, 'mapo-tofu');
+});
+
+test('dishesForIngredient: 按绑定商品英文名命中', () => {
+  const idx = RecipeLogic.buildProductIndex(products);
+  // 豆瓣酱绑定商品 name_en = "Dan Dan Pixian Bean Paste"
+  const r = RecipeLogic.dishesForIngredient('bean paste', recipes, idx);
+  assert.equal(r[0].id, 'mapo-tofu');
+});
+
+test('dishesForIngredient: 无关食材返回空', () => {
+  const idx = RecipeLogic.buildProductIndex(products);
+  assert.deepEqual(RecipeLogic.dishesForIngredient('三文鱼', recipes, idx), []);
+});
+
+test('todaysPicks: 同 seed 确定、数量受限', () => {
+  const a = RecipeLogic.todaysPicks(recipes, '2026-06-14', 1);
+  const b = RecipeLogic.todaysPicks(recipes, '2026-06-14', 1);
+  assert.deepEqual(a.map(x => x.id), b.map(x => x.id));
+  assert.equal(a.length, 1);
+});
+
+test('todaysPicks: n 超过总数时返回全部、不重复', () => {
+  const a = RecipeLogic.todaysPicks(recipes, 'seed-x', 99);
+  assert.equal(a.length, recipes.length);
+  assert.equal(new Set(a.map(x => x.id)).size, recipes.length);
+});
+
+test('todaysPicks: 不同 seed 轮换（多菜时子集不同）', () => {
+  const many = ['a','b','c','d','e'].map(id => ({ id: id, name_cn: id, ingredients: [] }));
+  const s1 = RecipeLogic.todaysPicks(many, 'day-1', 2).map(x => x.id).join(',');
+  const s2 = RecipeLogic.todaysPicks(many, 'day-2', 2).map(x => x.id).join(',');
+  assert.notEqual(s1, s2);
+});
+```
+
+- [ ] **Step 2: 跑测试确认失败**
+
+Run: `cd /d/easternmarket.ca/eastern-recipe && node --test test/`
+Expected: FAIL（`dishesForIngredient is not a function`）
+
+- [ ] **Step 3: 实现**
+
+在 `recipe-logic.js` 的 `return { ... }` 之前插入：
+```js
+  // 以货找菜：哪些菜用到了这个食材（按食材 label 或其绑定商品名）
+  function dishesForIngredient(query, recipes, productIndex) {
+    const q = normalizeQuery(query);
+    if (!q) return [];
+    const hit = (recipes || []).filter(function (r) {
+      return (r.ingredients || []).some(function (ing) {
+        if (normalizeQuery(ing.label).indexOf(q) !== -1) return true;
+        const p = ing.code ? productIndex[ing.code] : null;
+        if (!p) return false;
+        return normalizeQuery(p.name_cn).indexOf(q) !== -1 ||
+               normalizeQuery(p.name_en).indexOf(q) !== -1;
+      });
+    });
+    // 齐全度降序、食材总数升序
+    return hit.slice().sort(function (a, b) {
+      const av = associateRecipe(a, productIndex);
+      const bv = associateRecipe(b, productIndex);
+      if (bv.haveCount !== av.haveCount) return bv.haveCount - av.haveCount;
+      return av.totalCount - bv.totalCount;
+    });
+  }
+
+  // 字符串 → 32bit 无符号 hash（确定性，不依赖随机数）
+  function hashStr(s) {
+    let h = 2166136261;
+    for (let i = 0; i < s.length; i++) {
+      h ^= s.charCodeAt(i);
+      h = (h * 16777619) >>> 0;
+    }
+    return h >>> 0;
+  }
+
+  // 今晚吃什么：按 seed 确定性轮换取 n 道
+  function todaysPicks(recipes, seed, n) {
+    const list = (recipes || []).slice();
+    if (!list.length) return [];
+    const offset = hashStr(String(seed)) % list.length;
+    const out = [];
+    const take = Math.min(n, list.length);
+    for (let i = 0; i < take; i++) out.push(list[(offset + i) % list.length]);
+    return out;
+  }
+```
+并把 `return { ... }` 扩展为包含新函数：
+```js
+  return {
+    normalizeQuery: normalizeQuery,
+    matchRecipes: matchRecipes,
+    buildProductIndex: buildProductIndex,
+    associateRecipe: associateRecipe,
+    dishesForIngredient: dishesForIngredient,
+    todaysPicks: todaysPicks
+  };
+```
+
+- [ ] **Step 4: 跑测试确认通过**
+
+Run: `node --test test/`
+Expected: PASS（全部 16 个测试通过）
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add src/js/lib/recipe-logic.js test/recipe-logic.test.js
+git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit -m "feat: dishesForIngredient (reverse lookup) + todaysPicks rotation"
+```
+
+---
+
+## Task 4: 前端「逛着发现」首页 + 菜谱详情（骨架 + 渲染接线）
 
 **Files:**
 - Create: `src/index.html`
 - Create: `src/js/app.js`
 
-渲染层薄，所有计算调 `RecipeLogic`。无法纯 TDD（DOM），用"启动无报错 + 视觉验收"把关（Task 10 覆盖）。
+首页落地即"逛着发现"：今晚吃什么轮换 + 食材快捷 chips + 统一搜索（菜名/食材双向）+ 想做清单。渲染层薄，计算全调 `RecipeLogic`；收藏用 localStorage。无法纯 TDD（DOM），用"启动无报错 + 视觉验收"把关（Task 10）。
 
 - [ ] **Step 1: 写页面骨架**
 
@@ -426,21 +558,38 @@ git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit -m "feat:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>东方超市 · 想吃什么搜一搜</title>
-<meta name="description" content="搜一道菜，东方超市帮你备齐食材。价格、分类、有没有货，一目了然。">
+<title>东方超市 · 今晚吃什么</title>
+<meta name="description" content="今晚吃什么？东方超市帮你想——看看店里的菜能做成什么、怎么做、买齐多少钱。">
 <link rel="stylesheet" href="css/app.css?v=1">
 </head>
 <body>
 <header class="hdr">
-  <h1 class="hdr__title">东方超市 · 菜谱搜索</h1>
-  <p class="hdr__sub">想做什么菜？搜一下，食材帮你备齐</p>
+  <h1 class="hdr__title">东方超市 · 今晚吃什么</h1>
+  <p class="hdr__sub">搜菜名找食材，或点食材看能做什么</p>
   <div class="search">
     <input id="q" class="search__input" type="search" inputmode="search"
-           placeholder="例如：麻婆豆腐 / mapo / 豆腐" autocomplete="off">
+           placeholder="试试：麻婆豆腐 · mapo · 豆腐 · 鸡翅" autocomplete="off">
   </div>
 </header>
 <main>
-  <section id="results" class="results" aria-live="polite"></section>
+  <section id="home" class="home">
+    <div class="block">
+      <div class="block__hd">
+        <h2 class="block__title">今晚吃什么</h2>
+        <button id="reshuffle" class="link-btn">换一批</button>
+      </div>
+      <div id="picks" class="cards"></div>
+    </div>
+    <div class="block">
+      <h2 class="block__title">家里有这些？看看能做什么</h2>
+      <div id="chips" class="chips"></div>
+    </div>
+    <div class="block" id="favesBlock" hidden>
+      <h2 class="block__title">♥ 我想做的</h2>
+      <div id="faves" class="cards"></div>
+    </div>
+  </section>
+  <section id="results" class="results" hidden aria-live="polite"></section>
   <section id="detail" class="detail" hidden></section>
 </main>
 <footer class="ftr">价格仅供参考，以店内标价为准 · Eastern Market 东方超市</footer>
@@ -455,10 +604,13 @@ git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit -m "feat:
 
 `src/js/app.js`：
 ```js
-/* app.js — 入口：加载数据 → 建索引 → 搜索 → 渲染。逻辑全调 RecipeLogic。 */
+/* app.js — 逛发现首页(今晚吃什么/食材chips/想做清单) + 统一搜索(菜名/以货找菜) + 菜谱详情。
+   渲染薄层，计算全调 RecipeLogic；收藏存 localStorage。 */
 (function () {
   'use strict';
-  var state = { recipes: [], productIndex: {} };
+  var RL = window.RecipeLogic;
+  var FAVE_KEY = 'er_recipe_faves_v1';
+  var state = { recipes: [], productIndex: {}, byId: {}, reshuffle: 0 };
 
   function $(id) { return document.getElementById(id); }
   function esc(s) {
@@ -466,7 +618,32 @@ git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit -m "feat:
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
     });
   }
+  function todayStr() { return new Date().toISOString().slice(0, 10); }
 
+  // ---- 收藏（localStorage）----
+  function getFaves() {
+    try { return JSON.parse(localStorage.getItem(FAVE_KEY)) || []; } catch (e) { return []; }
+  }
+  function isFave(id) { return getFaves().indexOf(id) !== -1; }
+  function toggleFave(id) {
+    var f = getFaves(), i = f.indexOf(id);
+    if (i === -1) f.push(id); else f.splice(i, 1);
+    try { localStorage.setItem(FAVE_KEY, JSON.stringify(f)); } catch (e) {}
+  }
+
+  // ---- 菜卡 ----
+  function recipeCard(r) {
+    return '<button class="card" data-id="' + esc(r.id) + '">' +
+      '<span class="card__name">' + esc(r.name_cn) + '</span>' +
+      '<span class="card__tags">' + esc((r.tags || []).join(' · ')) + '</span></button>';
+  }
+  function wireCards(container) {
+    Array.prototype.forEach.call(container.querySelectorAll('.card'), function (btn) {
+      btn.onclick = function () { var r = state.byId[btn.dataset.id]; if (r) renderDetail(r); };
+    });
+  }
+
+  // ---- 食材行 ----
   function ingredientRow(r) {
     if (!r.available) {
       return '<li class="ing ing--out"><span class="ing__name">' + esc(r.label) +
@@ -482,14 +659,21 @@ git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit -m "feat:
       '<span class="ing__cat">' + esc(r.category || '') + '</span></li>';
   }
 
+  function show(section) {
+    $('home').hidden = section !== 'home';
+    $('results').hidden = section !== 'results';
+    $('detail').hidden = section !== 'detail';
+  }
+
   function renderDetail(recipe) {
-    var a = window.RecipeLogic.associateRecipe(recipe, state.productIndex);
+    var a = RL.associateRecipe(recipe, state.productIndex);
     var d = $('detail');
     var weighedNote = a.weighed.length
       ? '<p class="detail__weighed">另含按重量计价：' +
         a.weighed.map(function (w) { return esc(w.label) + ' $' + w.price.toFixed(2) + '/lb'; }).join('、') +
         '</p>'
       : '';
+    var faved = isFave(recipe.id);
     d.innerHTML =
       '<button class="back" id="back">← 返回</button>' +
       '<h2 class="detail__title">' + esc(recipe.name_cn) +
@@ -498,37 +682,89 @@ git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit -m "feat:
       '<div class="summary">这道菜共 ' + a.totalCount + ' 样食材，我们有 ' +
         a.haveCount + ' 样　·　定量食材约 $' + a.refPriceEach.toFixed(2) + ' 起</div>' +
       weighedNote +
+      '<button class="fave-btn' + (faved ? ' is-on' : '') + '" id="fave">' +
+        (faved ? '♥ 已加入想做' : '♡ 加入想做') + '</button>' +
       '<h3 class="detail__h3">做法</h3>' +
       '<ol class="steps">' + (recipe.steps || []).map(function (s) {
         return '<li>' + esc(s) + '</li>';
       }).join('') + '</ol>';
-    $('back').onclick = function () { d.hidden = true; $('results').hidden = false; };
-    $('results').hidden = true;
-    d.hidden = false;
+    $('back').onclick = function () { renderHome(); show('home'); };
+    $('fave').onclick = function () { toggleFave(recipe.id); renderDetail(recipe); };
+    show('detail');
     window.scrollTo(0, 0);
   }
 
-  function renderResults(list) {
+  // ---- 统一搜索：菜名 + 以货找菜 ----
+  function renderResults(query) {
+    var dishes = RL.matchRecipes(query, state.recipes);
+    var dishIds = {}; dishes.forEach(function (r) { dishIds[r.id] = 1; });
+    var byIng = RL.dishesForIngredient(query, state.recipes, state.productIndex)
+      .filter(function (r) { return !dishIds[r.id]; });
     var el = $('results');
-    if (!list.length) {
-      el.innerHTML = '<p class="empty">暂无此菜谱，换个说法试试～</p>';
-      return;
+    if (!dishes.length && !byIng.length) {
+      el.innerHTML = '<p class="empty">没找到～换个菜名或食材试试。</p>';
+      show('results'); return;
     }
-    el.innerHTML = list.map(function (r, i) {
-      return '<button class="card" data-i="' + i + '">' +
-        '<span class="card__name">' + esc(r.name_cn) + '</span>' +
-        '<span class="card__tags">' + esc((r.tags || []).join(' · ')) + '</span></button>';
-    }).join('');
-    Array.prototype.forEach.call(el.querySelectorAll('.card'), function (btn) {
-      btn.onclick = function () { renderDetail(list[+btn.dataset.i]); };
-    });
+    var html = '';
+    if (dishes.length) {
+      html += '<h2 class="block__title">菜谱</h2><div class="cards">' +
+        dishes.map(recipeCard).join('') + '</div>';
+    }
+    if (byIng.length) {
+      html += '<h2 class="block__title">用「' + esc(query.trim()) + '」还能做</h2><div class="cards">' +
+        byIng.map(recipeCard).join('') + '</div>';
+    }
+    el.innerHTML = html;
+    wireCards(el);
+    show('results');
   }
 
   function onSearch() {
-    var list = window.RecipeLogic.matchRecipes($('q').value, state.recipes);
-    $('detail').hidden = true;
-    $('results').hidden = false;
-    renderResults(list);
+    var q = $('q').value;
+    if (!q || !q.trim()) { renderHome(); show('home'); return; }
+    renderResults(q);
+  }
+
+  // ---- 首页 ----
+  // 在售食材按其绑定商品 sold_90d 取热门，做快捷 chips
+  function popularIngredientChips(max) {
+    var seen = {}, arr = [];
+    state.recipes.forEach(function (r) {
+      (r.ingredients || []).forEach(function (ing) {
+        var p = ing.code ? state.productIndex[ing.code] : null;
+        if (!p || !p.on_sale) return;
+        var sold = p.sold_90d || 0;
+        if (seen[ing.label]) { if (sold > seen[ing.label].sold) seen[ing.label].sold = sold; return; }
+        seen[ing.label] = { label: ing.label, sold: sold };
+        arr.push(seen[ing.label]);
+      });
+    });
+    arr.sort(function (a, b) { return b.sold - a.sold; });
+    return arr.slice(0, max).map(function (x) { return x.label; });
+  }
+
+  function renderHome() {
+    var seed = todayStr() + (state.reshuffle ? '#' + state.reshuffle : '');
+    var picks = RL.todaysPicks(state.recipes, seed, 4);
+    $('picks').innerHTML = picks.map(recipeCard).join('');
+    wireCards($('picks'));
+
+    var chips = popularIngredientChips(8);
+    $('chips').innerHTML = chips.map(function (c) {
+      return '<button class="chip" data-ing="' + esc(c) + '">' + esc(c) + '</button>';
+    }).join('');
+    Array.prototype.forEach.call($('chips').querySelectorAll('.chip'), function (btn) {
+      btn.onclick = function () { $('q').value = btn.dataset.ing; renderResults(btn.dataset.ing); };
+    });
+
+    var faves = getFaves().map(function (id) { return state.byId[id]; }).filter(Boolean);
+    if (faves.length) {
+      $('favesBlock').hidden = false;
+      $('faves').innerHTML = faves.map(recipeCard).join('');
+      wireCards($('faves'));
+    } else {
+      $('favesBlock').hidden = true;
+    }
   }
 
   function boot() {
@@ -537,10 +773,14 @@ git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit -m "feat:
       fetch('../data/products.json').then(function (r) { return r.json(); })
     ]).then(function (out) {
       state.recipes = out[0].recipes || [];
-      state.productIndex = window.RecipeLogic.buildProductIndex((out[1].items) || []);
+      state.productIndex = RL.buildProductIndex((out[1].items) || []);
+      state.recipes.forEach(function (r) { state.byId[r.id] = r; });
       $('q').addEventListener('input', onSearch);
+      $('reshuffle').onclick = function () { state.reshuffle += 1; renderHome(); };
+      renderHome();
+      show('home');
     }).catch(function () {
-      $('results').innerHTML = '<p class="empty">数据加载失败，请稍后再试。</p>';
+      $('home').innerHTML = '<p class="empty">数据加载失败，请稍后再试。</p>';
     });
   }
   document.addEventListener('DOMContentLoaded', boot);
@@ -555,14 +795,18 @@ cp data/_fixtures/products.sample.json data/products.json
 cp data/_fixtures/recipes.sample.json data/recipes.json
 python -m http.server 8080
 ```
-浏览器开 `http://localhost:8080`，搜"麻婆豆腐"→点卡片→应看到 4 行食材（豆腐/豆瓣有价、小葱/牛肉末"暂缺"）、汇总"4 样食材我们有 2 样 · 约 $8.48 起"。
+浏览器开 `http://localhost:8080` 验证：
+- 首页直接显示「今晚吃什么」卡片 + 食材 chips（豆腐/豆瓣酱等在售食材）；「换一批」可点。
+- 搜索框输"麻婆豆腐"→「菜谱」区出现卡片；点开→ 4 行食材（豆腐/豆瓣有价、小葱/牛肉末"暂缺"）、汇总"4 样食材我们有 2 样 · 约 $8.48 起"、可点「♡ 加入想做」。
+- 搜索框输"豆腐"→「用「豆腐」还能做」区出现麻婆豆腐（以货找菜）。
+- 加入想做后返回首页→「♥ 我想做的」区出现该菜；刷新页面仍在（localStorage）。
 Expected: 控制台 F12 无红色报错。
 
 - [ ] **Step 4: Commit**
 
 ```bash
 git add src/index.html src/js/app.js data/products.json data/recipes.json
-git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit -m "feat: front-end search page (A) wired to RecipeLogic"
+git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit -m "feat: browse-first home (today's picks/chips/faves) + unified search + detail"
 ```
 
 ---
@@ -597,6 +841,21 @@ main{max-width:560px;margin:0 auto;padding:12px 16px 40px}
 .card__name{font-size:17px;font-weight:600}
 .card__tags{font-size:12px;color:var(--muted)}
 .empty{color:var(--muted);text-align:center;padding:32px 0}
+/* 逛发现首页 */
+.block{margin:18px 0}
+.block__hd{display:flex;align-items:baseline;justify-content:space-between}
+.block__title{font-size:16px;font-weight:600;color:var(--green-d);margin:0 0 10px}
+.link-btn{background:none;border:none;color:var(--green);font-size:13px;cursor:pointer;padding:0}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:380px){.cards{grid-template-columns:1fr}}
+.cards .card{margin-bottom:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:18px;
+  padding:8px 14px;font-size:14px;color:var(--ink);cursor:pointer;min-height:36px}
+.chip:active{background:#eef6f0;border-color:var(--green)}
+.fave-btn{display:block;width:100%;margin:14px 0 4px;height:44px;border-radius:var(--radius);
+  border:1px solid var(--green);background:var(--card);color:var(--green-d);font-size:15px;cursor:pointer}
+.fave-btn.is-on{background:#eef6f0}
 .back{background:none;border:none;color:var(--green);font-size:15px;padding:8px 0;cursor:pointer}
 .detail__title{margin:4px 0 12px;font-size:22px;color:var(--green-d)}
 .detail__title small{font-size:14px;color:var(--muted);font-weight:400}
@@ -619,8 +878,10 @@ main{max-width:560px;margin:0 auto;padding:12px 16px 40px}
 
 - [ ] **Step 2: 视觉冒烟（移动视口）**
 
-`python -m http.server 8080`，Chrome DevTools 切 iPhone 视口，搜"麻婆豆腐"看详情：标题深绿、食材行对齐、"暂缺"红字淡底、汇总绿底卡片。
-Expected: 移动端无横向滚动、触摸目标≥44px、控制台无报错。
+`python -m http.server 8080`，Chrome DevTools 切 iPhone 视口：
+- 首页「今晚吃什么」卡片 2 列网格、食材 chips 自动换行、触摸目标 ≥36–44px。
+- 搜"麻婆豆腐"看详情：标题深绿、食材行对齐、"暂缺"红字淡底、汇总绿底卡片、「♡ 加入想做」按钮满宽。
+Expected: 移动端无横向滚动、触摸目标足够大、控制台无报错。
 
 - [ ] **Step 3: Commit**
 
@@ -1074,11 +1335,13 @@ git rm --cached -q --ignore-unmatch data/products.json 2>/dev/null; true
 
 ## 自检记录（写完计划后对照 spec）
 
-- **spec §1 A 引流**：Task 2–5、9 覆盖（搜菜→食材→价格→暂缺→汇总→购物清单雏形）。✅
+- **spec §1 A 搜菜找货**：Task 2、4、5、9 覆盖（搜菜→食材→价格→暂缺→汇总→想做收藏）。✅
+- **spec §1 A2 以货找菜（货→菜）**：Task 3B（`dishesForIngredient` 倒排）+ Task 4（统一搜索的"还能做"区 + 食材 chips）。✅
+- **spec §1 粘性首页**：Task 3B（`todaysPicks` 每日轮换）+ Task 4（今晚吃什么/换一批/chips/想做清单 localStorage）+ Task 5（首页样式）。✅
 - **spec §2 数据源/分类/币种/称重**：Task 6（build_product_record/价格单位/分类归一）、Task 3（称重不入总价）、全局加元。✅
 - **spec §4 数据模型**：Task 1 夹具 + Task 6 记录结构一致（字段名 `code`/`price_unit`/`sold_90d` 全程一致）。✅
 - **spec §6 半自动绑定**：Task 8 打分 + CLI、Task 9 实操。✅
 - **spec §7 版权/缓存/暂缺/价格时效**：Task 9 配图合规、Task 4 fetch 失败兜底、Task 3 暂缺、页脚"以店内标价为准"。✅
-- **spec §8 测试策略**：Task 2/3/6/8 的 node/pytest 用例对应。✅
-- **未覆盖（有意延后）**：B、featured.json、海报复用、每日自动化、搜索词回收 → Plan 2/3（spec §10 开放项一并在那里定）。
-- **类型一致性核对**：`code`/`price_unit`/`on_sale`/`sold_90d`/`refPriceEach`/`haveCount`/`weighed` 在 JS 与 Python 两侧命名一致，前端渲染读取字段与 `associateRecipe` 返回结构一致。✅
+- **spec §8 测试策略**：Task 2/3/3B/6/8 的 node/pytest 用例对应（含倒排 + 轮换确定性）。✅
+- **未覆盖（有意延后）**：B/featured.json、海报复用、每日自动化、搜索词回收、深度粘性(推送/个性化) → Plan 2/3（spec §10 开放项一并在那里定）。
+- **类型一致性核对**：`code`/`price_unit`/`on_sale`/`sold_90d`/`refPriceEach`/`haveCount`/`weighed` 在 JS 与 Python 两侧命名一致；`dishesForIngredient`/`todaysPicks`/`buildProductIndex`/`associateRecipe`/`matchRecipes` 五个导出名在 Task 3B 实现与 Task 4 调用处一致；前端渲染读取字段与 `associateRecipe` 返回结构一致。✅
