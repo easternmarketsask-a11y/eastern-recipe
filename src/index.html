@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>东方超市 · 今晚吃什么</title>
+<meta name="description" content="今晚吃什么？东方超市帮你想——看看店里的菜能做成什么、怎么做、买齐多少钱。">
+<link rel="stylesheet" href="css/app.css?v=1">
+</head>
+<body>
+<header class="hdr">
+  <h1 class="hdr__title">东方超市 · 今晚吃什么</h1>
+  <p class="hdr__sub">搜菜名找食材，或点食材看能做什么</p>
+  <div class="search">
+    <input id="q" class="search__input" type="search" inputmode="search"
+           placeholder="试试：麻婆豆腐 · mapo · 豆腐 · 鸡翅" autocomplete="off">
+  </div>
+</header>
+<main>
+  <section id="home" class="home">
+    <div class="block">
+      <div class="block__hd">
+        <h2 class="block__title">今晚吃什么</h2>
+        <button id="reshuffle" class="link-btn">换一批</button>
+      </div>
+      <div id="picks" class="cards"></div>
+    </div>
+    <div class="block">
+      <h2 class="block__title">家里有这些？看看能做什么</h2>
+      <div id="chips" class="chips"></div>
+    </div>
+    <div class="block" id="favesBlock" hidden>
+      <h2 class="block__title">♥ 我想做的</h2>
+      <div id="faves" class="cards"></div>
+    </div>
+  </section>
+  <section id="results" class="results" hidden aria-live="polite"></section>
+  <section id="detail" class="detail" hidden></section>
+</main>
+<footer class="ftr">价格仅供参考，以店内标价为准 · Eastern Market 东方超市</footer>
+
+<script src="js/lib/recipe-logic.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

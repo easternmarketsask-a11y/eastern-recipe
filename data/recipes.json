@@ -1,0 +1,20 @@
+{
+  "recipes": [
+    {
+      "id": "mapo-tofu",
+      "name_cn": "麻婆豆腐",
+      "name_en": "Mapo Tofu",
+      "aliases": ["麻婆豆腐", "mapo", "麻辣豆腐", "mapodoufu"],
+      "image": "images/mapo-tofu.jpg",
+      "image_credit": "self",
+      "tags": ["川菜", "下饭", "快手"],
+      "steps": ["豆腐切块焯水", "下豆瓣酱炒香", "加豆腐烧入味", "撒葱花出锅"],
+      "ingredients": [
+        { "label": "嫩豆腐", "qty": "1 盒", "code": "4011tofu", "required": true },
+        { "label": "郫县豆瓣酱", "qty": "2 勺", "code": "ddbanjiang", "required": true },
+        { "label": "小葱", "qty": "2 根", "code": "greenonion", "required": false },
+        { "label": "牛肉末", "qty": "200g", "code": null, "required": false }
+      ]
+    }
+  ]
+}
