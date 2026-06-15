@@ -20,8 +20,11 @@ def detect_price_unit(doc):
     """称重→'lb'，否则'each'。优先 Firestore 的 is_weighed / price_unit 信号，
     再退到商品名里的重量标记。兼容传入裸商品名字符串（仅按名字判断）。"""
     if isinstance(doc, dict):
-        if doc.get("is_weighed") is True:
+        iw = doc.get("is_weighed")
+        if iw is True:
             return "lb"
+        if iw is False:           # 明确标了不称重 → each，权威，不被商品名兜底覆盖
+            return "each"
         pu = (doc.get("price_unit") or "").strip().lower()
         if pu in ("lb", "kg"):
             return "lb"

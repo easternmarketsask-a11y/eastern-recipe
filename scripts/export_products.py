@@ -12,12 +12,23 @@ Both endpoints are public (no-auth GET), verified in stockwise_final/auth.py is_
 """
 import argparse
 import json
+import os
 import sys
 from datetime import datetime, timezone
 
 import requests
 
 from recipe_lib import build_product_record
+
+
+def _get_json(url, params=None, timeout=60):
+    """GET + raise_for_status + JSON 解析；非 JSON 响应（如 Cloudflare HTML 错误页）给出清晰退出。"""
+    resp = requests.get(url, params=params, timeout=timeout)
+    resp.raise_for_status()
+    try:
+        return resp.json()
+    except ValueError as e:
+        sys.exit(f"ERROR: {url} 返回的不是合法 JSON：{e}")
 
 # ── CLI ──────────────────────────────────────────────────────────────────────
 
@@ -40,9 +51,7 @@ def parse_args():
 def load_valid_categories(api_base: str) -> set:
     """GET /api/firebase/categories → set of active category name strings."""
     url = f"{api_base.rstrip('/')}/api/firebase/categories"
-    resp = requests.get(url, timeout=30)
-    resp.raise_for_status()
-    data = resp.json()
+    data = _get_json(url, timeout=30)
     cats = data.get("categories", [])
     if not cats:
         print("WARNING: categories endpoint returned empty list", file=sys.stderr)
@@ -52,12 +61,10 @@ def load_valid_categories(api_base: str) -> set:
 def load_products(api_base: str) -> list:
     """GET /api/firebase/products?limit=5000 → list of raw product dicts."""
     url = f"{api_base.rstrip('/')}/api/firebase/products"
-    params = {"limit": 5000}
-    resp = requests.get(url, params=params, timeout=60)
-    resp.raise_for_status()
-    data = resp.json()
-    products = data.get("products", [])
-    return products
+    data = _get_json(url, params={"limit": 5000}, timeout=60)
+    if "products" not in data:
+        sys.exit(f"ERROR: {url} 响应缺少 'products' 字段（实际字段：{list(data)[:8]}）——后端可能改了结构")
+    return data["products"]
 
 
 def load_sold_90d(api_base: str) -> dict:
@@ -125,6 +132,8 @@ def main():
         "items": items,
     }
 
+    out_dir = os.path.dirname(os.path.abspath(out_path))
+    os.makedirs(out_dir, exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 

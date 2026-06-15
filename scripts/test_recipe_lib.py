@@ -20,6 +20,8 @@ def test_detect_price_unit_weight():
     # 商品名重量标记兜底（lb 作为独立词）
     assert rl.detect_price_unit({"name": "Beef Shank per lb"}) == "lb"
     assert rl.detect_price_unit({"name": "Cilantro 芫荽"}) == "each"
+    # 明确 is_weighed=False 权威，不被商品名 "per lb" 覆盖
+    assert rl.detect_price_unit({"name": "Beef Jerky per lb bag", "is_weighed": False}) == "each"
 
 def test_normalize_category_known():
     valid = {"新鲜蔬菜", "干货调料"}
