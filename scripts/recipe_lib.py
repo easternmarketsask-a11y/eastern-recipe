@@ -16,11 +16,19 @@ def split_name(name):
     cn_parts = tokens[first_cn:]
     return (" ".join(cn_parts).strip(), " ".join(en_parts).strip())
 
-def detect_price_unit(name, clover_unit):
-    """称重→'lb'，否则'each'。优先看 Clover 单位，其次商品名里的重量标记。"""
-    if (clover_unit or "").strip().lower() in ("lb", "kg"):
-        return "lb"
-    if _WEIGHT_RE.search(name or ""):
+def detect_price_unit(doc):
+    """称重→'lb'，否则'each'。优先 Firestore 的 is_weighed / price_unit 信号，
+    再退到商品名里的重量标记。兼容传入裸商品名字符串（仅按名字判断）。"""
+    if isinstance(doc, dict):
+        if doc.get("is_weighed") is True:
+            return "lb"
+        pu = (doc.get("price_unit") or "").strip().lower()
+        if pu in ("lb", "kg"):
+            return "lb"
+        name = doc.get("name") or ""
+    else:
+        name = doc or ""
+    if _WEIGHT_RE.search(name):
         return "lb"
     return "each"
 
@@ -32,13 +40,16 @@ def normalize_category(raw, valid):
 def build_product_record(doc, valid_categories, sold_90d=0):
     """Firestore product doc → 公开站 products.json 的一条记录。"""
     cn, en = split_name(doc.get("name"))
-    on_sale = bool(doc.get("available", True)) and not bool(doc.get("deleted", False))
+    # 真实 Firestore 字段是 isActive（无 available 字段）；缺失或 None 视为在售（未知≠下架）
+    raw_active = doc.get("isActive", doc.get("available"))
+    active = True if raw_active is None else bool(raw_active)
+    on_sale = active and not bool(doc.get("deleted", False))
     return {
         "code": doc.get("code", ""),
         "name_cn": cn,
         "name_en": en,
         "price": doc.get("price"),
-        "price_unit": detect_price_unit(doc.get("name"), doc.get("clover_unit")),
+        "price_unit": detect_price_unit(doc),
         "category": normalize_category(doc.get("category"), valid_categories),
         "image_url": doc.get("imageUrl", "") or "",
         "on_sale": on_sale,

@@ -11,8 +11,15 @@ def test_split_name_cn_only():
     assert en == ""
 
 def test_detect_price_unit_weight():
-    assert rl.detect_price_unit("Tong Ho Crown Daisy 茼蒿", "lb") == "lb"
-    assert rl.detect_price_unit("Cilantro 芫荽", "") == "each"
+    # is_weighed 是权威称重标记
+    assert rl.detect_price_unit({"name": "Ginger 姜", "is_weighed": True}) == "lb"
+    # 已有 price_unit 字段次之
+    assert rl.detect_price_unit({"name": "Choy Sum 菜心", "price_unit": "lb"}) == "lb"
+    # 非称重商品
+    assert rl.detect_price_unit({"name": "LKK Soy Sauce 500ml", "is_weighed": False, "price_unit": "each"}) == "each"
+    # 商品名重量标记兜底（lb 作为独立词）
+    assert rl.detect_price_unit({"name": "Beef Shank per lb"}) == "lb"
+    assert rl.detect_price_unit({"name": "Cilantro 芫荽"}) == "each"
 
 def test_normalize_category_known():
     valid = {"新鲜蔬菜", "干货调料"}
@@ -25,13 +32,18 @@ def test_normalize_category_unknown_falls_back():
 def test_build_product_record():
     doc = {"code": "10588", "name": "Cilantro 芫荽", "price": 0.99,
            "category": "新鲜蔬菜", "imageUrl": "http://x/c.jpg",
-           "clover_unit": "lb", "available": True, "deleted": False}
+           "is_weighed": True, "isActive": True}
     rec = rl.build_product_record(doc, valid_categories={"新鲜蔬菜"}, sold_90d=142)
     assert rec == {
         "code": "10588", "name_cn": "芫荽", "name_en": "Cilantro",
         "price": 0.99, "price_unit": "lb", "category": "新鲜蔬菜",
         "image_url": "http://x/c.jpg", "on_sale": True, "sold_90d": 142,
     }
+
+def test_build_product_record_inactive_not_on_sale():
+    doc = {"code": "x1", "name": "Old Item 旧货", "price": 1.0, "isActive": False}
+    rec = rl.build_product_record(doc, valid_categories=set())
+    assert rec["on_sale"] is False
 
 def test_score_match_exact_substring_wins():
     prods = [
