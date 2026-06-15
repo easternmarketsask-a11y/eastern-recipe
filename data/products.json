@@ -1,9 +1,0 @@
-{
-  "generated_at": "2026-06-14T21:00:00-06:00",
-  "items": [
-    { "code": "4011tofu", "name_cn": "嫩豆腐", "name_en": "Soft Tofu", "price": 2.49, "price_unit": "each", "category": "豆腐蛋品", "image_url": "", "on_sale": true, "sold_90d": 88 },
-    { "code": "ddbanjiang", "name_cn": "丹丹郫县豆瓣酱", "name_en": "Dan Dan Pixian Bean Paste", "price": 5.99, "price_unit": "each", "category": "干货调料", "image_url": "", "on_sale": true, "sold_90d": 31 },
-    { "code": "10588", "name_cn": "芫荽", "name_en": "Cilantro", "price": 0.99, "price_unit": "lb", "category": "新鲜蔬菜", "image_url": "", "on_sale": true, "sold_90d": 142 },
-    { "code": "greenonion", "name_cn": "小葱", "name_en": "Green Onion", "price": 1.49, "price_unit": "lb", "category": "新鲜蔬菜", "image_url": "", "on_sale": false, "sold_90d": 60 }
-  ]
-}
