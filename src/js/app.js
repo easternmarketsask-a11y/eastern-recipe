@@ -57,6 +57,7 @@
   }
 
   function renderDetail(recipe) {
+    var cameFrom = $('results').hidden ? 'home' : 'results';
     var a = RL.associateRecipe(recipe, state.productIndex);
     var d = $('detail');
     var faved = isFave(recipe.id);
@@ -71,9 +72,13 @@
       '<ol class="steps">' + (recipe.steps || []).map(function (s) {
         return '<li>' + esc(s) + '</li>';
       }).join('') + '</ol>';
-    $('back').onclick = function () { renderHome(); show('home'); };
+    $('back').onclick = function () {
+      if (cameFrom === 'results') { show('results'); }      // 从搜索来 → 回到搜索结果，保留查询
+      else { $('q').value = ''; renderHome(); show('home'); } // 从首页来 → 回首页并清空搜索框
+    };
     $('fave').onclick = function () { toggleFave(recipe.id); renderDetail(recipe); };
     show('detail');
+    $('back').focus();   // 无障碍：详情打开后把焦点移到返回按钮
     window.scrollTo(0, 0);
   }
 
@@ -163,7 +168,7 @@
       renderHome();
       show('home');
     }).catch(function () {
-      $('home').innerHTML = '<p class="empty">数据加载失败，请稍后再试。</p>';
+      $('home').innerHTML = '<p class="empty">数据加载失败，请检查网络后<button class="link-btn" type="button" onclick="location.reload()">重试</button></p>';
     });
   }
   document.addEventListener('DOMContentLoaded', boot);
