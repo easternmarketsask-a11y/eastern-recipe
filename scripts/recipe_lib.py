@@ -44,3 +44,25 @@ def build_product_record(doc, valid_categories, sold_90d=0):
         "on_sale": on_sale,
         "sold_90d": sold_90d,
     }
+
+def score_match(ingredient, products):
+    """给食材在商品列表里的候选打分，返回 [(product, score), ...] 按分降序。
+    打分：中文子串命中 +2；英文 token 命中 +1/词；归一后完全相等 +1。"""
+    ing = (ingredient or "").strip().lower()
+    ing_cn = ing
+    ing_tokens = [t for t in re.split(r'\s+', ing) if t]
+    ranked = []
+    for p in products:
+        cn = (p.get("name_cn") or "").lower()
+        en = (p.get("name_en") or "").lower()
+        score = 0.0
+        if ing_cn and ing_cn in cn:
+            score += 2.0
+        for tok in ing_tokens:
+            if tok and (tok in en or tok in cn):
+                score += 1.0
+        if ing_cn and (ing_cn == cn or ing_cn == en):
+            score += 1.0
+        ranked.append((p, score))
+    ranked.sort(key=lambda x: x[1], reverse=True)
+    return ranked

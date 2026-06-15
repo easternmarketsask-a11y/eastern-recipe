@@ -32,3 +32,19 @@ def test_build_product_record():
         "price": 0.99, "price_unit": "lb", "category": "新鲜蔬菜",
         "image_url": "http://x/c.jpg", "on_sale": True, "sold_90d": 142,
     }
+
+def test_score_match_exact_substring_wins():
+    prods = [
+        {"code": "a", "name_cn": "嫩豆腐", "name_en": "Soft Tofu"},
+        {"code": "b", "name_cn": "豆腐干", "name_en": "Dried Tofu"},
+        {"code": "c", "name_cn": "白萝卜", "name_en": "Daikon"},
+    ]
+    ranked = rl.score_match("豆腐", prods)
+    assert ranked[0][0]["code"] in ("a", "b")   # 含"豆腐"的排前
+    assert ranked[-1][0]["code"] == "c"          # 不相关排末
+    assert ranked[0][1] >= ranked[-1][1]         # 分数降序
+
+def test_score_match_english_token():
+    prods = [{"code": "a", "name_cn": "丹丹豆瓣酱", "name_en": "Dan Dan Bean Paste"}]
+    ranked = rl.score_match("bean paste", prods)
+    assert ranked[0][1] > 0
