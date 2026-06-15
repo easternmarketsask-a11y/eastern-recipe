@@ -111,6 +111,12 @@ def main():
             skipped_no_code += 1
             continue
 
+        # 公开站不显示价格（店主决定，2026-06-15），故发布文件里不放价格——
+        # 避免把全店价目表做成可抓取的公开数据。build_product_record 仍算 price_unit
+        # 供将来店主侧用；这里只是从公开产物里投影掉价格字段。
+        record.pop("price", None)
+        record.pop("price_unit", None)
+
         # Warn on non-standard category
         if record["category"] and record["category"] not in valid_categories:
             print(

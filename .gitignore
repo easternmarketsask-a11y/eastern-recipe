@@ -3,4 +3,5 @@ node_modules/
 _incoming/
 *.local
 __pycache__/
-data/products.json
+# data/products.json 现纳入发布快照（GitHub Pages 需要它）；自动每日刷新见 Plan 3
+cprofile*/
