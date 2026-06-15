@@ -23,5 +23,53 @@
     });
   }
 
-  return { normalizeQuery: normalizeQuery, matchRecipes: matchRecipes };
+  function buildProductIndex(items) {
+    const idx = {};
+    (items || []).forEach(function (p) { idx[p.code] = p; });
+    return idx;
+  }
+
+  function round2(n) { return Math.round(n * 100) / 100; }
+
+  function associateRecipe(recipe, productIndex) {
+    const rows = [];
+    const weighed = [];
+    let refPriceEach = 0;
+    let haveCount = 0;
+    (recipe.ingredients || []).forEach(function (ing) {
+      const p = ing.code ? productIndex[ing.code] : null;
+      const available = !!(p && p.on_sale);
+      const row = {
+        label: ing.label,
+        qty: ing.qty,
+        required: !!ing.required,
+        unbound: !ing.code || !p,
+        available: available,
+        price: p ? p.price : null,
+        price_unit: p ? p.price_unit : null,
+        category: p ? p.category : null,
+        image_url: p ? p.image_url : ''
+      };
+      rows.push(row);
+      if (available) {
+        haveCount += 1;
+        if (p.price_unit === 'each') refPriceEach += p.price;
+        else if (p.price_unit === 'lb') weighed.push({ label: ing.label, price: p.price });
+      }
+    });
+    return {
+      rows: rows,
+      totalCount: (recipe.ingredients || []).length,
+      haveCount: haveCount,
+      refPriceEach: round2(refPriceEach),
+      weighed: weighed
+    };
+  }
+
+  return {
+    normalizeQuery: normalizeQuery,
+    matchRecipes: matchRecipes,
+    buildProductIndex: buildProductIndex,
+    associateRecipe: associateRecipe
+  };
 });
