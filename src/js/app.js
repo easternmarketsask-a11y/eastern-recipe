@@ -58,17 +58,25 @@
 
   function renderDetail(recipe) {
     var cameFrom = $('results').hidden ? 'home' : 'results';
-    var a = RL.associateRecipe(recipe, state.productIndex);
     var d = $('detail');
     var faved = isFave(recipe.id);
+    // 成品(ready)：本店有售，不拿商品表卡它；普通菜谱(dish)：列食材 有货/暂缺
+    var bodyHtml;
+    if (recipe.kind === 'ready') {
+      bodyHtml = '<div class="ready-tag">🛒 本店有售</div>';
+    } else {
+      var a = RL.associateRecipe(recipe, state.productIndex);
+      bodyHtml = '<ul class="ings">' + a.rows.map(ingredientRow).join('') + '</ul>';
+    }
+    var stepsTitle = recipe.kind === 'ready' ? '怎么吃' : '做法';
     d.innerHTML =
       '<button class="back" id="back">← 返回</button>' +
       '<h2 class="detail__title">' + esc(recipe.name_cn) +
         ' <small>' + esc(recipe.name_en || '') + '</small></h2>' +
-      '<ul class="ings">' + a.rows.map(ingredientRow).join('') + '</ul>' +
+      bodyHtml +
       '<button class="fave-btn' + (faved ? ' is-on' : '') + '" id="fave">' +
         (faved ? '♥ 已加入想做' : '♡ 加入想做') + '</button>' +
-      '<h3 class="detail__h3">做法</h3>' +
+      '<h3 class="detail__h3">' + stepsTitle + '</h3>' +
       '<ol class="steps">' + (recipe.steps || []).map(function (s) {
         return '<li>' + esc(s) + '</li>';
       }).join('') + '</ol>';
@@ -114,30 +122,53 @@
   }
 
   // ---- 首页 ----
-  // 在售食材按其绑定商品 sold_90d 取热门，做快捷 chips
-  function popularIngredientChips(max) {
+  // 某板块的菜，按 priority 高→低（priority 即按你 90 天销量定的热卖度）
+  function bySection(sec) {
+    return state.recipes.filter(function (r) { return r.section === sec; })
+      .sort(function (a, b) { return (b.priority || 0) - (a.priority || 0); });
+  }
+  // 快捷 chips：取"今晚吃什么 + 鲜河粉肠粉"里每道菜的主料（第一个必需且在售的食材），引导到高营业额菜
+  function featuredIngredientChips(max) {
     var seen = {}, arr = [];
-    state.recipes.forEach(function (r) {
-      (r.ingredients || []).forEach(function (ing) {
+    bySection('tonight').concat(bySection('fresh')).forEach(function (r) {
+      var ings = (r.ingredients || []).filter(function (ing) {
         var p = ing.code ? state.productIndex[ing.code] : null;
-        if (!p || !p.on_sale) return;
-        var sold = p.sold_90d || 0;
-        if (seen[ing.label]) { if (sold > seen[ing.label].sold) seen[ing.label].sold = sold; return; }
-        seen[ing.label] = { label: ing.label, sold: sold };
-        arr.push(seen[ing.label]);
+        return p && p.on_sale;
       });
+      if (!ings.length) return;
+      var lbl = ings[0].label;             // 主料
+      if (seen[lbl]) return;
+      seen[lbl] = 1; arr.push(lbl);
     });
-    arr.sort(function (a, b) { return b.sold - a.sold; });
-    return arr.slice(0, max).map(function (x) { return x.label; });
+    return arr.slice(0, max);
+  }
+  function fillCards(id, list) {
+    $(id).innerHTML = list.map(recipeCard).join('');
+    wireCards($(id));
   }
 
   function renderHome() {
-    var seed = todayStr() + (state.reshuffle ? '#' + state.reshuffle : '');
-    var picks = RL.todaysPicks(state.recipes, seed, 4);
-    $('picks').innerHTML = picks.map(recipeCard).join('');
-    wireCards($('picks'));
+    // 🔥 今晚吃什么：tonight 按热卖度排序，显示一个 4 道的窗口，「换一批」往后翻
+    var tonight = bySection('tonight');
+    if (tonight.length) {
+      var n = 4, start = (state.reshuffle * n) % tonight.length;
+      var win = [];
+      for (var i = 0; i < Math.min(n, tonight.length); i++) win.push(tonight[(start + i) % tonight.length]);
+      fillCards('picks', win);
+    } else {
+      fillCards('picks', RL.todaysPicks(state.recipes, todayStr(), 4)); // 兜底
+    }
 
-    var chips = popularIngredientChips(8);
+    // 🍜 鲜河粉鲜肠粉 / 🌅 早餐包点
+    var fresh = bySection('fresh');
+    $('freshBlock').hidden = !fresh.length;
+    fillCards('fresh', fresh);
+    var breakfast = bySection('breakfast');
+    $('breakfastBlock').hidden = !breakfast.length;
+    fillCards('breakfast', breakfast);
+
+    // 🥬 chips（主料 → 以货找菜）
+    var chips = featuredIngredientChips(10);
     $('chips').innerHTML = chips.map(function (c) {
       return '<button class="chip" data-ing="' + esc(c) + '">' + esc(c) + '</button>';
     }).join('');

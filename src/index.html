@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>东方超市 · 今晚吃什么</title>
 <meta name="description" content="今晚吃什么？东方超市帮你想——看看店里的菜能做成什么、怎么做、缺哪样来店里补齐。">
-<link rel="stylesheet" href="css/app.css?v=6">
+<link rel="stylesheet" href="css/app.css?v=7">
 </head>
 <body>
 <header class="hdr">
@@ -18,20 +18,30 @@
   <div class="search">
     <input id="q" class="search__input" type="search" inputmode="search"
            aria-label="搜索菜谱或食材"
-           placeholder="试试：麻婆豆腐 · mapo · 豆腐 · 鸡翅" autocomplete="off">
+           placeholder="试试：火锅 · 红烧肉 · 干炒牛河 · 小笼包" autocomplete="off">
   </div>
 </header>
 <main>
   <section id="home" class="home">
     <div class="block">
       <div class="block__hd">
-        <h2 class="block__title">今晚吃什么</h2>
+        <h2 class="block__title">🔥 今晚吃什么</h2>
         <button id="reshuffle" class="link-btn">换一批</button>
       </div>
       <div id="picks" class="cards"></div>
     </div>
+    <div class="block" id="freshBlock">
+      <h2 class="block__title">🍜 鲜河粉 · 鲜肠粉，怎么做</h2>
+      <p class="block__note">🚚 每周四到货 · 周五、六最新鲜　|　好吃不会做？跟着做就行</p>
+      <div id="fresh" class="cards"></div>
+    </div>
+    <div class="block" id="breakfastBlock">
+      <h2 class="block__title">🌅 早餐包点</h2>
+      <p class="block__note">蒸一蒸 / 煎一煎就能吃 · 本店有售</p>
+      <div id="breakfast" class="cards"></div>
+    </div>
     <div class="block">
-      <h2 class="block__title">家里有这些？看看能做什么</h2>
+      <h2 class="block__title">🥬 家里有这些？看看能做什么</h2>
       <div id="chips" class="chips"></div>
     </div>
     <div class="block" id="favesBlock" hidden>

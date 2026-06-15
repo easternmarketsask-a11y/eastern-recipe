@@ -1,6 +1,1164 @@
 {
   "recipes": [
     {
+      "id": "hotpot",
+      "name_cn": "在家涮火锅",
+      "name_en": "Home-Style Hot Pot",
+      "aliases": [
+        "火锅",
+        "涮火锅",
+        "hotpot",
+        "huoguo"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 100,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "火锅",
+        "羊肉",
+        "牛肉",
+        "聚会",
+        "家庭聚餐",
+        "下饭"
+      ],
+      "steps": [
+        "将牛油火锅底料放入锅中，加约1.5升清水，大火煮沸后转中火，底料完全融化即为锅底。",
+        "龙口粉丝提前用冷水泡发约20分钟；金针菇去根、大白菜切段、鱼豆腐和传统豆腐切厚片备用。",
+        "新西兰羔羊卷和牛肉卷从冰箱取出，室温回温约10分钟，方便涮食时均匀受热。",
+        "锅底沸腾后先下豆腐类食材（鱼豆腐、传统豆腐）煮2-3分钟，再依次下大白菜、金针菇、粉丝。",
+        "羊肉卷和牛肉卷薄片入锅涮15-30秒至变色即捞出，蘸酱食用（麻酱/沙茶酱均可）。",
+        "撒入小葱葱花提香，边涮边加料即可享用。"
+      ],
+      "ingredients": [
+        {
+          "label": "新西兰羔羊卷",
+          "qty": "2lb（1袋）",
+          "code": "6292644004474",
+          "required": true
+        },
+        {
+          "label": "牛肉卷",
+          "qty": "2lb（1袋）",
+          "code": "6292644004009",
+          "required": true
+        },
+        {
+          "label": "牛油火锅底料",
+          "qty": "1块（约150g）",
+          "code": "6971013105331",
+          "required": true
+        },
+        {
+          "label": "龙口粉丝",
+          "qty": "100g",
+          "code": "6928527900105",
+          "required": false
+        },
+        {
+          "label": "金针菇",
+          "qty": "1包",
+          "code": "6931787400001",
+          "required": false
+        },
+        {
+          "label": "大白菜",
+          "qty": "半棵（约500g）",
+          "code": "Sc1003dbc",
+          "required": false
+        },
+        {
+          "label": "鱼豆腐",
+          "qty": "1包",
+          "code": "841624002496",
+          "required": false
+        },
+        {
+          "label": "传统豆腐",
+          "qty": "1块",
+          "code": "777433001200",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "3根（切葱花）",
+          "code": "HFCXCXC",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "red-braised-pork",
+      "name_cn": "红烧肉",
+      "name_en": "Red-Braised Pork Belly",
+      "aliases": [
+        "红烧五花肉",
+        "东坡肉",
+        "hong shao rou",
+        "braised pork belly"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 95,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "猪肉",
+        "红烧",
+        "下饭菜",
+        "家常菜",
+        "经典"
+      ],
+      "steps": [
+        "五花肉切成约4cm正方块，冷水下锅，加料酒，大火焯水5分钟去腥，捞出洗净沥干。",
+        "锅中下少许油，中火将肉块各面煎至微金黄，逼出多余油脂，盛出备用。",
+        "锅中留底油，下冰糖中小火慢慢炒化，至变成棕红色焦糖（勿焦苦）。",
+        "迅速将五花肉倒入，翻炒使肉块均匀裹上焦糖色。",
+        "加生抽、老抽翻炒上色，倒入热水至八分没过肉块，下姜片。",
+        "大火烧开后转小火加盖焖煮45-60分钟至肉质软烂。",
+        "转大火收汁至浓稠发亮，出锅撒葱花即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "五花肉（带皮）",
+          "qty": "约800g",
+          "code": "0221",
+          "required": true
+        },
+        {
+          "label": "老抽",
+          "qty": "2汤匙",
+          "code": "722337817020",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "2汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "黄冰糖",
+          "qty": "30g",
+          "code": "871392000233",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "qty": "2汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "4片",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根（切葱花）",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "少许",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "braised-beef-brisket",
+      "name_cn": "红烧牛腩",
+      "name_en": "Red-Braised Beef Brisket",
+      "aliases": [
+        "红烧牛肉",
+        "hong shao niunan",
+        "braised brisket"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 93,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "牛肉",
+        "红烧",
+        "炖肉",
+        "下饭菜",
+        "家常菜"
+      ],
+      "steps": [
+        "牛腩切成约5cm块，冷水下锅，加料酒，大火焯水5-8分钟去腥沫，捞出洗净备用。",
+        "锅中下油，中火爆香姜片，下牛腩翻炒2分钟。",
+        "加生抽、老抽翻炒至肉块均匀上色。",
+        "倒入热水至没过牛腩，加入八角，大火烧开后转小火加盖焖煮1.5-2小时至软烂。",
+        "转大火收汁至浓稠，撒上葱花出锅。"
+      ],
+      "ingredients": [
+        {
+          "label": "爱尔兰牛腩",
+          "qty": "约1kg",
+          "code": "9735",
+          "required": true
+        },
+        {
+          "label": "老抽",
+          "qty": "2汤匙",
+          "code": "722337817020",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "2汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "qty": "2汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "4片",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "八角",
+          "qty": "2颗",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "2汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "soy-braised-beef-shank",
+      "name_cn": "酱卤牛腱",
+      "name_en": "Soy-Braised Beef Shank",
+      "aliases": [
+        "卤牛腱",
+        "卤牛肉",
+        "lu niujian",
+        "braised beef shank"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 91,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "牛肉",
+        "卤味",
+        "凉拌",
+        "下酒菜",
+        "家常菜"
+      ],
+      "steps": [
+        "牛腱子整块冷水入锅，加料酒，大火焯水10分钟，捞出冲洗干净。",
+        "锅中加足量水，放入牛腱子、姜片、葱段、生抽、老抽、料酒。",
+        "大火烧开后撇去浮沫，转小火加盖炖煮1.5小时至筷子可轻松插入。",
+        "关火后让牛腱继续在卤汁中浸泡至少1小时（冷藏浸泡过夜风味更佳）。",
+        "取出切薄片，淋少许卤汁，撒芝麻或葱花即可食用。"
+      ],
+      "ingredients": [
+        {
+          "label": "牛腱子肉",
+          "qty": "约1kg",
+          "code": "0033",
+          "required": true
+        },
+        {
+          "label": "老抽",
+          "qty": "3汤匙",
+          "code": "722337817020",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "3汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "qty": "3汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "5片",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "3根（切段）",
+          "code": "HFCXCXC",
+          "required": true
+        },
+        {
+          "label": "八角",
+          "qty": "2颗",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "冰糖",
+          "qty": "15g",
+          "code": "871392000233",
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "white-cut-chicken",
+      "name_cn": "白切鸡",
+      "name_en": "White-Cut Chicken",
+      "aliases": [
+        "白斩鸡",
+        "清水鸡",
+        "bai qie ji",
+        "poached chicken"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 92,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "鸡肉",
+        "粤菜",
+        "清淡",
+        "家常菜",
+        "健康"
+      ],
+      "steps": [
+        "三黄鸡洗净，去除内脏，腔内抹少许盐。",
+        "锅中加足量水，下姜片和葱段，大火烧开。",
+        "将整鸡放入沸水中（水要能没过鸡），大火煮3分钟后转小火加盖煮20-25分钟（视鸡大小调整）。",
+        "关火，让鸡在锅中继续浸泡10分钟，取出后迅速放入冰水中冷却，使鸡皮收紧弹嫩。",
+        "沥干后斩件摆盘，佐以葱姜蘸汁（葱末+姜末+少许盐+淋热油）即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "三黄鸡",
+          "qty": "1只（约1.5kg）",
+          "code": "4889shj",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "5片",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "3根",
+          "code": "HFCXCXC",
+          "required": true
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "少许（泼香用）",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "twice-cooked-pork",
+      "name_cn": "回锅肉",
+      "name_en": "Twice-Cooked Pork",
+      "aliases": [
+        "川菜回锅肉",
+        "hui guo rou",
+        "double cooked pork"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 90,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "猪肉",
+        "川菜",
+        "辣",
+        "下饭菜",
+        "家常菜"
+      ],
+      "steps": [
+        "五花肉整块冷水下锅，加料酒和姜片，大火煮至熟透（约25分钟），捞出放凉后切薄片。",
+        "蒜苗（或青蒜）斜切段，红椒切丝备用。",
+        "锅中下少许油，中火将肉片炒至出油、边缘微卷（此为「回锅」步骤）。",
+        "将肉片拨到锅边，中间下郫县豆瓣酱炒出红油。",
+        "加入蒜苗大火翻炒2分钟至断生，加生抽调味，翻匀出锅。"
+      ],
+      "ingredients": [
+        {
+          "label": "五花肉（带皮）",
+          "qty": "约500g",
+          "code": "0221",
+          "required": true
+        },
+        {
+          "label": "郫县豆瓣酱",
+          "qty": "1.5汤匙",
+          "code": "6909003888018",
+          "required": true
+        },
+        {
+          "label": "蒜苗",
+          "qty": "3-4根",
+          "code": "1063qsm",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "qty": "1汤匙（煮肉用）",
+          "code": "6907592001245",
+          "required": false
+        },
+        {
+          "label": "姜",
+          "qty": "2片（煮肉用）",
+          "code": "1037",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "少许",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "cumin-lamb",
+      "name_cn": "孜然羊肉",
+      "name_en": "Cumin Lamb Stir-Fry",
+      "aliases": [
+        "新疆孜然羊肉",
+        "ziranyang rou",
+        "cumin lamb"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 91,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "羊肉",
+        "新疆",
+        "孜然",
+        "香辣",
+        "下饭菜"
+      ],
+      "steps": [
+        "羊肩肉切薄片（约3mm），加少许生抽、料酒、淀粉抓匀腌制15分钟。",
+        "蒜切片，干辣椒剪段备用。",
+        "锅中大火烧热，下油至冒烟，下羊肉片大火快炒至变色（约1-2分钟），盛出备用。",
+        "锅中留底油，下蒜片和干辣椒段爆香，撒入孜然粉翻炒出香。",
+        "倒回羊肉，大火翻炒均匀，加盐调味，最后再撒一把孜然粒出锅。"
+      ],
+      "ingredients": [
+        {
+          "label": "羊肩肉（无骨）",
+          "qty": "约500g",
+          "code": "6944",
+          "required": true
+        },
+        {
+          "label": "孜然粉",
+          "qty": "1.5茶匙",
+          "code": null,
+          "required": true
+        },
+        {
+          "label": "孜然粒",
+          "qty": "1茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "蒜",
+          "qty": "5瓣（切片）",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "干辣椒",
+          "qty": "5-8个",
+          "code": "6971005993144",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "料酒",
+          "qty": "1汤匙",
+          "code": "6907592001245",
+          "required": false
+        },
+        {
+          "label": "土豆淀粉（腌肉用）",
+          "qty": "1茶匙",
+          "code": "6941837101024",
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "3汤匙",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "tomato-beef-brisket",
+      "name_cn": "番茄牛腩",
+      "name_en": "Tomato Beef Brisket Stew",
+      "aliases": [
+        "番茄炖牛腩",
+        "tomato beef stew",
+        "fangqie niunan"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 92,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "牛肉",
+        "番茄",
+        "炖汤",
+        "下饭菜",
+        "家常菜"
+      ],
+      "steps": [
+        "牛腩切块，冷水下锅焯水5分钟去腥，捞出洗净备用。",
+        "番茄顶部划十字，沸水烫10秒剥皮后切大块；姜切片，葱切段备用。",
+        "锅中下油，中火爆香姜片，下番茄块大火翻炒至出汁变软。",
+        "下牛腩翻炒2分钟，加热水至没过食材，大火烧开后撇去浮沫。",
+        "转小火加盖焖煮1.5-2小时至牛腩软烂，加盐调味出锅，撒上葱花。"
+      ],
+      "ingredients": [
+        {
+          "label": "爱尔兰牛腩",
+          "qty": "约800g",
+          "code": "9735",
+          "required": true
+        },
+        {
+          "label": "番茄",
+          "qty": "3个（约450g）",
+          "code": "1032xhs",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根（切葱花）",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "2汤匙",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "beef-chow-fun",
+      "name_cn": "干炒牛河",
+      "name_en": "Dry-Fried Beef Ho Fun",
+      "aliases": [
+        "炒牛河",
+        "干炒河粉",
+        "ganChao niuhe",
+        "beef ho fun",
+        "干炒牛肉河粉"
+      ],
+      "section": "fresh",
+      "kind": "dish",
+      "fresh": true,
+      "priority": 99,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "粤菜",
+        "河粉",
+        "牛肉",
+        "本周鲜货",
+        "经典",
+        "快手菜"
+      ],
+      "steps": [
+        "牛肉卷解冻后切薄片，加生抽、老抽、蚝油、少许淀粉抓匀腌制15分钟。",
+        "河粉用温水浸泡约5分钟后轻轻分开，沥干备用；豆芽摘去根须洗净；小葱切段。",
+        "锅中大火烧至冒烟，下油至滑锅，下牛肉片大火快炒至变色（约1分钟），盛出备用。",
+        "原锅大火，再下少许油，下河粉大火翻炒（动作快，避免粘连）。",
+        "加老抽翻炒上色，下豆芽和葱段快速翻炒约30秒。",
+        "倒回牛肉片，加生抽、蚝油大火翻炒均匀，出锅前淋芝麻油，即可装盘。"
+      ],
+      "ingredients": [
+        {
+          "label": "鲜河粉",
+          "qty": "908g（1袋）",
+          "code": "058398101014",
+          "required": true
+        },
+        {
+          "label": "牛肉卷",
+          "qty": "约300g",
+          "code": "6292644004009",
+          "required": true
+        },
+        {
+          "label": "豆芽菜",
+          "qty": "100g",
+          "code": "1024",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "3根（切段）",
+          "code": "HFCXCXC",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "2汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "老抽",
+          "qty": "1汤匙",
+          "code": "722337817020",
+          "required": true
+        },
+        {
+          "label": "蚝油",
+          "qty": "1汤匙",
+          "code": "6922824007468",
+          "required": true
+        },
+        {
+          "label": "芝麻油",
+          "qty": "数滴",
+          "code": "742812710905",
+          "required": false
+        },
+        {
+          "label": "土豆淀粉（腌肉用）",
+          "qty": "1茶匙",
+          "code": "6941837101024",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "3汤匙",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "soy-sauce-cheung-fun",
+      "name_cn": "豉油皇炒肠粉",
+      "name_en": "Soy Sauce Stir-Fried Rice Rolls",
+      "aliases": [
+        "炒肠粉",
+        "豉油肠粉",
+        "chi you chang fen",
+        "soy rice rolls"
+      ],
+      "section": "fresh",
+      "kind": "dish",
+      "fresh": true,
+      "priority": 97,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "粤菜",
+        "肠粉",
+        "早午餐",
+        "本周鲜货",
+        "快手菜"
+      ],
+      "steps": [
+        "肠粉轻轻展开（勿用力撕，容易断），切成约5cm段备用。",
+        "小碗中调制豉油汁：生抽2汤匙、老抽1茶匙、冰糖少许（或白糖半茶匙）、清水2汤匙，微波加热至糖溶化搅匀。",
+        "锅中下少许油，中火，下肠粉段轻轻翻炒，使其均匀受热（约2分钟）。",
+        "加入豆芽菜（可选）一同翻炒约30秒至断生。",
+        "淋入调好的豉油汁，大火翻炒均匀，撒葱花出锅。"
+      ],
+      "ingredients": [
+        {
+          "label": "鲜肠粉",
+          "qty": "567g（1袋）",
+          "code": "058398101083",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "2汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "老抽",
+          "qty": "1茶匙",
+          "code": "722337817020",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根（切葱花）",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "豆芽菜（可选）",
+          "qty": "50g",
+          "code": "1024",
+          "required": false
+        },
+        {
+          "label": "冰糖/白糖",
+          "qty": "少许",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "beef-brisket-noodle-soup",
+      "name_cn": "牛腩汤河粉",
+      "name_en": "Beef Brisket Rice Noodle Soup",
+      "aliases": [
+        "牛腩河粉",
+        "汤河粉",
+        "beef noodle soup",
+        "niunan hetang"
+      ],
+      "section": "fresh",
+      "kind": "dish",
+      "fresh": true,
+      "priority": 95,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "牛肉",
+        "河粉",
+        "汤面",
+        "本周鲜货",
+        "暖身",
+        "家常菜"
+      ],
+      "steps": [
+        "牛腩切块，冷水下锅焯水5分钟去腥，捞出洗净备用。",
+        "锅中加足量水（约1.5升），下牛腩、姜片，大火烧开后撇去浮沫，转小火炖1.5小时至软烂，加盐调味成牛腩汤。",
+        "河粉用温水泡软约5分钟，沥干备用。",
+        "另起锅将牛腩汤烧开，放入河粉煮约2-3分钟至河粉熟透。",
+        "盛入碗中，放上牛腩块，撒葱花，依喜好加少许胡椒粉即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "鲜河粉",
+          "qty": "908g（1袋）",
+          "code": "058398101014",
+          "required": true
+        },
+        {
+          "label": "爱尔兰牛腩",
+          "qty": "约500g",
+          "code": "9735",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根（切葱花）",
+          "code": "HFCXCXC",
+          "required": true
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "白胡椒粉",
+          "qty": "少许",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "cheung-fun-ready",
+      "name_cn": "鲜肠粉（即食）",
+      "name_en": "Fresh Rice Rolls (Ready to Steam)",
+      "aliases": [
+        "肠粉",
+        "鲜肠粉",
+        "chang fen",
+        "rice rolls"
+      ],
+      "section": "breakfast",
+      "kind": "ready",
+      "priority": 98,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "早餐",
+        "速食",
+        "粤式点心",
+        "蒸食"
+      ],
+      "steps": [
+        "肠粉无需解冻，直接取出切段，放入蒸锅。",
+        "大火蒸约6-8分钟至肠粉变软、透明感强。",
+        "蘸生抽或甜酱油食用，也可淋少许芝麻油提香。"
+      ],
+      "ingredients": [
+        {
+          "label": "鲜肠粉",
+          "qty": "1袋（567g）",
+          "code": "058398101083",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "youtiao-ready",
+      "name_cn": "传统大油条",
+      "name_en": "Traditional Deep-Fried Dough Sticks",
+      "aliases": [
+        "油条",
+        "炸油条",
+        "youtiao",
+        "dough sticks",
+        "大油条"
+      ],
+      "section": "breakfast",
+      "kind": "ready",
+      "priority": 94,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "早餐",
+        "速食",
+        "油炸",
+        "经典"
+      ],
+      "steps": [
+        "从冷冻取出，无需解冻。",
+        "油锅中热油至180°C（或烤箱预热200°C）。",
+        "油炸：下锅炸约2-3分钟，翻面，至金黄酥脆捞出；烤箱：烤8-10分钟至酥脆。",
+        "搭配豆浆或稀饭食用。"
+      ],
+      "ingredients": [
+        {
+          "label": "传统大油条",
+          "qty": "1袋（450g）",
+          "code": "6921097103563",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "nai-huang-bao-ready",
+      "name_cn": "奶黄包",
+      "name_en": "Custard Buns",
+      "aliases": [
+        "奶皇包",
+        "custard buns",
+        "nai huang bao"
+      ],
+      "section": "breakfast",
+      "kind": "ready",
+      "priority": 91,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "早餐",
+        "速食",
+        "蒸食",
+        "甜点"
+      ],
+      "steps": [
+        "从冷冻取出，无需解冻。",
+        "蒸锅水开后，将包子放入，大火蒸约12分钟。",
+        "关火后焖2分钟再开盖，防止塌陷。"
+      ],
+      "ingredients": [
+        {
+          "label": "奶黄包",
+          "qty": "1袋（337.5g）",
+          "code": "6902230159661",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "shouzhuabing-ready",
+      "name_cn": "手抓饼",
+      "name_en": "Flaky Scallion Pancakes",
+      "aliases": [
+        "葱油饼",
+        "手抓饼",
+        "scallion pancake",
+        "shouzhuabing"
+      ],
+      "section": "breakfast",
+      "kind": "ready",
+      "priority": 93,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "早餐",
+        "速食",
+        "煎食",
+        "葱香"
+      ],
+      "steps": [
+        "从冷冻取出，无需解冻，直接下锅。",
+        "平底锅中火，无需加油，直接放入手抓饼。",
+        "每面煎约2-3分钟至金黄，用锅铲或筷子从四边向中心拍打，使饼层次分明。",
+        "配鸡蛋、培根或蔬菜夹食均可。"
+      ],
+      "ingredients": [
+        {
+          "label": "手抓饼",
+          "qty": "1袋（450g）",
+          "code": "6921665714436",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "huajuan-ready",
+      "name_cn": "花卷",
+      "name_en": "Steamed Twisted Rolls",
+      "aliases": [
+        "葱花卷",
+        "steamed rolls",
+        "hua juan",
+        "flower rolls"
+      ],
+      "section": "breakfast",
+      "kind": "ready",
+      "priority": 88,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "早餐",
+        "速食",
+        "蒸食",
+        "主食"
+      ],
+      "steps": [
+        "从冷冻取出，无需解冻。",
+        "蒸锅水开后放入花卷，大火蒸约10-12分钟至蓬松柔软。",
+        "配豆浆、稀饭或炒菜食用。"
+      ],
+      "ingredients": [
+        {
+          "label": "花卷",
+          "qty": "1袋（270g）",
+          "code": "6902230159760",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "hei-jin-liusha-bao-ready",
+      "name_cn": "黑金流沙包",
+      "name_en": "Black Sesame Lava Buns",
+      "aliases": [
+        "流沙包",
+        "黑金包",
+        "lava bun",
+        "liusha bao"
+      ],
+      "section": "breakfast",
+      "kind": "ready",
+      "priority": 89,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "早餐",
+        "速食",
+        "蒸食",
+        "甜点",
+        "网红"
+      ],
+      "steps": [
+        "从冷冻取出，无需解冻。",
+        "蒸锅水开后放入，大火蒸约12分钟。",
+        "关火后不要立刻开盖，焖1分钟再取出，小心馅料烫口，趁热食用流沙感最佳。"
+      ],
+      "ingredients": [
+        {
+          "label": "黑金流沙包",
+          "qty": "1盒（300g）",
+          "code": "841624003219",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "cha-shao-bao-ready",
+      "name_cn": "叉烧包",
+      "name_en": "Char Siu Bao (BBQ Pork Buns)",
+      "aliases": [
+        "叉烧包",
+        "char siu bao",
+        "bbq pork buns",
+        "cha shao bao"
+      ],
+      "section": "breakfast",
+      "kind": "ready",
+      "priority": 87,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "早餐",
+        "速食",
+        "蒸食",
+        "粤式点心"
+      ],
+      "steps": [
+        "从冷冻取出，无需解冻。",
+        "蒸锅水开后放入叉烧包，大火蒸约12-15分钟至包子顶部略微开裂（正常现象）。",
+        "关火后焖2分钟再开盖，即可食用。"
+      ],
+      "ingredients": [
+        {
+          "label": "叉烧包",
+          "qty": "1袋（510g）",
+          "code": "800794211367",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "xian-rou-dabao-ready",
+      "name_cn": "鲜肉大包子",
+      "name_en": "Large Pork Steamed Buns",
+      "aliases": [
+        "大肉包",
+        "猪肉大包",
+        "large pork bun",
+        "xian rou bao"
+      ],
+      "section": "breakfast",
+      "kind": "ready",
+      "priority": 86,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "早餐",
+        "速食",
+        "蒸食",
+        "猪肉"
+      ],
+      "steps": [
+        "从冷冻取出，无需解冻。",
+        "蒸锅水开后放入大包子，大火蒸约15分钟至包子蓬松。",
+        "关火后焖2分钟再开盖，防止回缩。"
+      ],
+      "ingredients": [
+        {
+          "label": "鲜肉大包子",
+          "qty": "1袋（510g）",
+          "code": "628719016176",
+          "required": true
+        }
+      ]
+    },
+    {
       "id": "mapo-tofu",
       "name_cn": "麻婆豆腐",
       "name_en": "Mapo Tofu",
@@ -10,6 +1168,9 @@
         "spicy tofu",
         "麻辣豆腐"
       ],
+      "section": "other",
+      "kind": "dish",
+      "priority": 10,
       "image": "",
       "image_credit": "none",
       "tags": [
@@ -112,6 +1273,9 @@
         "tomato egg stir fry",
         "炒鸡蛋"
       ],
+      "section": "other",
+      "kind": "dish",
+      "priority": 10,
       "image": "",
       "image_credit": "none",
       "tags": [
@@ -182,6 +1346,9 @@
         "green pepper pork",
         "青椒猪肉"
       ],
+      "section": "other",
+      "kind": "dish",
+      "priority": 10,
       "image": "",
       "image_credit": "none",
       "tags": [
@@ -264,6 +1431,9 @@
         "you choy sum",
         "清烫菜心"
       ],
+      "section": "other",
+      "kind": "dish",
+      "priority": 10,
       "image": "",
       "image_credit": "none",
       "tags": [
@@ -342,6 +1512,9 @@
         "egg drop soup",
         "紫菜鸡蛋汤"
       ],
+      "section": "other",
+      "kind": "dish",
+      "priority": 10,
       "image": "",
       "image_credit": "none",
       "tags": [
@@ -403,81 +1576,109 @@
       ]
     },
     {
-      "id": "cola-chicken-wings",
-      "name_cn": "可乐鸡翅",
-      "name_en": "Cola Braised Chicken Wings",
+      "id": "xiaolongbao-ready",
+      "name_cn": "灌汤小笼包",
+      "name_en": "Steamed Pork Soup Dumplings",
       "aliases": [
-        "可乐鸡翅",
-        "cola chicken wings",
-        "braised chicken wings",
-        "焖鸡翅"
+        "小笼包",
+        "小籠包",
+        "灌汤包",
+        "汤包",
+        "xiaolongbao"
       ],
+      "section": "breakfast",
+      "kind": "ready",
+      "priority": 96,
       "image": "",
       "image_credit": "none",
       "tags": [
-        "家常菜",
-        "鸡肉",
-        "下饭菜",
-        "儿童喜爱",
-        "红烧"
+        "早餐",
+        "速食",
+        "上海点心",
+        "蒸食"
       ],
       "steps": [
-        "鸡全翅洗净，在翅面划两刀以便入味。",
-        "冷水入锅，加料酒，大火焯出血沫（约3分钟），捞出洗净沥干。",
-        "锅热少许油，中火煎鸡翅两面至金黄（约3分钟/面）。",
-        "加姜片、生抽、老抽翻炒，使鸡翅均匀上色。",
-        "倒入可乐（约355ml，正好一罐），没过鸡翅约一半。",
-        "大火烧开转中小火焖煮15-18分钟，期间翻面1-2次。",
-        "转大火收汁至浓稠发亮，出锅撒葱花。"
+        "冷冻无需解冻，垫油纸或菜叶放入蒸锅。",
+        "水开后大火蒸约8-10分钟至熟透。",
+        "小心内馅汤汁烫口，蘸香醋姜丝更香。"
       ],
       "ingredients": [
         {
-          "label": "鸡全翅",
-          "qty": "8只（约700g）",
-          "code": "9796",
+          "label": "灌汤小笼包",
+          "qty": "1袋（310g）",
+          "code": "800794022406",
           "required": true
-        },
+        }
+      ]
+    },
+    {
+      "id": "shumai-ready",
+      "name_cn": "蛋黄烧卖",
+      "name_en": "Glutinous Rice Shumai with Salted Egg",
+      "aliases": [
+        "烧卖",
+        "燒賣",
+        "烧麦",
+        "蛋黄烧卖",
+        "shumai",
+        "siu mai"
+      ],
+      "section": "breakfast",
+      "kind": "ready",
+      "priority": 92,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "早餐",
+        "速食",
+        "糯米",
+        "蒸食"
+      ],
+      "steps": [
+        "冷冻直接上锅，无需解冻。",
+        "水开后大火蒸约10-12分钟至糯米熟透。",
+        "趁热食用，口感最佳。"
+      ],
+      "ingredients": [
         {
-          "label": "可乐",
-          "qty": "1罐（355ml）",
-          "code": "06782900",
+          "label": "蛋黄烧卖",
+          "qty": "1袋（300g）",
+          "code": "800794222080",
           "required": true
-        },
+        }
+      ]
+    },
+    {
+      "id": "purple-rice-floss-bun",
+      "name_cn": "肉松紫米包",
+      "name_en": "Meat Floss Purple Rice Bun",
+      "aliases": [
+        "紫米包",
+        "肉松包",
+        "肉松紫米包",
+        "zimi bao"
+      ],
+      "section": "breakfast",
+      "kind": "ready",
+      "priority": 90,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "早餐",
+        "速食",
+        "面包"
+      ],
+      "steps": [
+        "常温即可食用，或微波加热约20-30秒更松软。",
+        "也可蒸约5分钟回软。",
+        "配豆浆/牛奶就是一顿早餐。"
+      ],
+      "ingredients": [
         {
-          "label": "生抽",
-          "qty": "2汤匙",
-          "code": "078895128789",
+          "label": "肉松紫米包",
+          "qty": "1个（567g）",
+          "code": "6958620709947",
           "required": true
-        },
-        {
-          "label": "老抽",
-          "qty": "1汤匙",
-          "code": "722337817020",
-          "required": true
-        },
-        {
-          "label": "料酒",
-          "qty": "1汤匙（焯水用）",
-          "code": "6907592001245",
-          "required": true
-        },
-        {
-          "label": "姜",
-          "qty": "3片",
-          "code": "1037",
-          "required": true
-        },
-        {
-          "label": "葱",
-          "qty": "1根",
-          "code": "10636jcjc",
-          "required": false
-        },
-        {
-          "label": "食用油",
-          "qty": "1汤匙",
-          "code": null,
-          "required": false
         }
       ]
     }
