@@ -66,10 +66,54 @@
     };
   }
 
+  // 以货找菜：哪些菜用到了这个食材（按食材 label 或其绑定商品名）
+  function dishesForIngredient(query, recipes, productIndex) {
+    const q = normalizeQuery(query);
+    if (!q) return [];
+    const hit = (recipes || []).filter(function (r) {
+      return (r.ingredients || []).some(function (ing) {
+        if (normalizeQuery(ing.label).indexOf(q) !== -1) return true;
+        const p = ing.code ? productIndex[ing.code] : null;
+        if (!p) return false;
+        return normalizeQuery(p.name_cn).indexOf(q) !== -1 ||
+               normalizeQuery(p.name_en).indexOf(q) !== -1;
+      });
+    });
+    return hit.slice().sort(function (a, b) {
+      const av = associateRecipe(a, productIndex);
+      const bv = associateRecipe(b, productIndex);
+      if (bv.haveCount !== av.haveCount) return bv.haveCount - av.haveCount;
+      return av.totalCount - bv.totalCount;
+    });
+  }
+
+  // 字符串 → 32bit 无符号 hash（确定性，不依赖随机数）
+  function hashStr(s) {
+    let h = 2166136261;
+    for (let i = 0; i < s.length; i++) {
+      h ^= s.charCodeAt(i);
+      h = (h * 16777619) >>> 0;
+    }
+    return h >>> 0;
+  }
+
+  // 今晚吃什么：按 seed 确定性轮换取 n 道
+  function todaysPicks(recipes, seed, n) {
+    const list = (recipes || []).slice();
+    if (!list.length) return [];
+    const offset = hashStr(String(seed)) % list.length;
+    const out = [];
+    const take = Math.min(n, list.length);
+    for (let i = 0; i < take; i++) out.push(list[(offset + i) % list.length]);
+    return out;
+  }
+
   return {
     normalizeQuery: normalizeQuery,
     matchRecipes: matchRecipes,
     buildProductIndex: buildProductIndex,
-    associateRecipe: associateRecipe
+    associateRecipe: associateRecipe,
+    dishesForIngredient: dishesForIngredient,
+    todaysPicks: todaysPicks
   };
 });

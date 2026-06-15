@@ -66,3 +66,41 @@ test('associateRecipe: 在售称重食材进 weighed 不进总价', () => {
   assert.equal(res.weighed[0].label, '小葱');
   assert.equal(res.weighed[0].price, 1.49);
 });
+
+test('dishesForIngredient: 按食材 label 命中菜', () => {
+  const idx = RecipeLogic.buildProductIndex(products);
+  const r = RecipeLogic.dishesForIngredient('豆腐', recipes, idx);
+  assert.equal(r.length, 1);
+  assert.equal(r[0].id, 'mapo-tofu');
+});
+
+test('dishesForIngredient: 按绑定商品英文名命中', () => {
+  const idx = RecipeLogic.buildProductIndex(products);
+  const r = RecipeLogic.dishesForIngredient('bean paste', recipes, idx);
+  assert.equal(r[0].id, 'mapo-tofu');
+});
+
+test('dishesForIngredient: 无关食材返回空', () => {
+  const idx = RecipeLogic.buildProductIndex(products);
+  assert.deepEqual(RecipeLogic.dishesForIngredient('三文鱼', recipes, idx), []);
+});
+
+test('todaysPicks: 同 seed 确定、数量受限', () => {
+  const a = RecipeLogic.todaysPicks(recipes, '2026-06-14', 1);
+  const b = RecipeLogic.todaysPicks(recipes, '2026-06-14', 1);
+  assert.deepEqual(a.map(x => x.id), b.map(x => x.id));
+  assert.equal(a.length, 1);
+});
+
+test('todaysPicks: n 超过总数时返回全部、不重复', () => {
+  const a = RecipeLogic.todaysPicks(recipes, 'seed-x', 99);
+  assert.equal(a.length, recipes.length);
+  assert.equal(new Set(a.map(x => x.id)).size, recipes.length);
+});
+
+test('todaysPicks: 不同 seed 轮换（多菜时子集不同）', () => {
+  const many = ['a','b','c','d','e'].map(id => ({ id: id, name_cn: id, ingredients: [] }));
+  const s1 = RecipeLogic.todaysPicks(many, 'day-1', 2).map(x => x.id).join(',');
+  const s2 = RecipeLogic.todaysPicks(many, 'day-2', 2).map(x => x.id).join(',');
+  assert.notEqual(s1, s2);
+});
