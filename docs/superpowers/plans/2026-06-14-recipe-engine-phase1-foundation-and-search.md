@@ -95,7 +95,7 @@ StockWise API (Firestore products) --export_products.py--> data/products.json
 ## 本地跑
 - 前端：任意静态服务器，如 `python -m http.server 8080`，开 http://localhost:8080
 - 导出商品：`python scripts/export_products.py --api <STOCKWISE_URL> --out data/products.json`
-- JS 测试：`node --test test/`
+- JS 测试：`node --test`
 - Python 测试：`python -m pytest scripts/ -v`
 
 ## 部署
@@ -226,7 +226,7 @@ test('matchRecipes: 空查询返回空', () => {
 
 - [ ] **Step 2: 跑测试确认失败**
 
-Run: `cd /d/easternmarket.ca/eastern-recipe && node --test test/`
+Run: `cd /d/easternmarket.ca/eastern-recipe && node --test`
 Expected: FAIL（`Cannot find module '../src/js/lib/recipe-logic.js'`）
 
 - [ ] **Step 3: 写最小实现**
@@ -264,7 +264,7 @@ Expected: FAIL（`Cannot find module '../src/js/lib/recipe-logic.js'`）
 
 - [ ] **Step 4: 跑测试确认通过**
 
-Run: `node --test test/`
+Run: `node --test`
 Expected: PASS（6 个 matchRecipes 测试通过）
 
 - [ ] **Step 5: Commit**
@@ -335,7 +335,7 @@ test('associateRecipe: 在售称重食材进 weighed 不进总价', () => {
 
 - [ ] **Step 2: 跑测试确认失败**
 
-Run: `node --test test/`
+Run: `node --test`
 Expected: FAIL（`buildProductIndex is not a function`）
 
 - [ ] **Step 3: 实现 buildProductIndex + associateRecipe**
@@ -397,7 +397,7 @@ Expected: FAIL（`buildProductIndex is not a function`）
 
 - [ ] **Step 4: 跑测试确认通过**
 
-Run: `node --test test/`
+Run: `node --test`
 Expected: PASS（全部 10 个测试通过）
 
 - [ ] **Step 5: Commit**
@@ -465,7 +465,7 @@ test('todaysPicks: 不同 seed 轮换（多菜时子集不同）', () => {
 
 - [ ] **Step 2: 跑测试确认失败**
 
-Run: `cd /d/easternmarket.ca/eastern-recipe && node --test test/`
+Run: `cd /d/easternmarket.ca/eastern-recipe && node --test`
 Expected: FAIL（`dishesForIngredient is not a function`）
 
 - [ ] **Step 3: 实现**
@@ -529,7 +529,7 @@ Expected: FAIL（`dishesForIngredient is not a function`）
 
 - [ ] **Step 4: 跑测试确认通过**
 
-Run: `node --test test/`
+Run: `node --test`
 Expected: PASS（全部 16 个测试通过）
 
 - [ ] **Step 5: Commit**
@@ -963,14 +963,15 @@ import re
 _WEIGHT_RE = re.compile(r'\b(lb|lbs|kg|/lb|per\s*lb)\b', re.I)
 
 def split_name(name):
-    """把 Clover 混排名拆成 (中文, 英文)。中文=含 CJK 的连续片段，英文=其余拉丁片段。"""
+    """把 Clover 混排名拆成 (中文, 英文)。英文=第一个 CJK token 之前的拉丁前缀，
+    中文=从第一个含 CJK 的 token 起到末尾（含规格如 500g）。"""
     s = (name or "").strip()
-    cn_parts, en_parts = [], []
-    for token in s.split():
-        if re.search(r'[一-鿿]', token):
-            cn_parts.append(token)
-        else:
-            en_parts.append(token)
+    tokens = s.split()
+    first_cn = next((i for i, t in enumerate(tokens) if re.search(r'[一-鿿]', t)), None)
+    if first_cn is None:
+        return ("", s)
+    en_parts = tokens[:first_cn]
+    cn_parts = tokens[first_cn:]
     return (" ".join(cn_parts).strip(), " ".join(en_parts).strip())
 
 def detect_price_unit(name, clover_unit):
@@ -1284,7 +1285,7 @@ git -c user.name="Claude" -c user.email="noreply@anthropic.com" commit -m "conte
 
 ```bash
 cd /d/easternmarket.ca/eastern-recipe
-node --test test/ && python -m pytest scripts/ -v
+node --test && python -m pytest scripts/ -v
 ```
 Expected: 全绿。任一失败先修再继续。
 
