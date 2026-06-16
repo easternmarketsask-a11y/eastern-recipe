@@ -2385,8 +2385,8 @@
       "section": "seafood",
       "kind": "dish",
       "priority": 94,
-      "image": "assets/images/qingzheng-luyu.jpg",
-      "image_credit": "cc",
+      "image": "",
+      "image_credit": "none",
       "tags": [
         "海鲜",
         "鱼",
@@ -2656,8 +2656,8 @@
       "section": "seafood",
       "kind": "ready",
       "priority": 86,
-      "image": "assets/images/huaxia-hua.jpg",
-      "image_credit": "cc",
+      "image": "",
+      "image_credit": "none",
       "tags": [
         "海鲜",
         "虾",
