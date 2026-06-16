@@ -3660,7 +3660,7 @@
       "kind": "dish",
       "priority": 96,
       "image": "assets/images/cant-douchi-paigu.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "粤菜",
         "蒸",
@@ -3725,7 +3725,7 @@
       "kind": "dish",
       "priority": 92,
       "image": "assets/images/cant-suanrong-fensi-shanbei.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "粤菜",
         "蒸",
@@ -3784,7 +3784,7 @@
       "kind": "dish",
       "priority": 88,
       "image": "assets/images/cant-haoyou-shengcai.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "粤菜",
         "清爽",
@@ -3832,7 +3832,7 @@
       "kind": "dish",
       "priority": 87,
       "image": "assets/images/cant-haoyou-jielan.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "粤菜",
         "清爽",
@@ -3878,7 +3878,7 @@
       "kind": "dish",
       "priority": 91,
       "image": "assets/images/cant-huadan-xiaren.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "粤菜",
         "嫩滑",
@@ -3924,7 +3924,7 @@
       "kind": "dish",
       "priority": 89,
       "image": "assets/images/cant-huadan-niurou.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "粤菜",
         "嫩滑",
@@ -3977,7 +3977,7 @@
       "kind": "dish",
       "priority": 93,
       "image": "assets/images/cant-lawei-baozaifan.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "粤菜",
         "煲仔饭",
@@ -4084,7 +4084,7 @@
       "kind": "dish",
       "priority": 86,
       "image": "assets/images/cant-tangcu-paigu.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "粤菜",
         "下饭",
