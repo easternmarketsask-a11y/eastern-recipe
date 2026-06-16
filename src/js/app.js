@@ -118,7 +118,7 @@
 
   // 「查看全部」：把某分类全部菜谱铺在结果区（网格），带返回首页
   var SEC_TITLE = {
-    tonight: '🔥 今晚吃什么', seafood: '🐟 海鲜河鲜', staple: '🍚 主食 · 面饭',
+    tonight: '🔥 今晚吃什么', cantonese: '🥢 粤菜 · 广式', seafood: '🐟 海鲜河鲜', staple: '🍚 主食 · 面饭',
     dumpling: '🥟 饺子 · 馄饨', fresh: '🍜 鲜河粉 · 鲜肠粉', breakfast: '🌅 早餐包点', veg: '🥗 家常蔬菜'
   };
   function showSection(sec) {
@@ -187,6 +187,10 @@
     // 🔥 今晚吃什么：tonight 全部上，按热卖度排序
     fillCards('picks', bySection('tonight'));
 
+    // 🥢 粤菜
+    var cantonese = bySection('cantonese');
+    $('cantoneseBlock').hidden = !cantonese.length;
+    fillCards('cantonese', cantonese);
     // 🐟 海鲜 / 🍚 主食 / 🥟 饺子馄饨
     var seafood = bySection('seafood');
     $('seafoodBlock').hidden = !seafood.length;

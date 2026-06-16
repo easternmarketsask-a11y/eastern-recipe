@@ -3582,6 +3582,475 @@
           "required": false
         }
       ]
+    },
+    {
+      "id": "cant-douchi-paigu",
+      "name_cn": "豉汁蒸排骨",
+      "name_en": "Steamed Pork Ribs in Black Bean Sauce",
+      "aliases": [
+        "豉汁蒸排骨",
+        "豉汁排骨",
+        "豆豉排骨",
+        "steamed ribs"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 96,
+      "image": "assets/images/cant-douchi-paigu.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "粤菜",
+        "蒸",
+        "下饭",
+        "经典"
+      ],
+      "steps": [
+        "排骨斩小块,洗净沥干。",
+        "加豆豉、蒜末、生抽、少许糖和淀粉抓匀腌15分钟。",
+        "大火蒸约12-15分钟至熟,撒葱花即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "排骨",
+          "qty": "400g",
+          "code": "420011",
+          "required": true
+        },
+        {
+          "label": "豆豉",
+          "qty": "1勺",
+          "code": "253853773359",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1勺",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "土豆淀粉",
+          "qty": "少许",
+          "code": "6941837101024",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "cant-suanrong-fensi-shanbei",
+      "name_cn": "蒜蓉粉丝蒸扇贝",
+      "name_en": "Steamed Scallops with Garlic & Vermicelli",
+      "aliases": [
+        "蒜蓉粉丝扇贝",
+        "蒜蓉扇贝",
+        "scallop garlic vermicelli"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 92,
+      "image": "assets/images/cant-suanrong-fensi-shanbei.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "粤菜",
+        "蒸",
+        "宴客",
+        "海鲜"
+      ],
+      "steps": [
+        "龙口粉丝泡软铺在扇贝上。",
+        "蒜末爆香淋在扇贝上,加少许生抽。",
+        "大火蒸约6-8分钟,撒葱花淋热油即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "扇贝柱",
+          "qty": "6粒",
+          "code": "990488000909",
+          "required": true
+        },
+        {
+          "label": "龙口粉丝",
+          "qty": "1小把",
+          "code": "6928527900105",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "4瓣",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1勺",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "cant-haoyou-shengcai",
+      "name_cn": "蚝油生菜",
+      "name_en": "Lettuce in Oyster Sauce",
+      "aliases": [
+        "蚝油生菜",
+        "生菜",
+        "oyster lettuce"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 88,
+      "image": "assets/images/cant-haoyou-shengcai.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "粤菜",
+        "清爽",
+        "快手",
+        "素菜"
+      ],
+      "steps": [
+        "生菜洗净,整片焯水至断生,捞出摆盘。",
+        "蒜末爆香,加蚝油和少许水勾薄芡。",
+        "淋在生菜上即可,清甜爽口。"
+      ],
+      "ingredients": [
+        {
+          "label": "生菜",
+          "qty": "1棵",
+          "code": "4061scsc",
+          "required": true
+        },
+        {
+          "label": "蚝油",
+          "qty": "1勺",
+          "code": "6922824007468",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "cant-haoyou-jielan",
+      "name_cn": "蚝油芥兰",
+      "name_en": "Gai Lan in Oyster Sauce",
+      "aliases": [
+        "蚝油芥兰",
+        "白灼芥兰",
+        "芥兰",
+        "gai lan"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 87,
+      "image": "assets/images/cant-haoyou-jielan.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "粤菜",
+        "清爽",
+        "素菜"
+      ],
+      "steps": [
+        "芥兰去老叶,焯水至翠绿,摆盘。",
+        "蒜末爆香加蚝油勾薄芡。",
+        "淋在芥兰上,保持脆嫩。"
+      ],
+      "ingredients": [
+        {
+          "label": "芥兰",
+          "qty": "1把",
+          "code": "1006jljl",
+          "required": true
+        },
+        {
+          "label": "蚝油",
+          "qty": "1勺",
+          "code": "6922824007468",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "cant-huadan-xiaren",
+      "name_cn": "滑蛋虾仁",
+      "name_en": "Shrimp with Silky Scrambled Egg",
+      "aliases": [
+        "滑蛋虾仁",
+        "虾仁炒蛋",
+        "shrimp egg"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 91,
+      "image": "assets/images/cant-huadan-xiaren.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "粤菜",
+        "嫩滑",
+        "下饭"
+      ],
+      "steps": [
+        "大虾去壳成虾仁,鸡蛋打散加少许盐。",
+        "虾仁滑炒变色盛出。",
+        "蛋液下锅半凝时加回虾仁,轻推成滑蛋即起。"
+      ],
+      "ingredients": [
+        {
+          "label": "大虾(取虾仁)",
+          "qty": "8只",
+          "code": "209145dxdx827510004140",
+          "required": true
+        },
+        {
+          "label": "鸡蛋",
+          "qty": "3个",
+          "code": "2008",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "cant-huadan-niurou",
+      "name_cn": "滑蛋牛肉",
+      "name_en": "Beef with Silky Egg",
+      "aliases": [
+        "滑蛋牛肉",
+        "滑蛋牛",
+        "beef egg"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 89,
+      "image": "assets/images/cant-huadan-niurou.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "粤菜",
+        "嫩滑",
+        "下饭"
+      ],
+      "steps": [
+        "牛肉卷用生抽、淀粉抓匀,滑炒至变色盛出。",
+        "蛋液下锅半凝,加回牛肉轻推成滑蛋。",
+        "撒葱花出锅。"
+      ],
+      "ingredients": [
+        {
+          "label": "牛肉卷",
+          "qty": "200g",
+          "code": "6292644004009",
+          "required": true
+        },
+        {
+          "label": "鸡蛋",
+          "qty": "3个",
+          "code": "2008",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1勺",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "cant-lawei-baozaifan",
+      "name_cn": "腊味煲仔饭",
+      "name_en": "Claypot Rice with Cured Meats",
+      "aliases": [
+        "腊味煲仔饭",
+        "煲仔饭",
+        "腊肠煲仔饭",
+        "claypot rice"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 93,
+      "image": "assets/images/cant-lawei-baozaifan.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "粤菜",
+        "煲仔饭",
+        "经典",
+        "下饭"
+      ],
+      "steps": [
+        "香米洗净放砂锅,加水煮至收水。",
+        "铺上腊肉腊肠片,小火焖10分钟。",
+        "淋豉油、放焯过的菜心,焖出锅巴即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "香米",
+          "qty": "2杯",
+          "code": "628774325817",
+          "required": true
+        },
+        {
+          "label": "腊肉",
+          "qty": "半条",
+          "code": "060629070167",
+          "required": true
+        },
+        {
+          "label": "腊肠",
+          "qty": "1根",
+          "code": "060629010132",
+          "required": true
+        },
+        {
+          "label": "菜心",
+          "qty": "几棵",
+          "code": "Ocycs",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "2勺",
+          "code": "078895128789",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "cant-mizhi-chashao",
+      "name_cn": "蜜汁叉烧",
+      "name_en": "Honey Char Siu (BBQ Pork)",
+      "aliases": [
+        "蜜汁叉烧",
+        "叉烧",
+        "char siu",
+        "chashao"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 90,
+      "image": "assets/images/cant-mizhi-chashao.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "粤菜",
+        "烧腊",
+        "下饭",
+        "经典"
+      ],
+      "steps": [
+        "梅头猪肉切长条,用叉烧酱腌2小时以上。",
+        "烤箱200度烤约25分钟,中途翻面。",
+        "刷蜂蜜再烤5分钟上色,切片即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "梅头猪肉卷",
+          "qty": "500g",
+          "code": "700953767868",
+          "required": true
+        },
+        {
+          "label": "叉烧酱",
+          "qty": "3勺",
+          "code": "229283147497",
+          "required": true
+        },
+        {
+          "label": "蜂蜜",
+          "qty": "2勺",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "cant-tangcu-paigu",
+      "name_cn": "糖醋排骨",
+      "name_en": "Sweet & Sour Pork Ribs",
+      "aliases": [
+        "糖醋排骨",
+        "tangcu paigu",
+        "sweet sour ribs"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 86,
+      "image": "assets/images/cant-tangcu-paigu.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "粤菜",
+        "下饭",
+        "酸甜",
+        "宴客"
+      ],
+      "steps": [
+        "排骨斩块焯水。",
+        "用糖醋排骨料(或生抽老抽糖醋)烧入味。",
+        "收汁亮油,撒白芝麻即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "排骨",
+          "qty": "500g",
+          "code": "420011",
+          "required": true
+        },
+        {
+          "label": "糖醋排骨料",
+          "qty": "1包",
+          "code": "6920358910612",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1勺",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "老抽",
+          "qty": "半勺",
+          "code": "722337817020",
+          "required": false
+        }
+      ]
     }
   ]
 }

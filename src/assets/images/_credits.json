@@ -250,5 +250,41 @@
   "zhajianmian": {
     "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Zhajiangmian",
     "via": "en:Zhajiangmian"
+  },
+  "cant-douchi-paigu": {
+    "source": "https://commons.wikimedia.org/wiki/File:Food_%E8%B1%89%E6%B1%81%E8%92%B8%E6%8E%92%E9%AA%A8,_%E6%96%B0%E8%91%A1%E8%8B%91,_Shin_Pu_Yuan,_%E5%8F%B0%E5%8C%97_(21531923392).jpg",
+    "via": "commons:豉汁排骨"
+  },
+  "cant-suanrong-fensi-shanbei": {
+    "source": "https://commons.wikimedia.org/wiki/File:Minced_garlic_glass_noodle_scallops.jpg",
+    "via": "commons:扇貝 蒜蓉"
+  },
+  "cant-haoyou-shengcai": {
+    "source": "https://commons.wikimedia.org/wiki/File:12%E6%9C%8811%E6%97%A5.jpg",
+    "via": "commons:蠔油生菜"
+  },
+  "cant-haoyou-jielan": {
+    "source": "https://commons.wikimedia.org/wiki/File:Food_%E8%A0%94%E6%B2%B9%E8%8A%A5%E8%98%AD%E8%8F%9C,_%E7%BE%8A%E6%88%90%E5%B0%8F%E9%A4%A8,_%E7%BE%8A%E5%9F%8E%E5%B0%8F%E9%A4%A8,_%E5%8F%B0%E5%8C%97_(17997079906).jpg",
+    "via": "commons:蠔油芥蘭"
+  },
+  "cant-huadan-niurou": {
+    "source": "https://commons.wikimedia.org/wiki/File:%E5%A4%A9%E4%BD%BF%E6%BB%91%E8%9B%8B%E7%89%9B%E8%82%89%E5%92%96%E5%93%A9%E9%A3%AF,_Izumi_Curry,_%E5%8F%B0%E5%8C%97_(23001204696).jpg",
+    "via": "commons:滑蛋牛肉"
+  },
+  "cant-lawei-baozaifan": {
+    "source": "https://commons.wikimedia.org/wiki/File:%E7%85%B2%E4%BB%94%E9%A3%AF.jpg",
+    "via": "commons:煲仔飯"
+  },
+  "cant-mizhi-chashao": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Char%20siu",
+    "via": "en:Char siu"
+  },
+  "cant-tangcu-paigu": {
+    "source": "https://commons.wikimedia.org/wiki/File:%E7%B3%96%E9%86%8B%E6%8E%92%E9%AA%A8.JPG",
+    "via": "commons:糖醋排骨"
+  },
+  "cant-huadan-xiaren": {
+    "source": "https://commons.wikimedia.org/wiki/File:Baby_shrimp_with_scrambled_egg.jpg",
+    "via": "commons:shrimp scrambled egg"
   }
 }
