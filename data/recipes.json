@@ -2035,8 +2035,8 @@
       "section": "veg",
       "kind": "dish",
       "priority": 72,
-      "image": "",
-      "image_credit": "none",
+      "image": "assets/images/veg-tonghao-garlic.jpg",
+      "image_credit": "self",
       "tags": [
         "素菜",
         "清香",

@@ -136,8 +136,8 @@
     "via": "commons:油麥菜"
   },
   "veg-tonghao-garlic": {
-    "source": "https://zh.wikipedia.org/api/rest_v1/page/summary/%E8%8C%BC%E8%92%BF",
-    "via": "zh:茼蒿"
+    "source": "owner photo",
+    "via": "self"
   },
   "veg-wawacai-soup": {
     "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Napa_cabbage",
