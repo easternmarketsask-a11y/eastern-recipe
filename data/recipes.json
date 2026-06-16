@@ -268,8 +268,8 @@
       "section": "tonight",
       "kind": "dish",
       "priority": 91,
-      "image": "assets/images/soy-braised-beef-shank.jpg",
-      "image_credit": "cc",
+      "image": "",
+      "image_credit": "none",
       "tags": [
         "牛肉",
         "卤味",
