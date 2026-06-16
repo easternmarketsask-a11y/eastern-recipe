@@ -1,0 +1,110 @@
+{
+  "hotpot": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Hot_pot",
+    "via": "en:Hot pot"
+  },
+  "red-braised-pork": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Red_braised_pork_belly",
+    "via": "en:Red braised pork belly"
+  },
+  "braised-beef-brisket": {
+    "source": "https://commons.wikimedia.org/wiki/File:%E3%80%90%E8%BC%95%E9%AC%86%E7%85%AE%E5%B9%BE%E5%91%B3%E3%80%91%E6%9F%B1%E4%BE%AF%E7%BE%8A%E8%85%A9%E7%82%86%E6%9E%9D%E7%AB%B9_2019.webm",
+    "via": "commons:柱侯牛腩"
+  },
+  "soy-braised-beef-shank": {
+    "source": "https://commons.wikimedia.org/wiki/File:Irish_Spiced_Beef.jpg",
+    "via": "commons:醬牛肉"
+  },
+  "white-cut-chicken": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/White_cut_chicken",
+    "via": "en:White cut chicken"
+  },
+  "twice-cooked-pork": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Twice-cooked_pork",
+    "via": "en:Twice-cooked pork"
+  },
+  "cumin-lamb": {
+    "source": "https://commons.wikimedia.org/wiki/File:%E5%AD%9C%E7%84%B6%E7%BE%8A%E8%82%89.jpg",
+    "via": "commons:孜然羊肉"
+  },
+  "tomato-beef-brisket": {
+    "source": "https://commons.wikimedia.org/wiki/File:ROC2022-02-23%E7%B8%BD%E7%B5%B1%E5%BA%9C%E5%85%AC%E5%A0%B17590.pdf",
+    "via": "commons:番茄牛腩"
+  },
+  "beef-chow-fun": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Beef_chow_fun",
+    "via": "en:Beef chow fun"
+  },
+  "soy-sauce-cheung-fun": {
+    "source": "https://commons.wikimedia.org/wiki/File:HK_Arena_Sunday_AsiaWorld_Expo_Food_Soy_Sauce_Fried_Noodles_%E8%B1%89%E6%B2%B9%E7%9A%87%E7%82%92%E9%BA%B5.JPG",
+    "via": "commons:豉油皇炒麵"
+  },
+  "beef-brisket-noodle-soup": {
+    "source": "https://zh.wikipedia.org/api/rest_v1/page/summary/%E7%89%9B%E8%85%A9%E9%BA%B5",
+    "via": "zh:牛腩麵"
+  },
+  "cheung-fun-ready": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Rice_noodle_roll",
+    "via": "en:Rice noodle roll"
+  },
+  "youtiao-ready": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Youtiao",
+    "via": "en:Youtiao"
+  },
+  "nai-huang-bao-ready": {
+    "source": "https://commons.wikimedia.org/wiki/File:SZ_Shenzhen_Futian_%E4%B8%8A%E6%B2%99%E6%A4%B0%E6%A8%B9%E8%B7%AF_Shangsha_Yeshu_Road_food_shopp_take-away_%E5%A5%B6%E9%BB%84%E5%8C%85_Steamed_bread_with_milk_and_egg_buns_April_2017_IX1.jpg",
+    "via": "commons:奶黄包"
+  },
+  "shouzhuabing-ready": {
+    "source": "https://commons.wikimedia.org/wiki/File:%E5%8F%A2%E6%9B%B8%E9%9B%86%E6%88%90%E7%BA%8C%E7%B7%A8%EF%BC%88%E6%BB%AC%EF%BC%89039.djvu",
+    "via": "commons:手抓饼"
+  },
+  "huajuan-ready": {
+    "source": "https://commons.wikimedia.org/wiki/File:Mandarinrolls.jpg",
+    "via": "commons:花卷"
+  },
+  "hei-jin-liusha-bao-ready": {
+    "source": "https://zh.wikipedia.org/api/rest_v1/page/summary/%E6%B5%81%E6%B2%99%E5%8C%85",
+    "via": "zh:流沙包"
+  },
+  "cha-shao-bao-ready": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Cha_siu_bao",
+    "via": "en:Cha siu bao"
+  },
+  "xian-rou-dabao-ready": {
+    "source": "https://commons.wikimedia.org/wiki/File:%E9%AE%AE%E8%82%89%E5%8C%85.jpg",
+    "via": "commons:鮮肉包"
+  },
+  "mapo-tofu": {
+    "source": "https://commons.wikimedia.org/wiki/File:Billyfoodmabodofu3.jpg",
+    "via": "commons:麻婆豆腐"
+  },
+  "tomato-egg": {
+    "source": "https://commons.wikimedia.org/wiki/File:Stir_Fried_Tomatoes_with_Scrambled_Eggs.jpg",
+    "via": "commons:番茄炒蛋"
+  },
+  "pork-green-pepper": {
+    "source": "https://commons.wikimedia.org/wiki/File:Green_pepper_steak_(%E9%9D%92%E6%A4%92%E8%82%89%E7%B5%B2)_(26880875325).jpg",
+    "via": "commons:青椒肉絲"
+  },
+  "blanched-choy-sum": {
+    "source": "https://commons.wikimedia.org/wiki/File:Napa_Cabbage_(Won_Bok,_Chinese_Cabbage,_Celery_Cabbage)_Bacterial_soft_rot_(35468272752).jpg",
+    "via": "commons:菜心 料理"
+  },
+  "seaweed-egg-soup": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Egg_drop_soup",
+    "via": "en:Egg drop soup"
+  },
+  "xiaolongbao-ready": {
+    "source": "https://commons.wikimedia.org/wiki/File:Xiao_Long_Bao_by_Junhao!.jpg",
+    "via": "commons:小籠包"
+  },
+  "shumai-ready": {
+    "source": "https://commons.wikimedia.org/wiki/File:Homemade_style_pork_shumai_in_Hong_Kong.jpg",
+    "via": "commons:燒賣"
+  },
+  "purple-rice-floss-bun": {
+    "source": "https://commons.wikimedia.org/wiki/File:HK_CWB_Yee_Wo_Street_%E5%A4%A7%E7%8F%AD%E9%BA%B5%E5%8C%85%E8%A5%BF%E9%A4%85_TaiPan_bakery_breads_%E8%82%89%E9%AC%86%E5%8C%85_Sept-2013.JPG",
+    "via": "commons:肉鬆麵包"
+  }
+}

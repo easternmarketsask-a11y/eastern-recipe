@@ -27,9 +27,12 @@
 
   // ---- 菜卡 ----
   function recipeCard(r) {
-    return '<button class="card" data-id="' + esc(r.id) + '">' +
-      '<span class="card__name">' + esc(r.name_cn) + '</span>' +
-      '<span class="card__tags">' + esc((r.tags || []).join(' · ')) + '</span></button>';
+    var img = r.image ? '<img class="card__img" src="' + esc(r.image) + '" alt="" loading="lazy">' : '';
+    return '<button class="card" data-id="' + esc(r.id) + '">' + img +
+      '<span class="card__body">' +
+        '<span class="card__name">' + esc(r.name_cn) + '</span>' +
+        '<span class="card__tags">' + esc((r.tags || []).join(' · ')) + '</span>' +
+      '</span></button>';
   }
   function wireCards(container) {
     Array.prototype.forEach.call(container.querySelectorAll('.card'), function (btn) {
@@ -69,8 +72,10 @@
       bodyHtml = '<ul class="ings">' + a.rows.map(ingredientRow).join('') + '</ul>';
     }
     var stepsTitle = recipe.kind === 'ready' ? '怎么吃' : '做法';
+    var hero = recipe.image ? '<img class="detail__img" src="' + esc(recipe.image) + '" alt="">' : '';
     d.innerHTML =
       '<button class="back" id="back">← 返回</button>' +
+      hero +
       '<h2 class="detail__title">' + esc(recipe.name_cn) +
         ' <small>' + esc(recipe.name_en || '') + '</small></h2>' +
       bodyHtml +
