@@ -4,7 +4,7 @@
   'use strict';
   var RL = window.RecipeLogic;
   var FAVE_KEY = 'er_recipe_faves_v1';
-  var state = { recipes: [], productIndex: {}, byId: {}, reshuffle: 0 };
+  var state = { recipes: [], productIndex: {}, byId: {} };
 
   function $(id) { return document.getElementById(id); }
   function esc(s) {
@@ -28,9 +28,10 @@
   // ---- 菜卡 ----
   function recipeCard(r) {
     var img = r.image ? '<img class="card__img" src="' + esc(r.image) + '" alt="" loading="lazy">' : '';
+    var en = r.name_en ? '<span class="card__en">' + esc(r.name_en) + '</span>' : '';
     return '<button class="card" data-id="' + esc(r.id) + '">' + img +
       '<span class="card__body">' +
-        '<span class="card__name">' + esc(r.name_cn) + '</span>' +
+        '<span class="card__name">' + esc(r.name_cn) + '</span>' + en +
         '<span class="card__tags">' + esc((r.tags || []).join(' · ')) + '</span>' +
       '</span></button>';
   }
@@ -82,7 +83,7 @@
       }).join('') + '</ol>';
     $('back').onclick = function () {
       if (cameFrom === 'results') { show('results'); }      // 从搜索来 → 回到搜索结果，保留查询
-      else { $('q').value = ''; renderHome(); show('home'); } // 从首页来 → 回首页并清空搜索框
+      else { $('q').value = ''; show('home'); renderHome(); } // 从首页来 → 回首页并清空搜索框
     };
     $('fave').onclick = function () { toggleFave(recipe.id); renderDetail(recipe); };
     show('detail');
@@ -127,7 +128,7 @@
       '<button class="back" id="secback">← 返回首页</button>' +
       '<h2 class="block__title">' + esc(SEC_TITLE[sec] || '') + '（' + list.length + '）</h2>' +
       '<div class="cards">' + list.map(recipeCard).join('') + '</div>';
-    $('secback').onclick = function () { renderHome(); show('home'); window.scrollTo(0, 0); };
+    $('secback').onclick = function () { show('home'); renderHome(); window.scrollTo(0, 0); };
     wireCards(el);
     show('results');
     window.scrollTo(0, 0);
@@ -135,7 +136,7 @@
 
   function onSearch() {
     var q = $('q').value;
-    if (!q || !q.trim()) { renderHome(); show('home'); return; }
+    if (!q || !q.trim()) { show('home'); renderHome(); return; }
     renderResults(q);
   }
 
@@ -160,22 +161,31 @@
     });
     return arr.slice(0, max);
   }
+  // 无限循环横滑：把一份卡片复制成三份，滚动到边界时无缝跳回中间份
+  function setupLoop(el) {
+    if (el._onScroll) { el.removeEventListener('scroll', el._onScroll); el._onScroll = null; }
+    if (el.scrollWidth <= el.clientWidth + 16) return; // 不溢出就不循环
+    var one = el.innerHTML;
+    el.innerHTML = one + one + one;
+    wireCards(el);                 // 克隆卡片靠 data-id 共用点击
+    var setW = el.scrollWidth / 3;
+    el.scrollLeft = setW;          // 起点落在中间那份
+    el._onScroll = function () {
+      if (el.scrollLeft < setW * 0.5) el.scrollLeft += setW;
+      else if (el.scrollLeft > setW * 1.5) el.scrollLeft -= setW;
+    };
+    el.addEventListener('scroll', el._onScroll, { passive: true });
+  }
   function fillCards(id, list) {
-    $(id).innerHTML = list.map(recipeCard).join('');
-    wireCards($(id));
+    var el = $(id);
+    el.innerHTML = list.map(recipeCard).join('');
+    wireCards(el);
+    setupLoop(el);
   }
 
   function renderHome() {
-    // 🔥 今晚吃什么：tonight 按热卖度排序，显示一个 4 道的窗口，「换一批」往后翻
-    var tonight = bySection('tonight');
-    if (tonight.length) {
-      var n = 4, start = (state.reshuffle * n) % tonight.length;
-      var win = [];
-      for (var i = 0; i < Math.min(n, tonight.length); i++) win.push(tonight[(start + i) % tonight.length]);
-      fillCards('picks', win);
-    } else {
-      fillCards('picks', RL.todaysPicks(state.recipes, todayStr(), 4)); // 兜底
-    }
+    // 🔥 今晚吃什么：tonight 全部上，按热卖度排序
+    fillCards('picks', bySection('tonight'));
 
     // 🐟 海鲜 / 🍚 主食 / 🥟 饺子馄饨
     var seafood = bySection('seafood');
@@ -226,12 +236,11 @@
       state.productIndex = RL.buildProductIndex((out[1].items) || []);
       state.recipes.forEach(function (r) { state.byId[r.id] = r; });
       $('q').addEventListener('input', onSearch);
-      $('reshuffle').onclick = function () { state.reshuffle += 1; renderHome(); };
       Array.prototype.forEach.call(document.querySelectorAll('.seeall'), function (btn) {
         btn.onclick = function () { showSection(btn.dataset.sec); };
       });
+      show('home');     // 先显示(可见)再渲染，循环行才能量到宽度
       renderHome();
-      show('home');
     }).catch(function () {
       $('home').innerHTML = '<p class="empty">数据加载失败，请检查网络后<button class="link-btn" type="button" onclick="location.reload()">重试</button></p>';
     });
