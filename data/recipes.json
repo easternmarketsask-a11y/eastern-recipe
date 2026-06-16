@@ -3713,7 +3713,7 @@
       "kind": "dish",
       "priority": 80,
       "image": "assets/images/zhajianmian.jpg",
-      "image_credit": "cc",
+      "image_credit": "",
       "tags": [
         "面条",
         "猪肉",
