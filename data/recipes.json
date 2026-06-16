@@ -42,7 +42,12 @@
           "label": "牛肉卷",
           "qty": "2lb（1袋）",
           "code": "6292644004009",
-          "required": true
+          "required": true,
+          "alt": [
+            "肥牛",
+            "肥牛卷",
+            "涮牛肉"
+          ]
         },
         {
           "label": "牛油火锅底料",
@@ -54,7 +59,11 @@
           "label": "龙口粉丝",
           "qty": "100g",
           "code": "6928527900105",
-          "required": false
+          "required": false,
+          "alt": [
+            "冬粉",
+            "细粉"
+          ]
         },
         {
           "label": "金针菇",
@@ -66,25 +75,44 @@
           "label": "大白菜",
           "qty": "半棵（约500g）",
           "code": "Sc1003dbc",
-          "required": false
+          "required": false,
+          "alt": [
+            "黄芽白",
+            "绍菜"
+          ]
         },
         {
           "label": "鱼豆腐",
           "qty": "1包",
           "code": "841624002496",
-          "required": false
+          "required": false,
+          "alt": [
+            "水豆腐",
+            "嫩豆腐",
+            "老豆腐"
+          ]
         },
         {
           "label": "传统豆腐",
           "qty": "1块",
           "code": "777433001200",
-          "required": false
+          "required": false,
+          "alt": [
+            "水豆腐",
+            "嫩豆腐",
+            "老豆腐"
+          ]
         },
         {
           "label": "小葱",
           "qty": "3根（切葱花）",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         }
       ],
       "nutrition": "荤素齐全·暖身满足"
@@ -125,7 +153,12 @@
           "label": "五花肉（带皮）",
           "qty": "约800g",
           "code": "0221",
-          "required": true
+          "required": true,
+          "alt": [
+            "三层肉",
+            "腩肉",
+            "猪腩肉"
+          ]
         },
         {
           "label": "老抽",
@@ -155,13 +188,22 @@
           "label": "姜",
           "qty": "4片",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "食用油",
@@ -208,7 +250,11 @@
           "label": "牛腩 / 牛肋条",
           "qty": "约1kg",
           "code": "00501nkn",
-          "required": true
+          "required": true,
+          "alt": [
+            "安格斯牛腩",
+            "坑腩"
+          ]
         },
         {
           "label": "老抽",
@@ -232,13 +278,22 @@
           "label": "姜",
           "qty": "4片",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "八角",
@@ -319,13 +374,22 @@
           "label": "姜",
           "qty": "5片",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "3根（切段）",
           "code": "HFCXCXC",
-          "required": true
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "八角",
@@ -382,19 +446,32 @@
           "label": "三黄鸡",
           "qty": "1只（约1.5kg）",
           "code": "4889shj",
-          "required": true
+          "required": true,
+          "alt": [
+            "光鸡",
+            "土鸡"
+          ]
         },
         {
           "label": "姜",
           "qty": "5片",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "3根",
           "code": "HFCXCXC",
-          "required": true
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "盐",
@@ -444,7 +521,12 @@
           "label": "五花肉（带皮）",
           "qty": "约500g",
           "code": "0221",
-          "required": true
+          "required": true,
+          "alt": [
+            "三层肉",
+            "腩肉",
+            "猪腩肉"
+          ]
         },
         {
           "label": "郫县豆瓣酱",
@@ -456,7 +538,11 @@
           "label": "蒜苗",
           "qty": "3-4根",
           "code": "1063qsm",
-          "required": true
+          "required": true,
+          "alt": [
+            "青蒜",
+            "蒜青"
+          ]
         },
         {
           "label": "生抽",
@@ -474,7 +560,11 @@
           "label": "姜",
           "qty": "2片（煮肉用）",
           "code": "1037",
-          "required": false
+          "required": false,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "食用油",
@@ -536,7 +626,12 @@
           "label": "蒜",
           "qty": "5瓣（切片）",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "干辣椒",
@@ -557,7 +652,7 @@
           "required": false
         },
         {
-          "label": "土豆淀粉（腌肉用）",
+          "label": "淀粉（腌肉用）",
           "qty": "1茶匙",
           "code": "6941837101024",
           "required": false
@@ -613,25 +708,42 @@
           "label": "牛腩 / 牛肋条",
           "qty": "约800g",
           "code": "00501nkn",
-          "required": true
+          "required": true,
+          "alt": [
+            "安格斯牛腩",
+            "坑腩"
+          ]
         },
         {
           "label": "番茄",
           "qty": "3个（约450g）",
           "code": "1032xhs",
-          "required": true
+          "required": true,
+          "alt": [
+            "西红柿",
+            "洋柿子"
+          ]
         },
         {
           "label": "姜",
           "qty": "3片",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "盐",
@@ -686,25 +798,46 @@
           "label": "鲜河粉",
           "qty": "908g（1袋）",
           "code": "058398101014",
-          "required": true
+          "required": true,
+          "alt": [
+            "沙河粉",
+            "粿条",
+            "贵刁",
+            "粄条"
+          ]
         },
         {
           "label": "牛肉卷",
           "qty": "约300g",
           "code": "6292644004009",
-          "required": true
+          "required": true,
+          "alt": [
+            "肥牛",
+            "肥牛卷",
+            "涮牛肉"
+          ]
         },
         {
           "label": "豆芽菜",
           "qty": "100g",
           "code": "1024",
-          "required": true
+          "required": true,
+          "alt": [
+            "银芽",
+            "黄豆芽",
+            "绿豆芽"
+          ]
         },
         {
           "label": "小葱",
           "qty": "3根（切段）",
           "code": "HFCXCXC",
-          "required": true
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -731,7 +864,7 @@
           "required": false
         },
         {
-          "label": "土豆淀粉（腌肉用）",
+          "label": "淀粉（腌肉用）",
           "qty": "1茶匙",
           "code": "6941837101024",
           "required": false
@@ -785,31 +918,56 @@
           "label": "鲜河粉",
           "qty": "908g（1包）",
           "code": "058398101014",
-          "required": true
+          "required": true,
+          "alt": [
+            "沙河粉",
+            "粿条",
+            "贵刁",
+            "粄条"
+          ]
         },
         {
           "label": "牛肉卷",
           "qty": "约300g",
           "code": "6292644004009",
-          "required": true
+          "required": true,
+          "alt": [
+            "肥牛",
+            "肥牛卷",
+            "涮牛肉"
+          ]
         },
         {
           "label": "芥兰",
           "qty": "约200g",
           "code": "1006jljl",
-          "required": true
+          "required": true,
+          "alt": [
+            "芥蓝",
+            "盖兰菜"
+          ]
         },
         {
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "小葱",
           "qty": "2根（切段）",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -830,7 +988,7 @@
           "required": true
         },
         {
-          "label": "土豆淀粉（腌肉+勾芡）",
+          "label": "淀粉（腌肉+勾芡）",
           "qty": "适量",
           "code": "6941837101024",
           "required": true
@@ -890,7 +1048,12 @@
           "label": "鲜肠粉",
           "qty": "567g（1袋）",
           "code": "058398101083",
-          "required": true
+          "required": true,
+          "alt": [
+            "猪肠粉",
+            "拉肠",
+            "布拉肠"
+          ]
         },
         {
           "label": "李锦记海皇XO酱",
@@ -914,13 +1077,23 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "豆芽菜（可选）",
           "qty": "50g",
           "code": "1024",
-          "required": false
+          "required": false,
+          "alt": [
+            "银芽",
+            "黄豆芽",
+            "绿豆芽"
+          ]
         },
         {
           "label": "冰糖/白糖",
@@ -976,25 +1149,44 @@
           "label": "鲜河粉",
           "qty": "908g（1袋）",
           "code": "058398101014",
-          "required": true
+          "required": true,
+          "alt": [
+            "沙河粉",
+            "粿条",
+            "贵刁",
+            "粄条"
+          ]
         },
         {
           "label": "牛腩 / 牛肋条",
           "qty": "约500g",
           "code": "00501nkn",
-          "required": true
+          "required": true,
+          "alt": [
+            "安格斯牛腩",
+            "坑腩"
+          ]
         },
         {
           "label": "姜",
           "qty": "3片",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
-          "required": true
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "盐",
@@ -1042,7 +1234,12 @@
           "label": "鲜肠粉",
           "qty": "1袋（567g）",
           "code": "058398101083",
-          "required": true
+          "required": true,
+          "alt": [
+            "猪肠粉",
+            "拉肠",
+            "布拉肠"
+          ]
         }
       ],
       "nutrition": "低脂米制·好消化"
@@ -1261,7 +1458,11 @@
           "label": "叉烧包",
           "qty": "1袋（510g）",
           "code": "800794211367",
-          "required": true
+          "required": true,
+          "alt": [
+            "叉燒",
+            "蜜汁叉烧"
+          ]
         }
       ],
       "nutrition": "咸甜适口·经典点心"
@@ -1337,7 +1538,11 @@
           "label": "嫩豆腐",
           "qty": "1块（约300g）",
           "code": "057864000035",
-          "required": true
+          "required": true,
+          "alt": [
+            "水豆腐",
+            "老豆腐"
+          ]
         },
         {
           "label": "猪肉末",
@@ -1355,13 +1560,22 @@
           "label": "姜",
           "qty": "1小块（约10g）",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "蒜",
           "qty": "3瓣",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "花椒粉",
@@ -1376,7 +1590,7 @@
           "required": false
         },
         {
-          "label": "土豆淀粉（勾芡用）",
+          "label": "淀粉（勾芡用）",
           "qty": "1汤匙+清水2汤匙",
           "code": "6941837101024",
           "required": true
@@ -1441,25 +1655,42 @@
           "label": "番茄",
           "qty": "3个（约450g）",
           "code": "1032xhs",
-          "required": true
+          "required": true,
+          "alt": [
+            "西红柿",
+            "洋柿子"
+          ]
         },
         {
           "label": "鸡蛋",
           "qty": "3个",
           "code": "2008",
-          "required": true
+          "required": true,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
         },
         {
           "label": "葱",
           "qty": "1根",
           "code": "10636jcjc",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "番茄酱（可选，提色）",
           "qty": "1茶匙",
           "code": "057000013165",
-          "required": false
+          "required": false,
+          "alt": [
+            "西红柿",
+            "洋柿子"
+          ]
         },
         {
           "label": "食用油",
@@ -1521,19 +1752,33 @@
           "label": "青椒",
           "qty": "3个（约200g）",
           "code": null,
-          "required": true
+          "required": true,
+          "alt": [
+            "灯笼椒",
+            "柿子椒",
+            "菜椒"
+          ]
         },
         {
           "label": "姜",
           "qty": "1小块",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "蒜",
           "qty": "3瓣",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -1548,7 +1793,7 @@
           "required": true
         },
         {
-          "label": "土豆淀粉（腌肉用）",
+          "label": "淀粉（腌肉用）",
           "qty": "1茶匙",
           "code": "6941837101024",
           "required": true
@@ -1602,7 +1847,12 @@
           "label": "菜心（油菜心）",
           "qty": "400g（约1把）",
           "code": "Ocycs",
-          "required": true
+          "required": true,
+          "alt": [
+            "菜薹",
+            "广东菜心",
+            "心菜"
+          ]
         },
         {
           "label": "生抽",
@@ -1620,13 +1870,22 @@
           "label": "葱",
           "qty": "1根（切丝）",
           "code": "10636jcjc",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "姜",
           "qty": "2片（切丝）",
           "code": "1037",
-          "required": false
+          "required": false,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "食用油",
@@ -1689,13 +1948,22 @@
           "label": "鸡蛋",
           "qty": "2个",
           "code": "2008",
-          "required": true
+          "required": true,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
         },
         {
           "label": "葱",
           "qty": "1根",
           "code": "10636jcjc",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -1869,7 +2137,12 @@
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "盐",
@@ -1915,13 +2188,23 @@
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -1962,13 +2245,21 @@
           "label": "韭菜",
           "qty": "1把",
           "code": "1015",
-          "required": true
+          "required": true,
+          "alt": [
+            "扁菜",
+            "起阳草"
+          ]
         },
         {
           "label": "鸡蛋",
           "qty": "3个",
           "code": "2008",
-          "required": true
+          "required": true,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
         },
         {
           "label": "盐",
@@ -2015,7 +2306,12 @@
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -2067,13 +2363,22 @@
           "label": "蒜苔",
           "qty": "1把",
           "code": "10631",
-          "required": true
+          "required": true,
+          "alt": [
+            "蒜薹",
+            "蒜毫"
+          ]
         },
         {
           "label": "五花肉",
           "qty": "200g",
           "code": "0221",
-          "required": true
+          "required": true,
+          "alt": [
+            "三层肉",
+            "腩肉",
+            "猪腩肉"
+          ]
         },
         {
           "label": "生抽",
@@ -2085,7 +2390,12 @@
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         }
       ],
       "nutrition": "蛋白+纤维·下饭"
@@ -2119,13 +2429,22 @@
           "label": "大白菜",
           "qty": "半棵",
           "code": "Sc1003dbc",
-          "required": true
+          "required": true,
+          "alt": [
+            "黄芽白",
+            "绍菜"
+          ]
         },
         {
           "label": "传统豆腐",
           "qty": "1块",
           "code": "777433001200",
-          "required": true
+          "required": true,
+          "alt": [
+            "水豆腐",
+            "嫩豆腐",
+            "老豆腐"
+          ]
         },
         {
           "label": "生抽",
@@ -2165,13 +2484,22 @@
           "label": "油麦菜",
           "qty": "1把",
           "code": "4028ymc",
-          "required": true
+          "required": true,
+          "alt": [
+            "莜麦菜",
+            "苦菜"
+          ]
         },
         {
           "label": "蒜",
           "qty": "3瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "蚝油",
@@ -2211,13 +2539,23 @@
           "label": "茼蒿",
           "qty": "1把",
           "code": "4039thth",
-          "required": true
+          "required": true,
+          "alt": [
+            "蒿子杆",
+            "皇帝菜",
+            "蓬蒿"
+          ]
         },
         {
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         }
       ],
       "nutrition": "清香开胃·膳食纤维"
@@ -2257,13 +2595,22 @@
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "鸡蛋",
           "qty": "1个",
           "code": "2008",
-          "required": false
+          "required": false,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
         }
       ],
       "nutrition": "清甜低卡·维生素"
@@ -2298,7 +2645,11 @@
           "label": "茄子",
           "qty": "2根",
           "code": "1017qgqg",
-          "required": true
+          "required": true,
+          "alt": [
+            "矮瓜",
+            "吊菜子"
+          ]
         },
         {
           "label": "郫县豆瓣酱",
@@ -2310,7 +2661,12 @@
           "label": "蒜",
           "qty": "3瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -2319,7 +2675,7 @@
           "required": false
         },
         {
-          "label": "土豆淀粉",
+          "label": "淀粉",
           "qty": "少许",
           "code": "6941837101024",
           "required": false
@@ -2356,19 +2712,31 @@
           "label": "冬瓜",
           "qty": "半个",
           "code": "1036dgdg",
-          "required": true
+          "required": true,
+          "alt": [
+            "白瓜"
+          ]
         },
         {
           "label": "排骨",
           "qty": "300g",
           "code": "420011",
-          "required": true
+          "required": true,
+          "alt": [
+            "肋排",
+            "子排",
+            "猪小排"
+          ]
         },
         {
           "label": "姜",
           "qty": "2片",
           "code": "1037",
-          "required": false
+          "required": false,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         }
       ],
       "nutrition": "清热利水·补钙"
@@ -2414,10 +2782,15 @@
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
-          "label": "土豆淀粉",
+          "label": "淀粉",
           "qty": "少许",
           "code": "6941837101024",
           "required": false
@@ -2461,7 +2834,12 @@
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         }
       ],
       "nutrition": "高钙高纤·清淡"
@@ -2510,13 +2888,22 @@
           "label": "姜",
           "qty": "3片",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
-          "required": true
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -2528,7 +2915,12 @@
           "label": "蒜",
           "qty": "3瓣（切末）",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "食用油",
@@ -2572,7 +2964,12 @@
           "label": "酒香鲈鱼",
           "qty": "1条",
           "code": "874718009897",
-          "required": true
+          "required": true,
+          "alt": [
+            "花鲈",
+            "七星鲈",
+            "海鲈"
+          ]
         },
         {
           "label": "蒸鱼豉油",
@@ -2584,13 +2981,22 @@
           "label": "姜",
           "qty": "4片",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "3根（切丝/段）",
           "code": "HFCXCXC",
-          "required": true
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -2658,16 +3064,25 @@
           "label": "蒜",
           "qty": "4瓣（切末）",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "鸡蛋",
           "qty": "1个（取蛋清）",
           "code": "2008",
-          "required": true
+          "required": true,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
         },
         {
-          "label": "土豆淀粉",
+          "label": "淀粉",
           "qty": "1汤匙",
           "code": "6941837101024",
           "required": true
@@ -2676,7 +3091,12 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "食用油",
@@ -2718,25 +3138,44 @@
           "label": "鱿鱼片",
           "qty": "1袋（约300g）",
           "code": "990488000312",
-          "required": true
+          "required": true,
+          "alt": [
+            "枪乌贼",
+            "柔鱼",
+            "鲜鱿"
+          ]
         },
         {
           "label": "青椒",
           "qty": "2个",
           "code": "10211mxgj",
-          "required": true
+          "required": true,
+          "alt": [
+            "灯笼椒",
+            "柿子椒",
+            "菜椒"
+          ]
         },
         {
           "label": "洋葱",
           "qty": "半个",
           "code": null,
-          "required": false
+          "required": false,
+          "alt": [
+            "圆葱",
+            "球葱"
+          ]
         },
         {
           "label": "蒜",
           "qty": "3瓣（切末）",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "蚝油",
@@ -2791,19 +3230,33 @@
           "label": "厄瓜多尔大虾",
           "qty": "1磅（约450g）",
           "code": "209145dxdx827510004140",
-          "required": true
+          "required": true,
+          "alt": [
+            "基围虾",
+            "明虾",
+            "海虾"
+          ]
         },
         {
           "label": "姜",
           "qty": "3片",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
-          "required": true
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -2844,7 +3297,12 @@
           "label": "虾滑",
           "qty": "1袋（约200g）",
           "code": "9780201265835",
-          "required": true
+          "required": true,
+          "alt": [
+            "基围虾",
+            "明虾",
+            "海虾"
+          ]
         }
       ],
       "nutrition": "高蛋白·火锅好搭"
@@ -2879,7 +3337,11 @@
           "label": "墨鱼丸",
           "qty": "1袋",
           "code": "827510006045",
-          "required": true
+          "required": true,
+          "alt": [
+            "鱼蛋",
+            "鱼圆"
+          ]
         }
       ],
       "nutrition": "Q弹·高蛋白"
@@ -2914,7 +3376,11 @@
           "label": "什锦鱼丸",
           "qty": "1袋",
           "code": "800794308074",
-          "required": true
+          "required": true,
+          "alt": [
+            "鱼蛋",
+            "鱼圆"
+          ]
         }
       ],
       "nutrition": "高蛋白·汤锅皆宜"
@@ -2951,13 +3417,23 @@
           "label": "鲜豆腐（中硬）",
           "qty": "1块（约450g）",
           "code": "777433001200",
-          "required": true
+          "required": true,
+          "alt": [
+            "水豆腐",
+            "嫩豆腐",
+            "老豆腐"
+          ]
         },
         {
           "label": "五花肉",
           "qty": "100g（切薄片）",
           "code": "0221",
-          "required": true
+          "required": true,
+          "alt": [
+            "三层肉",
+            "腩肉",
+            "猪腩肉"
+          ]
         },
         {
           "label": "郫县豆瓣酱",
@@ -2969,13 +3445,23 @@
           "label": "青椒",
           "qty": "2个",
           "code": "10211mxgj",
-          "required": false
+          "required": false,
+          "alt": [
+            "灯笼椒",
+            "柿子椒",
+            "菜椒"
+          ]
         },
         {
           "label": "蒜",
           "qty": "3瓣（切末）",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -2987,7 +3473,12 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "食用油",
@@ -3031,7 +3522,12 @@
           "label": "鲜豆腐（中硬）",
           "qty": "1块（约450g）",
           "code": "777433001200",
-          "required": true
+          "required": true,
+          "alt": [
+            "水豆腐",
+            "嫩豆腐",
+            "老豆腐"
+          ]
         },
         {
           "label": "郫县豆瓣酱",
@@ -3043,7 +3539,12 @@
           "label": "蒜",
           "qty": "4瓣（切末）",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -3052,7 +3553,7 @@
           "required": true
         },
         {
-          "label": "土豆淀粉",
+          "label": "淀粉",
           "qty": "1汤匙（水淀粉）",
           "code": "6941837101024",
           "required": true
@@ -3061,7 +3562,12 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "食用油",
@@ -3104,7 +3610,11 @@
           "label": "嫩豆腐",
           "qty": "1盒（约300g）",
           "code": "057864000059",
-          "required": true
+          "required": true,
+          "alt": [
+            "水豆腐",
+            "老豆腐"
+          ]
         },
         {
           "label": "皮蛋",
@@ -3122,7 +3632,12 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
-          "required": true
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "辣椒油",
@@ -3177,7 +3692,12 @@
           "label": "蒜",
           "qty": "2瓣（切片）",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -3226,7 +3746,12 @@
           "label": "干豆腐（豆腐皮）",
           "qty": "1袋（约250g）",
           "code": "859855001027",
-          "required": true
+          "required": true,
+          "alt": [
+            "水豆腐",
+            "嫩豆腐",
+            "老豆腐"
+          ]
         },
         {
           "label": "黄瓜",
@@ -3238,13 +3763,22 @@
           "label": "胡萝卜",
           "qty": "半根",
           "code": null,
-          "required": false
+          "required": false,
+          "alt": [
+            "白萝卜",
+            "莱菔"
+          ]
         },
         {
           "label": "蒜",
           "qty": "3瓣（切末）",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -3299,7 +3833,11 @@
           "label": "鸡蛋",
           "qty": "2个",
           "code": "2008",
-          "required": true
+          "required": true,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
         },
         {
           "label": "生抽",
@@ -3311,7 +3849,12 @@
           "label": "小葱",
           "qty": "1根（切葱花）",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "香油",
@@ -3353,19 +3896,33 @@
           "label": "腐竹段",
           "qty": "1袋（约150g干重）",
           "code": "6976411130176",
-          "required": true
+          "required": true,
+          "alt": [
+            "支竹",
+            "豆筋"
+          ]
         },
         {
           "label": "五花肉",
           "qty": "150g（切薄片）",
           "code": "0221",
-          "required": true
+          "required": true,
+          "alt": [
+            "三层肉",
+            "腩肉",
+            "猪腩肉"
+          ]
         },
         {
           "label": "蒜",
           "qty": "3瓣（切末）",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -3563,7 +4120,11 @@
           "label": "猪肉韭菜饺",
           "qty": "1袋（约500g）",
           "code": "628719295106",
-          "required": true
+          "required": true,
+          "alt": [
+            "扁菜",
+            "起阳草"
+          ]
         }
       ],
       "nutrition": "蛋白+纤维·经典管饱"
@@ -3607,19 +4168,32 @@
           "label": "番茄",
           "qty": "2个",
           "code": "1032xhs",
-          "required": true
+          "required": true,
+          "alt": [
+            "西红柿",
+            "洋柿子"
+          ]
         },
         {
           "label": "鸡蛋",
           "qty": "2个",
           "code": "2008",
-          "required": true
+          "required": true,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
         },
         {
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -3674,19 +4248,33 @@
           "label": "爱尔兰牛腩",
           "qty": "约500g",
           "code": "9735",
-          "required": true
+          "required": true,
+          "alt": [
+            "牛肋条",
+            "安格斯牛腩",
+            "坑腩"
+          ]
         },
         {
           "label": "姜",
           "qty": "3片",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -3748,7 +4336,12 @@
           "label": "五花肉",
           "qty": "200g（切小丁）",
           "code": "0221",
-          "required": true
+          "required": true,
+          "alt": [
+            "三层肉",
+            "腩肉",
+            "猪腩肉"
+          ]
         },
         {
           "label": "甜面酱",
@@ -3802,7 +4395,12 @@
           "label": "排骨",
           "qty": "400g",
           "code": "420011",
-          "required": true
+          "required": true,
+          "alt": [
+            "肋排",
+            "子排",
+            "猪小排"
+          ]
         },
         {
           "label": "豆豉",
@@ -3814,7 +4412,12 @@
           "label": "蒜",
           "qty": "3瓣",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -3823,7 +4426,7 @@
           "required": false
         },
         {
-          "label": "土豆淀粉",
+          "label": "淀粉",
           "qty": "少许",
           "code": "6941837101024",
           "required": false
@@ -3832,7 +4435,12 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         }
       ],
       "nutrition": "高蛋白·补钙下饭"
@@ -3867,19 +4475,33 @@
           "label": "扇贝柱",
           "qty": "6粒",
           "code": "990488000909",
-          "required": true
+          "required": true,
+          "alt": [
+            "带子",
+            "元贝",
+            "瑶柱"
+          ]
         },
         {
           "label": "龙口粉丝",
           "qty": "1小把",
           "code": "6928527900105",
-          "required": true
+          "required": true,
+          "alt": [
+            "冬粉",
+            "细粉"
+          ]
         },
         {
           "label": "蒜",
           "qty": "4瓣",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -3891,7 +4513,12 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         }
       ],
       "nutrition": "高蛋白·低脂鲜美"
@@ -3926,7 +4553,12 @@
           "label": "生菜",
           "qty": "1棵",
           "code": "4061scsc",
-          "required": true
+          "required": true,
+          "alt": [
+            "唛仔菜",
+            "西生菜",
+            "玻璃生菜"
+          ]
         },
         {
           "label": "蚝油",
@@ -3938,7 +4570,12 @@
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         }
       ],
       "nutrition": "高纤维·清淡低卡"
@@ -3973,7 +4610,11 @@
           "label": "芥兰",
           "qty": "1把",
           "code": "1006jljl",
-          "required": true
+          "required": true,
+          "alt": [
+            "芥蓝",
+            "盖兰菜"
+          ]
         },
         {
           "label": "蚝油",
@@ -3985,7 +4626,12 @@
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         }
       ],
       "nutrition": "高钙高纤·清爽"
@@ -4019,19 +4665,33 @@
           "label": "大虾(取虾仁)",
           "qty": "8只",
           "code": "209145dxdx827510004140",
-          "required": true
+          "required": true,
+          "alt": [
+            "虾肉",
+            "基围虾仁",
+            "虾球"
+          ]
         },
         {
           "label": "鸡蛋",
           "qty": "3个",
           "code": "2008",
-          "required": true
+          "required": true,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
         },
         {
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         }
       ],
       "nutrition": "高蛋白·嫩滑低脂"
@@ -4065,13 +4725,22 @@
           "label": "牛肉卷",
           "qty": "200g",
           "code": "6292644004009",
-          "required": true
+          "required": true,
+          "alt": [
+            "肥牛",
+            "肥牛卷",
+            "涮牛肉"
+          ]
         },
         {
           "label": "鸡蛋",
           "qty": "3个",
           "code": "2008",
-          "required": true
+          "required": true,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
         },
         {
           "label": "生抽",
@@ -4083,7 +4752,12 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         }
       ],
       "nutrition": "高蛋白·嫩滑补铁"
@@ -4131,13 +4805,23 @@
           "label": "腊肠",
           "qty": "1根",
           "code": "060629010132",
-          "required": true
+          "required": true,
+          "alt": [
+            "香肠",
+            "广式香肠",
+            "膶肠"
+          ]
         },
         {
           "label": "菜心",
           "qty": "几棵",
           "code": "Ocycs",
-          "required": false
+          "required": false,
+          "alt": [
+            "菜薹",
+            "广东菜心",
+            "心菜"
+          ]
         },
         {
           "label": "生抽",
@@ -4185,7 +4869,11 @@
           "label": "叉烧酱",
           "qty": "3勺",
           "code": "229283147497",
-          "required": true
+          "required": true,
+          "alt": [
+            "叉燒",
+            "蜜汁叉烧"
+          ]
         },
         {
           "label": "蜂蜜",
@@ -4226,13 +4914,23 @@
           "label": "排骨",
           "qty": "500g",
           "code": "420011",
-          "required": true
+          "required": true,
+          "alt": [
+            "肋排",
+            "子排",
+            "猪小排"
+          ]
         },
         {
           "label": "糖醋排骨料",
           "qty": "1包",
           "code": "6920358910612",
-          "required": false
+          "required": false,
+          "alt": [
+            "肋排",
+            "子排",
+            "猪小排"
+          ]
         },
         {
           "label": "生抽",

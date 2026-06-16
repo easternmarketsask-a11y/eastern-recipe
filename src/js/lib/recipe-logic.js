@@ -78,6 +78,8 @@
     const hit = (recipes || []).filter(function (r) {
       return (r.ingredients || []).some(function (ing) {
         if (normalizeQuery(ing.label).indexOf(q) !== -1) return true;
+        // 别名/俗称：芫荽=香菜、牛肋条=牛腩、马铃薯=土豆…
+        if (ing.alt && ing.alt.some(function (a) { return normalizeQuery(a).indexOf(q) !== -1; })) return true;
         const p = ing.code ? productIndex[ing.code] : null;
         if (!p) return false;
         return normalizeQuery(p.name_cn).indexOf(q) !== -1 ||
