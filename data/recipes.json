@@ -658,7 +658,7 @@
       "fresh": true,
       "priority": 99,
       "image": "assets/images/beef-chow-fun.jpg",
-      "image_credit": "cc",
+      "image_credit": "",
       "tags": [
         "粤菜",
         "河粉",
@@ -756,7 +756,7 @@
       "kind": "dish",
       "fresh": true,
       "priority": 98,
-      "image": "",
+      "image": "assets/images/wet-beef-ho-fun.jpg",
       "image_credit": "",
       "tags": [
         "牛河",
@@ -862,7 +862,7 @@
       "fresh": true,
       "priority": 97,
       "image": "assets/images/soy-sauce-cheung-fun.jpg",
-      "image_credit": "cc",
+      "image_credit": "",
       "tags": [
         "粤菜",
         "肠粉",
@@ -946,7 +946,7 @@
       "fresh": true,
       "priority": 95,
       "image": "assets/images/beef-brisket-noodle-soup.jpg",
-      "image_credit": "cc",
+      "image_credit": "",
       "tags": [
         "牛肉",
         "河粉",
