@@ -179,7 +179,10 @@
       "aliases": [
         "红烧牛肉",
         "hong shao niunan",
-        "braised brisket"
+        "braised brisket",
+        "牛肋条",
+        "牛腩",
+        "安格斯牛腩"
       ],
       "section": "tonight",
       "kind": "dish",
@@ -202,9 +205,9 @@
       ],
       "ingredients": [
         {
-          "label": "爱尔兰牛腩",
+          "label": "牛腩 / 牛肋条",
           "qty": "约1kg",
-          "code": "9735",
+          "code": "00501nkn",
           "required": true
         },
         {
@@ -581,7 +584,10 @@
       "aliases": [
         "番茄炖牛腩",
         "tomato beef stew",
-        "fangqie niunan"
+        "fangqie niunan",
+        "牛肋条",
+        "牛腩",
+        "安格斯牛腩"
       ],
       "section": "tonight",
       "kind": "dish",
@@ -604,9 +610,9 @@
       ],
       "ingredients": [
         {
-          "label": "爱尔兰牛腩",
+          "label": "牛腩 / 牛肋条",
           "qty": "约800g",
-          "code": "9735",
+          "code": "00501nkn",
           "required": true
         },
         {
@@ -939,7 +945,10 @@
         "牛腩河粉",
         "汤河粉",
         "beef noodle soup",
-        "niunan hetang"
+        "niunan hetang",
+        "牛肋条",
+        "牛腩",
+        "安格斯牛腩"
       ],
       "section": "fresh",
       "kind": "dish",
@@ -970,9 +979,9 @@
           "required": true
         },
         {
-          "label": "爱尔兰牛腩",
+          "label": "牛腩 / 牛肋条",
           "qty": "约500g",
-          "code": "9735",
+          "code": "00501nkn",
           "required": true
         },
         {
