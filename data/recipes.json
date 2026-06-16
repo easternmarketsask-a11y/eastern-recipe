@@ -740,14 +740,122 @@
       "nutrition": "碳水+蛋白·一盘管饱"
     },
     {
+      "id": "wet-beef-ho-fun",
+      "name_cn": "湿炒牛河",
+      "name_en": "Saucy Beef Ho Fun",
+      "aliases": [
+        "湿炒河粉",
+        "牛肉河",
+        "滑炒牛河",
+        "shichao niuhe",
+        "牛河（湿炒）",
+        "saucy beef ho fun",
+        "beef ho fun gravy"
+      ],
+      "section": "fresh",
+      "kind": "dish",
+      "fresh": true,
+      "priority": 98,
+      "image": "",
+      "image_credit": "",
+      "tags": [
+        "牛河",
+        "河粉",
+        "牛肉",
+        "滑嫩",
+        "浓汁",
+        "周末菜"
+      ],
+      "steps": [
+        "牛肉卷半解冻后切片，加生抽1茶匙、土豆淀粉、少许油抓匀，腌15分钟。",
+        "鲜河粉室温回软，用手轻轻拨散成条不粘连；芥兰洗净斜切段，蒜切末，葱切段。",
+        "调味汁：生抽2汤匙、老抽1茶匙、蚝油1汤匙、糖少许、清水约150ml、土豆淀粉1茶匙，调匀备用。",
+        "热锅多油，下河粉中火煎散、煎到边缘微焦，盛起平铺在盘中。",
+        "锅留底油爆香蒜末，下牛肉片大火快炒至变色盛起；下芥兰段炒至翠绿。",
+        "倒回牛肉，淋入调好的味汁煮滚、勾成薄芡，连汁一起淋在河粉上即可（喜欢可点几滴芝麻油）。"
+      ],
+      "ingredients": [
+        {
+          "label": "鲜河粉",
+          "qty": "908g（1包）",
+          "code": "058398101014",
+          "required": true
+        },
+        {
+          "label": "牛肉卷",
+          "qty": "约300g",
+          "code": "6292644004009",
+          "required": true
+        },
+        {
+          "label": "芥兰",
+          "qty": "约200g",
+          "code": "1006jljl",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根（切段）",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "适量",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "老抽",
+          "qty": "少许",
+          "code": "722337817020",
+          "required": false
+        },
+        {
+          "label": "蚝油",
+          "qty": "1汤匙",
+          "code": "6922824007468",
+          "required": true
+        },
+        {
+          "label": "土豆淀粉（腌肉+勾芡）",
+          "qty": "适量",
+          "code": "6941837101024",
+          "required": true
+        },
+        {
+          "label": "芝麻油",
+          "qty": "几滴",
+          "code": "742812710905",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ],
+      "nutrition": "牛肉河粉·浓汁裹粉更下饭"
+    },
+    {
       "id": "soy-sauce-cheung-fun",
-      "name_cn": "豉油皇炒肠粉",
-      "name_en": "Soy Sauce Stir-Fried Rice Rolls",
+      "name_cn": "豉油皇XO酱炒肠粉",
+      "name_en": "XO & Soy Sauce Stir-Fried Rice Rolls",
       "aliases": [
         "炒肠粉",
         "豉油肠粉",
         "chi you chang fen",
-        "soy rice rolls"
+        "soy rice rolls",
+        "豉油皇XO炒肠粉",
+        "XO酱炒肠粉",
+        "xo chang fen"
       ],
       "section": "fresh",
       "kind": "dish",
@@ -760,13 +868,15 @@
         "肠粉",
         "早午餐",
         "本周鲜货",
-        "快手菜"
+        "快手菜",
+        "XO酱"
       ],
       "steps": [
         "肠粉轻轻展开（勿用力撕，容易断），切成约5cm段备用。",
         "小碗中调制豉油汁：生抽2汤匙、老抽1茶匙、冰糖少许（或白糖半茶匙）、清水2汤匙，微波加热至糖溶化搅匀。",
         "锅中下少许油，中火，下肠粉段轻轻翻炒，使其均匀受热（约2分钟）。",
         "加入豆芽菜（可选）一同翻炒约30秒至断生。",
+        "加入1汤匙李锦记海皇XO酱，与肠粉一起翻炒出香（XO酱咸鲜，豉油可酌量减少）。",
         "淋入调好的豉油汁，大火翻炒均匀，撒葱花出锅。"
       ],
       "ingredients": [
@@ -774,6 +884,12 @@
           "label": "鲜肠粉",
           "qty": "567g（1袋）",
           "code": "058398101083",
+          "required": true
+        },
+        {
+          "label": "李锦记海皇XO酱",
+          "qty": "1汤匙",
+          "code": "78895144413",
           "required": true
         },
         {
