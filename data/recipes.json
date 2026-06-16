@@ -86,7 +86,8 @@
           "code": "HFCXCXC",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "荤素齐全·暖身满足"
     },
     {
       "id": "red-braised-pork",
@@ -168,7 +169,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "优质蛋白·补充能量"
     },
     {
       "id": "braised-beef-brisket",
@@ -253,7 +255,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高蛋白·补铁强身"
     },
     {
       "id": "soy-braised-beef-shank",
@@ -339,7 +342,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高蛋白·低脂紧实"
     },
     {
       "id": "white-cut-chicken",
@@ -401,7 +405,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "优质蛋白·低脂嫩滑"
     },
     {
       "id": "twice-cooked-pork",
@@ -474,7 +479,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "蛋白质·下饭开胃"
     },
     {
       "id": "cumin-lamb",
@@ -565,7 +571,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高蛋白·温补暖身"
     },
     {
       "id": "tomato-beef-brisket",
@@ -632,7 +639,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "蛋白+番茄红素·开胃"
     },
     {
       "id": "beef-chow-fun",
@@ -728,7 +736,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "碳水+蛋白·一盘管饱"
     },
     {
       "id": "soy-sauce-cheung-fun",
@@ -803,7 +812,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "米香软糯·暖胃"
     },
     {
       "id": "beef-brisket-noodle-soup",
@@ -873,7 +883,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "有汤有肉·暖身管饱"
     },
     {
       "id": "cheung-fun-ready",
@@ -908,7 +919,8 @@
           "code": "058398101083",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "低脂米制·好消化"
     },
     {
       "id": "youtiao-ready",
@@ -945,7 +957,8 @@
           "code": "6921097103563",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "香脆顶饱·配粥豆浆"
     },
     {
       "id": "nai-huang-bao-ready",
@@ -979,7 +992,8 @@
           "code": "6902230159661",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "香甜软糯·快手早餐"
     },
     {
       "id": "shouzhuabing-ready",
@@ -1015,7 +1029,8 @@
           "code": "6921665714436",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "酥香顶饱·方便"
     },
     {
       "id": "huajuan-ready",
@@ -1050,7 +1065,8 @@
           "code": "6902230159760",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "松软主食·配菜配粥"
     },
     {
       "id": "hei-jin-liusha-bao-ready",
@@ -1086,7 +1102,8 @@
           "code": "841624003219",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "香甜流心·暖心早餐"
     },
     {
       "id": "cha-shao-bao-ready",
@@ -1121,7 +1138,8 @@
           "code": "800794211367",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "咸甜适口·经典点心"
     },
     {
       "id": "xian-rou-dabao-ready",
@@ -1156,7 +1174,8 @@
           "code": "628719016176",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "有菜有肉·一个顶饱"
     },
     {
       "id": "mapo-tofu",
@@ -1261,7 +1280,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "植物蛋白·补钙下饭"
     },
     {
       "id": "tomato-egg",
@@ -1334,7 +1354,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "番茄红素+蛋白·开胃"
     },
     {
       "id": "pork-green-pepper",
@@ -1419,7 +1440,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "蛋白+维C·清爽下饭"
     },
     {
       "id": "blanched-choy-sum",
@@ -1499,7 +1521,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高纤维·清淡低卡"
     },
     {
       "id": "seaweed-egg-soup",
@@ -1573,7 +1596,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "补碘补钙·清爽暖胃"
     },
     {
       "id": "xiaolongbao-ready",
@@ -1609,7 +1633,8 @@
           "code": "800794022406",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "鲜香多汁·暖胃点心"
     },
     {
       "id": "shumai-ready",
@@ -1646,7 +1671,8 @@
           "code": "800794222080",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "糯香顶饱·营养早餐"
     },
     {
       "id": "purple-rice-floss-bun",
@@ -1680,7 +1706,8 @@
           "code": "6958620709947",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "粗粮+肉松·能量早餐"
     },
     {
       "id": "veg-celtuce-garlic",
@@ -1695,7 +1722,7 @@
       "kind": "dish",
       "priority": 75,
       "image": "assets/images/veg-celtuce-garlic.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "素菜",
         "清爽",
@@ -1725,7 +1752,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "清脆爽口·膳食纤维"
     },
     {
       "id": "veg-enoki-cold",
@@ -1740,7 +1768,7 @@
       "kind": "dish",
       "priority": 78,
       "image": "assets/images/veg-enoki-cold.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "素菜",
         "凉菜",
@@ -1776,7 +1804,8 @@
           "code": "078895128789",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高纤维·低卡开胃"
     },
     {
       "id": "veg-chive-egg",
@@ -1791,7 +1820,7 @@
       "kind": "dish",
       "priority": 76,
       "image": "assets/images/veg-chive-egg.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "素菜",
         "家常",
@@ -1822,7 +1851,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "温阳暖身·蛋白+纤维"
     },
     {
       "id": "veg-lotus-cold",
@@ -1838,7 +1868,7 @@
       "kind": "dish",
       "priority": 74,
       "image": "assets/images/veg-lotus-cold.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "素菜",
         "凉菜",
@@ -1880,7 +1910,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "清脆爽口·膳食纤维"
     },
     {
       "id": "veg-garlic-scape-pork",
@@ -1895,7 +1926,7 @@
       "kind": "dish",
       "priority": 80,
       "image": "assets/images/veg-garlic-scape-pork.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "家常",
         "下饭",
@@ -1931,7 +1962,8 @@
           "code": "0178",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "蛋白+纤维·下饭"
     },
     {
       "id": "veg-napa-tofu",
@@ -1946,7 +1978,7 @@
       "kind": "dish",
       "priority": 75,
       "image": "assets/images/veg-napa-tofu.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "家常",
         "暖身",
@@ -1976,7 +2008,8 @@
           "code": "078895128789",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "补钙+纤维·清淡暖身"
     },
     {
       "id": "veg-ayoumai-garlic",
@@ -1991,7 +2024,7 @@
       "kind": "dish",
       "priority": 73,
       "image": "assets/images/veg-ayoumai-garlic.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "素菜",
         "清炒",
@@ -2021,7 +2054,8 @@
           "code": "6922824007468",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高纤维·清淡爽口"
     },
     {
       "id": "veg-tonghao-garlic",
@@ -2060,7 +2094,8 @@
           "code": "0178",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "清香开胃·膳食纤维"
     },
     {
       "id": "veg-wawacai-soup",
@@ -2075,7 +2110,7 @@
       "kind": "dish",
       "priority": 74,
       "image": "assets/images/veg-wawacai-soup.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "家常",
         "汤菜",
@@ -2105,7 +2140,8 @@
           "code": "2008",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "清甜低卡·维生素"
     },
     {
       "id": "veg-eggplant-yuxiang",
@@ -2163,7 +2199,8 @@
           "code": "6941837101024",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "花青素·开胃下饭"
     },
     {
       "id": "veg-wintermelon-pork-soup",
@@ -2178,14 +2215,14 @@
       "kind": "dish",
       "priority": 76,
       "image": "assets/images/veg-wintermelon-pork-soup.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "汤",
         "清润",
         "暖身"
       ],
       "steps": [
-        "冬瓜去皮切块,排骨/五花焯水。",
+        "冬瓜去皮切块,排骨焯水。",
         "加姜片炖煮40分钟。",
         "下冬瓜再煮15分钟,加盐即可,清润不腻。"
       ],
@@ -2197,10 +2234,10 @@
           "required": true
         },
         {
-          "label": "五花肉",
+          "label": "排骨",
           "qty": "300g",
-          "code": "0221",
-          "required": false
+          "code": "420011",
+          "required": true
         },
         {
           "label": "姜",
@@ -2208,7 +2245,8 @@
           "code": "1037",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "清热利水·补钙"
     },
     {
       "id": "veg-broccoli-oyster",
@@ -2223,7 +2261,7 @@
       "kind": "dish",
       "priority": 73,
       "image": "assets/images/veg-broccoli-oyster.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "素菜",
         "清爽",
@@ -2259,7 +2297,8 @@
           "code": "6941837101024",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高维C·抗氧化"
     },
     {
       "id": "veg-shanghai-qing",
@@ -2275,7 +2314,7 @@
       "kind": "dish",
       "priority": 72,
       "image": "assets/images/veg-shanghai-qing.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "素菜",
         "清炒",
@@ -2299,7 +2338,8 @@
           "code": "0178",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高钙高纤·清淡"
     },
     {
       "id": "dujiao-yutou",
@@ -2371,7 +2411,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "优质蛋白·鲜辣开胃"
     },
     {
       "id": "qingzheng-luyu",
@@ -2438,7 +2479,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "优质蛋白·低脂DHA"
     },
     {
       "id": "suancai-yu",
@@ -2517,7 +2559,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高蛋白·酸辣开胃"
     },
     {
       "id": "baochao-youyu",
@@ -2588,7 +2631,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高蛋白·低脂弹牙"
     },
     {
       "id": "baizhuoxia",
@@ -2642,7 +2686,8 @@
           "code": "078895128789",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "高蛋白·低脂鲜甜"
     },
     {
       "id": "huaxia-hua",
@@ -2676,7 +2721,8 @@
           "code": "9780201265835",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "高蛋白·火锅好搭"
     },
     {
       "id": "moyuwan",
@@ -2710,7 +2756,8 @@
           "code": "827510006045",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "Q弹·高蛋白"
     },
     {
       "id": "shijinyuwan",
@@ -2744,7 +2791,8 @@
           "code": "800794308074",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "高蛋白·汤锅皆宜"
     },
     {
       "id": "jiachang-doufu",
@@ -2822,7 +2870,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "植物蛋白·补钙下饭"
     },
     {
       "id": "yuxiang-doufu",
@@ -2895,7 +2944,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "植物蛋白·开胃下饭"
     },
     {
       "id": "pidan-doufu",
@@ -2955,7 +3005,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高蛋白·清爽凉菜"
     },
     {
       "id": "qincai-xianggan",
@@ -2970,7 +3021,7 @@
       "kind": "dish",
       "priority": 71,
       "image": "assets/images/qincai-xianggan.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "素菜",
         "豆腐干",
@@ -3015,7 +3066,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高纤维·清爽降火"
     },
     {
       "id": "liangban-gandoufu",
@@ -3030,7 +3082,7 @@
       "kind": "dish",
       "priority": 69,
       "image": "assets/images/liangban-gandoufu.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "凉菜",
         "豆腐干",
@@ -3087,7 +3139,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "植物蛋白·爽口低卡"
     },
     {
       "id": "jidanzheng",
@@ -3141,7 +3194,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "优质蛋白·嫩滑好消化"
     },
     {
       "id": "fuzhu-charou",
@@ -3156,7 +3210,7 @@
       "kind": "dish",
       "priority": 68,
       "image": "assets/images/fuzhu-charou.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "腐竹",
         "猪肉",
@@ -3212,7 +3266,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "双重蛋白·顶饱"
     },
     {
       "id": "guantang-xiaoshuijiao",
@@ -3246,7 +3301,8 @@
           "code": "5177gtxsj",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "有菜有肉·暖胃管饱"
     },
     {
       "id": "suancai-roujiiao",
@@ -3280,7 +3336,8 @@
           "code": "628719295526",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "开胃解腻·一顿搞定"
     },
     {
       "id": "bajiaojiao",
@@ -3314,7 +3371,8 @@
           "code": "628719295502",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "海鱼蛋白·鲜香管饱"
     },
     {
       "id": "yangroujiiao",
@@ -3347,7 +3405,8 @@
           "code": "628719295519",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "温补暖身·高蛋白"
     },
     {
       "id": "zhurou-jiucaijiao",
@@ -3381,7 +3440,8 @@
           "code": "628719295106",
           "required": true
         }
-      ]
+      ],
+      "nutrition": "蛋白+纤维·经典管饱"
     },
     {
       "id": "xihongshi-jidan-mian",
@@ -3448,7 +3508,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "有菜有蛋·开胃一碗"
     },
     {
       "id": "niurou-lamian",
@@ -3520,7 +3581,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "有肉有面·顶饱"
     },
     {
       "id": "zhajianmian",
@@ -3581,7 +3643,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "酱香顶饱·主食"
     },
     {
       "id": "cant-douchi-paigu",
@@ -3646,7 +3709,8 @@
           "code": "HFCXCXC",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高蛋白·补钙下饭"
     },
     {
       "id": "cant-suanrong-fensi-shanbei",
@@ -3704,7 +3768,8 @@
           "code": "HFCXCXC",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高蛋白·低脂鲜美"
     },
     {
       "id": "cant-haoyou-shengcai",
@@ -3750,7 +3815,8 @@
           "code": "0178",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高纤维·清淡低卡"
     },
     {
       "id": "cant-haoyou-jielan",
@@ -3796,7 +3862,8 @@
           "code": "0178",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高钙高纤·清爽"
     },
     {
       "id": "cant-huadan-xiaren",
@@ -3841,7 +3908,8 @@
           "code": "HFCXCXC",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高蛋白·嫩滑低脂"
     },
     {
       "id": "cant-huadan-niurou",
@@ -3892,7 +3960,8 @@
           "code": "HFCXCXC",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高蛋白·嫩滑补铁"
     },
     {
       "id": "cant-lawei-baozaifan",
@@ -3951,7 +4020,8 @@
           "code": "078895128789",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "有饭有肉·一锅满足"
     },
     {
       "id": "cant-mizhi-chashao",
@@ -3998,7 +4068,8 @@
           "code": null,
           "required": false
         }
-      ]
+      ],
+      "nutrition": "优质蛋白·咸甜下饭"
     },
     {
       "id": "cant-tangcu-paigu",
@@ -4050,7 +4121,8 @@
           "code": "722337817020",
           "required": false
         }
-      ]
+      ],
+      "nutrition": "高蛋白·酸甜开胃"
     }
   ]
 }

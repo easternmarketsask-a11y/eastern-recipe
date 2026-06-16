@@ -29,10 +29,10 @@
   function recipeCard(r) {
     var img = r.image ? '<img class="card__img" src="' + esc(r.image) + '" alt="" loading="lazy">' : '';
     var en = r.name_en ? '<span class="card__en">' + esc(r.name_en) + '</span>' : '';
+    var nutri = r.nutrition ? '<span class="card__nutri">🌿 ' + esc(r.nutrition) + '</span>' : '';
     return '<button class="card" data-id="' + esc(r.id) + '">' + img +
       '<span class="card__body">' +
-        '<span class="card__name">' + esc(r.name_cn) + '</span>' + en +
-        '<span class="card__tags">' + esc((r.tags || []).join(' · ')) + '</span>' +
+        '<span class="card__name">' + esc(r.name_cn) + '</span>' + en + nutri +
       '</span></button>';
   }
   function wireCards(container) {
@@ -74,6 +74,7 @@
       hero +
       '<h2 class="detail__title">' + esc(recipe.name_cn) +
         ' <small>' + esc(recipe.name_en || '') + '</small></h2>' +
+      (recipe.nutrition ? '<div class="detail__nutri">🌿 营养 · ' + esc(recipe.nutrition) + '</div>' : '') +
       bodyHtml +
       '<button class="fave-btn' + (faved ? ' is-on' : '') + '" id="fave">' +
         (faved ? '♥ 已加入想做' : '♡ 加入想做') + '</button>' +

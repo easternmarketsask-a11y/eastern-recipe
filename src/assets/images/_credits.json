@@ -108,56 +108,56 @@
     "via": "commons:肉鬆麵包"
   },
   "veg-celtuce-garlic": {
-    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Celtuce",
-    "via": "en:Celtuce"
+    "source": "owner photo",
+    "via": "self"
   },
   "veg-enoki-cold": {
-    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Flammulina_filiformis",
-    "via": "en:Flammulina filiformis"
+    "source": "owner photo",
+    "via": "self"
   },
   "veg-chive-egg": {
-    "source": "https://zh.wikipedia.org/api/rest_v1/page/summary/%E9%9F%AD%E8%8F%9C",
-    "via": "zh:韭菜"
+    "source": "owner photo",
+    "via": "self"
   },
   "veg-lotus-cold": {
-    "source": "https://zh.wikipedia.org/api/rest_v1/page/summary/%E8%93%AE%E8%97%95",
-    "via": "zh:蓮藕"
+    "source": "owner photo",
+    "via": "self"
   },
   "veg-garlic-scape-pork": {
-    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Garlic_scape",
-    "via": "en:Garlic scape"
+    "source": "owner photo",
+    "via": "self"
   },
   "veg-napa-tofu": {
-    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Napa_cabbage",
-    "via": "en:Napa cabbage"
+    "source": "owner photo",
+    "via": "self"
   },
   "veg-ayoumai-garlic": {
-    "source": "https://commons.wikimedia.org/wiki/File:Lactuca_sativa_var._longifolia_Feria.jpg",
-    "via": "commons:油麥菜"
+    "source": "owner photo",
+    "via": "self"
   },
   "veg-tonghao-garlic": {
     "source": "owner photo",
     "via": "self"
   },
   "veg-wawacai-soup": {
-    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Napa_cabbage",
-    "via": "en:Napa cabbage"
+    "source": "owner photo",
+    "via": "self"
   },
   "veg-eggplant-yuxiang": {
     "source": "https://commons.wikimedia.org/wiki/File:Yuxiangqiezi.jpg",
     "via": "commons:魚香茄子"
   },
   "veg-wintermelon-pork-soup": {
-    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Winter_melon",
-    "via": "en:Winter melon"
+    "source": "owner photo",
+    "via": "self"
   },
   "veg-broccoli-oyster": {
-    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Broccoli",
-    "via": "en:Broccoli"
+    "source": "owner photo",
+    "via": "self"
   },
   "veg-shanghai-qing": {
-    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Bok_choy",
-    "via": "en:Bok choy"
+    "source": "owner photo",
+    "via": "self"
   },
   "dujiao-yutou": {
     "source": "https://commons.wikimedia.org/wiki/File:Steamed_fish_head_with_diced_hot_red_peppers_20211206.jpg",
@@ -204,20 +204,20 @@
     "via": "commons:皮蛋豆腐"
   },
   "qincai-xianggan": {
-    "source": "https://commons.wikimedia.org/wiki/File:5%E6%9C%884%E6%97%A5_%E8%8A%B9%E8%8F%9C%E7%82%92%E9%A6%99%E4%B9%BE%EF%BC%8C%E6%B2%99%E8%8C%B6%E9%9D%92%E6%A4%92%E7%89%9B%E8%82%89.jpg",
-    "via": "commons:芹菜炒香乾"
+    "source": "owner photo",
+    "via": "self"
   },
   "liangban-gandoufu": {
-    "source": "https://commons.wikimedia.org/wiki/File:Food_%E9%AD%AF%E8%82%89%E9%A3%AF,_%E9%9B%9E%E8%82%89%E7%B5%B2%E9%A3%AF,_%E8%B9%84%E8%86%80%E8%82%89,_%E6%B2%B9%E8%B1%86%E8%85%90,_%E9%AD%AF%E8%9B%8B,_%E7%84%A2%E8%82%89,_%E9%AD%AF%E7%99%BD%E8%8F%9C,_%E9%BB%83%E8%A8%98%E9%AD%AF%E8%82%89%E9%A3%AF,_%E9%BB%83%E8%A8%98,_%E5%8F%B0%E5%8C%97_(14505983780).jpg",
-    "via": "commons:豆腐絲"
+    "source": "owner photo",
+    "via": "self"
   },
   "jidanzheng": {
     "source": "https://commons.wikimedia.org/wiki/File:Chinese_steamed_eggs_by_Kanko.jpg",
     "via": "commons:蒸蛋"
   },
   "fuzhu-charou": {
-    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Tofu_skin",
-    "via": "en:Tofu skin"
+    "source": "owner photo",
+    "via": "self"
   },
   "guantang-xiaoshuijiao": {
     "source": "Wikimedia Commons",
