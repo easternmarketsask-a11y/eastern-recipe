@@ -7,7 +7,8 @@
 html,body{max-width:100%;overflow-x:hidden}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.5}
-.hdr{padding:16px 16px 12px;background:var(--card);border-bottom:1px solid var(--line)}
+.hdr{padding:16px 16px 12px;background:var(--card);border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:50;box-shadow:0 1px 6px rgba(30,42,34,.06)}
 .hdr__brand{margin:0;line-height:0}
 .hdr__logobtn{display:inline-block;padding:0;border:none;background:none;cursor:pointer}
 .hdr__logo{height:50px;width:auto;display:block}
