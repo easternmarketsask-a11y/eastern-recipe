@@ -115,6 +115,24 @@
     show('results');
   }
 
+  // 「查看全部」：把某分类全部菜谱铺在结果区（网格），带返回首页
+  var SEC_TITLE = {
+    tonight: '🔥 今晚吃什么', seafood: '🐟 海鲜河鲜', staple: '🍚 主食 · 面饭',
+    dumpling: '🥟 饺子 · 馄饨', fresh: '🍜 鲜河粉 · 鲜肠粉', breakfast: '🌅 早餐包点', veg: '🥗 家常蔬菜'
+  };
+  function showSection(sec) {
+    var list = bySection(sec);
+    var el = $('results');
+    el.innerHTML =
+      '<button class="back" id="secback">← 返回首页</button>' +
+      '<h2 class="block__title">' + esc(SEC_TITLE[sec] || '') + '（' + list.length + '）</h2>' +
+      '<div class="cards">' + list.map(recipeCard).join('') + '</div>';
+    $('secback').onclick = function () { renderHome(); show('home'); window.scrollTo(0, 0); };
+    wireCards(el);
+    show('results');
+    window.scrollTo(0, 0);
+  }
+
   function onSearch() {
     var q = $('q').value;
     if (!q || !q.trim()) { renderHome(); show('home'); return; }
@@ -209,6 +227,9 @@
       state.recipes.forEach(function (r) { state.byId[r.id] = r; });
       $('q').addEventListener('input', onSearch);
       $('reshuffle').onclick = function () { state.reshuffle += 1; renderHome(); };
+      Array.prototype.forEach.call(document.querySelectorAll('.seeall'), function (btn) {
+        btn.onclick = function () { showSection(btn.dataset.sec); };
+      });
       renderHome();
       show('home');
     }).catch(function () {
