@@ -4,7 +4,7 @@
   --radius:14px; --shadow:0 1px 3px rgba(30,42,34,.08);
 }
 *{box-sizing:border-box}
-html,body{max-width:100%;overflow-x:hidden}
+html,body{max-width:100%;overflow-x:hidden;overflow-x:clip}
 body{margin:0;background:var(--bg);color:var(--ink);
   font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.5}
 .hdr{padding:16px 16px 12px;background:var(--card);border-bottom:1px solid var(--line);
