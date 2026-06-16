@@ -579,8 +579,8 @@
       "section": "tonight",
       "kind": "dish",
       "priority": 92,
-      "image": "assets/images/tomato-beef-brisket.jpg",
-      "image_credit": "cc",
+      "image": "",
+      "image_credit": "none",
       "tags": [
         "牛肉",
         "番茄",
