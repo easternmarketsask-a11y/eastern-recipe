@@ -12,8 +12,8 @@
     "via": "commons:牛腩煲"
   },
   "soy-braised-beef-shank": {
-    "source": "https://commons.wikimedia.org/wiki/File:Irish_Spiced_Beef.jpg",
-    "via": "commons:醬牛肉"
+    "source": "owner photo",
+    "via": "self"
   },
   "white-cut-chicken": {
     "source": "https://en.wikipedia.org/api/rest_v1/page/summary/White_cut_chicken",
@@ -164,8 +164,8 @@
     "via": "commons:剁椒魚頭"
   },
   "qingzheng-luyu": {
-    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Steamed_fish",
-    "via": "en:Steamed fish"
+    "source": "owner photo",
+    "via": "self"
   },
   "suancai-yu": {
     "source": "https://commons.wikimedia.org/wiki/File:Shuizhuyu_at_Hamarkand_Silk_Road_Cuisine,_Beiqinglu_(20230121154615).jpg",
@@ -180,8 +180,8 @@
     "via": "commons:白灼蝦"
   },
   "huaxia-hua": {
-    "source": "https://commons.wikimedia.org/wiki/File:Heterocarpus_laevigatus.jpg",
-    "via": "commons:蝦滑"
+    "source": "owner photo",
+    "via": "self"
   },
   "moyuwan": {
     "source": "https://commons.wikimedia.org/wiki/File:Fish_Ball_Hor_Fun_Rice_Noodle_Soup_Salt-Baked_Chicken_Rice_-_Hakka_Teahouse,_Glen_Waverley_AUD9_lunch_special.jpg",

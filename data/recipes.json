@@ -268,8 +268,8 @@
       "section": "tonight",
       "kind": "dish",
       "priority": 91,
-      "image": "",
-      "image_credit": "none",
+      "image": "assets/images/soy-braised-beef-shank.jpg",
+      "image_credit": "self",
       "tags": [
         "牛肉",
         "卤味",
@@ -2385,8 +2385,8 @@
       "section": "seafood",
       "kind": "dish",
       "priority": 94,
-      "image": "",
-      "image_credit": "none",
+      "image": "assets/images/qingzheng-luyu.jpg",
+      "image_credit": "self",
       "tags": [
         "海鲜",
         "鱼",
@@ -2656,8 +2656,8 @@
       "section": "seafood",
       "kind": "ready",
       "priority": 86,
-      "image": "",
-      "image_credit": "none",
+      "image": "assets/images/huaxia-hua.jpg",
+      "image_credit": "self",
       "tags": [
         "海鲜",
         "虾",
