@@ -2495,7 +2495,7 @@
       "kind": "dish",
       "priority": 93,
       "image": "assets/images/suancai-yu.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "海鲜",
         "鱼",
@@ -2575,7 +2575,7 @@
       "kind": "dish",
       "priority": 90,
       "image": "assets/images/baochao-youyu.jpg",
-      "image_credit": "cc",
+      "image_credit": "self",
       "tags": [
         "海鲜",
         "鱿鱼",
