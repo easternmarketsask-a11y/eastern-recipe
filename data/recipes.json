@@ -1681,6 +1681,625 @@
           "required": true
         }
       ]
+    },
+    {
+      "id": "veg-celtuce-garlic",
+      "name_cn": "清炒莴笋丝",
+      "name_en": "Stir-fried Celtuce",
+      "aliases": [
+        "莴笋",
+        "清炒莴笋",
+        "wo sun"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 75,
+      "image": "assets/images/veg-celtuce-garlic.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "素菜",
+        "清爽",
+        "快手"
+      ],
+      "steps": [
+        "莴笋去皮切丝。",
+        "热油爆香蒜末，下莴笋丝大火快炒。",
+        "加盐调味，断生即出锅，脆嫩清爽。"
+      ],
+      "ingredients": [
+        {
+          "label": "莴笋",
+          "qty": "1根",
+          "code": "1061wsws",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "veg-enoki-cold",
+      "name_cn": "凉拌金针菇",
+      "name_en": "Cold Enoki Mushroom",
+      "aliases": [
+        "金针菇",
+        "凉拌金针菇",
+        "enoki"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 78,
+      "image": "assets/images/veg-enoki-cold.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "素菜",
+        "凉菜",
+        "下酒"
+      ],
+      "steps": [
+        "金针菇去根焯水30秒，过凉沥干。",
+        "加蒜末、葱花、生抽、少许醋和辣油拌匀。",
+        "清爽开胃，夏天最受欢迎。"
+      ],
+      "ingredients": [
+        {
+          "label": "金针菇",
+          "qty": "1包",
+          "code": "Jzgjzg6976532310051",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1勺",
+          "code": "078895128789",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "veg-chive-egg",
+      "name_cn": "韭菜炒蛋",
+      "name_en": "Stir-fried Chives with Egg",
+      "aliases": [
+        "韭菜炒蛋",
+        "韭菜鸡蛋",
+        "jiucai"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 76,
+      "image": "assets/images/veg-chive-egg.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "素菜",
+        "家常",
+        "快手",
+        "下饭"
+      ],
+      "steps": [
+        "韭菜切段，鸡蛋打散炒成块盛出。",
+        "热油下韭菜大火炒,加回鸡蛋。",
+        "加盐快速翻匀出锅。"
+      ],
+      "ingredients": [
+        {
+          "label": "韭菜",
+          "qty": "1把",
+          "code": "1015",
+          "required": true
+        },
+        {
+          "label": "鸡蛋",
+          "qty": "3个",
+          "code": "2008",
+          "required": true
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "veg-lotus-cold",
+      "name_cn": "凉拌藕片",
+      "name_en": "Sweet & Sour Lotus Root",
+      "aliases": [
+        "凉拌藕片",
+        "莲藕",
+        "糖醋藕",
+        "lotus root"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 74,
+      "image": "assets/images/veg-lotus-cold.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "素菜",
+        "凉菜",
+        "清脆"
+      ],
+      "steps": [
+        "莲藕去皮切薄片,焯水后过凉。",
+        "调汁:生抽、香醋、少许糖、蒜末。",
+        "拌匀冷藏更脆爽。"
+      ],
+      "ingredients": [
+        {
+          "label": "莲藕",
+          "qty": "1节",
+          "code": "1043lolo",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1勺",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "醋",
+          "qty": "2勺",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "糖",
+          "qty": "1勺",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "veg-garlic-scape-pork",
+      "name_cn": "蒜苔炒肉",
+      "name_en": "Garlic Scapes with Pork",
+      "aliases": [
+        "蒜苔炒肉",
+        "蒜苔炒五花",
+        "suantai"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 80,
+      "image": "assets/images/veg-garlic-scape-pork.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "家常",
+        "下饭",
+        "荤素"
+      ],
+      "steps": [
+        "蒜苔切段,五花肉切片。",
+        "煸炒五花肉出油,下蒜苔翻炒。",
+        "加生抽、盐炒至蒜苔断生入味。"
+      ],
+      "ingredients": [
+        {
+          "label": "蒜苔",
+          "qty": "1把",
+          "code": "10631",
+          "required": true
+        },
+        {
+          "label": "五花肉",
+          "qty": "200g",
+          "code": "0221",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1勺",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "veg-napa-tofu",
+      "name_cn": "白菜炖豆腐",
+      "name_en": "Napa Cabbage with Tofu",
+      "aliases": [
+        "白菜炖豆腐",
+        "大白菜豆腐",
+        "baicai"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 75,
+      "image": "assets/images/veg-napa-tofu.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "家常",
+        "暖身",
+        "汤菜"
+      ],
+      "steps": [
+        "大白菜切块,豆腐切块。",
+        "热油炒白菜至软,加水和豆腐炖煮。",
+        "加盐、少许生抽调味,汤鲜味美。"
+      ],
+      "ingredients": [
+        {
+          "label": "大白菜",
+          "qty": "半棵",
+          "code": "Sc1003dbc",
+          "required": true
+        },
+        {
+          "label": "传统豆腐",
+          "qty": "1块",
+          "code": "777433001200",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1勺",
+          "code": "078895128789",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "veg-ayoumai-garlic",
+      "name_cn": "蒜蓉油麦菜",
+      "name_en": "Garlic A-Choy",
+      "aliases": [
+        "蒜蓉油麦菜",
+        "油麦菜",
+        "a choy"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 73,
+      "image": "assets/images/veg-ayoumai-garlic.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "素菜",
+        "清炒",
+        "快手"
+      ],
+      "steps": [
+        "油麦菜洗净切段。",
+        "热油爆香蒜末,下油麦菜大火快炒。",
+        "加盐和少许蚝油,断生即起。"
+      ],
+      "ingredients": [
+        {
+          "label": "油麦菜",
+          "qty": "1把",
+          "code": "4028ymc",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "蚝油",
+          "qty": "1勺",
+          "code": "6922824007468",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "veg-tonghao-garlic",
+      "name_cn": "蒜蓉茼蒿",
+      "name_en": "Garlic Crown Daisy",
+      "aliases": [
+        "蒜蓉茼蒿",
+        "清炒茼蒿",
+        "tong ho"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 72,
+      "image": "",
+      "image_credit": "none",
+      "tags": [
+        "素菜",
+        "清香",
+        "快手"
+      ],
+      "steps": [
+        "茼蒿洗净切段。",
+        "蒜末爆香,下茼蒿大火快炒。",
+        "加盐调味,保持翠绿清香。"
+      ],
+      "ingredients": [
+        {
+          "label": "茼蒿",
+          "qty": "1把",
+          "code": "4039thth",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "veg-wawacai-soup",
+      "name_cn": "上汤娃娃菜",
+      "name_en": "Baby Napa in Supreme Broth",
+      "aliases": [
+        "上汤娃娃菜",
+        "娃娃菜",
+        "wawacai"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 74,
+      "image": "assets/images/veg-wawacai-soup.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "家常",
+        "汤菜",
+        "宴客"
+      ],
+      "steps": [
+        "娃娃菜竖切几瓣。",
+        "蒜末爆香,加高汤或清水煮开,下娃娃菜煮软。",
+        "可加咸蛋/皮蛋增香,淋汤即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "娃娃菜",
+          "qty": "2棵",
+          "code": "WWC",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "鸡蛋",
+          "qty": "1个",
+          "code": "2008",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "veg-eggplant-yuxiang",
+      "name_cn": "鱼香茄子",
+      "name_en": "Yu-Xiang Eggplant",
+      "aliases": [
+        "鱼香茄子",
+        "红烧茄子",
+        "qiezi",
+        "eggplant"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 80,
+      "image": "assets/images/veg-eggplant-yuxiang.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "川菜",
+        "下饭",
+        "经典"
+      ],
+      "steps": [
+        "茄子切条,过油或煎软。",
+        "下蒜末、郫县豆瓣炒香,加茄子。",
+        "调生抽、糖、少许醋焖入味,撒葱花。"
+      ],
+      "ingredients": [
+        {
+          "label": "茄子",
+          "qty": "2根",
+          "code": "1017qgqg",
+          "required": true
+        },
+        {
+          "label": "郫县豆瓣酱",
+          "qty": "1勺",
+          "code": "6909003888018",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1勺",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "土豆淀粉",
+          "qty": "少许",
+          "code": "6941837101024",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "veg-wintermelon-pork-soup",
+      "name_cn": "冬瓜排骨汤",
+      "name_en": "Winter Melon Pork Soup",
+      "aliases": [
+        "冬瓜排骨汤",
+        "冬瓜汤",
+        "wintermelon"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 76,
+      "image": "assets/images/veg-wintermelon-pork-soup.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "汤",
+        "清润",
+        "暖身"
+      ],
+      "steps": [
+        "冬瓜去皮切块,排骨/五花焯水。",
+        "加姜片炖煮40分钟。",
+        "下冬瓜再煮15分钟,加盐即可,清润不腻。"
+      ],
+      "ingredients": [
+        {
+          "label": "冬瓜",
+          "qty": "半个",
+          "code": "1036dgdg",
+          "required": true
+        },
+        {
+          "label": "五花肉",
+          "qty": "300g",
+          "code": "0221",
+          "required": false
+        },
+        {
+          "label": "姜",
+          "qty": "2片",
+          "code": "1037",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "veg-broccoli-oyster",
+      "name_cn": "蚝油西兰花",
+      "name_en": "Broccoli in Oyster Sauce",
+      "aliases": [
+        "蚝油西兰花",
+        "西兰花",
+        "broccoli"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 73,
+      "image": "assets/images/veg-broccoli-oyster.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "素菜",
+        "清爽",
+        "宴客"
+      ],
+      "steps": [
+        "西兰花切小朵,焯水至翠绿。",
+        "蒜末爆香,加蚝油和少许水勾薄芡。",
+        "淋在西兰花上即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "西兰花",
+          "qty": "1棵",
+          "code": "1030",
+          "required": true
+        },
+        {
+          "label": "蚝油",
+          "qty": "1勺",
+          "code": "6922824007468",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "土豆淀粉",
+          "qty": "少许",
+          "code": "6941837101024",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "veg-shanghai-qing",
+      "name_cn": "清炒上海青",
+      "name_en": "Stir-fried Shanghai Bok Choy",
+      "aliases": [
+        "清炒上海青",
+        "上海青",
+        "上海苗",
+        "bok choy"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 72,
+      "image": "assets/images/veg-shanghai-qing.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "素菜",
+        "清炒",
+        "快手"
+      ],
+      "steps": [
+        "上海青洗净对半切。",
+        "蒜末爆香,下上海青大火快炒。",
+        "加盐、少许糖提鲜,断生即起。"
+      ],
+      "ingredients": [
+        {
+          "label": "上海青",
+          "qty": "1把",
+          "code": "10251",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        }
+      ]
     }
   ]
 }

@@ -171,6 +171,9 @@
     var breakfast = bySection('breakfast');
     $('breakfastBlock').hidden = !breakfast.length;
     fillCards('breakfast', breakfast);
+    var veg = bySection('veg');
+    $('vegBlock').hidden = !veg.length;
+    fillCards('veg', veg);
 
     // 🥬 chips（主料 → 以货找菜）
     var chips = featuredIngredientChips(10);

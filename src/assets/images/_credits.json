@@ -80,8 +80,8 @@
     "via": "commons:麻婆豆腐"
   },
   "tomato-egg": {
-    "source": "https://commons.wikimedia.org/wiki/File:Stir_Fried_Tomatoes_with_Scrambled_Eggs.jpg",
-    "via": "commons:番茄炒蛋"
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Stir-fried_tomato_and_scrambled_eggs",
+    "via": "en:Stir-fried tomato and scrambled eggs"
   },
   "pork-green-pepper": {
     "source": "https://commons.wikimedia.org/wiki/File:Green_pepper_steak_(%E9%9D%92%E6%A4%92%E8%82%89%E7%B5%B2)_(26880875325).jpg",
@@ -106,5 +106,57 @@
   "purple-rice-floss-bun": {
     "source": "https://commons.wikimedia.org/wiki/File:HK_CWB_Yee_Wo_Street_%E5%A4%A7%E7%8F%AD%E9%BA%B5%E5%8C%85%E8%A5%BF%E9%A4%85_TaiPan_bakery_breads_%E8%82%89%E9%AC%86%E5%8C%85_Sept-2013.JPG",
     "via": "commons:肉鬆麵包"
+  },
+  "veg-celtuce-garlic": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Celtuce",
+    "via": "en:Celtuce"
+  },
+  "veg-enoki-cold": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Flammulina_filiformis",
+    "via": "en:Flammulina filiformis"
+  },
+  "veg-chive-egg": {
+    "source": "https://zh.wikipedia.org/api/rest_v1/page/summary/%E9%9F%AD%E8%8F%9C",
+    "via": "zh:韭菜"
+  },
+  "veg-lotus-cold": {
+    "source": "https://zh.wikipedia.org/api/rest_v1/page/summary/%E8%93%AE%E8%97%95",
+    "via": "zh:蓮藕"
+  },
+  "veg-garlic-scape-pork": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Garlic_scape",
+    "via": "en:Garlic scape"
+  },
+  "veg-napa-tofu": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Napa_cabbage",
+    "via": "en:Napa cabbage"
+  },
+  "veg-ayoumai-garlic": {
+    "source": "https://commons.wikimedia.org/wiki/File:Lactuca_sativa_var._longifolia_Feria.jpg",
+    "via": "commons:油麥菜"
+  },
+  "veg-tonghao-garlic": {
+    "source": "https://zh.wikipedia.org/api/rest_v1/page/summary/%E8%8C%BC%E8%92%BF",
+    "via": "zh:茼蒿"
+  },
+  "veg-wawacai-soup": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Napa_cabbage",
+    "via": "en:Napa cabbage"
+  },
+  "veg-eggplant-yuxiang": {
+    "source": "https://commons.wikimedia.org/wiki/File:Yuxiangqiezi.jpg",
+    "via": "commons:魚香茄子"
+  },
+  "veg-wintermelon-pork-soup": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Winter_melon",
+    "via": "en:Winter melon"
+  },
+  "veg-broccoli-oyster": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Broccoli",
+    "via": "en:Broccoli"
+  },
+  "veg-shanghai-qing": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Bok_choy",
+    "via": "en:Bok choy"
   }
 }
