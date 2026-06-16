@@ -40,17 +40,12 @@
     });
   }
 
-  // ---- 食材行（不显示价格；只标用量/分类/是否有货）----
+  // ---- 食材行（不显示价格、不显示缺货；默认都有货，客人到店购买）----
   function ingredientRow(r) {
-    if (!r.available) {
-      return '<li class="ing ing--out"><span class="ing__name">' + esc(r.label) +
-        '</span><span class="ing__qty">' + esc(r.qty) + '</span>' +
-        '<span class="ing__tag">暂缺</span></li>';
-    }
+    var cat = r.category ? '<span class="ing__cat">' + esc(r.category) + '</span>' : '';
     return '<li class="ing"><span class="ing__name">' + esc(r.label) +
       '</span><span class="ing__qty">' + esc(r.qty) + '</span>' +
-      '<span class="ing__tag ing__tag--ok">有货</span>' +
-      '<span class="ing__cat">' + esc(r.category || '') + '</span></li>';
+      '<span class="ing__tag ing__tag--ok">有货</span>' + cat + '</li>';
   }
 
   function show(section) {
@@ -164,6 +159,16 @@
       fillCards('picks', RL.todaysPicks(state.recipes, todayStr(), 4)); // 兜底
     }
 
+    // 🐟 海鲜 / 🍚 主食 / 🥟 饺子馄饨
+    var seafood = bySection('seafood');
+    $('seafoodBlock').hidden = !seafood.length;
+    fillCards('seafood', seafood);
+    var staple = bySection('staple');
+    $('stapleBlock').hidden = !staple.length;
+    fillCards('staple', staple);
+    var dumpling = bySection('dumpling');
+    $('dumplingBlock').hidden = !dumpling.length;
+    fillCards('dumpling', dumpling);
     // 🍜 鲜河粉鲜肠粉 / 🌅 早餐包点
     var fresh = bySection('fresh');
     $('freshBlock').hidden = !fresh.length;

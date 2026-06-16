@@ -2300,6 +2300,1288 @@
           "required": false
         }
       ]
+    },
+    {
+      "id": "dujiao-yutou",
+      "name_cn": "剁椒鱼头",
+      "name_en": "Steamed Fish Head with Chopped Chilli",
+      "aliases": [
+        "剁椒蒸鱼头",
+        "du jiao yu tou",
+        "chopped chilli fish head"
+      ],
+      "section": "seafood",
+      "kind": "dish",
+      "priority": 96,
+      "image": "assets/images/dujiao-yutou.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "海鲜",
+        "鱼",
+        "蒸菜",
+        "湘菜",
+        "下饭菜"
+      ],
+      "steps": [
+        "大鱼头从中间劈开（或请店员处理），用盐、料酒、姜片腌制15分钟去腥。",
+        "剁椒加少许生抽、糖、蒜末拌匀，均匀铺在鱼头两半上。",
+        "蒸锅水烧开，鱼头放入大盘，大火蒸10-12分钟至鱼肉熟透。",
+        "取出后撒上切碎的葱花，浇上热油激香，即可上桌。"
+      ],
+      "ingredients": [
+        {
+          "label": "大鱼头",
+          "qty": "1个（约750g）",
+          "code": "800794016061",
+          "required": true
+        },
+        {
+          "label": "剁椒",
+          "qty": "3-4汤匙",
+          "code": "210246615931",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根（切葱花）",
+          "code": "HFCXCXC",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣（切末）",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "2汤匙（淋热油用）",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "qingzheng-luyu",
+      "name_cn": "清蒸鲈鱼",
+      "name_en": "Steamed Sea Bass",
+      "aliases": [
+        "清蒸鱼",
+        "qing zheng lu yu",
+        "steamed bass"
+      ],
+      "section": "seafood",
+      "kind": "dish",
+      "priority": 94,
+      "image": "assets/images/qingzheng-luyu.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "海鲜",
+        "鱼",
+        "蒸菜",
+        "粤式",
+        "健康"
+      ],
+      "steps": [
+        "鲈鱼处理干净，两面划斜刀，用盐、料酒、姜片腌10分钟去腥。",
+        "盘底垫上葱段和姜片，将鱼放在上面，鱼腹内也放入少许姜葱。",
+        "蒸锅水大火烧开，鱼盘入锅蒸8-10分钟（视鱼大小）至筷子能轻松插入最厚处。",
+        "蒸好后倒掉盘内多余蒸鱼水，铺上新鲜葱丝，浇蒸鱼豉油。",
+        "另起锅烧2-3汤匙热油，淋在葱丝上激出香气，即可上桌。"
+      ],
+      "ingredients": [
+        {
+          "label": "酒香鲈鱼",
+          "qty": "1条",
+          "code": "874718009897",
+          "required": true
+        },
+        {
+          "label": "蒸鱼豉油",
+          "qty": "2汤匙",
+          "code": "6902265111719",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "4片",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "3根（切丝/段）",
+          "code": "HFCXCXC",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙（可代替蒸鱼豉油）",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "2汤匙（激香用）",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "suancai-yu",
+      "name_cn": "酸菜鱼",
+      "name_en": "Fish with Pickled Cabbage",
+      "aliases": [
+        "水煮酸菜鱼",
+        "suan cai yu",
+        "pickled cabbage fish"
+      ],
+      "section": "seafood",
+      "kind": "dish",
+      "priority": 93,
+      "image": "assets/images/suancai-yu.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "海鲜",
+        "鱼",
+        "酸辣",
+        "川菜",
+        "下饭菜"
+      ],
+      "steps": [
+        "鱼片用盐、料酒、蛋清、土豆淀粉抓匀腌制15分钟（滑嫩关键）。",
+        "酸菜切段；锅中下油，爆香蒜末和干辣椒，加酸菜翻炒1-2分钟出香味。",
+        "加入足量热水或高汤，大火烧开后转中火煮5分钟，让酸菜充分出味。",
+        "将鱼骨（若有）先入锅煮2分钟，再将腌好的鱼片抖散逐片下入，中小火煮1-2分钟至变白熟透。",
+        "出锅盛入大碗，撒上葱花和干辣椒，淋热油激香即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "脆皖鱼片（草鱼片）",
+          "qty": "1袋（约400g）",
+          "code": "800794392721",
+          "required": true
+        },
+        {
+          "label": "酸菜",
+          "qty": "1包（300-500g）",
+          "code": "6922474188883",
+          "required": true
+        },
+        {
+          "label": "干辣椒",
+          "qty": "4-5个",
+          "code": "6971005993144",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "4瓣（切末）",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "鸡蛋",
+          "qty": "1个（取蛋清）",
+          "code": "2008",
+          "required": true
+        },
+        {
+          "label": "土豆淀粉",
+          "qty": "1汤匙",
+          "code": "6941837101024",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根（切葱花）",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "baochao-youyu",
+      "name_cn": "爆炒鱿鱼",
+      "name_en": "Stir-Fried Squid",
+      "aliases": [
+        "炒鱿鱼",
+        "bao chao you yu",
+        "stir fry squid"
+      ],
+      "section": "seafood",
+      "kind": "dish",
+      "priority": 90,
+      "image": "assets/images/baochao-youyu.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "海鲜",
+        "鱿鱼",
+        "爆炒",
+        "家常菜"
+      ],
+      "steps": [
+        "鱿鱼片表面划十字花刀，切成小块；青椒去籽切片；洋葱切丝。",
+        "鱿鱼片用沸水快速焯烫20-30秒，卷曲花刀后立刻捞出沥干。",
+        "锅烧热下油，大火爆香蒜末，下鱿鱼片快速翻炒30秒。",
+        "加入青椒片和洋葱丝翻炒2分钟，调入蚝油、生抽、少许盐翻匀即可出锅。"
+      ],
+      "ingredients": [
+        {
+          "label": "鱿鱼片",
+          "qty": "1袋（约300g）",
+          "code": "990488000312",
+          "required": true
+        },
+        {
+          "label": "青椒",
+          "qty": "2个",
+          "code": "10211mxgj",
+          "required": true
+        },
+        {
+          "label": "洋葱",
+          "qty": "半个",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣（切末）",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "蚝油",
+          "qty": "1汤匙",
+          "code": "6922824007468",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "baizhuoxia",
+      "name_cn": "白灼虾",
+      "name_en": "Blanched Prawns",
+      "aliases": [
+        "清煮虾",
+        "bai zhuo xia",
+        "poached shrimp"
+      ],
+      "section": "seafood",
+      "kind": "dish",
+      "priority": 92,
+      "image": "assets/images/baizhuoxia.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "海鲜",
+        "虾",
+        "清淡",
+        "粤式",
+        "健康"
+      ],
+      "steps": [
+        "大虾剪去虾须、虾枪，用牙签从虾背第二节挑出虾肠，冲洗干净。",
+        "锅中加适量水，下姜片和葱段，大火烧开后放入大虾。",
+        "大火煮1.5-2分钟，虾身变红弯曲即刻捞出，过冰水或立即摆盘。",
+        "蘸料：生抽加少许姜末即可，亦可按喜好加香醋或辣椒。"
+      ],
+      "ingredients": [
+        {
+          "label": "厄瓜多尔大虾",
+          "qty": "1磅（约450g）",
+          "code": "209145dxdx827510004140",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "2汤匙（蘸料）",
+          "code": "078895128789",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "huaxia-hua",
+      "name_cn": "虾滑",
+      "name_en": "Shrimp Paste (Ready to Cook)",
+      "aliases": [
+        "虾泥",
+        "xia hua",
+        "shrimp paste hot pot"
+      ],
+      "section": "seafood",
+      "kind": "ready",
+      "priority": 86,
+      "image": "assets/images/huaxia-hua.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "海鲜",
+        "虾",
+        "火锅",
+        "速食"
+      ],
+      "steps": [
+        "虾滑直接从冰箱取出，用勺子挖成椭圆球形，或装入裱花袋挤成条状。",
+        "下入沸腾的火锅汤底或清水中，中火煮3-4分钟至浮起变白。",
+        "也可摊在平底锅上煎成虾饼，两面金黄即可食用。"
+      ],
+      "ingredients": [
+        {
+          "label": "虾滑",
+          "qty": "1袋（约200g）",
+          "code": "9780201265835",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "moyuwan",
+      "name_cn": "墨鱼丸",
+      "name_en": "Cuttlefish Balls (Ready to Cook)",
+      "aliases": [
+        "墨鱼球",
+        "mo yu wan",
+        "cuttlefish ball"
+      ],
+      "section": "seafood",
+      "kind": "ready",
+      "priority": 84,
+      "image": "assets/images/moyuwan.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "海鲜",
+        "丸子",
+        "火锅",
+        "速食"
+      ],
+      "steps": [
+        "墨鱼丸无需解冻，直接下入沸腾的火锅汤底或清汤中。",
+        "中火煮4-5分钟至丸子浮起、受热膨胀即可食用。",
+        "也可串签后烧烤，外焦里嫩别有风味。"
+      ],
+      "ingredients": [
+        {
+          "label": "墨鱼丸",
+          "qty": "1袋",
+          "code": "827510006045",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "shijinyuwan",
+      "name_cn": "什锦鱼丸",
+      "name_en": "Assorted Fish Balls (Ready to Cook)",
+      "aliases": [
+        "杂锦鱼丸",
+        "shi jin yu wan",
+        "mixed fish balls"
+      ],
+      "section": "seafood",
+      "kind": "ready",
+      "priority": 83,
+      "image": "assets/images/shijinyuwan.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "海鲜",
+        "丸子",
+        "火锅",
+        "速食"
+      ],
+      "steps": [
+        "什锦鱼丸无需解冻，直接下入沸腾的火锅汤底。",
+        "中火煮4-5分钟至全部浮起即可食用。",
+        "亦可与蔬菜一起做关东煮，风味更丰富。"
+      ],
+      "ingredients": [
+        {
+          "label": "什锦鱼丸",
+          "qty": "1袋",
+          "code": "800794308074",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "jiachang-doufu",
+      "name_cn": "家常豆腐",
+      "name_en": "Home-Style Tofu",
+      "aliases": [
+        "红烧豆腐",
+        "jia chang dou fu",
+        "braised tofu"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 88,
+      "image": "assets/images/jiachang-doufu.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "豆腐",
+        "家常菜",
+        "下饭菜",
+        "川菜风"
+      ],
+      "steps": [
+        "豆腐切成1cm厚片，表面用厨房纸吸干水分；五花肉切薄片；青椒切小块。",
+        "锅中热油，将豆腐片下锅中火煎至两面金黄，盛出备用。",
+        "锅中留底油，下五花肉片炒至出油变色，加郫县豆瓣酱炒出红油。",
+        "加蒜末翻炒爆香，再放回煎好的豆腐和青椒翻炒。",
+        "加生抽、少许清水，翻匀收汁，撒葱花出锅。"
+      ],
+      "ingredients": [
+        {
+          "label": "鲜豆腐（中硬）",
+          "qty": "1块（约450g）",
+          "code": "777433001200",
+          "required": true
+        },
+        {
+          "label": "五花肉",
+          "qty": "100g（切薄片）",
+          "code": "0221",
+          "required": true
+        },
+        {
+          "label": "郫县豆瓣酱",
+          "qty": "1汤匙",
+          "code": "6909003888018",
+          "required": true
+        },
+        {
+          "label": "青椒",
+          "qty": "2个",
+          "code": "10211mxgj",
+          "required": false
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣（切末）",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根（切葱花）",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "yuxiang-doufu",
+      "name_cn": "鱼香豆腐",
+      "name_en": "Yu-Xiang Tofu (Fish-Fragrant Sauce)",
+      "aliases": [
+        "鱼香味豆腐",
+        "yu xiang dou fu",
+        "fish fragrant tofu"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 87,
+      "image": "assets/images/yuxiang-doufu.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "豆腐",
+        "家常菜",
+        "川菜",
+        "下饭菜",
+        "素食"
+      ],
+      "steps": [
+        "豆腐切成约2cm小方块；土豆淀粉用少量水化开备用。",
+        "锅热油，将豆腐块下锅中火煎至表面微黄定型，盛出备用。",
+        "锅中留底油，下郫县豆瓣酱小火炒出红油，加蒜末炒香。",
+        "加少量清水烧开，放回豆腐块，调入生抽、少许糖，轻轻翻匀。",
+        "淋入水淀粉勾芡，汤汁浓稠后出锅，撒葱花即成。"
+      ],
+      "ingredients": [
+        {
+          "label": "鲜豆腐（中硬）",
+          "qty": "1块（约450g）",
+          "code": "777433001200",
+          "required": true
+        },
+        {
+          "label": "郫县豆瓣酱",
+          "qty": "1.5汤匙",
+          "code": "6909003888018",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "4瓣（切末）",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "土豆淀粉",
+          "qty": "1汤匙（水淀粉）",
+          "code": "6941837101024",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根（切葱花）",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "pidan-doufu",
+      "name_cn": "皮蛋豆腐",
+      "name_en": "Century Egg with Silken Tofu",
+      "aliases": [
+        "皮蛋冷豆腐",
+        "pi dan dou fu",
+        "century egg tofu"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 70,
+      "image": "assets/images/pidan-doufu.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "豆腐",
+        "皮蛋",
+        "凉菜",
+        "快手菜",
+        "无需开火"
+      ],
+      "steps": [
+        "嫩豆腐从盒中取出，轻轻倒扣在盘中，切块或保持整块均可。",
+        "皮蛋去壳，切成小瓣，摆在豆腐上。",
+        "生抽直接淋在皮蛋豆腐上，撒上切好的葱花。",
+        "可根据喜好再加少许香醋、辣椒油或芝麻油，即可食用。"
+      ],
+      "ingredients": [
+        {
+          "label": "嫩豆腐",
+          "qty": "1盒（约300g）",
+          "code": "057864000059",
+          "required": true
+        },
+        {
+          "label": "皮蛋",
+          "qty": "2个",
+          "code": "6920775217509",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1.5汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根（切葱花）",
+          "code": "HFCXCXC",
+          "required": true
+        },
+        {
+          "label": "辣椒油",
+          "qty": "少许（可选）",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "qincai-xianggan",
+      "name_cn": "芹菜炒香干",
+      "name_en": "Stir-Fried Celery with Spiced Tofu",
+      "aliases": [
+        "芹菜香干",
+        "qin cai xiang gan",
+        "celery spiced tofu"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 71,
+      "image": "assets/images/qincai-xianggan.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "素菜",
+        "豆腐干",
+        "芹菜",
+        "快手菜",
+        "家常菜"
+      ],
+      "steps": [
+        "唐芹洗净切段（约3-4cm）；五香干切成薄条。",
+        "锅烧热下油，爆香蒜片。",
+        "先下五香干翻炒约1分钟，再加入唐芹段大火翻炒2分钟。",
+        "调入少许盐、生抽翻匀出锅。"
+      ],
+      "ingredients": [
+        {
+          "label": "五香干",
+          "qty": "2块（约200g）",
+          "code": "859855001171",
+          "required": true
+        },
+        {
+          "label": "唐芹",
+          "qty": "3-4根",
+          "code": "1020tqtq",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣（切片）",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "liangban-gandoufu",
+      "name_cn": "凉拌干豆腐丝",
+      "name_en": "Cold Mixed Tofu Skin Strips",
+      "aliases": [
+        "凉拌豆腐皮",
+        "liang ban gan dou fu",
+        "cold tofu skin salad"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 69,
+      "image": "assets/images/liangban-gandoufu.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "凉菜",
+        "豆腐干",
+        "黄瓜",
+        "快手菜",
+        "素食"
+      ],
+      "steps": [
+        "干豆腐切成细丝，黄瓜切丝，胡萝卜切丝。",
+        "干豆腐丝用沸水焯烫1分钟，捞出过凉水，沥干备用。",
+        "将豆腐丝、黄瓜丝、胡萝卜丝放入碗中，加入蒜末。",
+        "调入生抽、香醋、香油、少许盐和糖拌匀，即可食用。"
+      ],
+      "ingredients": [
+        {
+          "label": "干豆腐（豆腐皮）",
+          "qty": "1袋（约250g）",
+          "code": "859855001027",
+          "required": true
+        },
+        {
+          "label": "黄瓜",
+          "qty": "1根",
+          "code": "10291dcqg",
+          "required": false
+        },
+        {
+          "label": "胡萝卜",
+          "qty": "半根",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣（切末）",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "2汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "香醋",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "香油",
+          "qty": "少许",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "jidanzheng",
+      "name_cn": "鸡蛋羹",
+      "name_en": "Steamed Egg Custard",
+      "aliases": [
+        "蒸蛋",
+        "ji dan zheng",
+        "steamed egg"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 70,
+      "image": "assets/images/jidanzheng.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "蛋",
+        "蒸菜",
+        "快手菜",
+        "家常菜",
+        "老少皆宜"
+      ],
+      "steps": [
+        "鸡蛋打散，加入1.5倍的温水（约40℃，非沸水）搅拌均匀，加少许盐。",
+        "将蛋液过筛一遍，去除气泡，倒入碗中。",
+        "蒸锅水开后放入，盖上保鲜膜（扎几个小孔）或锅盖留缝，中小火蒸8-10分钟。",
+        "蒸好后表面平滑细嫩，淋上生抽、撒葱花，滴少许香油即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "鸡蛋",
+          "qty": "2个",
+          "code": "2008",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "1根（切葱花）",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "香油",
+          "qty": "少许",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "fuzhu-charou",
+      "name_cn": "腐竹炒肉",
+      "name_en": "Stir-Fried Tofu Sticks with Pork",
+      "aliases": [
+        "腐竹肉片",
+        "fu zhu chao rou",
+        "bean curd sticks pork"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 68,
+      "image": "assets/images/fuzhu-charou.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "腐竹",
+        "猪肉",
+        "家常菜",
+        "下饭菜"
+      ],
+      "steps": [
+        "腐竹段提前用温水泡发约30分钟至软，挤干水分切段；五花肉切薄片。",
+        "锅热油，下五花肉片中火炒至出油变色。",
+        "加蒜末爆香，放入泡好的腐竹段翻炒2-3分钟。",
+        "调入生抽、老抽少许、蚝油翻匀，加少量清水收汁，出锅即成。"
+      ],
+      "ingredients": [
+        {
+          "label": "腐竹段",
+          "qty": "1袋（约150g干重）",
+          "code": "6976411130176",
+          "required": true
+        },
+        {
+          "label": "五花肉",
+          "qty": "150g（切薄片）",
+          "code": "0221",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣（切末）",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1.5汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "蚝油",
+          "qty": "1汤匙",
+          "code": "6922824007468",
+          "required": false
+        },
+        {
+          "label": "老抽",
+          "qty": "少许（上色）",
+          "code": "722337817020",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "guantang-xiaoshuijiao",
+      "name_cn": "灌汤小水饺",
+      "name_en": "Soup Dumplings (Boiled)",
+      "aliases": [
+        "灌汤饺",
+        "guan tang xiao shui jiao",
+        "soup dumplings boiled"
+      ],
+      "section": "dumpling",
+      "kind": "ready",
+      "priority": 95,
+      "image": "assets/images/guantang-xiaoshuijiao.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "饺子",
+        "速食",
+        "水饺",
+        "灌汤"
+      ],
+      "steps": [
+        "锅中水大火烧开，下饺子，用勺子轻轻推动防止粘底。",
+        "沸腾后加半碗冷水，重复两次（点水三次），饺子浮起且鼓胀即熟。",
+        "捞出蘸醋或酱油食用，小心咬开，内有鲜汤。"
+      ],
+      "ingredients": [
+        {
+          "label": "灌汤小水饺",
+          "qty": "1袋（约700g）",
+          "code": "5177gtxsj",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "suancai-roujiiao",
+      "name_cn": "酸菜肉饺",
+      "name_en": "Pork & Pickled Cabbage Dumplings",
+      "aliases": [
+        "酸菜饺子",
+        "suan cai rou jiao",
+        "pickled cabbage pork dumplings"
+      ],
+      "section": "dumpling",
+      "kind": "ready",
+      "priority": 90,
+      "image": "assets/images/suancai-roujiiao.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "饺子",
+        "速食",
+        "酸菜",
+        "猪肉"
+      ],
+      "steps": [
+        "锅中水大火烧开，下饺子，轻轻搅动防粘底。",
+        "水沸后点冷水两次，饺子全部浮起约1分钟后捞出。",
+        "蘸醋或生抽食用。"
+      ],
+      "ingredients": [
+        {
+          "label": "酸菜肉饺",
+          "qty": "1袋（700g）",
+          "code": "628719295526",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "bajiaojiao",
+      "name_cn": "鲅鱼饺",
+      "name_en": "Spanish Mackerel Dumplings",
+      "aliases": [
+        "鲅鱼水饺",
+        "ba yu jiao",
+        "mackerel dumplings"
+      ],
+      "section": "dumpling",
+      "kind": "ready",
+      "priority": 88,
+      "image": "assets/images/bajiaojiao.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "饺子",
+        "速食",
+        "海鲜",
+        "鱼肉"
+      ],
+      "steps": [
+        "锅中水大火烧开，下饺子，轻轻搅动防粘。",
+        "水沸后点冷水两次，饺子浮起后再煮1分钟，捞出。",
+        "搭配姜醋蘸料（姜末+香醋）最佳，去腥提鲜。"
+      ],
+      "ingredients": [
+        {
+          "label": "鲅鱼饺",
+          "qty": "1袋（700g）",
+          "code": "628719295502",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "yangroujiiao",
+      "name_cn": "羊肉饺",
+      "name_en": "Lamb Dumplings",
+      "aliases": [
+        "羊肉水饺",
+        "yang rou jiao",
+        "lamb dumplings"
+      ],
+      "section": "dumpling",
+      "kind": "ready",
+      "priority": 87,
+      "image": "assets/images/yangroujiiao.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "饺子",
+        "速食",
+        "羊肉"
+      ],
+      "steps": [
+        "锅中水大火烧开，下饺子，轻轻搅动。",
+        "水沸后点冷水两次，饺子全部浮起后再煮约1分钟捞出。",
+        "蘸醋和蒜泥食用风味最佳。"
+      ],
+      "ingredients": [
+        {
+          "label": "羊肉饺",
+          "qty": "1袋（700g）",
+          "code": "628719295519",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "zhurou-jiucaijiao",
+      "name_cn": "猪肉韭菜饺",
+      "name_en": "Pork & Chive Dumplings",
+      "aliases": [
+        "韭菜猪肉饺",
+        "zhu rou jiu cai jiao",
+        "pork chive dumplings"
+      ],
+      "section": "dumpling",
+      "kind": "ready",
+      "priority": 86,
+      "image": "assets/images/zhurou-jiucaijiao.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "饺子",
+        "速食",
+        "猪肉",
+        "韭菜"
+      ],
+      "steps": [
+        "锅中水大火烧开，下饺子，轻轻搅动防粘底。",
+        "水沸后点冷水两次，饺子浮起后再煮1分钟，捞出即可。",
+        "蘸生抽或香醋食用。"
+      ],
+      "ingredients": [
+        {
+          "label": "猪肉韭菜饺",
+          "qty": "1袋（约500g）",
+          "code": "628719295106",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "xihongshi-jidan-mian",
+      "name_cn": "西红柿鸡蛋面",
+      "name_en": "Tomato & Egg Noodle Soup",
+      "aliases": [
+        "番茄蛋面",
+        "xi hong shi ji dan mian",
+        "tomato egg noodles"
+      ],
+      "section": "staple",
+      "kind": "dish",
+      "priority": 82,
+      "image": "assets/images/xihongshi-jidan-mian.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "面条",
+        "番茄",
+        "鸡蛋",
+        "快手菜",
+        "家常菜"
+      ],
+      "steps": [
+        "番茄切块；鸡蛋打散加少许盐搅匀。",
+        "锅热油，下鸡蛋液炒至半熟成块，盛出备用。",
+        "锅中再下少许油，大火翻炒番茄至出汁，加适量热水烧成汤底，调入盐、少许生抽。",
+        "将炒好的鸡蛋倒回汤中，另起锅煮面。",
+        "拉面煮熟后捞入碗中，浇上番茄鸡蛋汤，撒葱花即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "兰州/京都拉面",
+          "qty": "1-2人份",
+          "code": "800794206004",
+          "required": true
+        },
+        {
+          "label": "番茄",
+          "qty": "2个",
+          "code": "1032xhs",
+          "required": true
+        },
+        {
+          "label": "鸡蛋",
+          "qty": "2个",
+          "code": "2008",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根（切葱花）",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "niurou-lamian",
+      "name_cn": "牛肉拉面",
+      "name_en": "Beef Noodle Soup",
+      "aliases": [
+        "红烧牛肉面",
+        "niu rou la mian",
+        "beef noodle soup"
+      ],
+      "section": "staple",
+      "kind": "dish",
+      "priority": 84,
+      "image": "assets/images/niurou-lamian.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "面条",
+        "牛肉",
+        "汤面",
+        "家常菜"
+      ],
+      "steps": [
+        "牛腩切大块，冷水下锅焯水5分钟，捞出洗净。",
+        "锅中热油，爆香姜片，下牛腩翻炒，加生抽、老抽上色。",
+        "加足量热水，大火烧开转小火加盖焖煮1.5-2小时至牛腩软烂。",
+        "另起锅煮拉面，按包装时间煮熟捞出放入碗中。",
+        "舀入牛肉汤，放上牛腩块，撒葱花即可。"
+      ],
+      "ingredients": [
+        {
+          "label": "兰州/京都拉面",
+          "qty": "1-2人份",
+          "code": "800794206004",
+          "required": true
+        },
+        {
+          "label": "爱尔兰牛腩",
+          "qty": "约500g",
+          "code": "9735",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根（切葱花）",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "2汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "老抽",
+          "qty": "1汤匙",
+          "code": "722337817020",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "zhajianmian",
+      "name_cn": "炸酱面",
+      "name_en": "Zhajiang Noodles (Pork & Bean Paste)",
+      "aliases": [
+        "肉丁炸酱面",
+        "zha jiang mian",
+        "zhajiang noodles"
+      ],
+      "section": "staple",
+      "kind": "dish",
+      "priority": 80,
+      "image": "assets/images/zhajianmian.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "面条",
+        "猪肉",
+        "炸酱",
+        "北京菜",
+        "家常菜"
+      ],
+      "steps": [
+        "五花肉切成小丁；黄瓜切丝备用（配菜）。",
+        "锅中下少许油，中小火炒香五花肉丁至出油微焦。",
+        "加入甜面酱翻炒，持续小火翻炒约5-8分钟至酱香浓郁、肉丁裹满酱料（炸酱完成）。",
+        "另起锅煮刀削面，按包装指示煮熟，捞出控水放入碗中。",
+        "将炸酱盛在面上，配上黄瓜丝，拌匀即可食用。"
+      ],
+      "ingredients": [
+        {
+          "label": "刀削面",
+          "qty": "1-2人份",
+          "code": "800794206080",
+          "required": true
+        },
+        {
+          "label": "五花肉",
+          "qty": "200g（切小丁）",
+          "code": "0221",
+          "required": true
+        },
+        {
+          "label": "甜面酱",
+          "qty": "3-4汤匙",
+          "code": "6901554010122",
+          "required": true
+        },
+        {
+          "label": "黄瓜",
+          "qty": "1根（切丝，配菜）",
+          "code": "10291dcqg",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        }
+      ]
     }
   ]
 }
