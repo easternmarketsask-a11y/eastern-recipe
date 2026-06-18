@@ -234,8 +234,8 @@
 
   function boot() {
     Promise.all([
-      fetch('../data/recipes.json').then(function (r) { return r.json(); }),
-      fetch('../data/products.json').then(function (r) { return r.json(); })
+      fetch('data/recipes.json').then(function (r) { return r.json(); }),
+      fetch('data/products.json').then(function (r) { return r.json(); })
     ]).then(function (out) {
       state.recipes = out[0].recipes || [];
       state.productIndex = RL.buildProductIndex((out[1].items) || []);

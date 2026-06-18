@@ -1,11 +1,11 @@
 # 东方超市菜谱搜索引擎
 
-纯静态站（GitHub Pages）。顾客搜一道菜（或点食材看能做什么），看到菜谱 + 每样食材在东方超市的分类/是否有货（不显示价格）。本地预览访问 `/src/`（根 `index.html` 会自动跳转）。
+纯静态站（GitHub Pages）。顾客搜一道菜（或点食材看能做什么），看到菜谱 + 每样食材在东方超市的分类/是否有货（不显示价格）。应用直接从站点根目录提供（`index.html` + `css/` `js/` `assets/`），网址即 `recipe.easternmarket.ca`，不再带 `/src/` 路径。
 
 ## 数据流
 StockWise API (Firestore products) --export_products.py--> data/products.json
 手工精选 + bind_ingredients.py --> data/recipes.json
-前端关联渲染（src/js）。
+前端关联渲染（js/）。
 
 ## 本地跑
 - 前端：任意静态服务器，如 `python -m http.server 8080`，开 http://localhost:8080

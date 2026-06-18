@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const RecipeLogic = require('../src/js/lib/recipe-logic.js');
+const RecipeLogic = require('../js/lib/recipe-logic.js');
 const recipes = require('../data/_fixtures/recipes.sample.json').recipes;
 
 test('matchRecipes: 中文全名命中', () => {
