@@ -120,7 +120,8 @@
   // 「查看全部」：把某分类全部菜谱铺在结果区（网格），带返回首页
   var SEC_TITLE = {
     tonight: '🔥 今晚吃什么', cantonese: '🥢 粤菜 · 广式', seafood: '🐟 海鲜河鲜', staple: '🍚 主食 · 面饭',
-    dumpling: '🥟 饺子 · 馄饨', fresh: '🍜 鲜河粉 · 鲜肠粉', breakfast: '🌅 早餐包点', veg: '🥗 家常蔬菜'
+    dumpling: '🥟 饺子 · 馄饨', fresh: '🍜 鲜河粉 · 鲜肠粉', breakfast: '🌅 早餐包点', veg: '🥗 家常蔬菜',
+    other: '🍳 家常菜'
   };
   function showSection(sec) {
     var list = bySection(sec);
@@ -199,6 +200,10 @@
     var staple = bySection('staple');
     $('stapleBlock').hidden = !staple.length;
     fillCards('staple', staple);
+    // 🍳 家常菜（section:"other"，原先无首页入口）
+    var other = bySection('other');
+    $('otherBlock').hidden = !other.length;
+    fillCards('other', other);
     var dumpling = bySection('dumpling');
     $('dumplingBlock').hidden = !dumpling.length;
     fillCards('dumpling', dumpling);
