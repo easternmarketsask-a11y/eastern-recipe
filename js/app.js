@@ -27,7 +27,7 @@
 
   // ---- 菜卡 ----
   function recipeCard(r) {
-    var img = r.image ? '<img class="card__img" src="' + esc(r.image) + '" alt="" loading="lazy">' : '';
+    var img = r.image ? '<img class="card__img" src="' + esc(r.image) + '" alt="' + esc(r.name_cn) + '" loading="lazy">' : '';
     var en = r.name_en ? '<span class="card__en">' + esc(r.name_en) + '</span>' : '';
     var nutri = r.nutrition ? '<span class="card__nutri">🌿 ' + esc(r.nutrition) + '</span>' : '';
     return '<button class="card" data-id="' + esc(r.id) + '">' + img +
@@ -68,7 +68,7 @@
       bodyHtml = '<ul class="ings">' + a.rows.map(ingredientRow).join('') + '</ul>';
     }
     var stepsTitle = recipe.kind === 'ready' ? '怎么吃' : '做法';
-    var hero = recipe.image ? '<img class="detail__img" src="' + esc(recipe.image) + '" alt="">' : '';
+    var hero = recipe.image ? '<img class="detail__img" src="' + esc(recipe.image) + '" alt="' + esc(recipe.name_cn) + '">' : '';
     d.innerHTML =
       '<button class="back" id="back">← 返回</button>' +
       hero +
