@@ -105,7 +105,7 @@
     }
     var html = '';
     if (dishes.length) {
-      html += '<h2 class="block__title">菜谱</h2><div class="cards">' +
+      html += '<h2 class="block__title">食谱</h2><div class="cards">' +
         dishes.map(recipeCard).join('') + '</div>';
     }
     if (byIng.length) {
