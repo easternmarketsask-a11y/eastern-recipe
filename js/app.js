@@ -1,10 +1,15 @@
-/* app.js — 逛发现首页(今晚吃什么/食材chips/想做清单) + 统一搜索(菜名/以货找菜) + 菜谱详情。
-   渲染薄层，计算全调 RecipeLogic；收藏存 localStorage。 */
+/* app.js — 逛发现首页(今晚吃什么/食材chips/想做清单) + 统一搜索(菜名/以货找菜) + 食谱详情
+   + 到店购物清单 + hash 路由(每道菜可分享链接、返回键可用)。
+   渲染薄层，计算全调 RecipeLogic；收藏/勾选存 localStorage。 */
 (function () {
   'use strict';
   var RL = window.RecipeLogic;
   var FAVE_KEY = 'er_recipe_faves_v1';
+  var DONE_KEY = 'er_shoplist_done_v1';
+  // 配送业务正式上线后把 enabled 改 true 即可（入口出现在详情页和购物清单页）
+  var DELIVERY = { enabled: false, url: 'https://easternmarket.ca' };
   var state = { recipes: [], productIndex: {}, byId: {} };
+  var didNav = 0;   // 本次会话内的站内跳转数；0 = 直接落地某深链，返回按钮回首页而非退出
 
   function $(id) { return document.getElementById(id); }
   function esc(s) {
@@ -12,7 +17,6 @@
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
     });
   }
-  function todayStr() { return new Date().toISOString().slice(0, 10); }
 
   // ---- 收藏（localStorage）----
   function getFaves() {
@@ -23,6 +27,61 @@
     var f = getFaves(), i = f.indexOf(id);
     if (i === -1) f.push(id); else f.splice(i, 1);
     try { localStorage.setItem(FAVE_KEY, JSON.stringify(f)); } catch (e) {}
+  }
+  // ---- 购物清单勾选状态（localStorage）----
+  function getDone() {
+    try { return JSON.parse(localStorage.getItem(DONE_KEY)) || {}; } catch (e) { return {}; }
+  }
+  function setDone(map) {
+    try { localStorage.setItem(DONE_KEY, JSON.stringify(map)); } catch (e) {}
+  }
+
+  // ---- hash 路由 ----
+  // ''            → 首页（搜索框有词则显示搜索结果）
+  // #/r/<id>      → 食谱详情（可直接分享这条链接）
+  // #/sec/<sec>   → 某板块全部
+  // #/list        → 到店购物清单
+  function parseHash() {
+    var h = location.hash || '', m;
+    if ((m = h.match(/^#\/r\/(.+)$/))) return { view: 'detail', id: decodeURIComponent(m[1]) };
+    if ((m = h.match(/^#\/sec\/([a-z]+)$/))) return { view: 'section', sec: m[1] };
+    if (h === '#/list') return { view: 'list' };
+    return { view: 'home' };
+  }
+  function nav(hash) {
+    if (location.hash === hash) route();
+    else location.hash = hash;   // 触发 hashchange → route()
+  }
+  function goBack() {
+    if (didNav > 0) history.back();
+    else location.hash = '';     // 直接落地深链：返回=去首页
+  }
+  function route() {
+    var r = parseHash();
+    if (r.view === 'detail') {
+      var rec = state.byId[r.id];
+      if (rec) { renderDetail(rec); return; }
+      // 未知 id（菜被下架/链接打错）→ 落回首页
+    }
+    if (r.view === 'section' && SEC_TITLE[r.sec]) { showSection(r.sec); return; }
+    if (r.view === 'list') { renderShoppingList(); return; }
+    var q = $('q').value;
+    if (q && q.trim()) { renderResults(q); }
+    else { show('home'); renderHome(); }
+  }
+
+  // ---- 复制链接（微信/浏览器都可用；clipboard 不可用时走隐藏输入框兜底）----
+  function copyText(t, onOk) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t).then(onOk, function () { legacyCopy(t, onOk); });
+    } else { legacyCopy(t, onOk); }
+  }
+  function legacyCopy(t, onOk) {
+    var ta = document.createElement('textarea');
+    ta.value = t; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { if (document.execCommand('copy')) onOk(); } catch (e) {}
+    document.body.removeChild(ta);
   }
 
   // ---- 菜卡 ----
@@ -37,7 +96,9 @@
   }
   function wireCards(container) {
     Array.prototype.forEach.call(container.querySelectorAll('.card'), function (btn) {
-      btn.onclick = function () { var r = state.byId[btn.dataset.id]; if (r) renderDetail(r); };
+      btn.onclick = function () {
+        if (state.byId[btn.dataset.id]) nav('#/r/' + encodeURIComponent(btn.dataset.id));
+      };
     });
   }
 
@@ -56,10 +117,9 @@
   }
 
   function renderDetail(recipe) {
-    var cameFrom = $('results').hidden ? 'home' : 'results';
     var d = $('detail');
     var faved = isFave(recipe.id);
-    // 成品(ready)：本店有售，不拿商品表卡它；普通菜谱(dish)：列食材 有货/暂缺
+    // 成品(ready)：本店有售，不拿商品表卡它；普通食谱(dish)：列食材 有货/暂缺
     var bodyHtml;
     if (recipe.kind === 'ready') {
       bodyHtml = '<div class="ready-tag">🛒 本店有售</div>';
@@ -69,6 +129,11 @@
     }
     var stepsTitle = recipe.kind === 'ready' ? '怎么吃' : '做法';
     var hero = recipe.image ? '<img class="detail__img" src="' + esc(recipe.image) + '" alt="' + esc(recipe.name_cn) + '">' : '';
+    var actions = '<div class="detail__actions">' +
+      '<button class="mini-btn" id="copylink">🔗 复制链接</button>' +
+      (faved ? '<button class="mini-btn" id="tolist">🧾 看购物清单</button>' : '') +
+      (DELIVERY.enabled ? '<a class="mini-btn" href="' + esc(DELIVERY.url) + '" target="_blank" rel="noopener">🚚 网上下单</a>' : '') +
+      '</div>';
     d.innerHTML =
       '<button class="back" id="back">← 返回</button>' +
       hero +
@@ -78,17 +143,96 @@
       bodyHtml +
       '<button class="fave-btn' + (faved ? ' is-on' : '') + '" id="fave">' +
         (faved ? '♥ 已加入想做' : '♡ 加入想做') + '</button>' +
+      actions +
       '<h3 class="detail__h3">' + stepsTitle + '</h3>' +
       '<ol class="steps">' + (recipe.steps || []).map(function (s) {
         return '<li>' + esc(s) + '</li>';
       }).join('') + '</ol>';
-    $('back').onclick = function () {
-      if (cameFrom === 'results') { show('results'); }      // 从搜索来 → 回到搜索结果，保留查询
-      else { $('q').value = ''; show('home'); renderHome(); } // 从首页来 → 回首页并清空搜索框
-    };
+    $('back').onclick = goBack;
     $('fave').onclick = function () { toggleFave(recipe.id); renderDetail(recipe); };
+    $('copylink').onclick = function () {
+      copyText(location.href, function () { $('copylink').textContent = '✅ 已复制，发给家人吧'; });
+    };
+    if ($('tolist')) $('tolist').onclick = function () { nav('#/list'); };
     show('detail');
     $('back').focus();   // 无障碍：详情打开后把焦点移到返回按钮
+    window.scrollTo(0, 0);
+  }
+
+  // ---- 到店购物清单：收藏的菜 → 食材汇总，按超市分区分组，可勾选划掉 ----
+  function renderShoppingList() {
+    var faves = getFaves().map(function (id) { return state.byId[id]; }).filter(Boolean);
+    var el = $('results');
+    var html = '<button class="back" id="listback">← 返回首页</button>' +
+      '<h2 class="block__title">🧾 到店购物清单</h2>';
+    if (!faves.length) {
+      el.innerHTML = html + '<p class="empty">还没有收藏的菜～<br>看到想做的菜点「♡ 加入想做」，这里就会帮你把食材汇总好。</p>';
+      $('listback').onclick = goBack;
+      show('results'); window.scrollTo(0, 0); return;
+    }
+    var list = RL.buildShoppingList(faves, state.productIndex);
+    var done = getDone();
+    // 只保留当前清单里还存在的勾选记录
+    var pruned = {};
+    list.groups.forEach(function (g) {
+      g.items.forEach(function (it) { if (done[it.key]) pruned[it.key] = 1; });
+    });
+    setDone(pruned); done = pruned;
+
+    html += '<p class="block__note">来自你收藏的 ' + faves.length + ' 道菜 · 按超市分区排好，到店照着拿</p>';
+    html += '<div class="shop-srcs">' + faves.map(function (r) {
+      return '<span class="src-chip">' + esc(r.name_cn) +
+        '<button data-rm="' + esc(r.id) + '" aria-label="从清单移除' + esc(r.name_cn) + '">✕</button></span>';
+    }).join('') + '</div>';
+    if (list.ready.length) {
+      html += '<div class="ready-tag">🛒 成品直接拿：' +
+        list.ready.map(function (r) { return esc(r.name_cn); }).join('、') + '（本店有售）</div>';
+    }
+    var GRP_ICON = { '新鲜蔬菜': '🥬', '新鲜水果': '🍎', '冷冻食品': '🧊', '豆腐蛋品': '🥚',
+      '米面粮油': '🍚', '干货调料': '🧂', '零食饮料': '🥤', '日用杂货': '🧺', '中成药品': '🌿' };
+    html += list.groups.map(function (g) {
+      return '<div class="shopgrp"><div class="shopgrp__hd">' +
+        (GRP_ICON[g.category] || '🛒') + ' ' + esc(g.category) + '</div><ul>' +
+        g.items.map(function (it) {
+          var uses = it.uses.map(function (u) {
+            return esc(u.recipe_cn) + (u.qty ? ' ' + esc(u.qty) : '');
+          }).join(' · ');
+          return '<li class="shopitem' + (done[it.key] ? ' is-done' : '') + '" data-key="' + esc(it.key) + '">' +
+            '<label><input type="checkbox"' + (done[it.key] ? ' checked' : '') + '>' +
+            '<span class="shopitem__name">' + esc(it.label) + '</span>' +
+            '<span class="shopitem__uses">' + uses + '</span></label></li>';
+        }).join('') + '</ul></div>';
+    }).join('');
+    html += '<div class="shoplist__actions">' +
+      '<button class="mini-btn" id="listcopy">🔗 复制清单文字</button>' +
+      '<button class="mini-btn" id="listclear">↺ 清除勾选</button>' +
+      (DELIVERY.enabled ? '<a class="mini-btn" href="' + esc(DELIVERY.url) + '" target="_blank" rel="noopener">🚚 网上下单</a>' : '') +
+      '</div>';
+    el.innerHTML = html;
+
+    $('listback').onclick = goBack;
+    Array.prototype.forEach.call(el.querySelectorAll('.src-chip button'), function (btn) {
+      btn.onclick = function () { toggleFave(btn.dataset.rm); renderShoppingList(); };
+    });
+    Array.prototype.forEach.call(el.querySelectorAll('.shopitem input'), function (cb) {
+      cb.onchange = function () {
+        var li = cb.closest('.shopitem'), map = getDone();
+        if (cb.checked) map[li.dataset.key] = 1; else delete map[li.dataset.key];
+        setDone(map);
+        li.classList.toggle('is-done', cb.checked);
+      };
+    });
+    $('listclear').onclick = function () { setDone({}); renderShoppingList(); };
+    $('listcopy').onclick = function () {
+      var lines = ['🧾 东方超市购物清单（' + faves.map(function (r) { return r.name_cn; }).join('、') + '）'];
+      list.groups.forEach(function (g) {
+        lines.push('【' + g.category + '】' + g.items.map(function (it) { return it.label; }).join('、'));
+      });
+      if (list.ready.length) lines.push('【成品】' + list.ready.map(function (r) { return r.name_cn; }).join('、'));
+      lines.push('食谱都在 → ' + location.origin + location.pathname);
+      copyText(lines.join('\n'), function () { $('listcopy').textContent = '✅ 已复制'; });
+    };
+    show('results');
     window.scrollTo(0, 0);
   }
 
@@ -117,7 +261,7 @@
     show('results');
   }
 
-  // 「查看全部」：把某分类全部菜谱铺在结果区（网格），带返回首页
+  // 「查看全部」：把某分类全部食谱铺在结果区（网格），带返回首页
   var SEC_TITLE = {
     tonight: '🔥 今晚吃什么', cantonese: '🥢 粤菜 · 广式', seafood: '🐟 海鲜河鲜', staple: '🍚 主食 · 面饭',
     dumpling: '🥟 饺子 · 馄饨', fresh: '🍜 鲜河粉 · 鲜肠粉', breakfast: '🌅 早餐包点', veg: '🥗 家常蔬菜',
@@ -130,13 +274,15 @@
       '<button class="back" id="secback">← 返回首页</button>' +
       '<h2 class="block__title">' + esc(SEC_TITLE[sec] || '') + '（' + list.length + '）</h2>' +
       '<div class="cards">' + list.map(recipeCard).join('') + '</div>';
-    $('secback').onclick = function () { show('home'); renderHome(); window.scrollTo(0, 0); };
+    $('secback').onclick = goBack;
     wireCards(el);
     show('results');
     window.scrollTo(0, 0);
   }
 
   function onSearch() {
+    // 在详情/板块/清单页开始搜索：静默清掉 hash（不产生历史记录），视图跟着搜索走
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
     var q = $('q').value;
     if (!q || !q.trim()) { show('home'); renderHome(); return; }
     renderResults(q);
@@ -247,10 +393,13 @@
       state.recipes.forEach(function (r) { state.byId[r.id] = r; });
       $('q').addEventListener('input', onSearch);
       Array.prototype.forEach.call(document.querySelectorAll('.seeall'), function (btn) {
-        btn.onclick = function () { showSection(btn.dataset.sec); };
+        btn.onclick = function () { nav('#/sec/' + btn.dataset.sec); };
       });
+      $('openShoplist').onclick = function () { nav('#/list'); };
+      window.addEventListener('hashchange', function () { didNav += 1; route(); });
       show('home');     // 先显示(可见)再渲染，循环行才能量到宽度
       renderHome();
+      if (location.hash) route();   // 直接落地的深链（#/r/xxx 分享链接）
     }).catch(function () {
       $('home').innerHTML = '<p class="empty">数据加载失败，请检查网络后<button class="link-btn" type="button" onclick="location.reload()">重试</button></p>';
     });

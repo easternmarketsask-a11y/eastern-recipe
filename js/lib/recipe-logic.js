@@ -98,6 +98,46 @@
     return scored.map(function (s) { return s.recipe; });
   }
 
+  // 想做清单 → 到店购物清单：跨菜合并同一食材，按超市分区分组，成品单列
+  // 分区展示顺序（仅排序用；未知分区排在已知之后、「其他」永远垫底）
+  const CAT_ORDER = ['新鲜蔬菜', '新鲜水果', '冷冻食品', '豆腐蛋品', '米面粮油',
+    '干货调料', '零食饮料', '日用杂货', '中成药品'];
+  function buildShoppingList(favRecipes, productIndex) {
+    const ready = [];
+    const byKey = {};
+    const keys = [];
+    (favRecipes || []).forEach(function (r) {
+      if (r.kind === 'ready') { ready.push({ id: r.id, name_cn: r.name_cn }); return; }
+      (r.ingredients || []).forEach(function (ing) {
+        const key = ing.code || 'label:' + ing.label;
+        if (!byKey[key]) {
+          const p = ing.code ? productIndex[ing.code] : null;
+          byKey[key] = { key: key, label: ing.label, category: (p && p.category) || '其他', uses: [] };
+          keys.push(key);
+        }
+        byKey[key].uses.push({ recipe_id: r.id, recipe_cn: r.name_cn, qty: ing.qty || '' });
+      });
+    });
+    const groupsMap = {};
+    keys.forEach(function (k) {
+      const it = byKey[k];
+      (groupsMap[it.category] = groupsMap[it.category] || []).push(it);
+    });
+    function rank(c) {
+      if (c === '其他') return CAT_ORDER.length + 1;
+      const i = CAT_ORDER.indexOf(c);
+      return i === -1 ? CAT_ORDER.length : i;
+    }
+    const cats = Object.keys(groupsMap).sort(function (a, b) {
+      return rank(a) - rank(b) || (a < b ? -1 : a > b ? 1 : 0);
+    });
+    return {
+      groups: cats.map(function (c) { return { category: c, items: groupsMap[c] }; }),
+      ready: ready,
+      itemCount: keys.length
+    };
+  }
+
   // 字符串 → 32bit 无符号 hash（确定性，不依赖随机数）
   function hashStr(s) {
     let h = 2166136261;
@@ -125,6 +165,7 @@
     buildProductIndex: buildProductIndex,
     associateRecipe: associateRecipe,
     dishesForIngredient: dishesForIngredient,
+    buildShoppingList: buildShoppingList,
     todaysPicks: todaysPicks
   };
 });

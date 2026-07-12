@@ -105,6 +105,59 @@ test('todaysPicks: 不同 seed 轮换（多菜时子集不同）', () => {
   assert.notEqual(s1, s2);
 });
 
+// ---- buildShoppingList：想做清单 → 到店购物清单 ----
+const mapo = recipes[0];
+const beefHefen = {
+  id: 'beef-hefen', name_cn: '干炒牛河', kind: 'dish',
+  ingredients: [
+    { label: '小葱', qty: '3 根', code: 'greenonion', required: false },
+    { label: '芫荽', qty: '1 把', code: '10588', required: false }
+  ]
+};
+const xlb = { id: 'xlb', name_cn: '小笼包', kind: 'ready', ingredients: [] };
+
+test('buildShoppingList: 跨菜同 code 食材合并为一行、保留每道菜用量', () => {
+  const idx = RecipeLogic.buildProductIndex(products);
+  const out = RecipeLogic.buildShoppingList([mapo, beefHefen], idx);
+  const all = out.groups.flatMap(g => g.items);
+  const onion = all.filter(it => it.key === 'greenonion');
+  assert.equal(onion.length, 1);
+  assert.deepEqual(onion[0].uses.map(u => u.recipe_cn), ['麻婆豆腐', '干炒牛河']);
+  assert.deepEqual(onion[0].uses.map(u => u.qty), ['2 根', '3 根']);
+});
+
+test('buildShoppingList: 未绑定食材归入「其他」', () => {
+  const idx = RecipeLogic.buildProductIndex(products);
+  const out = RecipeLogic.buildShoppingList([mapo], idx);
+  const other = out.groups.find(g => g.category === '其他');
+  assert.ok(other);
+  assert.deepEqual(other.items.map(it => it.label), ['牛肉末']);
+  assert.equal(other.items[0].key, 'label:牛肉末');
+});
+
+test('buildShoppingList: 分组按超市分区顺序、其他垫底', () => {
+  const idx = RecipeLogic.buildProductIndex(products);
+  const out = RecipeLogic.buildShoppingList([mapo, beefHefen], idx);
+  assert.deepEqual(out.groups.map(g => g.category),
+    ['新鲜蔬菜', '豆腐蛋品', '干货调料', '其他']);
+});
+
+test('buildShoppingList: 成品(ready)单列不进食材组', () => {
+  const idx = RecipeLogic.buildProductIndex(products);
+  const out = RecipeLogic.buildShoppingList([mapo, xlb], idx);
+  assert.deepEqual(out.ready.map(r => r.name_cn), ['小笼包']);
+  assert.equal(out.itemCount, 4);
+  const all = out.groups.flatMap(g => g.items);
+  assert.ok(!all.some(it => it.label === '小笼包'));
+});
+
+test('buildShoppingList: 空收藏返回空结构', () => {
+  const out = RecipeLogic.buildShoppingList([], {});
+  assert.deepEqual(out.groups, []);
+  assert.deepEqual(out.ready, []);
+  assert.equal(out.itemCount, 0);
+});
+
 test('associateRecipe: 市价(price=0)商品标记 market_price 且不进总价', () => {
   const idx = RecipeLogic.buildProductIndex(products);
   const idx2 = JSON.parse(JSON.stringify(idx));

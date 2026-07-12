@@ -13,7 +13,7 @@
 <link rel="icon" href="/favicon.ico?v=1" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png?v=1">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
-<link rel="stylesheet" href="css/app.css?v=16">
+<link rel="stylesheet" href="css/app.css?v=17">
 </head>
 <body>
 <header class="hdr">
@@ -80,16 +80,26 @@
       <div id="chips" class="chips"></div>
     </div>
     <div class="block" id="favesBlock" hidden>
-      <h2 class="block__title">♥ 我想做的</h2>
+      <div class="block__hd">
+        <h2 class="block__title">♥ 我想做的</h2>
+        <button class="link-btn" id="openShoplist">🧾 到店购物清单 ›</button>
+      </div>
+      <p class="block__note">收藏的菜帮你把食材汇总成一张清单，到店照着拿</p>
       <div id="faves" class="cards cards--row"></div>
     </div>
   </section>
   <section id="results" class="results" hidden aria-live="polite"></section>
   <section id="detail" class="detail" hidden></section>
 </main>
-<footer class="ftr">以店内实际供应为准 · Eastern Market 东方超市<br>食谱图片仅供参考</footer>
+<footer class="ftr">
+  <strong>Eastern Market 东方超市</strong><br>
+  133-412 Willowgrove Square, Saskatoon<br>
+  周一至周六 10am–6:30pm<br>
+  <a href="https://maps.google.com/?q=Eastern+Market,+412+Willowgrove+Square,+Saskatoon" target="_blank" rel="noopener">📍 地图导航</a>　·　<a href="https://easternmarket.ca">🛒 网上超市</a><br>
+  <span class="ftr__fine">以店内实际供应为准 · 食谱图片仅供参考</span>
+</footer>
 
-<script src="js/lib/recipe-logic.js?v=2"></script>
-<script src="js/app.js?v=9"></script>
+<script src="js/lib/recipe-logic.js?v=3"></script>
+<script src="js/app.js?v=10"></script>
 </body>
 </html>
