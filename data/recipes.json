@@ -41,7 +41,7 @@
         {
           "label": "牛肉卷",
           "qty": "2lb（1袋）",
-          "code": "6292644004009",
+          "code": "0723nrj",
           "required": true,
           "alt": [
             "肥牛",
@@ -249,7 +249,7 @@
         {
           "label": "牛腩 / 牛肋条",
           "qty": "约1kg",
-          "code": "00501nkn",
+          "code": "0050",
           "required": true,
           "alt": [
             "安格斯牛腩",
@@ -707,7 +707,7 @@
         {
           "label": "牛腩 / 牛肋条",
           "qty": "约800g",
-          "code": "00501nkn",
+          "code": "0050",
           "required": true,
           "alt": [
             "安格斯牛腩",
@@ -809,7 +809,7 @@
         {
           "label": "牛肉卷",
           "qty": "约300g",
-          "code": "6292644004009",
+          "code": "0723nrj",
           "required": true,
           "alt": [
             "肥牛",
@@ -929,7 +929,7 @@
         {
           "label": "牛肉卷",
           "qty": "约300g",
-          "code": "6292644004009",
+          "code": "0723nrj",
           "required": true,
           "alt": [
             "肥牛",
@@ -1160,7 +1160,7 @@
         {
           "label": "牛腩 / 牛肋条",
           "qty": "约500g",
-          "code": "00501nkn",
+          "code": "0050",
           "required": true,
           "alt": [
             "安格斯牛腩",
@@ -1674,7 +1674,7 @@
         {
           "label": "葱",
           "qty": "1根",
-          "code": "10636jcjc",
+          "code": "10636jcjcjc",
           "required": false,
           "alt": [
             "大葱",
@@ -1869,7 +1869,7 @@
         {
           "label": "葱",
           "qty": "1根（切丝）",
-          "code": "10636jcjc",
+          "code": "10636jcjcjc",
           "required": false,
           "alt": [
             "大葱",
@@ -1957,7 +1957,7 @@
         {
           "label": "葱",
           "qty": "1根",
-          "code": "10636jcjc",
+          "code": "10636jcjcjc",
           "required": false,
           "alt": [
             "大葱",
@@ -2180,7 +2180,7 @@
         {
           "label": "金针菇",
           "qty": "1包",
-          "code": "Jzgjzg6976532310051",
+          "code": "Jzgjzg628942779343",
           "required": true
         },
         {
@@ -3147,7 +3147,7 @@
         {
           "label": "青椒",
           "qty": "2个",
-          "code": "10211mxgj",
+          "code": "Lsj",
           "required": true,
           "alt": [
             "灯笼椒",
@@ -3443,7 +3443,7 @@
         {
           "label": "青椒",
           "qty": "2个",
-          "code": "10211mxgj",
+          "code": "Lsj",
           "required": false,
           "alt": [
             "灯笼椒",
@@ -3755,7 +3755,7 @@
         {
           "label": "黄瓜",
           "qty": "1根",
-          "code": "10291dcqg",
+          "code": "10291DCQG",
           "required": false
         },
         {
@@ -4351,7 +4351,7 @@
         {
           "label": "黄瓜",
           "qty": "1根（切丝，配菜）",
-          "code": "10291dcqg",
+          "code": "10291DCQG",
           "required": false
         },
         {
@@ -4723,7 +4723,7 @@
         {
           "label": "牛肉卷",
           "qty": "200g",
-          "code": "6292644004009",
+          "code": "0723nrj",
           "required": true,
           "alt": [
             "肥牛",
@@ -4945,6 +4945,548 @@
         }
       ],
       "nutrition": "高蛋白·酸甜开胃"
+    },
+    {
+      "id": "mooncake-ready",
+      "name_cn": "月饼（中秋应节）",
+      "name_en": "Mooncakes",
+      "aliases": [
+        "月饼",
+        "中秋月饼",
+        "五仁",
+        "莲蓉",
+        "流心奶黄",
+        "mooncake",
+        "yuebing"
+      ],
+      "section": "season",
+      "kind": "ready",
+      "priority": 100,
+      "image": "assets/images/mooncake-ready.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "中秋",
+        "应节",
+        "送礼",
+        "甜点"
+      ],
+      "steps": [
+        "礼盒未开封的常温阴凉处存放即可，开封后尽快吃完，别放冰箱串味。",
+        "流心奶黄月饼吃前烤箱 150°C 烤 5 分钟，或微波中火 15 秒，流心才会化开。",
+        "五仁、莲蓉这类偏甜，切成四小块分着吃，配一壶乌龙或普洱正好解腻。",
+        "送礼记得看保质期，铁盒装的放得久一些，适合寄给外地亲友。"
+      ],
+      "ingredients": [
+        {
+          "label": "莲香五仁月饼礼盒",
+          "qty": "1 盒",
+          "code": "871392002732",
+          "required": true,
+          "alt": [
+            "五仁月饼",
+            "五仁"
+          ]
+        },
+        {
+          "label": "望月双白莲蓉铁盒",
+          "qty": "1 盒",
+          "code": "871392008628",
+          "required": false,
+          "alt": [
+            "双黄莲蓉",
+            "莲蓉月饼"
+          ]
+        },
+        {
+          "label": "流心奶黄月饼",
+          "qty": "1 盒",
+          "code": "4892030196596",
+          "required": false,
+          "alt": [
+            "流心月饼",
+            "奶黄月饼"
+          ]
+        },
+        {
+          "label": "莲香双白莲蓉 640g",
+          "qty": "1 盒",
+          "code": "871392002718",
+          "required": false,
+          "alt": [
+            "白莲蓉"
+          ]
+        }
+      ],
+      "nutrition": "应节点心·分食刚好"
+    },
+    {
+      "id": "steamed-crab",
+      "name_cn": "清蒸红蟹",
+      "name_en": "Steamed Crab with Ginger Vinegar",
+      "aliases": [
+        "蒸蟹",
+        "清蒸螃蟹",
+        "螃蟹",
+        "红蟹",
+        "crab",
+        "pangxie"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 97,
+      "image": "assets/images/steamed-crab.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "中秋",
+        "海鲜",
+        "清蒸",
+        "团圆菜"
+      ],
+      "steps": [
+        "红蟹用刷子把壳和蟹脚缝隙刷干净，蟹肚朝上摆进蒸盘，这样蒸的时候蟹膏不会流走。",
+        "姜切厚片垫在蟹身下面，蟹身上再放两片，淋一汤匙料酒去腥。",
+        "水开后上锅，大火蒸 12 分钟（一斤左右的蟹）。蟹大就每多半斤加 2 分钟，蒸过头肉会柴。",
+        "趁蒸蟹的工夫调姜醋汁：姜切细末，加生抽、香醋，滴两滴芝麻油拌匀。",
+        "蟹壳变正红、蟹脚一掰就断即熟。出锅撒葱花，配姜醋汁蘸着吃。",
+        "蟹性寒，吃完喝一杯温姜茶暖胃。"
+      ],
+      "ingredients": [
+        {
+          "label": "红蟹",
+          "qty": "2 只（约 2lb）",
+          "code": "HXHXHX",
+          "required": true,
+          "alt": [
+            "螃蟹",
+            "青蟹",
+            "膏蟹"
+          ]
+        },
+        {
+          "label": "生姜",
+          "qty": "1 大块",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "京葱",
+          "qty": "1 根（切花）",
+          "code": "10636jcjcjc",
+          "required": true,
+          "alt": [
+            "葱",
+            "小葱",
+            "大葱"
+          ]
+        },
+        {
+          "label": "鮮味生抽",
+          "qty": "2 汤匙",
+          "code": "078895128789",
+          "required": true,
+          "alt": [
+            "生抽",
+            "酱油"
+          ]
+        },
+        {
+          "label": "料酒",
+          "qty": "1 汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "純香芝麻油",
+          "qty": "几滴",
+          "code": "742812710905",
+          "required": false,
+          "alt": [
+            "芝麻油",
+            "麻油"
+          ]
+        },
+        {
+          "label": "香醋",
+          "qty": "2 汤匙",
+          "code": null,
+          "required": false,
+          "alt": [
+            "镇江醋",
+            "米醋"
+          ]
+        }
+      ],
+      "nutrition": "高蛋白·低脂鲜甜"
+    },
+    {
+      "id": "lotus-pork-bone-soup",
+      "name_cn": "莲藕筒骨汤",
+      "name_en": "Lotus Root & Pork Bone Soup",
+      "aliases": [
+        "莲藕汤",
+        "藕汤",
+        "排骨莲藕汤",
+        "筒骨汤",
+        "lotus root soup",
+        "outang"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 96,
+      "image": "assets/images/lotus-pork-bone-soup.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "秋冬进补",
+        "汤水",
+        "莲藕",
+        "家常菜"
+      ],
+      "steps": [
+        "猪筒骨冷水下锅，加两片姜和一汤匙料酒，大火煮开后再煮 3 分钟，把血沫焯干净，捞出用温水冲洗。",
+        "莲藕削皮切滚刀块。想喝粉糯的汤就选粉藕，切好泡水里防氧化变黑。",
+        "筒骨和藕块一起下砂锅，加足量冷水一次加够，中途别添水。放姜片。",
+        "大火烧开转小火，加盖慢炖 1.5 小时。藕块用筷子能轻松戳透就对了。",
+        "放红枣和枸杞再煮 10 分钟，最后才放盐——早放盐肉会紧、汤不出味。",
+        "汤色奶白、藕吃起来沙沙的即成。剩下的汤第二天下把面条也好吃。"
+      ],
+      "ingredients": [
+        {
+          "label": "猪筒骨",
+          "qty": "2lb",
+          "code": "0030",
+          "required": true,
+          "alt": [
+            "筒骨",
+            "大骨",
+            "棒骨"
+          ]
+        },
+        {
+          "label": "莲藕",
+          "qty": "2 节（约 1.5lb）",
+          "code": "1043lolo",
+          "required": true,
+          "alt": [
+            "藕",
+            "粉藕",
+            "莲藕"
+          ]
+        },
+        {
+          "label": "生姜",
+          "qty": "4 片",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "姜"
+          ]
+        },
+        {
+          "label": "无核红枣",
+          "qty": "6 颗",
+          "code": "6941837101611",
+          "required": false,
+          "alt": [
+            "红枣",
+            "大枣"
+          ]
+        },
+        {
+          "label": "枸杞",
+          "qty": "1 汤匙",
+          "code": "698921024641",
+          "required": false
+        },
+        {
+          "label": "料酒",
+          "qty": "1 汤匙",
+          "code": "6907592001245",
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": true
+        }
+      ],
+      "nutrition": "补钙润燥·秋季汤水"
+    },
+    {
+      "id": "osmanthus-lotus-root",
+      "name_cn": "桂花糯米藕",
+      "name_en": "Sweet Osmanthus Glutinous Rice Lotus Root",
+      "aliases": [
+        "糯米藕",
+        "桂花糖藕",
+        "蜜汁糖藕",
+        "糖藕",
+        "tangou",
+        "glutinous rice lotus root"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 94,
+      "image": "assets/images/osmanthus-lotus-root.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "中秋",
+        "甜品",
+        "莲藕",
+        "江南菜"
+      ],
+      "steps": [
+        "香糯米淘洗后用清水泡 2 小时，泡透了才灌得进藕孔。",
+        "粉藕削皮，在一头 3 公分处切开当盖子，别切断，留着待会盖回去。",
+        "把泡好的糯米一点点灌进藕孔，边灌边用筷子往里戳实，灌到八分满就行——米会膨胀，太满会撑裂。",
+        "盖子盖回原位，用牙签沿切口插一圈固定住。",
+        "整节藕放进锅里，加水没过藕身，放黄冰糖和红枣，大火烧开转小火煮 1 小时。",
+        "煮到用筷子能戳透、汤汁变粘稠即可。捞出放凉再切片，热着切容易散。",
+        "切成半公分厚的片摆盘，淋上煮藕的糖汁，再舀两勺糖桂花铺面上。冰镇一下更好吃。"
+      ],
+      "ingredients": [
+        {
+          "label": "洪湖粉藕",
+          "qty": "2 节",
+          "code": "Hhlo",
+          "required": true,
+          "alt": [
+            "莲藕",
+            "粉藕",
+            "藕"
+          ]
+        },
+        {
+          "label": "香糯米",
+          "qty": "1 杯",
+          "code": "8715500035866",
+          "required": true,
+          "alt": [
+            "糯米",
+            "江米"
+          ]
+        },
+        {
+          "label": "糖桂花",
+          "qty": "3 汤匙",
+          "code": "6923585800497",
+          "required": true,
+          "alt": [
+            "桂花酱",
+            "桂花"
+          ]
+        },
+        {
+          "label": "黄冰糖",
+          "qty": "80g",
+          "code": "871392000233",
+          "required": true,
+          "alt": [
+            "冰糖"
+          ]
+        },
+        {
+          "label": "无核红枣",
+          "qty": "6 颗",
+          "code": "6941837101611",
+          "required": false,
+          "alt": [
+            "红枣"
+          ]
+        }
+      ],
+      "nutrition": "无油甜品·膳食纤维"
+    },
+    {
+      "id": "taro-pork-belly",
+      "name_cn": "芋头扣肉",
+      "name_en": "Steamed Pork Belly with Taro",
+      "aliases": [
+        "扣肉",
+        "芋儿扣肉",
+        "荔浦扣肉",
+        "芋头蒸肉",
+        "kourou",
+        "taro pork belly"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 92,
+      "image": "assets/images/taro-pork-belly.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "团圆菜",
+        "硬菜",
+        "蒸菜",
+        "芋头"
+      ],
+      "steps": [
+        "带皮五花肉整块冷水下锅，加姜片和料酒煮 20 分钟，筷子能插进去就捞出。",
+        "趁热在肉皮上均匀抹一层老抽上色，用牙签把肉皮扎满小孔，这样蒸的时候更容易入味、皮更松软。",
+        "平底锅少油，肉皮朝下小火煎到起虎皮小泡，煎的时候盖个锅盖挡油。煎好泡冷水 10 分钟，皮会起皱更漂亮。",
+        "五花肉切成半公分厚的片，小芋头去皮也切成同样厚的片。",
+        "腐乳压成泥，加生抽、老抽、一勺腐乳汁调成酱汁，把肉片和芋头片分别拌匀。",
+        "碗底铺一层肉（皮朝下），一片肉一片芋头交替码整齐，剩下的酱汁全浇上去。",
+        "上锅大火蒸 1 小时，蒸到芋头粉糯、肥肉不腻。",
+        "取出扣一个盘子在碗上，翻转倒扣，肉皮朝上，淋回碗里的汤汁即可上桌。"
+      ],
+      "ingredients": [
+        {
+          "label": "五花肉(带皮)",
+          "qty": "2lb",
+          "code": "0221",
+          "required": true,
+          "alt": [
+            "五花肉",
+            "带皮猪肉",
+            "三层肉"
+          ]
+        },
+        {
+          "label": "小芋头",
+          "qty": "1.5lb",
+          "code": "1041xyt",
+          "required": true,
+          "alt": [
+            "芋头",
+            "芋艿",
+            "荔浦芋"
+          ]
+        },
+        {
+          "label": "华生原味腐乳",
+          "qty": "3 块",
+          "code": "800794307619",
+          "required": true,
+          "alt": [
+            "腐乳",
+            "南乳",
+            "豆腐乳"
+          ]
+        },
+        {
+          "label": "老抽",
+          "qty": "2 汤匙",
+          "code": "722337817020",
+          "required": true
+        },
+        {
+          "label": "鮮味生抽",
+          "qty": "2 汤匙",
+          "code": "078895128789",
+          "required": true,
+          "alt": [
+            "生抽",
+            "酱油"
+          ]
+        },
+        {
+          "label": "料酒",
+          "qty": "2 汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "qty": "4 片",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "姜"
+          ]
+        },
+        {
+          "label": "黄冰糖",
+          "qty": "1 小块",
+          "code": "871392000233",
+          "required": false,
+          "alt": [
+            "冰糖"
+          ]
+        }
+      ],
+      "nutrition": "团圆硬菜·蒸制少油"
+    },
+    {
+      "id": "steamed-kabocha-yam",
+      "name_cn": "桂花蒸南瓜山药",
+      "name_en": "Steamed Kabocha & Chinese Yam with Osmanthus",
+      "aliases": [
+        "蒸南瓜",
+        "贝贝南瓜",
+        "南瓜山药",
+        "蒸山药",
+        "kabocha",
+        "nangua",
+        "chinese yam"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 90,
+      "image": "assets/images/steamed-kabocha-yam.jpg",
+      "image_credit": "cc",
+      "tags": [
+        "养生",
+        "无油",
+        "粗粮",
+        "秋冬进补"
+      ],
+      "steps": [
+        "贝贝南瓜洗净不用去皮，对半切开挖掉瓤，再切成一公分厚的月牙块。皮蒸软了很好吃，别削。",
+        "山药削皮切段。削皮时戴手套或在水下削，山药黏液沾手会痒。切好泡淡盐水里防氧化发黑。",
+        "南瓜和山药一起摆进蒸盘，山药垫底、南瓜铺面（南瓜熟得快一点）。",
+        "水开上锅，大火蒸 15 分钟，筷子能轻松扎透即可，别蒸太久会散成泥。",
+        "出锅趁热撒几粒黄冰糖碎，让它化在热气里。",
+        "最后淋两勺糖桂花，香气一下就出来了。热吃软糯，凉了当下午茶也好。"
+      ],
+      "ingredients": [
+        {
+          "label": "贝贝南瓜 PK",
+          "qty": "2 个",
+          "code": "10455bbng",
+          "required": true,
+          "alt": [
+            "贝贝南瓜",
+            "南瓜",
+            "小南瓜"
+          ]
+        },
+        {
+          "label": "山藥",
+          "qty": "1 根",
+          "code": "6976936600277",
+          "required": true,
+          "alt": [
+            "山药",
+            "淮山",
+            "铁棍山药"
+          ]
+        },
+        {
+          "label": "糖桂花",
+          "qty": "2 汤匙",
+          "code": "6923585800497",
+          "required": true,
+          "alt": [
+            "桂花酱",
+            "桂花"
+          ]
+        },
+        {
+          "label": "黄冰糖",
+          "qty": "适量",
+          "code": "871392000233",
+          "required": false,
+          "alt": [
+            "冰糖"
+          ]
+        }
+      ],
+      "nutrition": "无油低卡·养胃粗粮"
     }
   ]
 }

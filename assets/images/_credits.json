@@ -286,5 +286,29 @@
   "cant-huadan-xiaren": {
     "source": "https://commons.wikimedia.org/wiki/File:Baby_shrimp_with_scrambled_egg.jpg",
     "via": "commons:shrimp scrambled egg"
+  },
+  "mooncake-ready": {
+    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Mooncake",
+    "via": "en:Mooncake"
+  },
+  "steamed-crab": {
+    "source": "https://commons.wikimedia.org/wiki/File:CADAL11105556_%E7%83%B9%E9%A3%AA%E6%95%99%E7%A7%91%E6%9B%B8.djvu",
+    "via": "commons:清蒸螃蟹"
+  },
+  "lotus-pork-bone-soup": {
+    "source": "https://commons.wikimedia.org/wiki/File:SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E9%BE%8D%E5%B4%97_Longgang_%E5%B8%83%E6%B2%99%E8%B7%AF_Busha_Road_shop_%E8%A5%BF%E8%87%9A_%E8%93%AE%E8%97%95%E6%B9%AF_food_soup_night_Febuary_2025_R12S.jpg",
+    "via": "commons:蓮藕湯"
+  },
+  "osmanthus-lotus-root": {
+    "source": "https://commons.wikimedia.org/wiki/File:%E7%B3%96%E8%97%95.jpg",
+    "via": "commons:糯米藕"
+  },
+  "taro-pork-belly": {
+    "source": "https://commons.wikimedia.org/wiki/File:Cuisine_of_China_0074.JPG",
+    "via": "commons:芋頭扣肉"
+  },
+  "steamed-kabocha-yam": {
+    "source": "https://commons.wikimedia.org/wiki/File:CHANGSHAXIAOCHI.jpg",
+    "via": "commons:蒸南瓜"
   }
 }

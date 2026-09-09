@@ -37,7 +37,7 @@ def wiki_img(lang,title):
     try:
         d=S.get(u,timeout=20).json()
         img=(d.get('originalimage') or d.get('thumbnail') or {}).get('source','')
-        if re.search(r'\.(jpg|jpeg|png)$',img,re.I): return {'url':img,'page':u}
+        if re.search(r'\.(jpg|jpeg|png)(\?|$)',img,re.I): return {'url':img,'page':u}
     except Exception: pass
     return None
 def commons_imgs(q):
@@ -48,7 +48,7 @@ def commons_imgs(q):
     except Exception: return out
     for pg in sorted(((d.get('query') or {}).get('pages') or {}).values(),key=lambda x:x.get('index',99)):
         ii=(pg.get('imageinfo') or [{}])[0]; url=ii.get('thumburl') or ii.get('url') or ''
-        if re.search(r'\.(jpg|jpeg|png)$',url,re.I): out.append({'url':url,'page':ii.get('descriptionurl','')})
+        if re.search(r'\.(jpg|jpeg|png)(\?|$)',url,re.I): out.append({'url':url,'page':ii.get('descriptionurl','')})
     return out
 def try_download(hit,path):
     try:
