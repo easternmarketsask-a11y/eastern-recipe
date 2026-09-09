@@ -206,8 +206,37 @@ def index_page(all_recipes):
     return "".join(parts)
 
 
+def check_webp(recipes):
+    """每张菜图都必须有两档 WebP，缺一个就停下。
+
+    前端 <picture> 的回退是按「浏览器认不认 WebP」判断的，不是按「文件在不在」。
+    所以 WebP 文件缺失时图片会直接裂掉，不会退回 JPEG，而且悄无声息。
+    加了新菜图忘了跑 optimize_images.py 正是这个情况，必须让它响亮地失败。
+    """
+    missing = []
+    for r in recipes:
+        img = r.get("image")
+        if not img:
+            continue
+        for variant in ("card", "hero"):
+            w = sp.webp_for(img, variant)
+            if w and not os.path.exists(w):
+                missing.append(w)
+    if missing:
+        print("以下 WebP 文件不存在，图片会在网站上裂开：", file=sys.stderr)
+        for m in missing[:20]:
+            print("  " + m, file=sys.stderr)
+        if len(missing) > 20:
+            print("  ...共 %d 个" % len(missing), file=sys.stderr)
+        print("先跑：python scripts/optimize_images.py", file=sys.stderr)
+        return False
+    return True
+
+
 def main():
     recipes = json.load(io.open("data/recipes.json", encoding="utf-8"))["recipes"]
+    if not check_webp(recipes):
+        return 1
     pidx = {p["code"]: p for p in json.load(io.open("data/products.json", encoding="utf-8"))["items"]}
     if not os.path.isdir(OUT_DIR):
         os.makedirs(OUT_DIR)

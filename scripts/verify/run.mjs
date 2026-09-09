@@ -66,6 +66,20 @@ try {
     els.filter((i) => i.complete && i.naturalWidth === 0).map((i) => i.currentSrc || i.src));
   ok('中秋板块没有加载失败的图', brokenImgs.length === 0, brokenImgs.slice(0, 2).join(' '));
 
+  // 把所有横滑行滚到底，逼出全部懒加载图，再查全站有没有裂图。
+  // WebP 文件缺失时 <picture> 不会回退 JPEG（回退看的是浏览器支不支持，
+  // 不是文件在不在），图片会直接裂开且没有任何报错 —— 只有这样才抓得到。
+  await page.evaluate(() => {
+    document.querySelectorAll('.cards--row').forEach((el) => { el.scrollLeft = el.scrollWidth; });
+    window.scrollTo(0, document.body.scrollHeight);
+  });
+  await page.waitForTimeout(4000);
+  const brokenAll = await page.$$eval('img', (els) =>
+    els.filter((i) => i.complete && i.naturalWidth === 0).map((i) => i.currentSrc || i.src));
+  ok('首页全部图片都能加载（无裂图）', brokenAll.length === 0,
+    brokenAll.length ? brokenAll.slice(0, 3).join(' ') : '已滚完全部横滑行');
+  await page.evaluate(() => window.scrollTo(0, 0));
+
   // ── 详情页 ──────────────────────────────────────────────────────────────
   await page.click('#season .card[data-id="lotus-pork-bone-soup"]');
   await page.waitForSelector('#detail:not([hidden])', { timeout: 10000 });
