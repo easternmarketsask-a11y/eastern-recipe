@@ -1,0 +1,16 @@
+{
+  "name": "eastern-recipe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "东方超市食谱搜索引擎 —— 纯静态站，无构建步骤。本文件只为跑测试。",
+  "scripts": {
+    "test": "node --test",
+    "serve": "python -m http.server 8099",
+    "verify": "node scripts/verify/run.mjs",
+    "build:pages": "python scripts/build_static_pages.py",
+    "build:images": "python scripts/optimize_images.py"
+  },
+  "devDependencies": {
+    "playwright-core": "1.49.1"
+  }
+}

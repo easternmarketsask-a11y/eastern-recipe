@@ -7,7 +7,7 @@
   var FAVE_KEY = 'er_recipe_faves_v1';
   var DONE_KEY = 'er_shoplist_done_v1';
   // 配送业务正式上线后把 enabled 改 true 即可（入口出现在详情页和购物清单页）
-  var DELIVERY = { enabled: false, url: 'https://easternmarket.ca' };
+  var DELIVERY = { enabled: true, url: 'https://easternmarket.ca/group-order' };
   var state = { recipes: [], productIndex: {}, byId: {} };
   var didNav = 0;   // 本次会话内的站内跳转数；0 = 直接落地某深链，返回按钮回首页而非退出
 
@@ -84,9 +84,29 @@
     document.body.removeChild(ta);
   }
 
+  // 分享出去的地址用静态菜页（/r/<id>.html）：它有自己的大图预览，也能被搜索收录。
+  // 站内导航仍走 hash 路由，两者内容一致。
+  function shareUrl(id) {
+    return location.origin + location.pathname.replace(/[^/]*$/, '') +
+      'r/' + encodeURIComponent(id) + '.html';
+  }
+
+  // ---- 图片：优先 WebP（体积约为 JPEG 的 1/5），浏览器不认就回退原 .jpg ----
+  // assets/images/foo.jpg → assets/images/webp/foo-400.webp（卡片）/ foo.webp（大图）
+  // WebP 由 scripts/optimize_images.py 生成；缺文件时 <source> 不命中，img 兜底照样显示。
+  function picture(src, variant, cls, alt, lazy) {
+    var attrs = 'class="' + cls + '" src="' + esc(src) + '" alt="' + esc(alt) + '"' +
+      (lazy ? ' loading="lazy" decoding="async"' : '');
+    var m = /^(.*\/)([^\/]+)\.jpe?g$/i.exec(src || '');
+    if (!m) return '<img ' + attrs + '>';
+    var webp = m[1] + 'webp/' + m[2] + (variant === 'card' ? '-400' : '') + '.webp';
+    return '<picture><source type="image/webp" srcset="' + esc(webp) + '">' +
+      '<img ' + attrs + '></picture>';
+  }
+
   // ---- 菜卡 ----
   function recipeCard(r) {
-    var img = r.image ? '<img class="card__img" src="' + esc(r.image) + '" alt="' + esc(r.name_cn) + '" loading="lazy">' : '';
+    var img = r.image ? picture(r.image, 'card', 'card__img', r.name_cn, true) : '';
     var en = r.name_en ? '<span class="card__en">' + esc(r.name_en) + '</span>' : '';
     var nutri = r.nutrition ? '<span class="card__nutri">🌿 ' + esc(r.nutrition) + '</span>' : '';
     return '<button class="card" data-id="' + esc(r.id) + '">' + img +
@@ -128,7 +148,7 @@
       bodyHtml = '<ul class="ings">' + a.rows.map(ingredientRow).join('') + '</ul>';
     }
     var stepsTitle = recipe.kind === 'ready' ? '怎么吃' : '做法';
-    var hero = recipe.image ? '<img class="detail__img" src="' + esc(recipe.image) + '" alt="' + esc(recipe.name_cn) + '">' : '';
+    var hero = recipe.image ? picture(recipe.image, 'hero', 'detail__img', recipe.name_cn, false) : '';
     var actions = '<div class="detail__actions">' +
       '<button class="mini-btn" id="copylink">🔗 复制链接</button>' +
       (faved ? '<button class="mini-btn" id="tolist">🧾 看购物清单</button>' : '') +
@@ -151,7 +171,7 @@
     $('back').onclick = goBack;
     $('fave').onclick = function () { toggleFave(recipe.id); renderDetail(recipe); };
     $('copylink').onclick = function () {
-      copyText(location.href, function () { $('copylink').textContent = '✅ 已复制，发给家人吧'; });
+      copyText(shareUrl(recipe.id), function () { $('copylink').textContent = '✅ 已复制，发给家人吧'; });
     };
     if ($('tolist')) $('tolist').onclick = function () { nav('#/list'); };
     show('detail');
@@ -263,6 +283,7 @@
 
   // 「查看全部」：把某分类全部食谱铺在结果区（网格），带返回首页
   var SEC_TITLE = {
+    season: '🥮 中秋 · 应季',
     tonight: '🔥 今晚吃什么', cantonese: '🥢 粤菜 · 广式', seafood: '🐟 海鲜河鲜', staple: '🍚 主食 · 面饭',
     dumpling: '🥟 饺子 · 馄饨', fresh: '🍜 鲜河粉 · 鲜肠粉', breakfast: '🌅 早餐包点', veg: '🥗 家常蔬菜',
     other: '🍳 家常菜'
@@ -332,6 +353,11 @@
   }
 
   function renderHome() {
+    // 🥮 中秋 · 应季：排在最前面，过了节把菜换成秋冬进补即可继续用
+    var season = bySection('season');
+    $('seasonBlock').hidden = !season.length;
+    fillCards('season', season);
+
     // 🔥 今晚吃什么：tonight 全部上，按热卖度排序
     fillCards('picks', bySection('tonight'));
 
