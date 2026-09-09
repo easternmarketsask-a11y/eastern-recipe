@@ -119,6 +119,7 @@ def recipe_jsonld(recipe, product_index):
         "description": meta_description(recipe),
         "recipeIngredient": ings,
         "recipeInstructions": steps,
+        "author": {"@type": "Organization", "name": STORE_NAME},
         "publisher": {
             "@type": "GroceryStore",
             "name": STORE_NAME,

@@ -112,6 +112,18 @@ def test_jsonld_instructions_are_howtostep_in_order():
     assert [s["position"] for s in steps] == [1, 2, 3]
 
 
+def test_jsonld_has_author_google_lists_it_as_recommended():
+    d = sp.recipe_jsonld(DISH, PIDX)
+    assert d["author"]["name"] == "Eastern Market 东方超市"
+
+
+def test_jsonld_does_not_invent_cooking_times_or_yield():
+    """没有的数据不许编 —— 时间和份量食谱里本来就没记。"""
+    d = sp.recipe_jsonld(DISH, PIDX)
+    for k in ("prepTime", "cookTime", "totalTime", "recipeYield", "aggregateRating"):
+        assert k not in d
+
+
 def test_jsonld_publisher_is_the_store():
     d = sp.recipe_jsonld(DISH, PIDX)
     assert d["publisher"]["@type"] == "Grocery Store" or d["publisher"]["name"] == "Eastern Market 东方超市"
