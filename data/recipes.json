@@ -5035,7 +5035,7 @@
       "kind": "dish",
       "priority": 97,
       "image": "assets/images/steamed-crab.jpg",
-      "image_credit": "cc",
+      "image_credit": "ai",
       "tags": [
         "中秋",
         "海鲜",
@@ -5317,7 +5317,7 @@
       "kind": "dish",
       "priority": 92,
       "image": "assets/images/taro-pork-belly.jpg",
-      "image_credit": "cc",
+      "image_credit": "ai",
       "tags": [
         "团圆菜",
         "硬菜",
@@ -5428,7 +5428,7 @@
       "kind": "dish",
       "priority": 90,
       "image": "assets/images/steamed-kabocha-yam.jpg",
-      "image_credit": "cc",
+      "image_credit": "ai",
       "tags": [
         "养生",
         "无油",

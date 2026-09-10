@@ -21,11 +21,9 @@ FONT_BOLD = r'C:\Windows\Fonts\msyhbd.ttc'
 FONT_REG = r'C:\Windows\Fonts\msyh.ttc'
 FONT_EMOJI = r'C:\Windows\Fonts\seguiemj.ttf'
 
-# 需要占位图的菜：id -> emoji
+# 需要占位图的菜：id -> emoji。有成品图的不要留在这里，
+# 否则下次跑脚本会把实拍/生成图盖回字卡。
 TILES = {
-    'steamed-crab': '\U0001F980',        # 🦀
-    'taro-pork-belly': '\U0001F372',     # 🍲
-    'steamed-kabocha-yam': '\U0001F963',  # 🥣
 }
 
 

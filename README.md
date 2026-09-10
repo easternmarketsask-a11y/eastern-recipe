@@ -45,7 +45,7 @@ StockWise API (Firestore products) --export_products.py--> data/products.json
 **宁可放品牌字卡，也不要放错的菜的照片。** `make_placeholder_tiles.py` 生成这种字卡，
 清单在脚本顶部的 `TILES`。拍到实拍图后按上面的换图流程覆盖即可，脚本清单里删掉那一条。
 
-当前用占位卡的：清蒸红蟹、芋头扣肉、桂花蒸南瓜山药。
+当前没有菜在用占位卡。
 
 ## 本地跑
 ```bash
