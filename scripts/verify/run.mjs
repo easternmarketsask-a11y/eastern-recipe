@@ -48,19 +48,19 @@ try {
   await page.waitForSelector('#season .card', { timeout: 15000 });
 
   const seasonVisible = await page.isVisible('#seasonBlock');
-  ok('首页出现「中秋 · 应季」板块', seasonVisible);
+  ok('首页出现「应季」板块', seasonVisible);
 
   // setupLoop 会把卡片复制三份做无缝循环，所以按 data-id 去重才是真实菜数
   const seasonIds = await page.$$eval('#season .card', (els) =>
     [...new Set(els.map((e) => e.dataset.id))]);
-  ok('中秋板块有 6 道菜', seasonIds.length === 6, seasonIds.join(', '));
+  ok('应季板块有 5 道菜，不含月饼', seasonIds.length === 5 && !seasonIds.includes('mooncake-ready'), seasonIds.join(', '));
 
   const usesCatalog = requested.some((u) => u.includes('/data/catalog.json'));
   const usesFullCatalog = requested.some((u) => u.includes('/data/products.json'));
   ok('首页下载精简目录，不下载全库商品', usesCatalog && !usesFullCatalog);
 
   const jumpText = await page.$eval('#jump', (e) => e.textContent);
-  ok('首页有板块快捷条', jumpText.includes('中秋') && jumpText.includes('粤菜') && jumpText.includes('饺子'), jumpText);
+  ok('首页有板块快捷条', jumpText.includes('应季') && jumpText.includes('粤菜') && jumpText.includes('饺子') && !jumpText.includes('中秋'), jumpText);
 
   const desk = await browser.newContext({ viewport: { width: 1280, height: 800 } });
   const dp = await desk.newPage();
@@ -75,7 +75,7 @@ try {
   await desk.close();
 
   const firstBlock = await page.$eval('.home .block .block__title', (e) => e.textContent.trim());
-  ok('中秋板块排在首页第一位', firstBlock.includes('中秋'), firstBlock);
+  ok('应季板块排在首页第一位', firstBlock.includes('应季') && !firstBlock.includes('中秋'), firstBlock);
 
   const usesWebp = await page.$eval('#season picture source',
     (s) => s.getAttribute('srcset') || '');
@@ -85,7 +85,7 @@ try {
   // complete 且 naturalWidth===0 才是坏图。
   const brokenImgs = await page.$$eval('#season img', (els) =>
     els.filter((i) => i.complete && i.naturalWidth === 0).map((i) => i.currentSrc || i.src));
-  ok('中秋板块没有加载失败的图', brokenImgs.length === 0, brokenImgs.slice(0, 2).join(' '));
+  ok('应季板块没有加载失败的图', brokenImgs.length === 0, brokenImgs.slice(0, 2).join(' '));
 
   // 把所有横滑行滚到底，逼出全部懒加载图，再查全站有没有裂图。
   // WebP 文件缺失时 <picture> 不会回退 JPEG（回退看的是浏览器支不支持，
@@ -142,9 +142,9 @@ try {
 
   // ── 搜索 ────────────────────────────────────────────────────────────────
   await page.fill('#q', '月饼');
-  await page.waitForSelector('#results .card', { timeout: 10000 });
-  const hits = await page.$$eval('#results .card__name', (e) => e.map((x) => x.textContent.trim()));
-  ok('搜「月饼」能搜到', hits.some((t) => t.includes('月饼')), hits.slice(0, 3).join('、'));
+  await page.waitForSelector('#results .empty', { timeout: 10000 });
+  const moonMiss = await page.$eval('#results .empty', (e) => e.textContent.trim());
+  ok('搜「月饼」已经下架', moonMiss.includes('没找到'), moonMiss);
 
   await page.fill('#q', '莲藕');
   await page.waitForSelector('#results .card', { timeout: 10000 });
@@ -153,20 +153,20 @@ try {
 
   // ── 静态 SEO 页 ─────────────────────────────────────────────────────────
   const p2 = await ctx.newPage();
-  const resp = await p2.goto(BASE + '/r/mooncake-ready.html', { waitUntil: 'domcontentloaded' });
+  const resp = await p2.goto(BASE + '/r/hotpot.html', { waitUntil: 'domcontentloaded' });
   ok('静态菜页返回 200', resp.status() === 200, String(resp.status()));
   const h1 = await p2.$eval('h1', (e) => e.textContent.trim());
-  ok('静态菜页有 h1 菜名', h1.includes('月饼'), h1);
+  ok('静态菜页有 h1 菜名', h1.includes('火锅'), h1);
   const ld = await p2.$eval('script[type="application/ld+json"]', (e) => JSON.parse(e.textContent));
-  ok('静态菜页带 Recipe 结构化数据', ld['@type'] === 'Recipe' && ld.name.includes('月饼'));
+  ok('静态菜页带 Recipe 结构化数据', ld['@type'] === 'Recipe' && ld.name.includes('火锅'));
   ok('结构化数据含做法步骤', Array.isArray(ld.recipeInstructions) && ld.recipeInstructions.length > 0,
     ld.recipeInstructions.length + ' 步');
   const canon = await p2.$eval('link[rel=canonical]', (e) => e.href);
-  ok('静态菜页有 canonical', /\/r\/mooncake-ready\.html$/.test(canon), canon);
+  ok('静态菜页有 canonical', /\/r\/hotpot\.html$/.test(canon), canon);
   // 真的把 JS 关掉再读一遍 —— 爬虫看到的就是这个
   const noJsCtx = await browser.newContext({ javaScriptEnabled: false });
   const noJs = await noJsCtx.newPage();
-  await noJs.goto(BASE + '/r/mooncake-ready.html', { waitUntil: 'domcontentloaded' });
+  await noJs.goto(BASE + '/r/hotpot.html', { waitUntil: 'domcontentloaded' });
   const stepsText = await noJs.$$eval('.steps li', (e) => e.map((x) => x.textContent.trim()));
   const ingText = await noJs.$$eval('.ing__name', (e) => e.map((x) => x.textContent.trim()));
   ok('关掉 JS 后做法照样在页面上', stepsText.length > 0, stepsText.length + ' 步');
@@ -176,7 +176,7 @@ try {
   const idx = await p2.goto(BASE + '/r/', { waitUntil: 'domcontentloaded' });
   ok('全部食谱目录页返回 200', idx.status() === 200);
   const links = await p2.$$eval('.pg-seclist a', (e) => e.length);
-  ok('目录页链出全部 79 道菜', links === 79, links + ' 条');
+  ok('目录页链出全部 78 道菜', links === 78, links + ' 条');
   await p2.close();
 
   ok('浏览器控制台无报错', consoleErrors.length === 0, consoleErrors.slice(0, 2).join(' | '));

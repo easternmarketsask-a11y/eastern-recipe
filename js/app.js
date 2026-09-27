@@ -283,14 +283,14 @@
 
   // 「查看全部」：把某分类全部食谱铺在结果区（网格），带返回首页
   var SEC_TITLE = {
-    season: '🥮 中秋 · 应季',
+    season: '🍂 应季',
     tonight: '🔥 今晚吃什么', cantonese: '🥢 粤菜 · 广式', seafood: '🐟 海鲜河鲜', staple: '🍚 主食 · 面饭',
     dumpling: '🥟 饺子 · 馄饨', fresh: '🍜 鲜河粉 · 鲜肠粉', breakfast: '🌅 早餐包点', veg: '🥗 家常蔬菜',
     other: '🍳 家常菜'
   };
   // 首页很长，这条快捷条让人直接跳到某个板块，不用一路横滑过去
   var JUMPS = [
-    { id: 'seasonBlock', label: '中秋' },
+    { id: 'seasonBlock', label: '应季' },
     { id: 'tonightBlock', label: '今晚' },
     { id: 'cantoneseBlock', label: '粤菜' },
     { id: 'vegBlock', label: '蔬菜' },
@@ -388,7 +388,7 @@
   }
 
   function renderHome() {
-    // 🥮 中秋 · 应季：排在最前面，过了节把菜换成秋冬进补即可继续用
+    // 🍂 应季：排在最前面。中秋月饼已下架，明年应节再加回来。
     var season = bySection('season');
     $('seasonBlock').hidden = !season.length;
     fillCards('season', season);

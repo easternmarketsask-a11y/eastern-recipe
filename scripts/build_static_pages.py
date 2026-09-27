@@ -186,7 +186,7 @@ def index_page(all_recipes):
     """全部食谱目录：爬虫从这里能一跳走到每一道菜。"""
     n = len(all_recipes)
     title = "全部 %d 道家常食谱 · 东方超市" % n
-    desc = ("东方超市家常食谱目录，共 %d 道：中秋应季、今晚吃什么、粤菜、家常蔬菜、"
+    desc = ("东方超市家常食谱目录，共 %d 道：应季、今晚吃什么、粤菜、家常蔬菜、"
             "海鲜河鲜、早餐包点、饺子馄饨等。食材在店里都买得到。" % n)[:155]
     parts = [head(title, desc, "%s/r/" % sp.SITE, None)]
     parts.append('<nav class="pg-crumb"><a href="/">首页</a> › 全部食谱</nav>')

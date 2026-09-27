@@ -76,9 +76,9 @@ python scripts/build_static_pages.py     # 重新生成 r/*.html + sitemap，并
 否则那道菜没有可被搜索收录的网址。
 
 ## 换季
-首页板块 `season` 现在是「🥮 中秋 · 应季」。过完节不用删代码，把 `data/recipes.json`
-里那几道菜换成秋冬进补的，再改三处标题即可：`index.html` 的板块标题、`js/app.js` 的
-`SEC_TITLE`、`scripts/static_pages.py` 的 `SEC_TITLE`。板块内没有菜时会自动隐藏。
+首页板块 `season` 现在是「🍂 应季」。月饼只在中秋档期上，过节后从 `data/recipes.json` 拿掉。
+换季不用删代码：改菜，再改三处标题（`index.html` 的板块标题、`js/app.js` 的
+`SEC_TITLE`、`scripts/static_pages.py` 的 `SEC_TITLE`）。板块内没有菜时会自动隐藏。
 
 ## 部署
 push 到 GitHub（easternmarketsask-a11y/eastern-recipe）→ GitHub Pages 自动发布。CNAME=recipe.easternmarket.ca。

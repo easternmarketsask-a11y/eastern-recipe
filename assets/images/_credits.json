@@ -1,7 +1,7 @@
 {
   "hotpot": {
-    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Hot_pot",
-    "via": "en:Hot pot"
+    "source": "https://commons.wikimedia.org/wiki/File:Korean_hot_pot_with_Chinese_dippings.jpg",
+    "via": "commons:Korean hot pot with Chinese dippings (CC BY-SA 4.0)"
   },
   "red-braised-pork": {
     "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Red_braised_pork_belly",
@@ -286,10 +286,6 @@
   "cant-huadan-xiaren": {
     "source": "https://commons.wikimedia.org/wiki/File:Baby_shrimp_with_scrambled_egg.jpg",
     "via": "commons:shrimp scrambled egg"
-  },
-  "mooncake-ready": {
-    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Mooncake",
-    "via": "en:Mooncake"
   },
   "steamed-crab": {
     "source": "ai generated food photo",
