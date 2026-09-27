@@ -59,6 +59,59 @@ def build_product_record(doc, valid_categories, sold_90d=0):
         "sold_90d": sold_90d,
     }
 
+# 页面实际要查的字段。image_url / sold_90d 不参与展示，留在全库 products.json 里即可。
+_CATALOG_KEYS = ("code", "name_cn", "name_en", "category", "on_sale")
+
+
+def build_catalog(recipes, products, generated_at=""):
+    """食谱引用到的商品，收成页面要下载的那一份。
+
+    全库 products.json 给绑定脚本用。顾客打开网站只需要这些条码上的
+    中文名、英文名、超市分区、是否在售。没被任何食谱引用的商品不进这份。
+    """
+    idx = {}
+    for p in products or []:
+        code = p.get("code")
+        if code and code not in idx:
+            idx[code] = p
+    seen = set()
+    items = []
+    for r in recipes or []:
+        for ing in r.get("ingredients") or []:
+            code = ing.get("code") or ""
+            if not code or code in seen:
+                continue
+            seen.add(code)
+            p = idx.get(code)
+            if not p:
+                continue
+            item = {k: (bool(p.get(k)) if k == "on_sale" else (p.get(k) or ""))
+                    for k in _CATALOG_KEYS}
+            if p.get("price") is not None:
+                item["price"] = p.get("price")
+            if p.get("price_unit"):
+                item["price_unit"] = p.get("price_unit")
+            items.append(item)
+    return {
+        "generated_at": generated_at or "",
+        "source_count": len(products or []),
+        "items": items,
+    }
+
+
+def catalog_shrink_error(existing_count, new_count, force=False):
+    """匿名拉商品已被压到 200 条。新导出比现有快照少一半以上时，不许覆盖。"""
+    if force or not existing_count or not new_count:
+        return None
+    if new_count < existing_count * 0.5:
+        return (
+            "现有快照有 %d 条，这次只拉到 %d 条。"
+            "匿名商品接口最多返回 200 条，覆盖会拆掉食材绑定。确定要覆盖再加 --force。"
+            % (existing_count, new_count)
+        )
+    return None
+
+
 def score_match(ingredient, products):
     """给食材在商品列表里的候选打分，返回 [(product, score), ...] 按分降序。
     打分：中文子串命中 +2；英文 token 命中 +1/词；归一后完全相等 +1。"""

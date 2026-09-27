@@ -37,8 +37,10 @@ const ctx = await browser.newContext({ viewport: { width: 390, height: 844 } });
 const page = await ctx.newPage();
 const consoleErrors = [];
 const pageErrors = [];
+const requested = [];
 page.on('console', (m) => { if (m.type() === 'error' && !NOISE.test(m.text())) consoleErrors.push(m.text()); });
 page.on('pageerror', (e) => pageErrors.push(String(e)));
+page.on('request', (r) => requested.push(r.url()));
 
 try {
   // ── 首页 ────────────────────────────────────────────────────────────────
@@ -52,6 +54,25 @@ try {
   const seasonIds = await page.$$eval('#season .card', (els) =>
     [...new Set(els.map((e) => e.dataset.id))]);
   ok('中秋板块有 6 道菜', seasonIds.length === 6, seasonIds.join(', '));
+
+  const usesCatalog = requested.some((u) => u.includes('/data/catalog.json'));
+  const usesFullCatalog = requested.some((u) => u.includes('/data/products.json'));
+  ok('首页下载精简目录，不下载全库商品', usesCatalog && !usesFullCatalog);
+
+  const jumpText = await page.$eval('#jump', (e) => e.textContent);
+  ok('首页有板块快捷条', jumpText.includes('中秋') && jumpText.includes('粤菜') && jumpText.includes('饺子'), jumpText);
+
+  const desk = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+  const dp = await desk.newPage();
+  await dp.goto(BASE + '/', { waitUntil: 'networkidle' });
+  await dp.waitForSelector('#veg .card', { timeout: 15000 });
+  const vegNums = await dp.$$eval('#veg .card', (els) => {
+    const ids = els.map((e) => e.dataset.id);
+    return { n: ids.length, u: new Set(ids).size };
+  });
+  ok('宽屏把菜铺开，不复制三份', vegNums.n === vegNums.u && vegNums.u >= 10,
+    vegNums.n + ' 张卡片 / ' + vegNums.u + ' 道菜');
+  await desk.close();
 
   const firstBlock = await page.$eval('.home .block .block__title', (e) => e.textContent.trim());
   ok('中秋板块排在首页第一位', firstBlock.includes('中秋'), firstBlock);

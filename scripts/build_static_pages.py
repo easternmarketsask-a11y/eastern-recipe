@@ -10,7 +10,7 @@
 为什么需要它：站点本体是 hash 路由（#/r/<id>），对 Google 来说整站只有一个
 网址。静态页是搜索入口，页面里的按钮再把人送回单页应用去收藏、凑购物清单。
 
-改完食谱或图片后重新跑一次：
+改完食谱或图片后重新跑一次（同时重写 data/catalog.json）：
     python scripts/build_static_pages.py
 """
 import io
@@ -21,10 +21,11 @@ from datetime import date
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import recipe_lib as rl
 import static_pages as sp
 
 OUT_DIR = "r"
-CSS_V = "18"
+CSS_V = "19"
 ASSET_V = "1"
 DELIVERY_URL = "https://easternmarket.ca/group-order"
 
@@ -233,11 +234,25 @@ def check_webp(recipes):
     return True
 
 
+def write_catalog(recipes, products_doc):
+    """写出页面实际下载的精简目录。全库 products.json 仍留给绑定脚本。"""
+    cat = rl.build_catalog(
+        recipes, products_doc.get("items") or [],
+        generated_at=products_doc.get("generated_at") or "")
+    with io.open("data/catalog.json", "w", encoding="utf-8", newline="\n") as f:
+        json.dump(cat, f, ensure_ascii=False, separators=(",", ":"))
+        f.write("\n")
+    print("catalog.json: %d 条（全库 %d 条，页面不下载全库）" % (
+        len(cat["items"]), cat["source_count"]))
+
+
 def main():
     recipes = json.load(io.open("data/recipes.json", encoding="utf-8"))["recipes"]
+    products_doc = json.load(io.open("data/products.json", encoding="utf-8"))
+    write_catalog(recipes, products_doc)
     if not check_webp(recipes):
         return 1
-    pidx = {p["code"]: p for p in json.load(io.open("data/products.json", encoding="utf-8"))["items"]}
+    pidx = {p["code"]: p for p in products_doc["items"]}
     if not os.path.isdir(OUT_DIR):
         os.makedirs(OUT_DIR)
 

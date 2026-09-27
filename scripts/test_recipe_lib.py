@@ -1,3 +1,6 @@
+import json
+import os
+
 import recipe_lib as rl
 
 def test_split_name_mixed():
@@ -62,3 +65,54 @@ def test_score_match_english_token():
     prods = [{"code": "a", "name_cn": "丹丹豆瓣酱", "name_en": "Dan Dan Bean Paste"}]
     ranked = rl.score_match("bean paste", prods)
     assert ranked[0][1] > 0
+
+
+def test_build_catalog_keeps_only_referenced_products():
+    recipes = [{"id": "a", "ingredients": [
+        {"code": "1", "label": "豆腐"},
+        {"code": "1", "label": "豆腐"},
+        {"code": "", "label": "盐"},
+        {"label": "葱"},
+        {"code": "missing", "label": "没有的"},
+    ]}]
+    products = [
+        {"code": "1", "name_cn": "嫩豆腐", "name_en": "Soft Tofu", "category": "豆腐蛋品",
+         "on_sale": True, "price": 2.5, "price_unit": "each",
+         "image_url": "http://x/big.jpg", "sold_90d": 9},
+        {"code": "2", "name_cn": "没人用", "name_en": "Unused", "category": "零食饮料",
+         "on_sale": True, "image_url": "http://x/u.jpg", "sold_90d": 0},
+    ]
+    cat = rl.build_catalog(recipes, products, generated_at="2026-09-09T00:00:00Z")
+    assert cat["generated_at"] == "2026-09-09T00:00:00Z"
+    assert cat["source_count"] == 2
+    assert len(cat["items"]) == 1
+    assert cat["items"][0]["code"] == "1"
+    assert cat["items"][0]["name_cn"] == "嫩豆腐"
+    assert cat["items"][0]["price"] == 2.5
+    assert "image_url" not in cat["items"][0]
+    assert "sold_90d" not in cat["items"][0]
+
+
+def test_live_catalog_is_a_slim_slice():
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    recipes = json.load(open(os.path.join(root, "data", "recipes.json"), encoding="utf-8"))["recipes"]
+    products = json.load(open(os.path.join(root, "data", "products.json"), encoding="utf-8"))
+    cat = rl.build_catalog(recipes, products["items"], generated_at=products.get("generated_at"))
+    assert cat["items"]
+    assert len(cat["items"]) < 200
+    assert len(cat["items"]) < len(products["items"]) // 5
+    have = {p["code"] for p in products["items"]}
+    got = {i["code"] for i in cat["items"]}
+    for r in recipes:
+        for ing in r.get("ingredients") or []:
+            code = ing.get("code")
+            if code and code in have:
+                assert code in got
+
+
+def test_catalog_shrink_error_blocks_capped_export():
+    msg = rl.catalog_shrink_error(2705, 200)
+    assert msg and "200" in msg
+    assert rl.catalog_shrink_error(2705, 200, force=True) is None
+    assert rl.catalog_shrink_error(2705, 2600) is None
+    assert rl.catalog_shrink_error(0, 200) is None

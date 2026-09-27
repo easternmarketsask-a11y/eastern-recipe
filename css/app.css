@@ -1,6 +1,6 @@
 :root{
   --green:#3a8c50; --green-d:#2a5c34; --accent:#E8522A;
-  --bg:#f4f9f5; --card:#fff; --ink:#1f2a22; --muted:#6b7a6f; --line:#e6efe8;
+  --bg:#f4f9f5; --card:#fff; --ink:#1f2a22; --muted:#4a5c52; --line:#e6efe8;
   --radius:14px; --shadow:0 1px 3px rgba(30,42,34,.08);
 }
 *{box-sizing:border-box}
@@ -15,8 +15,8 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .hdr__name{flex:0 0 auto;margin:0;font-size:15px;font-weight:700;color:var(--green-d);letter-spacing:.2px;
   line-height:1.2;border-left:1px solid var(--line);padding-left:9px;white-space:nowrap}
 .search{flex:1 1 auto;min-width:0}
-.search__input{width:100%;height:38px;border:1px solid var(--line);border-radius:19px;
-  padding:0 14px;font-size:13px;outline:none;background:#fbfdfb}
+.search__input{width:100%;height:40px;border:1px solid var(--line);border-radius:20px;
+  padding:0 14px;font-size:16px;outline:none;background:#fbfdfb}
 .search__input:focus{border-color:var(--green)}
 main{max-width:560px;margin:0 auto;padding:12px 16px 40px}
 .card{display:flex;flex-direction:column;align-items:stretch;width:100%;min-width:0;
@@ -26,7 +26,7 @@ picture{display:contents}
 .card__img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--bg)}
 .card__body{display:flex;flex-direction:column;gap:2px;padding:10px 12px;align-items:stretch}
 .card__name{font-size:15px;font-weight:700;color:var(--green-d);letter-spacing:.3px;line-height:1.25;overflow-wrap:anywhere}
-.card__en{font-size:10.5px;color:#9aa39c;letter-spacing:.6px;font-weight:400;
+.card__en{font-size:11.5px;color:var(--muted);letter-spacing:.4px;font-weight:400;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card__nutri{font-size:11.5px;color:var(--green);font-weight:500;margin-top:3px;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -36,7 +36,14 @@ picture{display:contents}
 .detail__img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:var(--radius);margin:6px 0 12px;display:block;background:var(--bg)}
 .empty{color:var(--muted);text-align:center;padding:32px 0}
 /* 逛发现首页 */
-.block{margin:18px 0}
+.block{margin:18px 0;scroll-margin-top:72px}
+.jump{display:flex;gap:8px;overflow-x:auto;padding:2px 0 6px;margin:0 0 2px;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.jump::-webkit-scrollbar{display:none}
+.jump__btn{flex:0 0 auto;border:1px solid var(--line);background:var(--card);
+  color:var(--green-d);border-radius:16px;min-height:32px;padding:6px 12px;
+  font-size:13px;cursor:pointer}
+.jump__btn:active{background:#eef6f0;border-color:var(--green)}
 .block__hd{display:flex;align-items:baseline;justify-content:space-between}
 .block__title{font-size:16px;font-weight:600;color:var(--green-d);margin:0 0 10px}
 .block__note{margin:-4px 0 10px;font-size:12px;color:var(--muted);line-height:1.5}
@@ -75,7 +82,7 @@ picture{display:contents}
 .ftr{text-align:center;color:var(--muted);font-size:12px;padding:20px;line-height:1.9}
 .ftr strong{color:var(--green-d);font-size:13px}
 .ftr a{color:var(--green);text-decoration:none}
-.ftr__fine{font-size:11px;opacity:.85}
+.ftr__fine{font-size:12px;color:var(--muted)}
 /* 详情页次级操作（复制链接/看购物清单/网上下单） */
 .detail__actions{display:flex;gap:8px;margin:0 0 4px}
 .mini-btn{flex:1;min-height:38px;border-radius:var(--radius);border:1px solid var(--line);
@@ -101,3 +108,10 @@ picture{display:contents}
 .shopitem.is-done .shopitem__name{text-decoration:line-through;color:var(--muted)}
 .shopitem.is-done .shopitem__uses{opacity:.6}
 .shoplist__actions{display:flex;gap:8px;margin:14px 0 4px}
+@media (min-width: 900px){
+  body.spa main{max-width:960px;padding:20px 24px 56px}
+  body.spa .cards{grid-template-columns:repeat(4,minmax(0,1fr))}
+  body.spa .cards--row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+    overflow:visible;scroll-snap-type:none}
+  body.spa .cards--row .card{flex:none;width:auto}
+}

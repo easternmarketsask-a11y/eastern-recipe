@@ -28,9 +28,16 @@ Google 爬不到井号后面的东西，所以每道菜额外生成一个真网�
 ```
 StockWise API (Firestore products) --export_products.py--> data/products.json
 手工精选 + bind_ingredients.py                          --> data/recipes.json
-              ├── 前端 js/ 直接读（单页应用）
-              └── build_static_pages.py 读（静态菜页 + sitemap）
+              ├── build_static_pages.py 读全库，生成静态菜页 + sitemap
+              └── 同时抽出食谱用到的商品 → data/catalog.json
+                    └── 前端 js/ 只读 recipes.json + catalog.json
 ```
+
+`products.json` 是全库快照（约 2700 条，含图片地址），只给绑定脚本和静态页生成用。
+顾客打开网站下载的是 `catalog.json`（只有食谱引用到的那一百多条，没有图片地址）。
+
+匿名商品接口现在最多返回 200 条。**不要**再跑 `export_products.py` 去覆盖
+`data/products.json`：脚本发现新结果不到现有条数的一半会直接拒绝，避免把快照缩成 200 条、食材绑定全部断开。
 
 ## 图片
 - 原图 `assets/images/<id>.jpg`，WebP 由 `optimize_images.py` 生成到 `assets/images/webp/`
@@ -63,7 +70,7 @@ npm run verify                   # 真浏览器跑一遍关键路径（需先 np
 ## 改了食谱或图片之后
 ```bash
 python scripts/optimize_images.py        # 有新图才需要
-python scripts/build_static_pages.py     # 重新生成 r/*.html + sitemap.xml
+python scripts/build_static_pages.py     # 重新生成 r/*.html + sitemap，并重写 catalog.json
 ```
 两个脚本都是幂等的，重复跑没有副作用。**加了新菜一定要跑 build_static_pages.py**，
 否则那道菜没有可被搜索收录的网址。

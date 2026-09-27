@@ -18,6 +18,7 @@ from datetime import datetime, timezone
 
 import requests
 
+import recipe_lib
 from recipe_lib import build_product_record
 
 
@@ -43,6 +44,11 @@ def parse_args():
         "--out",
         default="../data/products.json",
         help="Output path for products.json",
+    )
+    p.add_argument(
+        "--force",
+        action="store_true",
+        help="覆盖一份明显更小的现有快照（默认拒绝：匿名接口最多 200 条）",
     )
     return p.parse_args()
 
@@ -137,6 +143,17 @@ def main():
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "items": items,
     }
+
+    existing_n = 0
+    if os.path.exists(out_path):
+        try:
+            with open(out_path, encoding="utf-8") as f:
+                existing_n = len((json.load(f).get("items") or []))
+        except (OSError, ValueError):
+            existing_n = 0
+    shrink = recipe_lib.catalog_shrink_error(existing_n, len(items), force=args.force)
+    if shrink:
+        sys.exit("ERROR: " + shrink)
 
     out_dir = os.path.dirname(os.path.abspath(out_path))
     os.makedirs(out_dir, exist_ok=True)

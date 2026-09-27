@@ -288,6 +288,39 @@
     dumpling: '🥟 饺子 · 馄饨', fresh: '🍜 鲜河粉 · 鲜肠粉', breakfast: '🌅 早餐包点', veg: '🥗 家常蔬菜',
     other: '🍳 家常菜'
   };
+  // 首页很长，这条快捷条让人直接跳到某个板块，不用一路横滑过去
+  var JUMPS = [
+    { id: 'seasonBlock', label: '中秋' },
+    { id: 'tonightBlock', label: '今晚' },
+    { id: 'cantoneseBlock', label: '粤菜' },
+    { id: 'vegBlock', label: '蔬菜' },
+    { id: 'seafoodBlock', label: '海鲜' },
+    { id: 'freshBlock', label: '河粉' },
+    { id: 'breakfastBlock', label: '早餐' },
+    { id: 'stapleBlock', label: '主食' },
+    { id: 'otherBlock', label: '家常' },
+    { id: 'dumplingBlock', label: '饺子' }
+  ];
+  function renderJump() {
+    var nav = $('jump');
+    if (!nav) return;
+    nav.innerHTML = JUMPS.filter(function (j) {
+      var el = $(j.id);
+      return el && !el.hidden;
+    }).map(function (j) {
+      return '<button type="button" class="jump__btn" data-jump="' + j.id + '">' +
+        esc(j.label) + '</button>';
+    }).join('');
+    Array.prototype.forEach.call(nav.querySelectorAll('.jump__btn'), function (btn) {
+      btn.onclick = function () {
+        var el = $(btn.dataset.jump);
+        if (!el) return;
+        var reduce = window.matchMedia &&
+          window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      };
+    });
+  }
   function showSection(sec) {
     var list = bySection(sec);
     var el = $('results');
@@ -332,6 +365,8 @@
   }
   // 无限循环横滑：把一份卡片复制成三份，滚动到边界时无缝跳回中间份
   function setupLoop(el) {
+    // 宽屏改成网格铺开，不再复制三份。复制了的话每道菜会在桌面上出现三次。
+    if (window.matchMedia && window.matchMedia('(min-width: 900px)').matches) return;
     if (el._onScroll) { el.removeEventListener('scroll', el._onScroll); el._onScroll = null; }
     if (el.scrollWidth <= el.clientWidth + 16) return; // 不溢出就不循环
     var one = el.innerHTML;
@@ -407,12 +442,14 @@
     } else {
       $('favesBlock').hidden = true;
     }
+    renderJump();
   }
 
   function boot() {
     Promise.all([
       fetch('data/recipes.json').then(function (r) { return r.json(); }),
-      fetch('data/products.json').then(function (r) { return r.json(); })
+      // 只拉食谱用到的商品。全库 products.json 约 660KB，页面用不到。
+      fetch('data/catalog.json').then(function (r) { return r.json(); })
     ]).then(function (out) {
       state.recipes = out[0].recipes || [];
       state.productIndex = RL.buildProductIndex((out[1].items) || []);
