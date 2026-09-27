@@ -1,7 +1,7 @@
 {
   "hotpot": {
-    "source": "https://commons.wikimedia.org/wiki/File:Korean_hot_pot_with_Chinese_dippings.jpg",
-    "via": "commons:Korean hot pot with Chinese dippings (CC BY-SA 4.0)"
+    "source": "owner photo",
+    "via": "self"
   },
   "red-braised-pork": {
     "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Red_braised_pork_belly",

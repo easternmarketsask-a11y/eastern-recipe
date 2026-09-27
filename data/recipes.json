@@ -13,8 +13,8 @@
       "section": "tonight",
       "kind": "dish",
       "priority": 100,
-      "image": "assets/images/hotpot.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/hotpot-platter.jpg",
+      "image_credit": "self",
       "tags": [
         "火锅",
         "羊肉",
