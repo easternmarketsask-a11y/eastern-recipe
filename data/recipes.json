@@ -130,8 +130,8 @@
       "section": "tonight",
       "kind": "dish",
       "priority": 95,
-      "image": "assets/images/red-braised-pork.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/red-braised-pork-bowl.jpg",
+      "image_credit": "self",
       "tags": [
         "猪肉",
         "红烧",

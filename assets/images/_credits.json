@@ -4,8 +4,8 @@
     "via": "self"
   },
   "red-braised-pork": {
-    "source": "https://en.wikipedia.org/api/rest_v1/page/summary/Red_braised_pork_belly",
-    "via": "en:Red braised pork belly"
+    "source": "owner photo",
+    "via": "self"
   },
   "braised-beef-brisket": {
     "source": "https://commons.wikimedia.org/wiki/File:%E7%89%9B%E8%85%A9%E7%85%B2%E4%BB%94%E9%A5%AD_Beef_Brisket_Hotpot_Rice_-_Soup,_Box_Hill_(2171826488).jpg",
