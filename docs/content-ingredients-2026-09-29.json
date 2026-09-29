@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-09-29T04:22:30.0572635Z",
+  "checked_at_utc": "2026-09-29T18:58:32.7847554Z",
   "source": "StockWise public targeted product search",
   "scope": "Active catalog presence; not a guarantee of physical stock",
   "products": [
@@ -249,6 +249,94 @@
       "code": "HFCXCXC",
       "name": "Green Onion 小葱 BOX",
       "id": "muxD7B3T7Dn6wwsUeFkv",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    },
+    {
+      "code": "1012",
+      "name": "Arrow Root 粉葛",
+      "id": "QEBy4vbMwdk8imjVlPwJ",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 38.4,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    },
+    {
+      "code": "1006jljl",
+      "name": "Gay Lan 芥兰",
+      "id": "nGCQxUC8bgAxFG4uFr3I",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    },
+    {
+      "code": "1018",
+      "name": "You Choy 菜心",
+      "id": "StSGNIMSW0IqMg5L37vz",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    },
+    {
+      "code": "0030",
+      "name": "Pork Tube Bones 猪筒骨",
+      "id": "IkzltGAFYOg74oXtkrXP",
+      "category": "冷冻食品",
+      "active": true,
+      "available_for_delivery": null,
+      "stock_quantity": 0.0,
+      "stock_confidence": 35,
+      "stock_shortfall_kind": "no_purchase_history"
+    },
+    {
+      "code": "6941837101611",
+      "name": "SWF Seedless Red Dates 无核红枣 250g",
+      "id": "RBYaogLzbtpDfnILUWxK",
+      "category": "干货调料",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 10.0,
+      "stock_confidence": 74,
+      "stock_shortfall_kind": "none"
+    },
+    {
+      "code": "6922824007468",
+      "name": "LKK Less Sodium Oyster Sauce 薄盐蚝油 300ml",
+      "id": "ocDqsMaxbwrFxmJBSnO3",
+      "category": "干货调料",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 4.0,
+      "stock_confidence": 92,
+      "stock_shortfall_kind": "none"
+    },
+    {
+      "code": "1037",
+      "name": "Ginger 生姜",
+      "id": "jKYJ8Etu2Tqj4Gim16IN",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 208.7,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    },
+    {
+      "code": "0178",
+      "name": "Peeled Garlic 脱皮蒜头 pk",
+      "id": "l9N6w7i9BeIDGLDiXDdt",
       "category": "新鲜蔬菜",
       "active": true,
       "available_for_delivery": true,

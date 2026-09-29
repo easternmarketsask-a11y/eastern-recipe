@@ -54,6 +54,15 @@ StockWise API (Firestore products) --export_products.py--> data/products.json
 
 当前没有菜在用占位卡。
 
+### 2026-09 内容与配图约定
+
+食谱图片可以使用高质量 AI 示意图，`image_credit` 必须记录来源；页脚说明图片含 AI 示意图。
+新图使用独立文件名（如 `-ai-202609.jpg`），保留原照片，避免缓存与回退问题。
+配图必须与实际食材、做法一致。粉葛不可误配沙葛，芥兰和菜心不可用生菜图替代。
+新增食谱的主要食材先核对 StockWise 商品记录；核查证据见
+`docs/content-ingredients-2026-09-29.json`。在售商品记录不等于实时物理库存保证。
+内容批次脚本只有在主要食材通过核验后才允许生成；不要用硬编码名单绕过核验。
+
 ## 本地跑
 ```bash
 npm install                      # 只装 playwright-core，不下载浏览器

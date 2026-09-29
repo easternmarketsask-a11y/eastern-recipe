@@ -425,8 +425,8 @@
       "section": "tonight",
       "kind": "dish",
       "priority": 92,
-      "image": "assets/images/white-cut-chicken.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/white-cut-chicken-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "鸡肉",
         "粤菜",
@@ -587,8 +587,8 @@
       "section": "tonight",
       "kind": "dish",
       "priority": 91,
-      "image": "assets/images/cumin-lamb.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/cumin-lamb-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "羊肉",
         "新疆",
@@ -1294,8 +1294,8 @@
       "section": "breakfast",
       "kind": "ready",
       "priority": 91,
-      "image": "assets/images/nai-huang-bao-ready.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/nai-huang-bao-ready-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "早餐",
         "速食",
@@ -1403,8 +1403,8 @@
       "section": "breakfast",
       "kind": "ready",
       "priority": 89,
-      "image": "assets/images/hei-jin-liusha-bao-ready.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/hei-jin-liusha-bao-ready-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "早餐",
         "速食",
@@ -1516,8 +1516,8 @@
       "section": "other",
       "kind": "dish",
       "priority": 10,
-      "image": "assets/images/mapo-tofu.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/mapo-tofu-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "川菜",
         "豆腐",
@@ -1635,8 +1635,8 @@
       "section": "other",
       "kind": "dish",
       "priority": 10,
-      "image": "assets/images/tomato-egg.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/tomato-egg-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "家常菜",
         "快手菜",
@@ -1715,8 +1715,8 @@
     },
     {
       "id": "pork-green-pepper",
-      "name_cn": "青椒肉丝",
-      "name_en": "Stir-Fried Pork with Green Pepper",
+      "name_cn": "青椒肉末",
+      "name_en": "Minced Pork with Green Peppers",
       "aliases": [
         "青椒炒肉丝",
         "肉丝炒青椒",
@@ -1726,8 +1726,8 @@
       "section": "other",
       "kind": "dish",
       "priority": 10,
-      "image": "assets/images/pork-green-pepper.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/pork-green-pepper-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "家常菜",
         "下饭菜",
@@ -1735,11 +1735,11 @@
         "猪肉"
       ],
       "steps": [
-        "猪肉末（或里脊肉）加生抽、料酒、淀粉、少许油抓匀，腌制10分钟。",
+        "猪肉末加生抽、料酒、淀粉、少许油抓匀，冷藏腌制10分钟。",
         "青椒去蒂去子，切丝；姜蒜切末备用。",
         "锅热油（大火），下肉末炒至变色散开，盛出备用。",
         "锅中留底油，爆香姜蒜末，下青椒丝大火翻炒约1分钟至断生保留脆感。",
-        "倒回炒好的肉丝，加生抽、少许盐，大火翻炒均匀出锅。"
+        "倒回炒好的肉末，加生抽、少许盐和1汤匙水炒匀，肉末中心达到71°C后出锅。"
       ],
       "ingredients": [
         {
@@ -1826,8 +1826,8 @@
       "section": "other",
       "kind": "dish",
       "priority": 10,
-      "image": "assets/images/blanched-choy-sum.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/blanched-choy-sum-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "粤菜",
         "素菜",
@@ -1922,8 +1922,8 @@
       "section": "other",
       "kind": "dish",
       "priority": 10,
-      "image": "assets/images/seaweed-egg-soup.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/seaweed-egg-soup-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "汤",
         "家常菜",
@@ -2080,8 +2080,8 @@
       "section": "breakfast",
       "kind": "ready",
       "priority": 90,
-      "image": "assets/images/purple-rice-floss-bun.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/purple-rice-floss-bun-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "早餐",
         "速食",
@@ -3357,8 +3357,8 @@
       "section": "seafood",
       "kind": "ready",
       "priority": 83,
-      "image": "assets/images/shijinyuwan.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/shijinyuwan-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "海鲜",
         "丸子",
@@ -3396,8 +3396,8 @@
       "section": "tonight",
       "kind": "dish",
       "priority": 88,
-      "image": "assets/images/jiachang-doufu.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/jiachang-doufu-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "豆腐",
         "家常菜",
@@ -3500,8 +3500,8 @@
       "section": "tonight",
       "kind": "dish",
       "priority": 87,
-      "image": "assets/images/yuxiang-doufu.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/yuxiang-doufu-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "豆腐",
         "家常菜",
@@ -3589,8 +3589,8 @@
       "section": "veg",
       "kind": "dish",
       "priority": 70,
-      "image": "assets/images/pidan-doufu.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/pidan-doufu-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "豆腐",
         "皮蛋",
@@ -3812,8 +3812,8 @@
       "section": "veg",
       "kind": "dish",
       "priority": 70,
-      "image": "assets/images/jidanzheng.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/jidanzheng-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "蛋",
         "蒸菜",
@@ -3962,8 +3962,8 @@
       "section": "dumpling",
       "kind": "ready",
       "priority": 95,
-      "image": "assets/images/guantang-xiaoshuijiao.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/guantang-xiaoshuijiao-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "饺子",
         "速食",
@@ -4101,8 +4101,8 @@
       "section": "dumpling",
       "kind": "ready",
       "priority": 86,
-      "image": "assets/images/zhurou-jiucaijiao.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/zhurou-jiucaijiao-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "饺子",
         "速食",
@@ -4140,8 +4140,8 @@
       "section": "staple",
       "kind": "dish",
       "priority": 82,
-      "image": "assets/images/xihongshi-jidan-mian.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/xihongshi-jidan-mian-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "面条",
         "番茄",
@@ -5064,8 +5064,8 @@
       "section": "season",
       "kind": "dish",
       "priority": 96,
-      "image": "assets/images/lotus-pork-bone-soup.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/lotus-pork-bone-soup-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "秋冬进补",
         "汤水",
@@ -5158,8 +5158,8 @@
       "section": "season",
       "kind": "dish",
       "priority": 94,
-      "image": "assets/images/osmanthus-lotus-root.jpg",
-      "image_credit": "cc",
+      "image": "assets/images/osmanthus-lotus-root-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "中秋",
         "甜品",
@@ -6744,7 +6744,7 @@
         }
       ],
       "steps": [
-        "约2小时，4人份。粉葛削皮切厚块；猪筒骨冷水下锅，煮开后再煮3分钟，捞出用温水冲净浮沫。",
+        "粉葛是广东常用的煲汤根茎，汤味清甜、煮后带粉糯感；它与沙葛是不同食材。约2小时，4人份。粉葛削皮切厚块；猪筒骨冷水下锅，煮开后再煮3分钟，捞出用温水冲净浮沫。",
         "骨头、粉葛和姜片放入汤锅，加约2升冷水，大火煮开后转小火，保持轻微沸腾。",
         "盖盖煲约1.5小时，中途只在需要时补热水；想要更清甜可在最后30分钟加入红枣。",
         "粉葛用筷子能插入、汤味清甜后加盐。粉葛口感粉糯，适合第一次尝试广东汤水的客人；可把粉葛和骨肉一起吃。"

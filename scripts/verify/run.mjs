@@ -53,7 +53,7 @@ try {
   // setupLoop 会把卡片复制三份做无缝循环，所以按 data-id 去重才是真实菜数
   const seasonIds = await page.$$eval('#season .card', (els) =>
     [...new Set(els.map((e) => e.dataset.id))]);
-  ok('应季板块有 5 道菜，不含月饼', seasonIds.length === 5 && !seasonIds.includes('mooncake-ready'), seasonIds.join(', '));
+  ok('应季板块有 10 道菜，含粉葛汤且不含月饼', seasonIds.length === 10 && seasonIds.includes('pueraria-pork-soup') && !seasonIds.includes('mooncake-ready'), seasonIds.join(', '));
 
   const usesCatalog = requested.some((u) => u.includes('/data/catalog.json'));
   const usesFullCatalog = requested.some((u) => u.includes('/data/products.json'));
@@ -176,7 +176,18 @@ try {
   const idx = await p2.goto(BASE + '/r/', { waitUntil: 'domcontentloaded' });
   ok('全部食谱目录页返回 200', idx.status() === 200);
   const links = await p2.$$eval('.pg-seclist a', (e) => e.length);
-  ok('目录页链出全部 78 道菜', links === 78, links + ' 条');
+  ok('目录页链出全部 101 道菜', links === 101, links + ' 条');
+  for (const [id, name] of [
+    ['pueraria-pork-soup', '粉葛猪骨汤'],
+    ['gai-lan-oyster-sauce', '蚝油芥兰'],
+    ['choy-sum-garlic', '蒜蓉菜心'],
+    ['minced-pork-steamed-egg', '肉末蒸蛋'],
+  ]) {
+    const response = await p2.goto(BASE + '/r/' + id + '.html', { waitUntil: 'networkidle' });
+    const title = await p2.locator('h1').innerText();
+    const hero = await p2.locator('.detail__img').evaluate((img) => ({ loaded: img.complete && img.naturalWidth > 0, src: img.currentSrc }));
+    ok(name + '线上可读且配图完整', response.status() === 200 && title.includes(name) && hero.loaded && hero.src.includes(id + '-ai-202609'), hero.src);
+  }
   await p2.close();
 
   ok('浏览器控制台无报错', consoleErrors.length === 0, consoleErrors.slice(0, 2).join(' | '));

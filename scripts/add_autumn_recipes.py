@@ -96,9 +96,6 @@ def main():
     existing = {r['id'] for r in data['recipes']}
     products = {p['code'] for p in json.loads((ROOT / 'data/products.json').read_text(encoding='utf-8-sig'))['items']}
     checked = {p['code'] for p in json.loads((ROOT / 'docs/content-ingredients-2026-09-29.json').read_text(encoding='utf-8-sig'))['products']}
-    # New specialty greens/root codes are present in the same dated catalog snapshot;
-    # the live targeted check is kept separate so a failed network call cannot invent stock.
-    checked.update(('1012', '1006jljl', '1018', '0030', '6941837101611', '6922824007468', '1037', '0178'))
     for rid, cn, en, section, ingredients, steps in CONTENT:
         assert all(P.get(label) in checked for label, _, main in ingredients if main), rid
         rows = [{'label': label, 'qty': qty, 'code': P.get(label) if P.get(label) in products else None, 'required': bool(main)} for label, qty, main in ingredients]
