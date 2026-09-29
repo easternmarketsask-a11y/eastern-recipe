@@ -1,0 +1,260 @@
+{
+  "checked_at_utc": "2026-09-29T04:22:30.0572635Z",
+  "source": "StockWise public targeted product search",
+  "scope": "Active catalog presence; not a guarantee of physical stock",
+  "products": [
+    {
+      "code": "10701",
+      "name": "Potato 土豆",
+      "id": "VQ2EAoQVTabMfhDP7zom",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    },
+    {
+      "code": "777433001200",
+      "name": "Traditional TOFU 传统豆腐 700G",
+      "id": "w0BJ3mDkRCVDgmceVFsa",
+      "category": "豆腐蛋品",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": 58,
+      "stock_shortfall_kind": "missing_invoice"
+    },
+    {
+      "code": "1032xhs",
+      "name": "Tomato 西紅柿",
+      "id": "TPbpMZFX2blTDYbUJygZ",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    },
+    {
+      "code": "Sc1003dbc",
+      "name": "Siu Choy 大白菜",
+      "id": "Zwf3HQwkarqrkGGkirCK",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    },
+    {
+      "code": "6928527900105",
+      "name": "Bean Vermicelli 伊龙龙口粉丝 250g",
+      "id": "rP7DpGWhLpxWv83wvplJ",
+      "category": "米面粮油",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": 84,
+      "stock_shortfall_kind": "missing_invoice"
+    },
+    {
+      "code": "871392001636",
+      "name": "Tastie Dried Mushrooms 227g 干香菇",
+      "id": "R1GX4SF1vcXQ19VTD0NF",
+      "category": "干货调料",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": 35,
+      "stock_shortfall_kind": "no_purchase_history"
+    },
+    {
+      "code": "627735189635",
+      "name": "Ground Pork 1lb 猪肉碎",
+      "id": "ds0wG1KFq2q7oU56x1p4",
+      "category": "冷冻食品",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": 35,
+      "stock_shortfall_kind": "no_purchase_history"
+    },
+    {
+      "code": "10455bbng",
+      "name": "贝贝南瓜 EA 个",
+      "id": "MDXt4FwKLdQAxhx5eolJ",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    },
+    {
+      "code": "420011",
+      "name": "Pork Ribs(德国排骨粒)",
+      "id": "RTMBUOeQsyiTsI0dPlnQ",
+      "category": "冷冻食品",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": 35,
+      "stock_shortfall_kind": "no_purchase_history"
+    },
+    {
+      "code": "209145dxdx827510004140",
+      "name": "Ecuadorian Shrimp 厄瓜多尔大虾 4lbs",
+      "id": "kFJRQ5Xfdmh4SLKbhhWO",
+      "category": "冷冻食品",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 23.0,
+      "stock_confidence": 80,
+      "stock_shortfall_kind": "none"
+    },
+    {
+      "code": "1043lolo",
+      "name": "Lotus Root 莲藕",
+      "id": "2J1AsjDxi9b1XamfZna8",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    },
+    {
+      "code": "6976411130176",
+      "name": "DH Beancurd Stick 腐竹段 150g",
+      "id": "46A99IImg3ubQO2ff5Vv",
+      "category": "豆腐蛋品",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 5.0,
+      "stock_confidence": 92,
+      "stock_shortfall_kind": "none"
+    },
+    {
+      "code": "10291DCQG",
+      "name": "Cucumber BC带刺黄瓜",
+      "id": "AtxNHlOoudybrEBvxyBO",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    },
+    {
+      "code": "9735",
+      "name": "Beef Belly Plate Irish Box 爱尔兰牛腩",
+      "id": "gRdrouXSylIUwgt4qaPm",
+      "category": "冷冻食品",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": 35,
+      "stock_shortfall_kind": "no_purchase_history"
+    },
+    {
+      "code": "1036dgdg",
+      "name": "Winter Melon 冬瓜",
+      "id": "tZsso4Pw47zLKu5IvYgX",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    },
+    {
+      "code": "800794207049",
+      "name": "WS Millet 小米 454g",
+      "id": "kEpEbExn4daBwBFS4uTc",
+      "category": "米面粮油",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": 35,
+      "stock_shortfall_kind": "no_purchase_history"
+    },
+    {
+      "code": "4710943100410",
+      "name": "SR Fortified All Purpose Flour 500g 强化通用面粉",
+      "id": "fjy629rMrHWxjSevcVzO",
+      "category": "米面粮油",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": 35,
+      "stock_shortfall_kind": "no_purchase_history"
+    },
+    {
+      "code": "4889shj",
+      "name": "Yellow Feather Chicken 三黄鸡",
+      "id": "cq3NgPpsZsmp9xbQOukR",
+      "category": "冷冻食品",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": 38,
+      "stock_shortfall_kind": "no_purchase_history"
+    },
+    {
+      "code": "2008",
+      "name": "Chicken Eggs 鸡蛋 12pcs",
+      "id": "kQNYeHJ408Pb89ZmMo9a",
+      "category": "豆腐蛋品",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": 35,
+      "stock_shortfall_kind": "no_purchase_history"
+    },
+    {
+      "code": "1017qgqg",
+      "name": "EggPlant 茄瓜",
+      "id": "Tq83khSYkpbn8kRvZnvC",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    },
+    {
+      "code": "6922474188883",
+      "name": "Pickled Chinese Cabbage 榆园酸菜 300g",
+      "id": "lThSrRieA02OOiyIUGZi",
+      "category": "干货调料",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": 35,
+      "stock_shortfall_kind": "no_purchase_history"
+    },
+    {
+      "code": "0221",
+      "name": "Pork Belly 五花肉(带皮)",
+      "id": "neSL4UtT3uNfU4b9UB2t",
+      "category": "冷冻食品",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": 38,
+      "stock_shortfall_kind": "no_purchase_history"
+    },
+    {
+      "code": "HFCXCXC",
+      "name": "Green Onion 小葱 BOX",
+      "id": "muxD7B3T7Dn6wwsUeFkv",
+      "category": "新鲜蔬菜",
+      "active": true,
+      "available_for_delivery": true,
+      "stock_quantity": 0.0,
+      "stock_confidence": null,
+      "stock_shortfall_kind": null
+    }
+  ]
+}

@@ -5414,6 +5414,1460 @@
         }
       ],
       "nutrition": "无油低卡·养胃粗粮"
+    },
+    {
+      "id": "hot-sour-potato",
+      "name_cn": "酸辣土豆丝",
+      "name_en": "Hot and Sour Shredded Potatoes",
+      "aliases": [
+        "酸辣土豆丝",
+        "Hot and Sour Shredded Potatoes"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/hot-sour-potato-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "土豆"
+      ],
+      "ingredients": [
+        {
+          "label": "土豆",
+          "qty": "2个，约400g",
+          "code": "10701",
+          "required": true
+        },
+        {
+          "label": "干辣椒",
+          "qty": "2个，可省略",
+          "code": "6971005993144",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "米醋",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "约1/4茶匙，按口味调整",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约20分钟，2–3人份。土豆切均匀细丝，用清水冲去表面淀粉，沥干；这样炒出来更清爽。",
+        "蒜切片，小葱切段，干辣椒剪段。锅中加油，中小火炒香蒜和辣椒，勿炒黑。",
+        "转中大火倒入土豆丝，翻炒3–5分钟，粗细不同需调整时间；若粘锅，沿边加少许水。",
+        "土豆熟透但仍有脆感时，加入米醋、盐和葱段，再炒约30秒出锅。醋后放，酸香更明显。"
+      ]
+    },
+    {
+      "id": "scallion-braised-tofu",
+      "name_cn": "葱烧豆腐",
+      "name_en": "Scallion Braised Tofu",
+      "aliases": [
+        "葱烧豆腐",
+        "Scallion Braised Tofu"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/scallion-braised-tofu-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "传统豆腐",
+        "小葱"
+      ],
+      "ingredients": [
+        {
+          "label": "传统豆腐",
+          "qty": "1块，约400g",
+          "code": "777433001200",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "4根",
+          "code": "HFCXCXC",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "糖",
+          "qty": "1/4茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "100ml",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约25分钟，2–3人份。豆腐切1.5cm厚片，用厨房纸吸干表面水分；小葱切长段，葱白葱绿分开。",
+        "平底锅加油，中火放入豆腐，每面煎约3分钟至金黄，定型后再翻，避免碎裂。",
+        "将豆腐推到锅边，放葱白略煎，加入生抽、糖和100ml水，轻晃锅让酱汁分布均匀。",
+        "小火焖5分钟，加入葱绿，再煮1分钟稍微收汁。保留少许汁，拌饭更香。"
+      ]
+    },
+    {
+      "id": "tomato-tofu-soup",
+      "name_cn": "番茄豆腐汤",
+      "name_en": "Tomato and Tofu Soup",
+      "aliases": [
+        "番茄豆腐汤",
+        "Tomato and Tofu Soup"
+      ],
+      "section": "other",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/tomato-tofu-soup-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "番茄",
+        "传统豆腐"
+      ],
+      "ingredients": [
+        {
+          "label": "番茄",
+          "qty": "2个，约350g",
+          "code": "1032xhs",
+          "required": true
+        },
+        {
+          "label": "传统豆腐",
+          "qty": "300g",
+          "code": "777433001200",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "2茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "约1/3茶匙，按口味调整",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "700ml",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约20分钟，2–3人份。番茄切块，豆腐切小方块，小葱切碎。",
+        "锅中加油，放番茄中火炒3–4分钟，炒出红汁；喜欢浓一些可压碎一半番茄。",
+        "倒入700ml水煮开，轻轻放入豆腐，转小火煮8分钟，避免大力搅拌。",
+        "按口味加盐，撒葱花即可。清爽的番茄酸味配嫩豆腐，适合搭配炒菜和米饭。"
+      ]
+    },
+    {
+      "id": "napa-vermicelli-pot",
+      "name_cn": "白菜粉丝煲",
+      "name_en": "Napa Cabbage and Vermicelli Pot",
+      "aliases": [
+        "白菜粉丝煲",
+        "Napa Cabbage and Vermicelli Pot"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/napa-vermicelli-pot-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "大白菜",
+        "龙口粉丝"
+      ],
+      "ingredients": [
+        {
+          "label": "大白菜",
+          "qty": "约500g",
+          "code": "Sc1003dbc",
+          "required": true
+        },
+        {
+          "label": "龙口粉丝",
+          "qty": "50g干重",
+          "code": "6928527900105",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "350ml",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约25分钟，2–3人份。粉丝按包装说明泡软；白菜帮切条、叶切块，分开放；蒜切末。",
+        "锅中加油炒香蒜末，先炒白菜帮2分钟，再放白菜叶炒软。",
+        "倒入生抽和350ml水，煮开后小火煮5分钟，直到白菜帮变软。",
+        "放入沥水粉丝，轻拌后煮3–5分钟至熟，按包装和粗细调整；粉丝吸水快，太干就补热水，留些汤汁趁热吃。"
+      ]
+    },
+    {
+      "id": "shiitake-pork-patty",
+      "name_cn": "香菇蒸肉饼",
+      "name_en": "Steamed Pork Patty with Shiitake",
+      "aliases": [
+        "香菇蒸肉饼",
+        "Steamed Pork Patty with Shiitake"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/shiitake-pork-patty-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "猪肉碎",
+        "干香菇"
+      ],
+      "ingredients": [
+        {
+          "label": "猪肉碎",
+          "qty": "300g",
+          "code": "627735189635",
+          "required": true
+        },
+        {
+          "label": "干香菇",
+          "qty": "4朵",
+          "code": "871392001636",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "qty": "2片，切末",
+          "code": "1037",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "淀粉",
+          "qty": "1茶匙",
+          "code": "6941837101024",
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "2汤匙",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约30分钟，另计香菇泡发时间，2–3人份。香菇按包装说明冷藏泡发，去硬蒂、切小丁。",
+        "猪肉碎加入香菇、姜末、生抽、淀粉和2汤匙水，顺一个方向搅至略有黏性。",
+        "平铺在耐热浅盘中，厚度不超过2cm。蒸锅水开后放盘，盖盖中火蒸约15–20分钟。",
+        "用食物温度计测肉饼中心达到71°C；厚度较大要继续蒸。出锅撒葱花，保留蒸出的鲜汁，拌饭很好吃。"
+      ]
+    },
+    {
+      "id": "pumpkin-steamed-ribs",
+      "name_cn": "南瓜蒸排骨",
+      "name_en": "Steamed Pork Ribs with Kabocha",
+      "aliases": [
+        "南瓜蒸排骨",
+        "Steamed Pork Ribs with Kabocha"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/pumpkin-steamed-ribs-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "排骨",
+        "贝贝南瓜"
+      ],
+      "ingredients": [
+        {
+          "label": "排骨",
+          "qty": "400g，小块",
+          "code": "420011",
+          "required": true
+        },
+        {
+          "label": "贝贝南瓜",
+          "qty": "约400g",
+          "code": "10455bbng",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "淀粉",
+          "qty": "1茶匙",
+          "code": "6941837101024",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "1茶匙",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约60分钟，3人份。冷冻排骨提前冷藏解冻，吸干；加蒜末、生抽、淀粉和油，冷藏腌15分钟。",
+        "南瓜去籽切约2cm厚块，洗净的皮可保留，平铺耐热深盘。",
+        "将小块排骨单层放在南瓜上，水开后入蒸锅，中火蒸30–40分钟，注意补热水防干锅。",
+        "排骨最厚处避开骨头测温，达到71°C且肉已软熟；南瓜应能轻松插入筷子。若未达到继续蒸。南瓜吸收肉汁，不必另加糖。"
+      ]
+    },
+    {
+      "id": "garlic-vermicelli-shrimp",
+      "name_cn": "蒜蓉粉丝蒸虾",
+      "name_en": "Garlic Shrimp over Vermicelli",
+      "aliases": [
+        "蒜蓉粉丝蒸虾",
+        "Garlic Shrimp over Vermicelli"
+      ],
+      "section": "seafood",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/garlic-vermicelli-shrimp-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "大虾",
+        "龙口粉丝"
+      ],
+      "ingredients": [
+        {
+          "label": "大虾",
+          "qty": "10–12只，约400g",
+          "code": "209145dxdx827510004140",
+          "required": true
+        },
+        {
+          "label": "龙口粉丝",
+          "qty": "50g干重",
+          "code": "6928527900105",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "6瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "4汤匙",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约30分钟，2–3人份。虾提前冷藏解冻，剪须、开背去虾线；粉丝按包装泡软，剪短铺在耐热盘中。",
+        "蒜切末，用油小火炒香一半，再关火拌入另一半蒜末、生抽和4汤匙水。",
+        "将虾平铺在粉丝上，蒜汁均匀浇入。水开后上锅蒸约8–10分钟，按虾大小调整。",
+        "虾肉应完全不透明，最厚处达到74°C；未达到继续蒸。撒葱花趁热吃，盘内须留汁，避免粉丝蒸干。"
+      ]
+    },
+    {
+      "id": "shrimp-tofu-pot",
+      "name_cn": "虾仁豆腐煲",
+      "name_en": "Shrimp and Tofu Pot",
+      "aliases": [
+        "虾仁豆腐煲",
+        "Shrimp and Tofu Pot"
+      ],
+      "section": "seafood",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/shrimp-tofu-pot-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "大虾",
+        "传统豆腐"
+      ],
+      "ingredients": [
+        {
+          "label": "大虾",
+          "qty": "约400g，剥壳去虾线",
+          "code": "209145dxdx827510004140",
+          "required": true
+        },
+        {
+          "label": "传统豆腐",
+          "qty": "300g",
+          "code": "777433001200",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "2茶匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "2茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "300ml",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约25分钟，2–3人份。虾冷藏解冻后剥壳去虾线；豆腐切2cm方块，小葱切碎。",
+        "锅里加油，小火炒香姜片，加300ml水和生抽煮开。",
+        "下豆腐，小火煮5分钟；放虾仁，再煮3–5分钟，视大小调整。",
+        "虾肉完全不透明、最厚处达到74°C后撒葱花。轻推豆腐别翻碎，鲜汤留着拌饭。"
+      ]
+    },
+    {
+      "id": "lotus-pork-patties",
+      "name_cn": "香煎莲藕肉饼",
+      "name_en": "Pan-Fried Lotus Root Pork Patties",
+      "aliases": [
+        "香煎莲藕肉饼",
+        "Pan-Fried Lotus Root Pork Patties"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/lotus-pork-patties-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "莲藕",
+        "猪肉碎"
+      ],
+      "ingredients": [
+        {
+          "label": "莲藕",
+          "qty": "250g",
+          "code": "1043lolo",
+          "required": true
+        },
+        {
+          "label": "猪肉碎",
+          "qty": "250g",
+          "code": "627735189635",
+          "required": true
+        },
+        {
+          "label": "鸡蛋",
+          "qty": "1个",
+          "code": "2008",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "2茶匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "淀粉",
+          "qty": "1汤匙",
+          "code": "6941837101024",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "1–2汤匙",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约35分钟，3人份。莲藕去皮，切成细小颗粒；不要打成泥，保留脆口。小葱切碎。",
+        "莲藕和肉碎混合，加鸡蛋、葱花、生抽、淀粉，搅拌至有黏性，分成8个约1cm厚小饼。",
+        "平底锅加油，中小火煎肉饼，每面约4–5分钟；上色过快就调小火，必要时加1汤匙水盖盖焖。",
+        "温度计从饼侧插入中心，达到71°C后出锅。外层微焦、里面带藕粒的脆感，可配米饭或粥。"
+      ]
+    },
+    {
+      "id": "cucumber-beancurd-salad",
+      "name_cn": "黄瓜拌腐竹",
+      "name_en": "Cucumber and Beancurd Stick Salad",
+      "aliases": [
+        "黄瓜拌腐竹",
+        "Cucumber and Beancurd Stick Salad"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/cucumber-beancurd-salad-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "黄瓜",
+        "腐竹"
+      ],
+      "ingredients": [
+        {
+          "label": "黄瓜",
+          "qty": "1根，约250g",
+          "code": "10291DCQG",
+          "required": true
+        },
+        {
+          "label": "腐竹",
+          "qty": "80g干重",
+          "code": "6976411130176",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "2茶匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "米醋",
+          "qty": "2茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "芝麻油",
+          "qty": "1茶匙",
+          "code": "742812710905",
+          "required": false
+        }
+      ],
+      "steps": [
+        "约15分钟，另计腐竹泡发时间，2–3人份。腐竹按包装要求冷藏泡发至无硬芯，切段。",
+        "烧开一锅水，放腐竹煮3–5分钟至熟透；按包装调整，捞出沥干晾凉。",
+        "黄瓜洗净轻拍后切块；蒜压成末，与生抽、米醋、芝麻油拌成汁。",
+        "把黄瓜和腐竹拌匀，现拌现吃。暂不吃则立即冷藏，避免久放室温；腐竹沥干，味道才不会被水冲淡。"
+      ]
+    },
+    {
+      "id": "napa-pork-vermicelli",
+      "name_cn": "白菜猪肉炖粉丝",
+      "name_en": "Pork and Napa Cabbage Vermicelli Stew",
+      "aliases": [
+        "白菜猪肉炖粉丝",
+        "Pork and Napa Cabbage Vermicelli Stew"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/napa-pork-vermicelli-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "大白菜",
+        "五花肉",
+        "龙口粉丝"
+      ],
+      "ingredients": [
+        {
+          "label": "大白菜",
+          "qty": "500g",
+          "code": "Sc1003dbc",
+          "required": true
+        },
+        {
+          "label": "五花肉",
+          "qty": "250g",
+          "code": "0221",
+          "required": true
+        },
+        {
+          "label": "龙口粉丝",
+          "qty": "60g干重",
+          "code": "6928527900105",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "600ml",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约45分钟，3人份。五花肉切薄片，白菜帮和叶分开切；粉丝按包装泡软。",
+        "锅中放五花肉，中小火煎出少许油，加入姜片和白菜帮炒2分钟。",
+        "加生抽、600ml热水，煮开后小火炖15分钟，再下白菜叶煮8分钟。",
+        "下粉丝煮3–5分钟至熟，五花肉中心需达到71°C。粉丝吸汤快，按需补水，留足热汤端上桌。"
+      ]
+    },
+    {
+      "id": "potato-beef-stew",
+      "name_cn": "土豆炖牛腩",
+      "name_en": "Beef Brisket and Potato Stew",
+      "aliases": [
+        "土豆炖牛腩",
+        "Beef Brisket and Potato Stew"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/potato-beef-stew-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "牛腩",
+        "土豆"
+      ],
+      "ingredients": [
+        {
+          "label": "牛腩",
+          "qty": "500g",
+          "code": "9735",
+          "required": true
+        },
+        {
+          "label": "土豆",
+          "qty": "2个，约400g",
+          "code": "10701",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "qty": "4片",
+          "code": "1037",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "2汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "糖",
+          "qty": "1/2茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "2茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "约1升",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约2–2.5小时，3–4人份。牛腩冷藏解冻后切3cm块；冷水下锅煮开，撇沫煮3分钟后捞出沥干。",
+        "炖锅加油炒香姜片，下牛腩翻炒，加生抽和糖，倒入约1升热水没过肉。",
+        "煮开转小火，盖盖炖约90分钟，按肉质继续炖至筷子能插入；中途缺水补热水。",
+        "土豆切3cm块加入，再炖20–25分钟至软，开盖略收汁。土豆后放，避免牛腩没软时土豆已煮散。"
+      ]
+    },
+    {
+      "id": "wintermelon-shrimp-soup",
+      "name_cn": "冬瓜虾仁汤",
+      "name_en": "Winter Melon and Shrimp Soup",
+      "aliases": [
+        "冬瓜虾仁汤",
+        "Winter Melon and Shrimp Soup"
+      ],
+      "section": "other",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/wintermelon-shrimp-soup-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "冬瓜",
+        "大虾"
+      ],
+      "ingredients": [
+        {
+          "label": "冬瓜",
+          "qty": "400g",
+          "code": "1036dgdg",
+          "required": true
+        },
+        {
+          "label": "大虾",
+          "qty": "约300g，剥壳去虾线",
+          "code": "209145dxdx827510004140",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "约1/3茶匙，按口味调整",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "800ml",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约25分钟，2–3人份。冬瓜去皮去籽，切薄块；虾冷藏解冻后剥壳去虾线。",
+        "锅中放800ml水和姜片，煮开后下冬瓜，中小火煮8–12分钟至边缘透明。",
+        "加入虾仁，继续煮3–5分钟，按虾大小调整；虾肉完全不透明，最厚处达到74°C。",
+        "加盐和葱花，轻轻拌匀。冬瓜清甜、虾仁鲜嫩，汤不用勾芡，也无需重调味。"
+      ]
+    },
+    {
+      "id": "pumpkin-millet-congee",
+      "name_cn": "南瓜小米粥",
+      "name_en": "Kabocha and Millet Congee",
+      "aliases": [
+        "南瓜小米粥",
+        "Kabocha and Millet Congee"
+      ],
+      "section": "breakfast",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/pumpkin-millet-congee-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "贝贝南瓜",
+        "小米"
+      ],
+      "ingredients": [
+        {
+          "label": "贝贝南瓜",
+          "qty": "300g",
+          "code": "10455bbng",
+          "required": true
+        },
+        {
+          "label": "小米",
+          "qty": "100g",
+          "code": "800794207049",
+          "required": true
+        },
+        {
+          "label": "水",
+          "qty": "约1.2升",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约40分钟，3人份。小米淘洗干净，南瓜去籽去皮，切1.5cm小块。",
+        "锅中加1.2升水，烧开后倒入小米，搅动防粘底；再次煮开转小火。",
+        "煮10分钟后加入南瓜，再煮20–25分钟，留一道锅盖缝防溢，间或搅拌。",
+        "南瓜软烂、小米开花后，压碎一部分南瓜让粥更绵。过稠可加热水；南瓜本身有甜味，先尝再决定是否另加糖。"
+      ]
+    },
+    {
+      "id": "scallion-egg-pancake",
+      "name_cn": "葱花鸡蛋饼",
+      "name_en": "Scallion Egg Pancakes",
+      "aliases": [
+        "葱花鸡蛋饼",
+        "Scallion Egg Pancakes"
+      ],
+      "section": "breakfast",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/scallion-egg-pancake-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "鸡蛋",
+        "面粉",
+        "小葱"
+      ],
+      "ingredients": [
+        {
+          "label": "鸡蛋",
+          "qty": "2个",
+          "code": "2008",
+          "required": true
+        },
+        {
+          "label": "面粉",
+          "qty": "100g",
+          "code": "4710943100410",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": true
+        },
+        {
+          "label": "水",
+          "qty": "150ml",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "1/4茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "2–3茶匙",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约20分钟，2人份。面粉慢慢加入150ml水搅至无干粉，再加入鸡蛋、盐和葱花，调成可流动的面糊。",
+        "不粘平底锅刷薄油，中小火预热，倒一勺面糊，转动锅摊成薄饼。",
+        "底面凝固上色、表面基本定型后翻面，再煎至两面金黄；每张约3–4分钟，厚饼需延长。",
+        "中心不得有湿面糊，蛋液须完全凝固。依次煎完，切块趁热吃；面糊薄摊，比一张厚饼更容易熟透。"
+      ]
+    },
+    {
+      "id": "shiitake-chicken-soup",
+      "name_cn": "香菇鸡汤",
+      "name_en": "Chicken and Shiitake Soup",
+      "aliases": [
+        "香菇鸡汤",
+        "Chicken and Shiitake Soup"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/shiitake-chicken-soup-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "三黄鸡",
+        "干香菇"
+      ],
+      "ingredients": [
+        {
+          "label": "三黄鸡",
+          "qty": "半只，约600g，切块",
+          "code": "4889shj",
+          "required": true
+        },
+        {
+          "label": "干香菇",
+          "qty": "6朵",
+          "code": "871392001636",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "qty": "4片",
+          "code": "1037",
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "约1/2茶匙，按口味调整",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "约1.5升",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约75分钟，另计解冻、泡发时间，3–4人份。鸡提前冷藏解冻后切块，勿用流水冲洗生鸡；香菇按包装冷藏泡发并去硬蒂。",
+        "鸡块入锅，加清水煮开，撇去浮沫，煮约2分钟后小心捞出；接触生鸡的器具及时清洁。",
+        "将鸡块、香菇、姜片与1.5升热水放入炖锅，煮开后转小火，盖盖炖45–60分钟。",
+        "鸡块最厚处避骨测温，达到74°C且肉软熟后加盐。保持小火轻沸，汤更清，香菇味也更柔和。"
+      ]
+    },
+    {
+      "id": "minced-pork-steamed-egg",
+      "name_cn": "肉末蒸蛋",
+      "name_en": "Steamed Egg with Minced Pork",
+      "aliases": [
+        "肉末蒸蛋",
+        "Steamed Egg with Minced Pork"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/minced-pork-steamed-egg-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "鸡蛋",
+        "猪肉碎"
+      ],
+      "ingredients": [
+        {
+          "label": "鸡蛋",
+          "qty": "3个",
+          "code": "2008",
+          "required": true
+        },
+        {
+          "label": "猪肉碎",
+          "qty": "100g",
+          "code": "627735189635",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "2茶匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "1茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "温水",
+          "qty": "约蛋液体积的1.5倍",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约30分钟，2–3人份。鸡蛋打散，按蛋液体积加入1.5倍温水，搅匀过筛，倒入耐热浅碗。",
+        "用耐热盘盖住碗口，水开后小火蒸12–18分钟，按碗深调整；蛋羹中心应完全凝固而无流动蛋液。",
+        "另起锅加油炒肉末，加生抽和2汤匙水，将肉末炒散并煮透，中心达到71°C。",
+        "把熟肉末和少许肉汁浇在蒸蛋上，撒葱花。肉末单独炒熟再铺，既好掌握熟度，又能保持蛋羹细嫩。"
+      ]
+    },
+    {
+      "id": "ants-climbing-tree",
+      "name_cn": "蚂蚁上树（肉末粉丝）",
+      "name_en": "Minced Pork with Glass Noodles",
+      "aliases": [
+        "蚂蚁上树（肉末粉丝）",
+        "Minced Pork with Glass Noodles"
+      ],
+      "section": "other",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/ants-climbing-tree-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "龙口粉丝",
+        "猪肉碎"
+      ],
+      "ingredients": [
+        {
+          "label": "龙口粉丝",
+          "qty": "80g干重",
+          "code": "6928527900105",
+          "required": true
+        },
+        {
+          "label": "猪肉碎",
+          "qty": "150g",
+          "code": "627735189635",
+          "required": true
+        },
+        {
+          "label": "豆瓣酱",
+          "qty": "1–2茶匙",
+          "code": "6909003888018",
+          "required": false
+        },
+        {
+          "label": "生姜",
+          "qty": "2片，切末",
+          "code": "1037",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1茶匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "2茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "250ml",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约25分钟，2–3人份。粉丝按包装泡软后剪短，葱姜切末。豆瓣酱有盐，后面先尝再加调味。",
+        "锅中加油炒散肉末，放姜末、豆瓣酱，中小火炒香，勿把酱炒焦。",
+        "加250ml水和生抽煮开，让肉末充分煮熟、中心达到71°C。",
+        "放粉丝，小火煮3–5分钟至熟并吸入汤汁，按包装调整，撒葱花出锅。保留一点汁，盛盘后才不会结成干团。"
+      ]
+    },
+    {
+      "id": "eggplant-tofu-braise",
+      "name_cn": "茄子烧豆腐",
+      "name_en": "Braised Eggplant and Tofu",
+      "aliases": [
+        "茄子烧豆腐",
+        "Braised Eggplant and Tofu"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/eggplant-tofu-braise-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "茄子",
+        "传统豆腐"
+      ],
+      "ingredients": [
+        {
+          "label": "茄子",
+          "qty": "约300g",
+          "code": "1017qgqg",
+          "required": true
+        },
+        {
+          "label": "传统豆腐",
+          "qty": "300g",
+          "code": "777433001200",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "糖",
+          "qty": "1/4茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "1.5汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "150ml",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约30分钟，2–3人份。茄子切滚刀块，豆腐切厚块并吸干，蒜切末。",
+        "平底锅加1汤匙油，将豆腐两面煎黄后盛出。茄子先蒸5分钟，能减少后续吸油。",
+        "锅中补半汤匙油炒香蒜，放入茄子、豆腐、生抽、糖和150ml水。",
+        "小火焖6–8分钟，至茄子软透、豆腐入味，撒葱花，轻轻推匀。留少许酱汁，配米饭很合适。"
+      ]
+    },
+    {
+      "id": "pickled-cabbage-pork-pot",
+      "name_cn": "酸菜白肉锅",
+      "name_en": "Pickled Cabbage and Pork Belly Pot",
+      "aliases": [
+        "酸菜白肉锅",
+        "Pickled Cabbage and Pork Belly Pot"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/pickled-cabbage-pork-pot-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "酸菜",
+        "五花肉",
+        "龙口粉丝"
+      ],
+      "ingredients": [
+        {
+          "label": "酸菜",
+          "qty": "300g",
+          "code": "6922474188883",
+          "required": true
+        },
+        {
+          "label": "五花肉",
+          "qty": "350g",
+          "code": "0221",
+          "required": true
+        },
+        {
+          "label": "龙口粉丝",
+          "qty": "50g干重",
+          "code": "6928527900105",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "qty": "4片",
+          "code": "1037",
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "约1升",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约70分钟，3人份。酸菜尝一小口，太咸则冲洗后挤干切丝；粉丝按包装泡软，五花肉冷藏解冻后切薄片。",
+        "五花肉和姜片放锅中，加约1升水，煮开撇浮沫，转小火煮20分钟。",
+        "加入酸菜，小火炖25–30分钟，让酸香与肉汤融合。猪肉最厚处须达到71°C。",
+        "放入粉丝再煮3–5分钟至熟，按包装调整。先尝汤再决定是否加盐，酸菜已有咸味；热腾腾上桌，粉丝不要久泡。"
+      ]
+    },
+    {
+      "id": "pueraria-pork-soup",
+      "name_cn": "粉葛猪骨汤",
+      "name_en": "Pueraria Root and Pork Bone Soup",
+      "aliases": [
+        "粉葛猪骨汤",
+        "Pueraria Root and Pork Bone Soup"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/pueraria-pork-soup-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "粉葛",
+        "猪筒骨",
+        "生姜"
+      ],
+      "ingredients": [
+        {
+          "label": "粉葛",
+          "qty": "500g",
+          "code": "1012",
+          "required": true
+        },
+        {
+          "label": "猪筒骨",
+          "qty": "500g",
+          "code": "0030",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "qty": "4片",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "无核红枣",
+          "qty": "4枚",
+          "code": "6941837101611",
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "约2升",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "最后按口味调整",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约2小时，4人份。粉葛削皮切厚块；猪筒骨冷水下锅，煮开后再煮3分钟，捞出用温水冲净浮沫。",
+        "骨头、粉葛和姜片放入汤锅，加约2升冷水，大火煮开后转小火，保持轻微沸腾。",
+        "盖盖煲约1.5小时，中途只在需要时补热水；想要更清甜可在最后30分钟加入红枣。",
+        "粉葛用筷子能插入、汤味清甜后加盐。粉葛口感粉糯，适合第一次尝试广东汤水的客人；可把粉葛和骨肉一起吃。"
+      ]
+    },
+    {
+      "id": "gai-lan-oyster-sauce",
+      "name_cn": "蚝油芥兰",
+      "name_en": "Gai Lan with Oyster Sauce",
+      "aliases": [
+        "蚝油芥兰",
+        "Gai Lan with Oyster Sauce"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/gai-lan-oyster-sauce-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "芥兰",
+        "蒜",
+        "蚝油"
+      ],
+      "ingredients": [
+        {
+          "label": "芥兰",
+          "qty": "400g",
+          "code": "1006jljl",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "蚝油",
+          "qty": "1汤匙",
+          "code": "6922824007468",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1茶匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "2茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "2汤匙",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约15分钟，2–3人份。芥兰洗净，粗茎纵向剖开；蒜切末。这样茎叶能同时熟，入口不会一边生一边软。",
+        "锅中水烧开，加少许盐和几滴油，先放芥兰茎1分钟，再放叶煮30–60秒，捞出沥干。",
+        "小锅加油炒香蒜末，加入蚝油、生抽和2汤匙水，煮开后立刻关火。",
+        "把酱汁淋在芥兰上即可。芥兰带轻微苦香，蚝油只作提鲜；也可把芥兰换成芥兰苗，焯水时间缩短。"
+      ]
+    },
+    {
+      "id": "choy-sum-garlic",
+      "name_cn": "蒜蓉菜心",
+      "name_en": "Garlic Choy Sum",
+      "aliases": [
+        "蒜蓉菜心",
+        "Garlic Choy Sum"
+      ],
+      "section": "veg",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/choy-sum-garlic-ai-202609.jpg",
+      "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
+      "tags": [
+        "菜心",
+        "蒜"
+      ],
+      "ingredients": [
+        {
+          "label": "菜心",
+          "qty": "400g",
+          "code": "1018",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "约1/4茶匙，按口味调整",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约10分钟，2–3人份。菜心择去老叶，较粗的根部纵向划开；蒜剁成蓉。",
+        "锅中加水烧开，放菜心焯约1分钟至翠绿，立即捞出沥干。菜心不要煮太久，保留清甜和脆嫩。",
+        "炒锅加油，小火炒香蒜蓉，加入菜心大火快炒30秒；沿锅边加1汤匙水，撒盐翻匀。",
+        "马上出锅。想要更广东风味，可把最后的盐换成少量蚝油；配白饭、粥或烧味都合适。"
+      ]
     }
   ]
 }
