@@ -80,12 +80,32 @@ def webp_for(image, variant):
 
 _MAX_DESC = 155
 
+# 与 scripts/recipe_facts.py 的 METHOD_LABEL 同一说法
+METHOD_LABEL = {
+    "steam": "蒸一蒸",
+    "boil": "煮一煮",
+    "pan": "煎一煎",
+    "fry": "炸或烤",
+    "microwave": "热一热",
+    "room": "打开就能吃",
+}
+
 
 def meta_description(recipe):
-    """搜索结果里那两行字。控制在 155 字内，超出会被 Google 截断。"""
+    """搜索结果里那两行字。控制在 155 字内，超出会被 Google 截断。
+
+    成品按真实加热方式写。没有 method 时不猜「蒸」。
+    """
     name = recipe.get("name_cn") or ""
+    hook = re.sub(r'\s+', ' ', (recipe.get("hook") or "")).strip()
     if recipe.get("kind") == "ready":
-        base = "%s——东方超市本店有售，买回家蒸一蒸就能吃。" % name
+        how = METHOD_LABEL.get(recipe.get("method"), "按包装上的做法就能吃")
+        base = "%s——东方超市本店有售，%s。" % (name, how)
+        if hook:
+            base += hook if hook.endswith("。") else hook
+    elif hook:
+        base = "%s：%s食材在东方超市都买得到。" % (
+            name, hook if hook.endswith("。") else hook + "。")
     else:
         mains = [i.get("label") for i in (recipe.get("ingredients") or [])
                  if i.get("required") and i.get("label")][:3]
@@ -94,6 +114,32 @@ def meta_description(recipe):
             if food else "%s的家常做法，一步步跟着做。食材在东方超市都买得到。" % name
     base = re.sub(r'\s+', ' ', base).strip()
     return base[:_MAX_DESC]
+
+
+def iso_duration(minutes):
+    """schema.org totalTime。只在食谱自己写了分钟数时才调用。"""
+    m = int(minutes)
+    h, rem = divmod(m, 60)
+    if h and rem:
+        return "PT%dH%dM" % (h, rem)
+    if h:
+        return "PT%dH" % h
+    return "PT%dM" % m
+
+
+def fact_line(recipe):
+    """详情页上那一排：时间、人数、成品怎么加热。"""
+    bits = []
+    if recipe.get("minutes"):
+        bits.append("约%d分钟" % int(recipe["minutes"]))
+    if recipe.get("servings"):
+        bits.append(str(recipe["servings"]))
+    label = METHOD_LABEL.get(recipe.get("method") or "")
+    if label and label != "打开就能吃":
+        bits.append(label)
+    elif recipe.get("method") == "room":
+        bits.append("即食")
+    return " · ".join(bits)
 
 
 # ── 结构化数据 ───────────────────────────────────────────────────────────────
@@ -136,6 +182,10 @@ def recipe_jsonld(recipe, product_index):
     if recipe.get("nutrition"):
         doc["nutrition"] = {"@type": "NutritionInformation",
                             "description": recipe["nutrition"]}
+    if isinstance(recipe.get("minutes"), int) and recipe["minutes"] > 0:
+        doc["totalTime"] = iso_duration(recipe["minutes"])
+    if recipe.get("servings"):
+        doc["recipeYield"] = recipe["servings"]
     cat = SEC_TITLE.get(recipe.get("section"))
     if cat:
         doc["recipeCategory"] = re.sub(r'^[^\w一-鿿]+', '', cat).strip()
@@ -157,14 +207,33 @@ def jsonld_script(recipe, product_index):
 # ── 站内互链 ─────────────────────────────────────────────────────────────────
 
 def related(recipe, all_recipes, n):
-    """同板块优先，不够再拿别的板块补。给爬虫留爬行路径，也方便顾客继续逛。"""
+    """先放食谱点名的下一道，再同板块，最后别的板块。"""
     rid = recipe.get("id")
-    same, other = [], []
+    by_id = {}
     for r in all_recipes:
-        if r.get("id") == rid:
+        by_id[r.get("id")] = r
+    picked = []
+    seen = {rid}
+    for pid in recipe.get("pairs") or []:
+        other = by_id.get(pid)
+        if other and other.get("id") not in seen:
+            picked.append(other)
+            seen.add(other.get("id"))
+    same, rest = [], []
+    for r in all_recipes:
+        if r.get("id") in seen:
             continue
-        (same if r.get("section") == recipe.get("section") else other).append(r)
-    return (same + other)[:n]
+        (same if r.get("section") == recipe.get("section") else rest).append(r)
+    return (picked + same + rest)[:n]
+
+
+def family_mates(recipe, all_recipes):
+    """同一成品家族的其他口味，例如五种水饺。"""
+    fam = recipe.get("family")
+    if not fam:
+        return []
+    return [r for r in all_recipes
+            if r.get("family") == fam and r.get("id") != recipe.get("id")]
 
 
 # ── sitemap / robots ─────────────────────────────────────────────────────────

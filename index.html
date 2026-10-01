@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=1">
 <link rel="preload" href="data/recipes.json" as="fetch" crossorigin>
 <link rel="preload" href="data/catalog.json" as="fetch" crossorigin>
-<link rel="stylesheet" href="css/app.css?v=19">
+<link rel="stylesheet" href="css/app.css?v=20">
 </head>
 <body class="spa">
 <header class="hdr">
@@ -34,17 +34,18 @@
 <main>
   <section id="home" class="home">
     <nav id="jump" class="jump" aria-label="按板块浏览"></nav>
-    <div class="block" id="seasonBlock">
-      <div class="block__hd"><h2 class="block__title">🍂 应季</h2><button class="link-btn seeall" data-sec="season">查看全部 ›</button></div>
-      <p class="block__note">团圆饭的硬菜和应季汤水 · 料店里都有</p>
-      <div id="season" class="cards cards--row"></div>
-    </div>
     <div class="block" id="tonightBlock">
       <div class="block__hd">
         <h2 class="block__title">🔥 今晚吃什么</h2>
-        <button class="link-btn seeall" data-sec="tonight">查看全部 ›</button>
+        <button class="link-btn seeall" data-sec="tonight">全部硬菜 ›</button>
       </div>
-      <div id="picks" class="cards cards--row"></div>
+      <p class="block__note">先选一种吃法，再看要买什么、怎么做</p>
+      <div id="decide" class="decide"></div>
+    </div>
+    <div class="block" id="seasonBlock">
+      <div class="block__hd"><h2 class="block__title">🍂 应季</h2><button class="link-btn seeall" data-sec="season">查看全部 ›</button></div>
+      <p class="block__note">换季的汤和硬菜 · 蟹、莲藕、芋头、粉葛、南瓜，料店里都有</p>
+      <div id="season" class="cards cards--row"></div>
     </div>
     <div class="block" id="cantoneseBlock">
       <div class="block__hd"><h2 class="block__title">🥢 粤菜 · 广式</h2><button class="link-btn seeall" data-sec="cantonese">查看全部 ›</button></div>
@@ -107,7 +108,7 @@
   <span class="ftr__fine">以店内实际供应为准 · 食谱图片含 AI 示意图，仅供参考</span>
 </footer>
 
-<script src="js/lib/recipe-logic.js?v=3"></script>
-<script src="js/app.js?v=13"></script>
+<script src="js/lib/recipe-logic.js?v=4"></script>
+<script src="js/app.js?v=14"></script>
 </body>
 </html>

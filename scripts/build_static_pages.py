@@ -25,7 +25,7 @@ import recipe_lib as rl
 import static_pages as sp
 
 OUT_DIR = "r"
-CSS_V = "19"
+CSS_V = "20"
 ASSET_V = "1"
 DELIVERY_URL = "https://easternmarket.ca/group-order"
 
@@ -39,7 +39,9 @@ PAGE_CSS = """
 .pg-h1{margin:6px 0 10px;font-size:23px;color:var(--green-d);line-height:1.3}
 .pg-h1 small{display:block;font-size:13px;color:var(--muted);font-weight:400;margin-top:3px}
 .pg-h2{font-size:16px;font-weight:600;color:var(--green-d);margin:20px 0 10px}
-.pg-lede{font-size:13.5px;color:var(--muted);line-height:1.7;margin:0 0 12px}
+.pg-facts{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px;font-size:13px;color:var(--green-d)}
+.pg-lede{font-size:15px;color:var(--ink);line-height:1.65;margin:0 0 12px}
+.ing__shelf{display:block;font-size:12px;font-weight:400;color:var(--muted);margin-top:2px}
 .pg-cta{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
 .pg-cta .mini-btn{flex:1 1 42%}
 .pg-cta .mini-btn--go{background:var(--green);color:#fff;border-color:var(--green)}
@@ -119,10 +121,15 @@ def picture(image, variant, cls, alt):
 def card_html(r):
     img = picture(r.get("image"), "card", "card__img", r.get("name_cn") or "")
     en = ('<span class="card__en">%s</span>' % sp.h(r["name_en"])) if r.get("name_en") else ""
-    nut = ('<span class="card__nutri">🌿 %s</span>' % sp.h(r["nutrition"])) if r.get("nutrition") else ""
+    bits = []
+    if r.get("minutes"):
+        bits.append("约%d分钟" % int(r["minutes"]))
+    if r.get("servings"):
+        bits.append(str(r["servings"]))
+    meta = ('<span class="card__meta">%s</span>' % sp.h(" · ".join(bits))) if bits else ""
     return ('<a class="card" href="/%s">%s<span class="card__body">'
             '<span class="card__name">%s</span>%s%s</span></a>'
-            % (sp.h(sp.recipe_path(r["id"])), img, sp.h(r.get("name_cn") or ""), en, nut))
+            % (sp.h(sp.recipe_path(r["id"])), img, sp.h(r.get("name_cn") or ""), en, meta))
 
 
 def recipe_page(r, pidx, all_recipes):
@@ -145,23 +152,37 @@ def recipe_page(r, pidx, all_recipes):
     parts.append('<h1 class="pg-h1">%s%s</h1>'
                  % (sp.h(name),
                     ('<small>%s</small>' % sp.h(r["name_en"])) if r.get("name_en") else ""))
+    facts = sp.fact_line(r)
+    if facts:
+        parts.append('<p class="pg-facts">%s</p>' % sp.h(facts))
+    hook = (r.get("hook") or "").strip()
+    parts.append('<p class="pg-lede">%s</p>' % sp.h(hook or desc))
     if r.get("nutrition"):
         parts.append('<div class="detail__nutri">🌿 营养 · %s</div>' % sp.h(r["nutrition"]))
-    parts.append('<p class="pg-lede">%s</p>' % sp.h(desc))
 
-    # 食材
+    # 食材。成品写包装名，不再假装每一行都「有货」。
+    how = sp.METHOD_LABEL.get(r.get("method") or "")
     if is_ready:
-        parts.append('<div class="ready-tag">🛒 本店有售</div>')
-    parts.append('<h2 class="pg-h2">%s</h2>' % ("店里有这些口味" if is_ready else "要买什么"))
+        parts.append('<div class="ready-tag">🛒 本店有售%s</div>'
+                     % ((" · " + sp.h(how)) if how else ""))
+    parts.append('<h2 class="pg-h2">%s</h2>' % ("货架上的包装" if is_ready else "要买什么"))
     rows = []
     for ing in r.get("ingredients") or []:
         p = pidx.get(ing.get("code")) if ing.get("code") else None
         cat = (p or {}).get("category") or ""
         cat_html = ('<span class="ing__cat">%s %s</span>' % (GRP_ICON.get(cat, "🛒"), sp.h(cat))) if cat else ""
-        rows.append('<li class="ing"><span class="ing__name">%s</span>'
+        label = ing.get("label") or ""
+        shelf = (p or {}).get("name_cn") or ""
+        shelf_html = ('<span class="ing__shelf">货架：%s</span>' % sp.h(shelf)
+                      ) if shelf and shelf != label else ""
+        rows.append('<li class="ing"><span class="ing__name">%s%s</span>'
                     '<span class="ing__qty">%s</span>%s</li>'
-                    % (sp.h(ing.get("label") or ""), sp.h(ing.get("qty") or ""), cat_html))
+                    % (sp.h(label), shelf_html, sp.h(ing.get("qty") or ""), cat_html))
     parts.append('<ul class="ings">%s</ul>' % "".join(rows))
+    mates = sp.family_mates(r, all_recipes)
+    if mates:
+        parts.append('<h2 class="pg-h2">还有这些口味</h2><div class="cards">%s</div>'
+                     % "".join(card_html(x) for x in mates))
 
     parts.append('<div class="pg-cta">'
                  '<a class="mini-btn mini-btn--go" href="%s">♡ 加入想做 · 凑购物清单</a>'
@@ -173,9 +194,10 @@ def recipe_page(r, pidx, all_recipes):
     parts.append('<ol class="steps">%s</ol>'
                  % "".join('<li>%s</li>' % sp.h(s) for s in (r.get("steps") or [])))
 
-    rel = sp.related(r, all_recipes, 6)
+    mate_ids = {x["id"] for x in mates}
+    rel = [x for x in sp.related(r, all_recipes, 8) if x["id"] not in mate_ids][:6]
     if rel:
-        parts.append('<div class="pg-more"><h2 class="pg-h2">换个菜看看</h2>'
+        parts.append('<div class="pg-more"><h2 class="pg-h2">接下来可以做</h2>'
                      '<div class="cards">%s</div></div>' % "".join(card_html(x) for x in rel))
     parts.append('<a class="pg-allrecipes" href="/r/">📖 看全部 %d 道食谱 ›</a>' % len(all_recipes))
     parts.append(FOOT)

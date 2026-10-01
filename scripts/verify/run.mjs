@@ -72,10 +72,29 @@ try {
   });
   ok('宽屏把菜铺开，不复制三份', vegNums.n === vegNums.u && vegNums.u >= 10,
     vegNums.n + ' 张卡片 / ' + vegNums.u + ' 道菜');
+  const decideCols = await dp.$eval('#decide', (el) => getComputedStyle(el).gridTemplateColumns);
+  ok('宽屏三种吃法并排', decideCols.split(' ').filter(Boolean).length === 3, decideCols);
   await desk.close();
 
   const firstBlock = await page.$eval('.home .block .block__title', (e) => e.textContent.trim());
-  ok('应季板块排在首页第一位', firstBlock.includes('应季') && !firstBlock.includes('中秋'), firstBlock);
+  ok('今晚吃什么排在首页第一位', firstBlock.includes('今晚吃什么'), firstBlock);
+
+  const decide = await page.$$eval('#decide .decide__card', (els) => els.map((e) => ({
+    id: e.dataset.id,
+    role: (e.querySelector('.decide__role') || {}).textContent || '',
+  })));
+  ok('首页三种吃法各一道',
+    decide.length === 3
+      && decide[0].id === 'tomato-egg' && decide[0].role.includes('快手上桌')
+      && decide[1].id === 'napa-pork-vermicelli' && decide[1].role.includes('一家三口')
+      && decide[2].id === 'hotpot' && decide[2].role.includes('周末多做一点'),
+    decide.map((d) => d.role + ':' + d.id).join(' / '));
+  await page.click('#decide .decide__card[data-id="tomato-egg"]');
+  await page.waitForSelector('#detail:not([hidden]) .detail__title', { timeout: 10000 });
+  const quickTitle = await page.$eval('.detail__title', (e) => e.textContent.trim());
+  ok('点快手上桌打开番茄炒蛋', quickTitle.includes('番茄炒蛋'), quickTitle);
+  await page.goBack();
+  await page.waitForSelector('#season .card', { timeout: 10000 });
 
   const usesWebp = await page.$eval('#season picture source',
     (s) => s.getAttribute('srcset') || '');
@@ -106,6 +125,13 @@ try {
   await page.waitForSelector('#detail:not([hidden])', { timeout: 10000 });
   const title = await page.$eval('.detail__title', (e) => e.textContent.trim());
   ok('点卡片能打开详情页', title.includes('莲藕筒骨汤'), title);
+
+  const facts = await page.$eval('.detail__facts', (e) => e.textContent.trim());
+  const hook = await page.$eval('.detail__hook', (e) => e.textContent.trim());
+  ok('详情页写时间和一句为什么今晚做', /约\d+分钟/.test(facts) && hook.length > 8, facts + ' / ' + hook);
+  const stockBadge = await page.$$eval('#detail .ing', (els) =>
+    els.filter((e) => e.textContent.includes('有货')).length);
+  ok('详情页不再无条件印有货', stockBadge === 0);
 
   const ings = await page.$$eval('#detail .ing__name', (e) => e.map((x) => x.textContent.trim()));
   ok('详情页列出食材', ings.length >= 5, ings.slice(0, 3).join('、') + ' …');
@@ -163,6 +189,14 @@ try {
     ld.recipeInstructions.length + ' 步');
   const canon = await p2.$eval('link[rel=canonical]', (e) => e.href);
   ok('静态菜页有 canonical', /\/r\/hotpot\.html$/.test(canon), canon);
+  const dump = await p2.goto(BASE + '/r/guantang-xiaoshuijiao.html', { waitUntil: 'domcontentloaded' });
+  const dumpFacts = await p2.$eval('.pg-facts', (e) => e.textContent);
+  const dumpMeta = await p2.$eval('meta[name=description]', (e) => e.content);
+  const dumpTag = await p2.$eval('.ready-tag', (e) => e.textContent);
+  ok('水饺按煮来写，不说蒸一蒸',
+    dump.status() === 200 && dumpFacts.includes('煮一煮') && dumpMeta.includes('煮一煮')
+      && dumpTag.includes('煮一煮') && !dumpMeta.includes('蒸') && !dumpFacts.includes('蒸'),
+    dumpFacts + ' / ' + dumpMeta.slice(0, 40));
   // 真的把 JS 关掉再读一遍 —— 爬虫看到的就是这个
   const noJsCtx = await browser.newContext({ javaScriptEnabled: false });
   const noJs = await noJsCtx.newPage();

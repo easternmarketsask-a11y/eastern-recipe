@@ -51,7 +51,8 @@
         price: p ? p.price : null,
         price_unit: p ? p.price_unit : null,
         category: p ? p.category : null,
-        image_url: p ? p.image_url : ''
+        image_url: p ? p.image_url : '',
+        shelf_name: (p && p.name_cn) || ''
       };
       rows.push(row);
       if (available) {
@@ -148,6 +149,59 @@
     return h >>> 0;
   }
 
+  var METHOD_LABEL = {
+    steam: '蒸一蒸', boil: '煮一煮', pan: '煎一煎',
+    fry: '炸或烤', microwave: '热一热', room: '打开就能吃'
+  };
+
+  var DECIDE_ROLES = [
+    { id: 'quick', title: '快手上桌', note: '今晚不想久站' },
+    { id: 'family', title: '一家三口', note: '一锅就开饭' },
+    { id: 'weekend', title: '周末多做一点', note: '慢慢做，够分' }
+  ];
+
+  function decisionBoard(recipes) {
+    return DECIDE_ROLES.map(function (role) {
+      var list = (recipes || []).filter(function (r) { return r.decide === role.id; });
+      list.sort(function (a, b) { return (b.priority || 0) - (a.priority || 0); });
+      if (!list.length) return null;
+      return { role: role.id, title: role.title, note: role.note, recipe: list[0] };
+    }).filter(Boolean);
+  }
+
+  function familyMates(recipe, recipes) {
+    if (!recipe || !recipe.family) return [];
+    return (recipes || []).filter(function (r) {
+      return r.family === recipe.family && r.id !== recipe.id;
+    });
+  }
+
+  function relatedRecipes(recipe, recipes, n) {
+    var byId = {};
+    (recipes || []).forEach(function (r) { byId[r.id] = r; });
+    var out = [], seen = {};
+    seen[recipe.id] = 1;
+    (recipe.pairs || []).forEach(function (id) {
+      if (byId[id] && !seen[id]) { out.push(byId[id]); seen[id] = 1; }
+    });
+    var same = [], rest = [];
+    (recipes || []).forEach(function (r) {
+      if (seen[r.id]) return;
+      (r.section === recipe.section ? same : rest).push(r);
+    });
+    return out.concat(same, rest).slice(0, n);
+  }
+
+  function factLine(recipe) {
+    var bits = [];
+    if (recipe.minutes) bits.push('约' + recipe.minutes + '分钟');
+    if (recipe.servings) bits.push(recipe.servings);
+    var how = METHOD_LABEL[recipe.method];
+    if (how && recipe.method !== 'room') bits.push(how);
+    else if (recipe.method === 'room') bits.push('即食');
+    return bits.join(' · ');
+  }
+
   // 今晚吃什么：按 seed 确定性轮换取 n 道
   function todaysPicks(recipes, seed, n) {
     const list = (recipes || []).slice();
@@ -166,6 +220,11 @@
     associateRecipe: associateRecipe,
     dishesForIngredient: dishesForIngredient,
     buildShoppingList: buildShoppingList,
-    todaysPicks: todaysPicks
+    todaysPicks: todaysPicks,
+    decisionBoard: decisionBoard,
+    familyMates: familyMates,
+    relatedRecipes: relatedRecipes,
+    factLine: factLine,
+    METHOD_LABEL: METHOD_LABEL
   };
 });

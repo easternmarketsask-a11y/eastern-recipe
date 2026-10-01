@@ -158,6 +158,38 @@ test('buildShoppingList: 空收藏返回空结构', () => {
   assert.equal(out.itemCount, 0);
 });
 
+const catalog = require('../data/recipes.json').recipes;
+
+test('decisionBoard: 三种吃法各一道，按快手、一家、周末排', () => {
+  const board = RecipeLogic.decisionBoard(catalog);
+  assert.deepEqual(board.map((x) => x.role), ['quick', 'family', 'weekend']);
+  assert.deepEqual(board.map((x) => x.recipe.id), [
+    'tomato-egg', 'napa-pork-vermicelli', 'hotpot',
+  ]);
+  assert.deepEqual(board.map((x) => x.title), ['快手上桌', '一家三口', '周末多做一点']);
+});
+
+test('relatedRecipes: 先放这道菜点名的下一道', () => {
+  const tomato = catalog.find((r) => r.id === 'tomato-egg');
+  const rel = RecipeLogic.relatedRecipes(tomato, catalog, 4);
+  assert.deepEqual(rel.slice(0, 2).map((r) => r.id), ['choy-sum-garlic', 'seaweed-egg-soup']);
+  assert.ok(!rel.some((r) => r.id === 'tomato-egg'));
+});
+
+test('familyMates: 水饺家族只含其他口味', () => {
+  const dumpling = catalog.find((r) => r.id === 'guantang-xiaoshuijiao');
+  const mates = RecipeLogic.familyMates(dumpling, catalog);
+  assert.ok(mates.length >= 4);
+  assert.ok(mates.every((r) => r.family === 'dumpling' && r.id !== dumpling.id));
+});
+
+test('factLine: 成品写真实加热方式', () => {
+  const dumpling = catalog.find((r) => r.id === 'guantang-xiaoshuijiao');
+  assert.equal(RecipeLogic.factLine(dumpling), '约15分钟 · 3人 · 煮一煮');
+  const tomato = catalog.find((r) => r.id === 'tomato-egg');
+  assert.equal(RecipeLogic.factLine(tomato), '约15分钟 · 2人');
+});
+
 test('associateRecipe: 市价(price=0)商品标记 market_price 且不进总价', () => {
   const idx = RecipeLogic.buildProductIndex(products);
   const idx2 = JSON.parse(JSON.stringify(idx));

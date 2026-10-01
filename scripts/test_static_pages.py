@@ -85,6 +85,24 @@ def test_meta_description_mentions_dish_and_store_and_fits_serp():
 
 def test_meta_description_for_ready_says_in_store():
     assert "本店有售" in sp.meta_description(READY)
+    # 没写加热方式时不猜「蒸」
+    assert "蒸" not in sp.meta_description(READY)
+
+
+def test_meta_description_for_boiled_ready_says_boil_not_steam():
+    boiled = dict(READY, name_cn="灌汤小水饺", method="boil",
+                  hook="水开下锅，点水三次。")
+    d = sp.meta_description(boiled)
+    assert "煮一煮" in d
+    assert "蒸" not in d
+
+
+def test_meta_description_uses_hook_when_present():
+    hooked = dict(DISH, hook="番茄、鸡蛋、葱，店里都有。十五分钟，米饭就有菜。")
+    d = sp.meta_description(hooked)
+    assert "十五分钟" in d
+    assert "东方超市" in d
+    assert len(d) <= 155
 
 
 # ── JSON-LD ──────────────────────────────────────────────────────────────────
@@ -124,6 +142,15 @@ def test_jsonld_does_not_invent_cooking_times_or_yield():
         assert k not in d
 
 
+def test_jsonld_includes_time_and_yield_only_when_the_recipe_states_them():
+    timed = dict(DISH, minutes=45, servings="3人")
+    d = sp.recipe_jsonld(timed, PIDX)
+    assert d["totalTime"] == "PT45M"
+    assert d["recipeYield"] == "3人"
+    long = sp.recipe_jsonld(dict(DISH, minutes=150, servings="4人"), PIDX)
+    assert long["totalTime"] == "PT2H30M"
+
+
 def test_jsonld_publisher_is_the_store():
     d = sp.recipe_jsonld(DISH, PIDX)
     assert d["publisher"]["@type"] == "Grocery Store" or d["publisher"]["name"] == "Eastern Market 东方超市"
@@ -161,6 +188,20 @@ def test_related_falls_back_to_other_sections_when_section_is_thin():
     all_r = [DISH, dict(READY, id="z")]
     rel = sp.related(DISH, all_r, 3)
     assert [r["id"] for r in rel] == ["z"]
+
+
+def test_related_puts_named_pairs_ahead_of_the_same_section():
+    paired = dict(DISH, pairs=["z"])
+    all_r = [paired, dict(DISH, id="a", name_cn="A"), dict(READY, id="z", name_cn="Z")]
+    rel = sp.related(paired, all_r, 3)
+    assert [r["id"] for r in rel][:2] == ["z", "a"]
+
+
+def test_family_mates_exclude_self():
+    bun = dict(READY, id="a", family="bun")
+    mates = sp.family_mates(bun, [bun, dict(READY, id="b", family="bun"),
+                                  dict(READY, id="c", family="dumpling")])
+    assert [r["id"] for r in mates] == ["b"]
 
 
 # ── sitemap / robots ─────────────────────────────────────────────────────────

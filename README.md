@@ -1,6 +1,6 @@
 # 东方超市食谱搜索引擎
 
-纯静态站（GitHub Pages）。顾客搜一道菜（或点食材看能做什么），看到食谱 + 每样食材在东方超市的分类/是否有货（不显示价格）。应用直接从站点根目录提供（`index.html` + `css/` `js/` `assets/`），网址即 `recipe.easternmarket.ca`，不再带 `/src/` 路径。
+纯静态站（GitHub Pages）。顾客搜一道菜（或点食材看能做什么），看到食谱、大概要多久、几个人吃、货架上的包装名和超市分区（不显示价格，也不印「有货」）。应用直接从站点根目录提供（`index.html` + `css/` `js/` `assets/`），网址即 `recipe.easternmarket.ca`，不再带 `/src/` 路径。
 
 ## 两套页面，各管一头
 
@@ -76,9 +76,14 @@ npm run verify                   # 真浏览器跑一遍关键路径（需先 np
 `EM_BASE=https://recipe.easternmarket.ca npm run verify` 可以直接打生产。
 它覆盖单元测试抓不到的失败态：按钮在、点了没反应、也不报错。
 
+时间、人数、一句话理由、成品加热方式写在 `scripts/recipe_facts.py`。
+改完先跑它写回 `data/recipes.json`，再生成静态页。成品加热方式只有：
+蒸一蒸、煮一煮、煎一煎、炸或烤、热一热、打开就能吃。没写方式时不猜「蒸」。
+
 ## 改了食谱或图片之后
 ```bash
 python scripts/optimize_images.py        # 有新图才需要
+python scripts/recipe_facts.py           # 时间 / 人数 / 理由 / 加热方式有改动才需要
 python scripts/build_static_pages.py     # 重新生成 r/*.html + sitemap，并重写 catalog.json
 ```
 两个脚本都是幂等的，重复跑没有副作用。**加了新菜一定要跑 build_static_pages.py**，

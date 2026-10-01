@@ -108,10 +108,11 @@
   function recipeCard(r) {
     var img = r.image ? picture(r.image, 'card', 'card__img', r.name_cn, true) : '';
     var en = r.name_en ? '<span class="card__en">' + esc(r.name_en) + '</span>' : '';
-    var nutri = r.nutrition ? '<span class="card__nutri">🌿 ' + esc(r.nutrition) + '</span>' : '';
+    var meta = RL.factLine(r);
+    var metaHtml = meta ? '<span class="card__meta">' + esc(meta) + '</span>' : '';
     return '<button class="card" data-id="' + esc(r.id) + '">' + img +
       '<span class="card__body">' +
-        '<span class="card__name">' + esc(r.name_cn) + '</span>' + en + nutri +
+        '<span class="card__name">' + esc(r.name_cn) + '</span>' + en + metaHtml +
       '</span></button>';
   }
   function wireCards(container) {
@@ -122,12 +123,13 @@
     });
   }
 
-  // ---- 食材行（不显示价格、不显示缺货；默认都有货，客人到店购买）----
+  // 食材行：写货架上的包装名和分区。不印「有货」——目录是快照，那三个字没有信息。
   function ingredientRow(r) {
+    var shelf = (r.shelf_name && r.shelf_name !== r.label)
+      ? '<span class="ing__shelf">货架：' + esc(r.shelf_name) + '</span>' : '';
     var cat = r.category ? '<span class="ing__cat">' + esc(r.category) + '</span>' : '';
-    return '<li class="ing"><span class="ing__name">' + esc(r.label) +
-      '</span><span class="ing__qty">' + esc(r.qty) + '</span>' +
-      '<span class="ing__tag ing__tag--ok">有货</span>' + cat + '</li>';
+    return '<li class="ing"><span class="ing__name">' + esc(r.label) + shelf +
+      '</span><span class="ing__qty">' + esc(r.qty) + '</span>' + cat + '</li>';
   }
 
   function show(section) {
@@ -139,13 +141,17 @@
   function renderDetail(recipe) {
     var d = $('detail');
     var faved = isFave(recipe.id);
-    // 成品(ready)：本店有售，不拿商品表卡它；普通食谱(dish)：列食材 有货/暂缺
-    var bodyHtml;
+    var a = RL.associateRecipe(recipe, state.productIndex);
+    var how = RL.METHOD_LABEL[recipe.method] || '';
+    var bodyHtml = '';
     if (recipe.kind === 'ready') {
-      bodyHtml = '<div class="ready-tag">🛒 本店有售</div>';
-    } else {
-      var a = RL.associateRecipe(recipe, state.productIndex);
-      bodyHtml = '<ul class="ings">' + a.rows.map(ingredientRow).join('') + '</ul>';
+      bodyHtml += '<div class="ready-tag">🛒 本店有售' + (how ? ' · ' + esc(how) : '') + '</div>';
+    }
+    bodyHtml += '<ul class="ings">' + a.rows.map(ingredientRow).join('') + '</ul>';
+    var mates = RL.familyMates(recipe, state.recipes);
+    if (mates.length) {
+      bodyHtml += '<h3 class="detail__h3">还有这些口味</h3><div class="cards">' +
+        mates.map(recipeCard).join('') + '</div>';
     }
     var stepsTitle = recipe.kind === 'ready' ? '怎么吃' : '做法';
     var hero = recipe.image ? picture(recipe.image, 'hero', 'detail__img', recipe.name_cn, false) : '';
@@ -154,11 +160,23 @@
       (faved ? '<button class="mini-btn" id="tolist">🧾 看购物清单</button>' : '') +
       (DELIVERY.enabled ? '<a class="mini-btn" href="' + esc(DELIVERY.url) + '" target="_blank" rel="noopener">🚚 网上下单</a>' : '') +
       '</div>';
+    var mateIds = {};
+    mates.forEach(function (r) { mateIds[r.id] = 1; });
+    var next = RL.relatedRecipes(recipe, state.recipes, 8).filter(function (r) {
+      return !mateIds[r.id];
+    }).slice(0, 4);
+    var nextHtml = next.length
+      ? '<div class="detail__more"><h3 class="detail__h3">接下来可以做</h3><div class="cards">' +
+        next.map(recipeCard).join('') + '</div></div>'
+      : '';
+    var facts = RL.factLine(recipe);
     d.innerHTML =
       '<button class="back" id="back">← 返回</button>' +
       hero +
       '<h2 class="detail__title">' + esc(recipe.name_cn) +
         ' <small>' + esc(recipe.name_en || '') + '</small></h2>' +
+      (facts ? '<p class="detail__facts">' + esc(facts) + '</p>' : '') +
+      (recipe.hook ? '<p class="detail__hook">' + esc(recipe.hook) + '</p>' : '') +
       (recipe.nutrition ? '<div class="detail__nutri">🌿 营养 · ' + esc(recipe.nutrition) + '</div>' : '') +
       bodyHtml +
       '<button class="fave-btn' + (faved ? ' is-on' : '') + '" id="fave">' +
@@ -167,7 +185,9 @@
       '<h3 class="detail__h3">' + stepsTitle + '</h3>' +
       '<ol class="steps">' + (recipe.steps || []).map(function (s) {
         return '<li>' + esc(s) + '</li>';
-      }).join('') + '</ol>';
+      }).join('') + '</ol>' +
+      nextHtml;
+    wireCards(d);
     $('back').onclick = goBack;
     $('fave').onclick = function () { toggleFave(recipe.id); renderDetail(recipe); };
     $('copylink').onclick = function () {
@@ -206,7 +226,11 @@
     }).join('') + '</div>';
     if (list.ready.length) {
       html += '<div class="ready-tag">🛒 成品直接拿：' +
-        list.ready.map(function (r) { return esc(r.name_cn); }).join('、') + '（本店有售）</div>';
+        list.ready.map(function (r) {
+          var rec = state.byId[r.id];
+          var how = rec && RL.METHOD_LABEL[rec.method];
+          return esc(r.name_cn) + (how ? '（' + esc(how) + '）' : '');
+        }).join('、') + '</div>';
     }
     var GRP_ICON = { '新鲜蔬菜': '🥬', '新鲜水果': '🍎', '冷冻食品': '🧊', '豆腐蛋品': '🥚',
       '米面粮油': '🍚', '干货调料': '🧂', '零食饮料': '🥤', '日用杂货': '🧺', '中成药品': '🌿' };
@@ -290,6 +314,7 @@
   };
   // 首页很长，这条快捷条让人直接跳到某个板块，不用一路横滑过去
   var JUMPS = [
+    { id: 'tonightBlock', label: '今晚' },
     { id: 'seasonBlock', label: '应季' },
     { id: 'tonightBlock', label: '今晚' },
     { id: 'cantoneseBlock', label: '粤菜' },
@@ -387,14 +412,39 @@
     setupLoop(el);
   }
 
+  function renderDecide() {
+    var el = $('decide');
+    if (!el) return;
+    var board = RL.decisionBoard(state.recipes);
+    el.innerHTML = board.map(function (item) {
+      var r = item.recipe;
+      var img = r.image
+        ? '<span class="decide__img">' + picture(r.image, 'card', 'card__img', r.name_cn, true) + '</span>'
+        : '';
+      return '<button type="button" class="decide__card" data-id="' + esc(r.id) + '">' + img +
+        '<span class="decide__body">' +
+          '<span class="decide__role">' + esc(item.title) + '</span>' +
+          '<span class="decide__note">' + esc(item.note) + '</span>' +
+          '<span class="decide__name">' + esc(r.name_cn) + '</span>' +
+          '<span class="decide__meta">' + esc(RL.factLine(r)) + '</span>' +
+          '<span class="decide__hook">' + esc(r.hook || '') + '</span>' +
+        '</span></button>';
+    }).join('');
+    Array.prototype.forEach.call(el.querySelectorAll('.decide__card'), function (btn) {
+      btn.onclick = function () {
+        if (state.byId[btn.dataset.id]) nav('#/r/' + encodeURIComponent(btn.dataset.id));
+      };
+    });
+  }
+
   function renderHome() {
-    // 🍂 应季：排在最前面。中秋月饼已下架，明年应节再加回来。
+    // 🍂 应季仍在。中秋月饼已下架，明年应节再加回来。首页第一块是今晚的三种吃法。
     var season = bySection('season');
     $('seasonBlock').hidden = !season.length;
     fillCards('season', season);
 
-    // 🔥 今晚吃什么：tonight 全部上，按热卖度排序
-    fillCards('picks', bySection('tonight'));
+    // 今晚吃什么：三种吃法各一道，全部硬菜仍从「查看全部」进
+    renderDecide();
 
     // 🥢 粤菜
     var cantonese = bySection('cantonese');

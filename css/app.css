@@ -30,6 +30,24 @@ picture{display:contents}
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card__nutri{font-size:11.5px;color:var(--green);font-weight:500;margin-top:3px;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card__meta{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.35}
+.detail__facts{margin:0 0 8px;font-size:13px;color:var(--green-d)}
+.detail__hook{font-size:15px;line-height:1.65;margin:0 0 12px;color:var(--ink)}
+.detail__h3{font-size:16px;font-weight:600;color:var(--green-d);margin:18px 0 8px}
+.detail__more{margin-top:8px}
+.ing__shelf{display:block;font-size:12px;font-weight:400;color:var(--muted);margin-top:2px}
+.decide{display:flex;flex-direction:column;gap:10px}
+.decide__card{display:grid;grid-template-columns:118px minmax(0,1fr);width:100%;
+  text-align:left;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:0;overflow:hidden;cursor:pointer;color:inherit}
+.decide__img{display:block;min-height:132px;overflow:hidden;background:var(--bg)}
+.decide__img img{width:100%;height:100%;min-height:132px;object-fit:cover;aspect-ratio:auto}
+.decide__body{display:flex;flex-direction:column;gap:2px;padding:12px 12px 12px 10px;min-width:0}
+.decide__role{font-size:12px;font-weight:600;color:var(--green)}
+.decide__note{font-size:12px;color:var(--muted)}
+.decide__name{font-size:18px;font-weight:700;color:var(--green-d);line-height:1.25;margin-top:2px}
+.decide__meta{font-size:13px;color:var(--ink)}
+.decide__hook{font-size:13px;color:var(--muted);line-height:1.5}
 .detail__nutri{display:inline-block;background:#eef6f0;color:var(--green-d);font-size:13px;
   font-weight:500;border-radius:8px;padding:5px 12px;margin:0 0 12px}
 .card__tags{font-size:12px;color:var(--muted);overflow-wrap:anywhere;margin-top:3px}
@@ -114,4 +132,8 @@ picture{display:contents}
   body.spa .cards--row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
     overflow:visible;scroll-snap-type:none}
   body.spa .cards--row .card{flex:none;width:auto}
+  body.spa .decide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  body.spa .decide__card{grid-template-columns:1fr}
+  body.spa .decide__img{min-height:0}
+  body.spa .decide__img img{height:160px;min-height:0}
 }

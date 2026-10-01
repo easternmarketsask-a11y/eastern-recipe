@@ -115,7 +115,16 @@
           ]
         }
       ],
-      "nutrition": "荤素齐全·暖身满足"
+      "nutrition": "荤素齐全·暖身满足",
+      "minutes": 40,
+      "servings": "4人",
+      "hook": "羊卷、牛卷、白菜和豆腐，周末围一桌就够。",
+      "decide": "weekend",
+      "pairs": [
+        "huaxia-hua",
+        "moyuwan",
+        "veg-enoki-cold"
+      ]
     },
     {
       "id": "red-braised-pork",
@@ -212,7 +221,14 @@
           "required": false
         }
       ],
-      "nutrition": "优质蛋白·补充能量"
+      "nutrition": "优质蛋白·补充能量",
+      "minutes": 75,
+      "servings": "4人",
+      "hook": "五花肉小火炖一小时，汁收到发亮就下饭。",
+      "pairs": [
+        "blanched-choy-sum",
+        "choy-sum-garlic"
+      ]
     },
     {
       "id": "braised-beef-brisket",
@@ -314,7 +330,13 @@
           "required": false
         }
       ],
-      "nutrition": "高蛋白·补铁强身"
+      "nutrition": "高蛋白·补铁强身",
+      "minutes": 120,
+      "servings": "4人",
+      "hook": "牛腩要炖到筷子插得进，周末提前上锅。",
+      "pairs": [
+        "cant-haoyou-shengcai"
+      ]
     },
     {
       "id": "soy-braised-beef-shank",
@@ -410,7 +432,14 @@
           "required": false
         }
       ],
-      "nutrition": "高蛋白·低脂紧实"
+      "nutrition": "高蛋白·低脂紧实",
+      "minutes": 160,
+      "servings": "4人",
+      "hook": "牛腱卤好切片，冷藏泡一夜更入味。",
+      "pairs": [
+        "veg-celtuce-garlic",
+        "liangban-gandoufu"
+      ]
     },
     {
       "id": "white-cut-chicken",
@@ -486,7 +515,14 @@
           "required": false
         }
       ],
-      "nutrition": "优质蛋白·低脂嫩滑"
+      "nutrition": "优质蛋白·低脂嫩滑",
+      "minutes": 45,
+      "servings": "4人",
+      "hook": "整鸡浸熟，配一碟菜心就是一桌。",
+      "pairs": [
+        "choy-sum-garlic",
+        "blanched-choy-sum"
+      ]
     },
     {
       "id": "twice-cooked-pork",
@@ -573,7 +609,14 @@
           "required": false
         }
       ],
-      "nutrition": "蛋白质·下饭开胃"
+      "nutrition": "蛋白质·下饭开胃",
+      "minutes": 40,
+      "servings": "3人",
+      "hook": "五花肉回锅，蒜苗和豆瓣酱一起下饭。",
+      "pairs": [
+        "hot-sour-potato",
+        "veg-shanghai-qing"
+      ]
     },
     {
       "id": "cumin-lamb",
@@ -670,7 +713,13 @@
           "required": false
         }
       ],
-      "nutrition": "高蛋白·温补暖身"
+      "nutrition": "高蛋白·温补暖身",
+      "minutes": 25,
+      "servings": "3人",
+      "hook": "羊肩肉快炒，孜然味一出来就能吃。",
+      "pairs": [
+        "veg-celtuce-garlic"
+      ]
     },
     {
       "id": "tomato-beef-brisket",
@@ -758,7 +807,13 @@
           "required": false
         }
       ],
-      "nutrition": "蛋白+番茄红素·开胃"
+      "nutrition": "蛋白+番茄红素·开胃",
+      "minutes": 120,
+      "servings": "4人",
+      "hook": "番茄把牛腩炖软，汤拌饭就够。",
+      "pairs": [
+        "gai-lan-oyster-sauce"
+      ]
     },
     {
       "id": "beef-chow-fun",
@@ -876,7 +931,14 @@
           "required": false
         }
       ],
-      "nutrition": "碳水+蛋白·一盘管饱"
+      "nutrition": "碳水+蛋白·一盘管饱",
+      "minutes": 30,
+      "servings": "3人",
+      "hook": "周四到的河粉，大火快炒才不粘。",
+      "pairs": [
+        "veg-shanghai-qing",
+        "soy-sauce-cheung-fun"
+      ]
     },
     {
       "id": "wet-beef-ho-fun",
@@ -1006,7 +1068,13 @@
           "required": false
         }
       ],
-      "nutrition": "牛肉河粉·浓汁裹粉更下饭"
+      "nutrition": "牛肉河粉·浓汁裹粉更下饭",
+      "minutes": 30,
+      "servings": "3人",
+      "hook": "河粉垫底，牛肉芥兰连汁浇上去。",
+      "pairs": [
+        "beef-chow-fun"
+      ]
     },
     {
       "id": "soy-sauce-cheung-fun",
@@ -1108,7 +1176,13 @@
           "required": false
         }
       ],
-      "nutrition": "米香软糯·暖胃"
+      "nutrition": "米香软糯·暖胃",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "肠粉切段，XO酱和豉油一起炒两分钟。",
+      "pairs": [
+        "cheung-fun-ready"
+      ]
     },
     {
       "id": "beef-brisket-noodle-soup",
@@ -1201,7 +1275,13 @@
           "required": false
         }
       ],
-      "nutrition": "有汤有肉·暖身管饱"
+      "nutrition": "有汤有肉·暖身管饱",
+      "minutes": 110,
+      "servings": "3人",
+      "hook": "牛腩汤先炖软，河粉下锅两分钟。",
+      "pairs": [
+        "veg-tonghao-garlic"
+      ]
     },
     {
       "id": "cheung-fun-ready",
@@ -1242,7 +1322,14 @@
           ]
         }
       ],
-      "nutrition": "低脂米制·好消化"
+      "nutrition": "低脂米制·好消化",
+      "minutes": 8,
+      "servings": "2人",
+      "hook": "不用解冻，蒸到软透，蘸生抽就吃。",
+      "method": "steam",
+      "pairs": [
+        "soy-sauce-cheung-fun"
+      ]
     },
     {
       "id": "youtiao-ready",
@@ -1280,7 +1367,14 @@
           "required": true
         }
       ],
-      "nutrition": "香脆顶饱·配粥豆浆"
+      "nutrition": "香脆顶饱·配粥豆浆",
+      "minutes": 10,
+      "servings": "2人",
+      "hook": "冷冻直接下锅，炸或烤箱都能脆。",
+      "method": "fry",
+      "pairs": [
+        "pumpkin-millet-congee"
+      ]
     },
     {
       "id": "nai-huang-bao-ready",
@@ -1315,7 +1409,16 @@
           "required": true
         }
       ],
-      "nutrition": "香甜软糯·快手早餐"
+      "nutrition": "香甜软糯·快手早餐",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "水开再蒸，焖两分钟才不会塌。",
+      "method": "steam",
+      "family": "bun",
+      "pairs": [
+        "huajuan-ready",
+        "pumpkin-millet-congee"
+      ]
     },
     {
       "id": "shouzhuabing-ready",
@@ -1352,7 +1455,14 @@
           "required": true
         }
       ],
-      "nutrition": "酥香顶饱·方便"
+      "nutrition": "酥香顶饱·方便",
+      "minutes": 8,
+      "servings": "2人",
+      "hook": "平底锅不用加油，两面煎到起层。",
+      "method": "pan",
+      "pairs": [
+        "scallion-egg-pancake"
+      ]
     },
     {
       "id": "huajuan-ready",
@@ -1388,7 +1498,12 @@
           "required": true
         }
       ],
-      "nutrition": "松软主食·配菜配粥"
+      "nutrition": "松软主食·配菜配粥",
+      "minutes": 12,
+      "servings": "2人",
+      "hook": "冷冻直接蒸，配粥或炒菜都行。",
+      "method": "steam",
+      "family": "bun"
     },
     {
       "id": "hei-jin-liusha-bao-ready",
@@ -1425,7 +1540,12 @@
           "required": true
         }
       ],
-      "nutrition": "香甜流心·暖心早餐"
+      "nutrition": "香甜流心·暖心早餐",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "蒸好焖一分钟再开盖，流沙才烫不到。",
+      "method": "steam",
+      "family": "bun"
     },
     {
       "id": "cha-shao-bao-ready",
@@ -1465,7 +1585,12 @@
           ]
         }
       ],
-      "nutrition": "咸甜适口·经典点心"
+      "nutrition": "咸甜适口·经典点心",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "蒸到顶部微微开裂是熟了，不是蒸坏。",
+      "method": "steam",
+      "family": "bun"
     },
     {
       "id": "xian-rou-dabao-ready",
@@ -1501,7 +1626,12 @@
           "required": true
         }
       ],
-      "nutrition": "有菜有肉·一个顶饱"
+      "nutrition": "有菜有肉·一个顶饱",
+      "minutes": 18,
+      "servings": "2–3人",
+      "hook": "一只就顶一顿，蒸好焖两分钟再揭盖。",
+      "method": "steam",
+      "family": "bun"
     },
     {
       "id": "mapo-tofu",
@@ -1620,7 +1750,14 @@
           "required": false
         }
       ],
-      "nutrition": "植物蛋白·补钙下饭"
+      "nutrition": "植物蛋白·补钙下饭",
+      "minutes": 20,
+      "servings": "2人",
+      "hook": "豆腐焯一下再下锅，豆瓣酱炒出红油。",
+      "pairs": [
+        "hot-sour-potato",
+        "seaweed-egg-soup"
+      ]
     },
     {
       "id": "tomato-egg",
@@ -1711,7 +1848,15 @@
           "required": false
         }
       ],
-      "nutrition": "番茄红素+蛋白·开胃"
+      "nutrition": "番茄红素+蛋白·开胃",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "番茄、鸡蛋、葱，店里都有。十五分钟，米饭就有菜。",
+      "decide": "quick",
+      "pairs": [
+        "choy-sum-garlic",
+        "seaweed-egg-soup"
+      ]
     },
     {
       "id": "pork-green-pepper",
@@ -1811,7 +1956,13 @@
           "required": false
         }
       ],
-      "nutrition": "蛋白+维C·清爽下饭"
+      "nutrition": "蛋白+维C·清爽下饭",
+      "minutes": 20,
+      "servings": "2人",
+      "hook": "青椒留一点脆，肉末炒散就能拌饭。",
+      "pairs": [
+        "tomato-egg"
+      ]
     },
     {
       "id": "blanched-choy-sum",
@@ -1906,7 +2057,14 @@
           "required": false
         }
       ],
-      "nutrition": "高纤维·清淡低卡"
+      "nutrition": "高纤维·清淡低卡",
+      "minutes": 12,
+      "servings": "2人",
+      "hook": "菜心烫到碧绿就捞，热油一淋就上桌。",
+      "pairs": [
+        "white-cut-chicken",
+        "red-braised-pork"
+      ]
     },
     {
       "id": "seaweed-egg-soup",
@@ -1990,7 +2148,14 @@
           "required": false
         }
       ],
-      "nutrition": "补碘补钙·清爽暖胃"
+      "nutrition": "补碘补钙·清爽暖胃",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "紫菜蛋花，一锅汤把晚饭补齐。",
+      "pairs": [
+        "tomato-egg",
+        "guantang-xiaoshuijiao"
+      ]
     },
     {
       "id": "xiaolongbao-ready",
@@ -2027,7 +2192,14 @@
           "required": true
         }
       ],
-      "nutrition": "鲜香多汁·暖胃点心"
+      "nutrition": "鲜香多汁·暖胃点心",
+      "minutes": 10,
+      "servings": "2人",
+      "hook": "垫张油纸蒸，汤汁烫，先咬个小口。",
+      "method": "steam",
+      "pairs": [
+        "seaweed-egg-soup"
+      ]
     },
     {
       "id": "shumai-ready",
@@ -2065,7 +2237,14 @@
           "required": true
         }
       ],
-      "nutrition": "糯香顶饱·营养早餐"
+      "nutrition": "糯香顶饱·营养早餐",
+      "minutes": 12,
+      "servings": "2人",
+      "hook": "不用解冻，蒸到糯米透了趁热吃。",
+      "method": "steam",
+      "pairs": [
+        "pumpkin-millet-congee"
+      ]
     },
     {
       "id": "purple-rice-floss-bun",
@@ -2099,7 +2278,12 @@
           "required": true
         }
       ],
-      "nutrition": "粗粮+肉松·能量早餐"
+      "nutrition": "粗粮+肉松·能量早餐",
+      "minutes": 1,
+      "servings": "2人",
+      "hook": "常温就能吃，微波二十秒更松软。",
+      "method": "microwave",
+      "family": "bun"
     },
     {
       "id": "veg-celtuce-garlic",
@@ -2150,7 +2334,14 @@
           "required": false
         }
       ],
-      "nutrition": "清脆爽口·膳食纤维"
+      "nutrition": "清脆爽口·膳食纤维",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "莴笋切丝快炒，断生就出锅，还是脆的。",
+      "pairs": [
+        "soy-braised-beef-shank",
+        "cumin-lamb"
+      ]
     },
     {
       "id": "veg-enoki-cold",
@@ -2212,7 +2403,13 @@
           "required": false
         }
       ],
-      "nutrition": "高纤维·低卡开胃"
+      "nutrition": "高纤维·低卡开胃",
+      "minutes": 10,
+      "servings": "2人",
+      "hook": "金针菇焯三十秒，蒜和生抽拌开胃。",
+      "pairs": [
+        "hotpot"
+      ]
     },
     {
       "id": "veg-chive-egg",
@@ -2267,7 +2464,13 @@
           "required": false
         }
       ],
-      "nutrition": "温阳暖身·蛋白+纤维"
+      "nutrition": "温阳暖身·蛋白+纤维",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "韭菜和鸡蛋，两样就够一盘。",
+      "pairs": [
+        "zhurou-jiucaijiao"
+      ]
     },
     {
       "id": "veg-lotus-cold",
@@ -2331,7 +2534,14 @@
           "required": false
         }
       ],
-      "nutrition": "清脆爽口·膳食纤维"
+      "nutrition": "清脆爽口·膳食纤维",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "藕片凉拌，清甜，适合配重口肉菜。",
+      "pairs": [
+        "twice-cooked-pork",
+        "osmanthus-lotus-root"
+      ]
     },
     {
       "id": "veg-garlic-scape-pork",
@@ -2397,7 +2607,13 @@
           ]
         }
       ],
-      "nutrition": "蛋白+纤维·下饭"
+      "nutrition": "蛋白+纤维·下饭",
+      "minutes": 20,
+      "servings": "2人",
+      "hook": "蒜苔炒肉，下饭，十分钟出锅。",
+      "pairs": [
+        "tomato-egg"
+      ]
     },
     {
       "id": "veg-napa-tofu",
@@ -2452,7 +2668,13 @@
           "required": false
         }
       ],
-      "nutrition": "补钙+纤维·清淡暖身"
+      "nutrition": "补钙+纤维·清淡暖身",
+      "minutes": 25,
+      "servings": "3人",
+      "hook": "白菜和豆腐一锅炖，汤留着拌饭。",
+      "pairs": [
+        "napa-pork-vermicelli"
+      ]
     },
     {
       "id": "veg-ayoumai-garlic",
@@ -2507,7 +2729,13 @@
           "required": false
         }
       ],
-      "nutrition": "高纤维·清淡爽口"
+      "nutrition": "高纤维·清淡爽口",
+      "minutes": 12,
+      "servings": "2人",
+      "hook": "油麦菜蒜蓉快炒，叶子还是绿的就起锅。",
+      "pairs": [
+        "white-cut-chicken"
+      ]
     },
     {
       "id": "veg-tonghao-garlic",
@@ -2557,7 +2785,13 @@
           ]
         }
       ],
-      "nutrition": "清香开胃·膳食纤维"
+      "nutrition": "清香开胃·膳食纤维",
+      "minutes": 12,
+      "servings": "2人",
+      "hook": "茼蒿有香气，大火快炒，不要炒老。",
+      "pairs": [
+        "beef-brisket-noodle-soup"
+      ]
     },
     {
       "id": "veg-wawacai-soup",
@@ -2612,7 +2846,13 @@
           ]
         }
       ],
-      "nutrition": "清甜低卡·维生素"
+      "nutrition": "清甜低卡·维生素",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "娃娃菜上汤，几分钟就软，适合配米饭。",
+      "pairs": [
+        "minced-pork-steamed-egg"
+      ]
     },
     {
       "id": "veg-eggplant-yuxiang",
@@ -2680,7 +2920,13 @@
           "required": false
         }
       ],
-      "nutrition": "花青素·开胃下饭"
+      "nutrition": "花青素·开胃下饭",
+      "minutes": 25,
+      "servings": "2人",
+      "hook": "茄子烧出汁，鱼香酱拌饭。",
+      "pairs": [
+        "yuxiang-doufu"
+      ]
     },
     {
       "id": "veg-wintermelon-pork-soup",
@@ -2738,7 +2984,13 @@
           ]
         }
       ],
-      "nutrition": "清热利水·补钙"
+      "nutrition": "清热利水·补钙",
+      "minutes": 50,
+      "servings": "3人",
+      "hook": "冬瓜和排骨一锅汤，晚饭有菜有汤。",
+      "pairs": [
+        "choy-sum-garlic"
+      ]
     },
     {
       "id": "veg-broccoli-oyster",
@@ -2795,7 +3047,13 @@
           "required": false
         }
       ],
-      "nutrition": "高维C·抗氧化"
+      "nutrition": "高维C·抗氧化",
+      "minutes": 12,
+      "servings": "2人",
+      "hook": "西兰花焯绿，蚝油淋上就吃。",
+      "pairs": [
+        "garlic-vermicelli-shrimp"
+      ]
     },
     {
       "id": "veg-shanghai-qing",
@@ -2841,7 +3099,14 @@
           ]
         }
       ],
-      "nutrition": "高钙高纤·清淡"
+      "nutrition": "高钙高纤·清淡",
+      "minutes": 12,
+      "servings": "2人",
+      "hook": "上海青清炒，配河粉或红烧肉都行。",
+      "pairs": [
+        "beef-chow-fun",
+        "twice-cooked-pork"
+      ]
     },
     {
       "id": "dujiao-yutou",
@@ -2928,7 +3193,13 @@
           "required": false
         }
       ],
-      "nutrition": "优质蛋白·鲜辣开胃"
+      "nutrition": "优质蛋白·鲜辣开胃",
+      "minutes": 30,
+      "servings": "3人",
+      "hook": "鱼头铺剁椒，蒸十分钟，热油一浇。",
+      "pairs": [
+        "veg-shanghai-qing"
+      ]
     },
     {
       "id": "qingzheng-luyu",
@@ -3010,7 +3281,13 @@
           "required": false
         }
       ],
-      "nutrition": "优质蛋白·低脂DHA"
+      "nutrition": "优质蛋白·低脂DHA",
+      "minutes": 25,
+      "servings": "2人",
+      "hook": "鲈鱼蒸到筷子插得进，豉油和热油分开浇。",
+      "pairs": [
+        "choy-sum-garlic"
+      ]
     },
     {
       "id": "suancai-yu",
@@ -3104,7 +3381,13 @@
           "required": false
         }
       ],
-      "nutrition": "高蛋白·酸辣开胃"
+      "nutrition": "高蛋白·酸辣开胃",
+      "minutes": 30,
+      "servings": "3人",
+      "hook": "酸菜先煮出味，鱼片最后下一两分钟。",
+      "pairs": [
+        "napa-vermicelli-pot"
+      ]
     },
     {
       "id": "baochao-youyu",
@@ -3195,7 +3478,13 @@
           "required": false
         }
       ],
-      "nutrition": "高蛋白·低脂弹牙"
+      "nutrition": "高蛋白·低脂弹牙",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "鱿鱼焯到卷起就捞，大火快炒才不老。",
+      "pairs": [
+        "veg-broccoli-oyster"
+      ]
     },
     {
       "id": "baizhuoxia",
@@ -3264,7 +3553,13 @@
           "required": true
         }
       ],
-      "nutrition": "高蛋白·低脂鲜甜"
+      "nutrition": "高蛋白·低脂鲜甜",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "虾变红弯起来就捞，过久肉会柴。",
+      "pairs": [
+        "qingzheng-luyu"
+      ]
     },
     {
       "id": "huaxia-hua",
@@ -3304,7 +3599,15 @@
           ]
         }
       ],
-      "nutrition": "高蛋白·火锅好搭"
+      "nutrition": "高蛋白·火锅好搭",
+      "minutes": 10,
+      "servings": "2人",
+      "hook": "虾滑煮到浮起变白，也可以摊成虾饼。",
+      "method": "boil",
+      "family": "hotpot-ball",
+      "pairs": [
+        "hotpot"
+      ]
     },
     {
       "id": "moyuwan",
@@ -3343,7 +3646,15 @@
           ]
         }
       ],
-      "nutrition": "Q弹·高蛋白"
+      "nutrition": "Q弹·高蛋白",
+      "minutes": 8,
+      "servings": "2人",
+      "hook": "墨鱼丸不用解冻，下开水煮到浮起。",
+      "method": "boil",
+      "family": "hotpot-ball",
+      "pairs": [
+        "hotpot"
+      ]
     },
     {
       "id": "shijinyuwan",
@@ -3382,7 +3693,16 @@
           ]
         }
       ],
-      "nutrition": "高蛋白·汤锅皆宜"
+      "nutrition": "高蛋白·汤锅皆宜",
+      "minutes": 8,
+      "servings": "2人",
+      "hook": "什锦鱼丸下火锅或清汤，浮起就能吃。",
+      "method": "boil",
+      "family": "hotpot-ball",
+      "pairs": [
+        "hotpot",
+        "veg-napa-tofu"
+      ]
     },
     {
       "id": "jiachang-doufu",
@@ -3486,7 +3806,13 @@
           "required": false
         }
       ],
-      "nutrition": "植物蛋白·补钙下饭"
+      "nutrition": "植物蛋白·补钙下饭",
+      "minutes": 25,
+      "servings": "3人",
+      "hook": "豆腐两面煎黄，豆瓣酱和青椒一起收汁。",
+      "pairs": [
+        "hot-sour-potato"
+      ]
     },
     {
       "id": "yuxiang-doufu",
@@ -3575,7 +3901,13 @@
           "required": false
         }
       ],
-      "nutrition": "植物蛋白·开胃下饭"
+      "nutrition": "植物蛋白·开胃下饭",
+      "minutes": 20,
+      "servings": "2人",
+      "hook": "没有鱼也是鱼香，汁勾浓了拌饭。",
+      "pairs": [
+        "veg-eggplant-yuxiang"
+      ]
     },
     {
       "id": "pidan-doufu",
@@ -3645,7 +3977,13 @@
           "required": false
         }
       ],
-      "nutrition": "高蛋白·清爽凉菜"
+      "nutrition": "高蛋白·清爽凉菜",
+      "minutes": 10,
+      "servings": "2人",
+      "hook": "皮蛋和嫩豆腐，淋生抽就是一盘凉菜。",
+      "pairs": [
+        "white-cut-chicken"
+      ]
     },
     {
       "id": "qincai-xianggan",
@@ -3711,7 +4049,13 @@
           "required": false
         }
       ],
-      "nutrition": "高纤维·清爽降火"
+      "nutrition": "高纤维·清爽降火",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "香干先炒，芹菜后下，还是脆的。",
+      "pairs": [
+        "jiachang-doufu"
+      ]
     },
     {
       "id": "liangban-gandoufu",
@@ -3798,7 +4142,13 @@
           "required": false
         }
       ],
-      "nutrition": "植物蛋白·爽口低卡"
+      "nutrition": "植物蛋白·爽口低卡",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "干豆腐丝焯一下过凉，黄瓜一起拌。",
+      "pairs": [
+        "soy-braised-beef-shank"
+      ]
     },
     {
       "id": "jidanzheng",
@@ -3862,7 +4212,13 @@
           "required": false
         }
       ],
-      "nutrition": "优质蛋白·嫩滑好消化"
+      "nutrition": "优质蛋白·嫩滑好消化",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "蛋液过筛，小火蒸到表面平、没有流动蛋液。",
+      "pairs": [
+        "pumpkin-millet-congee"
+      ]
     },
     {
       "id": "fuzhu-charou",
@@ -3948,7 +4304,13 @@
           "required": false
         }
       ],
-      "nutrition": "双重蛋白·顶饱"
+      "nutrition": "双重蛋白·顶饱",
+      "minutes": 40,
+      "servings": "2人",
+      "hook": "腐竹先泡软，再和五花肉收汁。",
+      "pairs": [
+        "veg-shanghai-qing"
+      ]
     },
     {
       "id": "guantang-xiaoshuijiao",
@@ -3983,7 +4345,15 @@
           "required": true
         }
       ],
-      "nutrition": "有菜有肉·暖胃管饱"
+      "nutrition": "有菜有肉·暖胃管饱",
+      "minutes": 15,
+      "servings": "3人",
+      "hook": "水开下锅，点水三次，咬开里面有汤。",
+      "method": "boil",
+      "family": "dumpling",
+      "pairs": [
+        "seaweed-egg-soup"
+      ]
     },
     {
       "id": "suancai-roujiiao",
@@ -4018,7 +4388,15 @@
           "required": true
         }
       ],
-      "nutrition": "开胃解腻·一顿搞定"
+      "nutrition": "开胃解腻·一顿搞定",
+      "minutes": 15,
+      "servings": "3人",
+      "hook": "酸菜馅解腻，煮到浮起再多一分钟。",
+      "method": "boil",
+      "family": "dumpling",
+      "pairs": [
+        "veg-napa-tofu"
+      ]
     },
     {
       "id": "bajiaojiao",
@@ -4053,7 +4431,12 @@
           "required": true
         }
       ],
-      "nutrition": "海鱼蛋白·鲜香管饱"
+      "nutrition": "海鱼蛋白·鲜香管饱",
+      "minutes": 15,
+      "servings": "3人",
+      "hook": "鲅鱼馅配姜醋，煮熟就捞，不要久煮。",
+      "method": "boil",
+      "family": "dumpling"
     },
     {
       "id": "yangroujiiao",
@@ -4087,7 +4470,12 @@
           "required": true
         }
       ],
-      "nutrition": "温补暖身·高蛋白"
+      "nutrition": "温补暖身·高蛋白",
+      "minutes": 15,
+      "servings": "3人",
+      "hook": "羊肉饺蘸蒜醋，水开下锅，浮起再煮一分钟。",
+      "method": "boil",
+      "family": "dumpling"
     },
     {
       "id": "zhurou-jiucaijiao",
@@ -4126,7 +4514,15 @@
           ]
         }
       ],
-      "nutrition": "蛋白+纤维·经典管饱"
+      "nutrition": "蛋白+纤维·经典管饱",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "韭菜猪肉是家常味，煮熟蘸醋就吃。",
+      "method": "boil",
+      "family": "dumpling",
+      "pairs": [
+        "veg-chive-egg"
+      ]
     },
     {
       "id": "xihongshi-jidan-mian",
@@ -4207,7 +4603,13 @@
           "required": false
         }
       ],
-      "nutrition": "有菜有蛋·开胃一碗"
+      "nutrition": "有菜有蛋·开胃一碗",
+      "minutes": 20,
+      "servings": "2人",
+      "hook": "番茄炒出汁再下面，一碗就是晚饭。",
+      "pairs": [
+        "tomato-egg"
+      ]
     },
     {
       "id": "niurou-lamian",
@@ -4294,7 +4696,13 @@
           "required": false
         }
       ],
-      "nutrition": "有肉有面·顶饱"
+      "nutrition": "有肉有面·顶饱",
+      "minutes": 120,
+      "servings": "2人",
+      "hook": "牛腩先炖软，面另煮，汤浇上去。",
+      "pairs": [
+        "veg-celtuce-garlic"
+      ]
     },
     {
       "id": "zhajianmian",
@@ -4361,7 +4769,13 @@
           "required": false
         }
       ],
-      "nutrition": "酱香顶饱·主食"
+      "nutrition": "酱香顶饱·主食",
+      "minutes": 25,
+      "servings": "2人",
+      "hook": "甜面酱把肉丁炒香，黄瓜丝拌着吃。",
+      "pairs": [
+        "liangban-gandoufu"
+      ]
     },
     {
       "id": "cant-douchi-paigu",
@@ -4442,7 +4856,13 @@
           ]
         }
       ],
-      "nutrition": "高蛋白·补钙下饭"
+      "nutrition": "高蛋白·补钙下饭",
+      "minutes": 30,
+      "servings": "3人",
+      "hook": "排骨腌一刻钟，蒸到熟，葱花收尾。",
+      "pairs": [
+        "cant-haoyou-jielan"
+      ]
     },
     {
       "id": "cant-suanrong-fensi-shanbei",
@@ -4520,7 +4940,13 @@
           ]
         }
       ],
-      "nutrition": "高蛋白·低脂鲜美"
+      "nutrition": "高蛋白·低脂鲜美",
+      "minutes": 20,
+      "servings": "2人",
+      "hook": "扇贝上铺粉丝和蒜蓉，蒸六到八分钟。",
+      "pairs": [
+        "choy-sum-garlic"
+      ]
     },
     {
       "id": "cant-haoyou-shengcai",
@@ -4577,7 +5003,14 @@
           ]
         }
       ],
-      "nutrition": "高纤维·清淡低卡"
+      "nutrition": "高纤维·清淡低卡",
+      "minutes": 10,
+      "servings": "2人",
+      "hook": "生菜烫断生，蚝油薄芡淋上。",
+      "pairs": [
+        "cant-mizhi-chashao",
+        "white-cut-chicken"
+      ]
     },
     {
       "id": "cant-haoyou-jielan",
@@ -4633,7 +5066,14 @@
           ]
         }
       ],
-      "nutrition": "高钙高纤·清爽"
+      "nutrition": "高钙高纤·清爽",
+      "minutes": 12,
+      "servings": "2人",
+      "hook": "芥兰焯到翠绿就捞，蚝油只要提鲜。",
+      "pairs": [
+        "cant-douchi-paigu",
+        "gai-lan-oyster-sauce"
+      ]
     },
     {
       "id": "cant-huadan-xiaren",
@@ -4693,7 +5133,13 @@
           ]
         }
       ],
-      "nutrition": "高蛋白·嫩滑低脂"
+      "nutrition": "高蛋白·嫩滑低脂",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "虾仁先滑熟，蛋液半凝时推在一起。",
+      "pairs": [
+        "cant-haoyou-shengcai"
+      ]
     },
     {
       "id": "cant-huadan-niurou",
@@ -4759,7 +5205,13 @@
           ]
         }
       ],
-      "nutrition": "高蛋白·嫩滑补铁"
+      "nutrition": "高蛋白·嫩滑补铁",
+      "minutes": 15,
+      "servings": "2人",
+      "hook": "牛肉滑熟再回蛋液，嫩，配米饭。",
+      "pairs": [
+        "cant-haoyou-jielan"
+      ]
     },
     {
       "id": "cant-lawei-baozaifan",
@@ -4829,7 +5281,13 @@
           "required": false
         }
       ],
-      "nutrition": "有饭有肉·一锅满足"
+      "nutrition": "有饭有肉·一锅满足",
+      "minutes": 45,
+      "servings": "2人",
+      "hook": "腊味铺在饭上焖出锅巴，菜心最后放。",
+      "pairs": [
+        "choy-sum-garlic"
+      ]
     },
     {
       "id": "cant-mizhi-chashao",
@@ -4881,7 +5339,14 @@
           "required": false
         }
       ],
-      "nutrition": "优质蛋白·咸甜下饭"
+      "nutrition": "优质蛋白·咸甜下饭",
+      "minutes": 150,
+      "servings": "3人",
+      "hook": "叉烧酱先腌两小时，烤箱半小时刷蜜。",
+      "pairs": [
+        "cant-haoyou-shengcai",
+        "cha-shao-bao-ready"
+      ]
     },
     {
       "id": "cant-tangcu-paigu",
@@ -4944,7 +5409,13 @@
           "required": false
         }
       ],
-      "nutrition": "高蛋白·酸甜开胃"
+      "nutrition": "高蛋白·酸甜开胃",
+      "minutes": 40,
+      "servings": "3人",
+      "hook": "排骨用糖醋料收汁，亮了再撒芝麻。",
+      "pairs": [
+        "hot-sour-potato"
+      ]
     },
     {
       "id": "steamed-crab",
@@ -5047,7 +5518,13 @@
           ]
         }
       ],
-      "nutrition": "高蛋白·低脂鲜甜"
+      "nutrition": "高蛋白·低脂鲜甜",
+      "minutes": 20,
+      "servings": "2人",
+      "hook": "蟹肚朝上蒸，膏不会流走，配姜醋。",
+      "pairs": [
+        "pueraria-pork-soup"
+      ]
     },
     {
       "id": "lotus-pork-bone-soup",
@@ -5141,7 +5618,14 @@
           "required": true
         }
       ],
-      "nutrition": "补钙润燥·秋季汤水"
+      "nutrition": "补钙润燥·秋季汤水",
+      "minutes": 100,
+      "servings": "4人",
+      "hook": "藕和筒骨一次把水加够，汤炖到奶白。",
+      "pairs": [
+        "choy-sum-garlic",
+        "steamed-kabocha-yam"
+      ]
     },
     {
       "id": "osmanthus-lotus-root",
@@ -5226,7 +5710,13 @@
           ]
         }
       ],
-      "nutrition": "无油甜品·膳食纤维"
+      "nutrition": "无油甜品·膳食纤维",
+      "minutes": 180,
+      "servings": "4人",
+      "hook": "糯米先泡两小时，藕煮软放凉再切。",
+      "pairs": [
+        "taro-pork-belly"
+      ]
     },
     {
       "id": "taro-pork-belly",
@@ -5336,7 +5826,13 @@
           ]
         }
       ],
-      "nutrition": "团圆硬菜·蒸制少油"
+      "nutrition": "团圆硬菜·蒸制少油",
+      "minutes": 90,
+      "servings": "4人",
+      "hook": "芋头和带皮五花肉扣蒸一小时，倒扣上桌。",
+      "pairs": [
+        "gai-lan-oyster-sauce"
+      ]
     },
     {
       "id": "steamed-kabocha-yam",
@@ -5413,7 +5909,13 @@
           ]
         }
       ],
-      "nutrition": "无油低卡·养胃粗粮"
+      "nutrition": "无油低卡·养胃粗粮",
+      "minutes": 20,
+      "servings": "3人",
+      "hook": "南瓜不用削皮，和山药一起蒸到能戳透。",
+      "pairs": [
+        "lotus-pork-bone-soup"
+      ]
     },
     {
       "id": "hot-sour-potato",
@@ -5480,6 +5982,13 @@
         "蒜切片，小葱切段，干辣椒剪段。锅中加油，中小火炒香蒜和辣椒，勿炒黑。",
         "转中大火倒入土豆丝，翻炒3–5分钟，粗细不同需调整时间；若粘锅，沿边加少许水。",
         "土豆熟透但仍有脆感时，加入米醋、盐和葱段，再炒约30秒出锅。醋后放，酸香更明显。"
+      ],
+      "minutes": 20,
+      "servings": "2–3人",
+      "hook": "土豆丝冲掉淀粉再炒，醋最后放才香。",
+      "pairs": [
+        "twice-cooked-pork",
+        "mapo-tofu"
       ]
     },
     {
@@ -5542,6 +6051,12 @@
         "平底锅加油，中火放入豆腐，每面煎约3分钟至金黄，定型后再翻，避免碎裂。",
         "将豆腐推到锅边，放葱白略煎，加入生抽、糖和100ml水，轻晃锅让酱汁分布均匀。",
         "小火焖5分钟，加入葱绿，再煮1分钟稍微收汁。保留少许汁，拌饭更香。"
+      ],
+      "minutes": 25,
+      "servings": "2–3人",
+      "hook": "豆腐煎到两面黄，葱段焖出汁拌饭。",
+      "pairs": [
+        "tomato-egg"
       ]
     },
     {
@@ -5604,6 +6119,12 @@
         "锅中加油，放番茄中火炒3–4分钟，炒出红汁；喜欢浓一些可压碎一半番茄。",
         "倒入700ml水煮开，轻轻放入豆腐，转小火煮8分钟，避免大力搅拌。",
         "按口味加盐，撒葱花即可。清爽的番茄酸味配嫩豆腐，适合搭配炒菜和米饭。"
+      ],
+      "minutes": 20,
+      "servings": "2–3人",
+      "hook": "番茄先炒出红汁，豆腐小火煮，别搅碎。",
+      "pairs": [
+        "scallion-braised-tofu"
       ]
     },
     {
@@ -5666,6 +6187,12 @@
         "锅中加油炒香蒜末，先炒白菜帮2分钟，再放白菜叶炒软。",
         "倒入生抽和350ml水，煮开后小火煮5分钟，直到白菜帮变软。",
         "放入沥水粉丝，轻拌后煮3–5分钟至熟，按包装和粗细调整；粉丝吸水快，太干就补热水，留些汤汁趁热吃。"
+      ],
+      "minutes": 25,
+      "servings": "2–3人",
+      "hook": "白菜帮先炒，粉丝后下，留一点汤。",
+      "pairs": [
+        "suancai-yu"
       ]
     },
     {
@@ -5734,6 +6261,12 @@
         "猪肉碎加入香菇、姜末、生抽、淀粉和2汤匙水，顺一个方向搅至略有黏性。",
         "平铺在耐热浅盘中，厚度不超过2cm。蒸锅水开后放盘，盖盖中火蒸约15–20分钟。",
         "用食物温度计测肉饼中心达到71°C；厚度较大要继续蒸。出锅撒葱花，保留蒸出的鲜汁，拌饭很好吃。"
+      ],
+      "minutes": 30,
+      "servings": "2–3人",
+      "hook": "肉饼蒸到中心熟透，蒸出来的汁留着拌饭。",
+      "pairs": [
+        "gai-lan-oyster-sauce"
       ]
     },
     {
@@ -5796,6 +6329,12 @@
         "南瓜去籽切约2cm厚块，洗净的皮可保留，平铺耐热深盘。",
         "将小块排骨单层放在南瓜上，水开后入蒸锅，中火蒸30–40分钟，注意补热水防干锅。",
         "排骨最厚处避开骨头测温，达到71°C且肉已软熟；南瓜应能轻松插入筷子。若未达到继续蒸。南瓜吸收肉汁，不必另加糖。"
+      ],
+      "minutes": 60,
+      "servings": "3人",
+      "hook": "排骨铺在南瓜上蒸，南瓜吸的是肉汁。",
+      "pairs": [
+        "steamed-kabocha-yam"
       ]
     },
     {
@@ -5864,6 +6403,12 @@
         "蒜切末，用油小火炒香一半，再关火拌入另一半蒜末、生抽和4汤匙水。",
         "将虾平铺在粉丝上，蒜汁均匀浇入。水开后上锅蒸约8–10分钟，按虾大小调整。",
         "虾肉应完全不透明，最厚处达到74°C；未达到继续蒸。撒葱花趁热吃，盘内须留汁，避免粉丝蒸干。"
+      ],
+      "minutes": 30,
+      "servings": "2–3人",
+      "hook": "虾铺在粉丝上，蒸到虾肉不透明。",
+      "pairs": [
+        "veg-broccoli-oyster"
       ]
     },
     {
@@ -5932,6 +6477,12 @@
         "锅里加油，小火炒香姜片，加300ml水和生抽煮开。",
         "下豆腐，小火煮5分钟；放虾仁，再煮3–5分钟，视大小调整。",
         "虾肉完全不透明、最厚处达到74°C后撒葱花。轻推豆腐别翻碎，鲜汤留着拌饭。"
+      ],
+      "minutes": 25,
+      "servings": "2–3人",
+      "hook": "豆腐先入汤，虾仁最后下，鲜汤拌饭。",
+      "pairs": [
+        "wintermelon-shrimp-soup"
       ]
     },
     {
@@ -6000,6 +6551,12 @@
         "莲藕和肉碎混合，加鸡蛋、葱花、生抽、淀粉，搅拌至有黏性，分成8个约1cm厚小饼。",
         "平底锅加油，中小火煎肉饼，每面约4–5分钟；上色过快就调小火，必要时加1汤匙水盖盖焖。",
         "温度计从饼侧插入中心，达到71°C后出锅。外层微焦、里面带藕粒的脆感，可配米饭或粥。"
+      ],
+      "minutes": 35,
+      "servings": "3人",
+      "hook": "藕切小粒不要打成泥，小火煎到中心熟。",
+      "pairs": [
+        "veg-lotus-cold"
       ]
     },
     {
@@ -6062,6 +6619,12 @@
         "烧开一锅水，放腐竹煮3–5分钟至熟透；按包装调整，捞出沥干晾凉。",
         "黄瓜洗净轻拍后切块；蒜压成末，与生抽、米醋、芝麻油拌成汁。",
         "把黄瓜和腐竹拌匀，现拌现吃。暂不吃则立即冷藏，避免久放室温；腐竹沥干，味道才不会被水冲淡。"
+      ],
+      "minutes": 15,
+      "servings": "2–3人",
+      "hook": "腐竹泡到没有硬芯，和拍黄瓜现拌。",
+      "pairs": [
+        "white-cut-chicken"
       ]
     },
     {
@@ -6125,6 +6688,14 @@
         "锅中放五花肉，中小火煎出少许油，加入姜片和白菜帮炒2分钟。",
         "加生抽、600ml热水，煮开后小火炖15分钟，再下白菜叶煮8分钟。",
         "下粉丝煮3–5分钟至熟，五花肉中心需达到71°C。粉丝吸汤快，按需补水，留足热汤端上桌。"
+      ],
+      "minutes": 45,
+      "servings": "3人",
+      "hook": "一锅白菜、五花肉和粉丝，三个人够吃，汤也够拌饭。",
+      "decide": "family",
+      "pairs": [
+        "gai-lan-oyster-sauce",
+        "veg-napa-tofu"
       ]
     },
     {
@@ -6193,6 +6764,12 @@
         "炖锅加油炒香姜片，下牛腩翻炒，加生抽和糖，倒入约1升热水没过肉。",
         "煮开转小火，盖盖炖约90分钟，按肉质继续炖至筷子能插入；中途缺水补热水。",
         "土豆切3cm块加入，再炖20–25分钟至软，开盖略收汁。土豆后放，避免牛腩没软时土豆已煮散。"
+      ],
+      "minutes": 150,
+      "servings": "3–4人",
+      "hook": "牛腩先炖软再下土豆，土豆才不会煮散。",
+      "pairs": [
+        "veg-tonghao-garlic"
       ]
     },
     {
@@ -6255,6 +6832,12 @@
         "锅中放800ml水和姜片，煮开后下冬瓜，中小火煮8–12分钟至边缘透明。",
         "加入虾仁，继续煮3–5分钟，按虾大小调整；虾肉完全不透明，最厚处达到74°C。",
         "加盐和葱花，轻轻拌匀。冬瓜清甜、虾仁鲜嫩，汤不用勾芡，也无需重调味。"
+      ],
+      "minutes": 25,
+      "servings": "2–3人",
+      "hook": "冬瓜煮到边透明，虾仁最后下。",
+      "pairs": [
+        "shrimp-tofu-pot"
       ]
     },
     {
@@ -6299,6 +6882,13 @@
         "锅中加1.2升水，烧开后倒入小米，搅动防粘底；再次煮开转小火。",
         "煮10分钟后加入南瓜，再煮20–25分钟，留一道锅盖缝防溢，间或搅拌。",
         "南瓜软烂、小米开花后，压碎一部分南瓜让粥更绵。过稠可加热水；南瓜本身有甜味，先尝再决定是否另加糖。"
+      ],
+      "minutes": 40,
+      "servings": "3人",
+      "hook": "小米先煮，南瓜后下，粥自己会甜。",
+      "pairs": [
+        "youtiao-ready",
+        "jidanzheng"
       ]
     },
     {
@@ -6362,6 +6952,13 @@
         "不粘平底锅刷薄油，中小火预热，倒一勺面糊，转动锅摊成薄饼。",
         "底面凝固上色、表面基本定型后翻面，再煎至两面金黄；每张约3–4分钟，厚饼需延长。",
         "中心不得有湿面糊，蛋液须完全凝固。依次煎完，切块趁热吃；面糊薄摊，比一张厚饼更容易熟透。"
+      ],
+      "minutes": 20,
+      "servings": "2人",
+      "hook": "面糊摊薄，两面金黄、中间没有湿浆。",
+      "pairs": [
+        "shouzhuabing-ready",
+        "pumpkin-millet-congee"
       ]
     },
     {
@@ -6418,6 +7015,12 @@
         "鸡块入锅，加清水煮开，撇去浮沫，煮约2分钟后小心捞出；接触生鸡的器具及时清洁。",
         "将鸡块、香菇、姜片与1.5升热水放入炖锅，煮开后转小火，盖盖炖45–60分钟。",
         "鸡块最厚处避骨测温，达到74°C且肉软熟后加盐。保持小火轻沸，汤更清，香菇味也更柔和。"
+      ],
+      "minutes": 75,
+      "servings": "3–4人",
+      "hook": "香菇和鸡块小火炖，汤清，晚饭喝一碗。",
+      "pairs": [
+        "choy-sum-garlic"
       ]
     },
     {
@@ -6480,6 +7083,13 @@
         "用耐热盘盖住碗口，水开后小火蒸12–18分钟，按碗深调整；蛋羹中心应完全凝固而无流动蛋液。",
         "另起锅加油炒肉末，加生抽和2汤匙水，将肉末炒散并煮透，中心达到71°C。",
         "把熟肉末和少许肉汁浇在蒸蛋上，撒葱花。肉末单独炒熟再铺，既好掌握熟度，又能保持蛋羹细嫩。"
+      ],
+      "minutes": 30,
+      "servings": "2–3人",
+      "hook": "蛋羹蒸嫩，肉末另炒熟再铺上去。",
+      "pairs": [
+        "veg-wawacai-soup",
+        "seaweed-egg-soup"
       ]
     },
     {
@@ -6554,6 +7164,12 @@
         "锅中加油炒散肉末，放姜末、豆瓣酱，中小火炒香，勿把酱炒焦。",
         "加250ml水和生抽煮开，让肉末充分煮熟、中心达到71°C。",
         "放粉丝，小火煮3–5分钟至熟并吸入汤汁，按包装调整，撒葱花出锅。保留一点汁，盛盘后才不会结成干团。"
+      ],
+      "minutes": 25,
+      "servings": "2–3人",
+      "hook": "肉末先炒熟，粉丝再吸汤，留一点汁。",
+      "pairs": [
+        "veg-celtuce-garlic"
       ]
     },
     {
@@ -6628,6 +7244,12 @@
         "平底锅加1汤匙油，将豆腐两面煎黄后盛出。茄子先蒸5分钟，能减少后续吸油。",
         "锅中补半汤匙油炒香蒜，放入茄子、豆腐、生抽、糖和150ml水。",
         "小火焖6–8分钟，至茄子软透、豆腐入味，撒葱花，轻轻推匀。留少许酱汁，配米饭很合适。"
+      ],
+      "minutes": 30,
+      "servings": "2–3人",
+      "hook": "茄子先蒸再烧，少吸油，豆腐还是整块的。",
+      "pairs": [
+        "yuxiang-doufu"
       ]
     },
     {
@@ -6685,6 +7307,12 @@
         "五花肉和姜片放锅中，加约1升水，煮开撇浮沫，转小火煮20分钟。",
         "加入酸菜，小火炖25–30分钟，让酸香与肉汤融合。猪肉最厚处须达到71°C。",
         "放入粉丝再煮3–5分钟至熟，按包装调整。先尝汤再决定是否加盐，酸菜已有咸味；热腾腾上桌，粉丝不要久泡。"
+      ],
+      "minutes": 70,
+      "servings": "3人",
+      "hook": "酸菜先尝咸淡，粉丝最后下，热着吃。",
+      "pairs": [
+        "napa-pork-vermicelli"
       ]
     },
     {
@@ -6748,6 +7376,13 @@
         "骨头、粉葛和姜片放入汤锅，加约2升冷水，大火煮开后转小火，保持轻微沸腾。",
         "盖盖煲约1.5小时，中途只在需要时补热水；想要更清甜可在最后30分钟加入红枣。",
         "粉葛用筷子能插入、汤味清甜后加盐。粉葛口感粉糯，适合第一次尝试广东汤水的客人；可把粉葛和骨肉一起吃。"
+      ],
+      "minutes": 120,
+      "servings": "4人",
+      "hook": "粉葛是煲汤的根，和沙葛不是同一种。小火煲到粉糯。",
+      "pairs": [
+        "choy-sum-garlic",
+        "steamed-crab"
       ]
     },
     {
@@ -6811,6 +7446,13 @@
         "锅中水烧开，加少许盐和几滴油，先放芥兰茎1分钟，再放叶煮30–60秒，捞出沥干。",
         "小锅加油炒香蒜末，加入蚝油、生抽和2汤匙水，煮开后立刻关火。",
         "把酱汁淋在芥兰上即可。芥兰带轻微苦香，蚝油只作提鲜；也可把芥兰换成芥兰苗，焯水时间缩短。"
+      ],
+      "minutes": 15,
+      "servings": "2–3人",
+      "hook": "芥兰茎先焯、叶后下，蚝油只作提鲜。",
+      "pairs": [
+        "white-cut-chicken",
+        "napa-pork-vermicelli"
       ]
     },
     {
@@ -6867,6 +7509,13 @@
         "锅中加水烧开，放菜心焯约1分钟至翠绿，立即捞出沥干。菜心不要煮太久，保留清甜和脆嫩。",
         "炒锅加油，小火炒香蒜蓉，加入菜心大火快炒30秒；沿锅边加1汤匙水，撒盐翻匀。",
         "马上出锅。想要更广东风味，可把最后的盐换成少量蚝油；配白饭、粥或烧味都合适。"
+      ],
+      "minutes": 10,
+      "servings": "2–3人",
+      "hook": "菜心焯到翠绿就捞，蒜蓉快炒三十秒。",
+      "pairs": [
+        "white-cut-chicken",
+        "tomato-egg"
       ]
     }
   ]
