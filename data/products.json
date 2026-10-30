@@ -21522,9 +21522,9 @@
     },
     {
       "code": "0729",
-      "name_cn": "加拿大红刺参 1lb",
-      "name_en": "Frozen Cucumber",
-      "category": "新鲜蔬菜",
+      "name_cn": "冰海参(加拿大红刺参)",
+      "name_en": "Frozen Sea Cucumber",
+      "category": "冷冻食品",
       "image_url": "",
       "on_sale": true,
       "sold_90d": 0
@@ -24342,6 +24342,24 @@
       "name_cn": "日式碗套装",
       "name_en": "Japanese Design JX440 Bowl Set",
       "category": "日用杂货",
+      "image_url": "",
+      "on_sale": true,
+      "sold_90d": 0
+    },
+    {
+      "code": "92294",
+      "name_cn": "新鲜松茸 盒340G",
+      "name_en": "Matsutake",
+      "category": "新鲜蔬菜",
+      "image_url": "",
+      "on_sale": true,
+      "sold_90d": 0
+    },
+    {
+      "code": "LXLX",
+      "name_cn": "蓝蟹 LB",
+      "name_en": "Blue Crab",
+      "category": "新鲜蔬菜",
       "image_url": "",
       "on_sale": true,
       "sold_90d": 0

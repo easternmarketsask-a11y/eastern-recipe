@@ -7517,6 +7517,394 @@
         "white-cut-chicken",
         "tomato-egg"
       ]
+    },
+    {
+      "id": "steamed-blue-crab",
+      "name_cn": "清蒸蓝蟹",
+      "name_en": "Steamed Blue Crab",
+      "aliases": [
+        "清蒸蓝蟹",
+        "蓝蟹",
+        "Steamed Blue Crab",
+        "blue crab"
+      ],
+      "section": "seafood",
+      "kind": "dish",
+      "priority": 96,
+      "image": "assets/images/steamed-blue-crab.jpg",
+      "image_credit": "品牌字卡，还没有成品照片",
+      "tags": [
+        "蓝蟹",
+        "海鲜",
+        "清蒸"
+      ],
+      "ingredients": [
+        {
+          "label": "蓝蟹",
+          "qty": "约2磅",
+          "code": "LXLX",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "qty": "1大块",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "香醋",
+          "qty": "2汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1茶匙，可省略",
+          "code": "078895128789",
+          "required": false
+        }
+      ],
+      "steps": [
+        "约25分钟，2人份。蓝蟹要鲜活的；已经死了的不要蒸。刷净壳，揭开盖，去掉鳃，腹部的脐也去掉。",
+        "姜切丝。一半垫在盘底，蟹肚朝上码好。蒸锅水开后再上锅，中火蒸15–18分钟。",
+        "壳全红、肉不透明、腿节一掰就离，就是熟了。蟹大就再蒸两三分钟，不要凭感觉提前揭盖。",
+        "剩下的姜丝配香醋做蘸汁，喜欢咸一点加一茶匙生抽，撒一点葱花。趁热吃，放凉了肉会柴。"
+      ],
+      "minutes": 25,
+      "servings": "2人",
+      "hook": "蓝蟹蒸到壳全红，姜醋蘸着吃。",
+      "method": "steam",
+      "decide": "quick",
+      "pairs": [
+        "scallion-sea-cucumber",
+        "gai-lan-oyster-sauce"
+      ]
+    },
+    {
+      "id": "matsutake-silkie-soup",
+      "name_cn": "松茸竹丝鸡汤",
+      "name_en": "Matsutake and Silkie Chicken Soup",
+      "aliases": [
+        "松茸竹丝鸡汤",
+        "松茸汤",
+        "竹丝鸡汤",
+        "Matsutake and Silkie Chicken Soup"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 96,
+      "image": "assets/images/matsutake-silkie-soup.jpg",
+      "image_credit": "品牌字卡，还没有成品照片",
+      "tags": [
+        "松茸",
+        "竹丝鸡",
+        "汤"
+      ],
+      "ingredients": [
+        {
+          "label": "竹丝鸡",
+          "qty": "约600g（1只小的）",
+          "code": "778621732791",
+          "required": true
+        },
+        {
+          "label": "新鲜松茸",
+          "qty": "1盒（340g）",
+          "code": "92294",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "qty": "4片",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "盐",
+          "qty": "约1/2茶匙，最后按口味",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约80分钟，另计解冻，3–4人份。竹丝鸡冷藏解冻后切块，不要用流水冲洗生鸡。松茸用湿布擦净，不要久泡，切厚片；根太硬就削掉。",
+        "鸡块冷水下锅，煮开后撇沫，再煮约2分钟捞出。接触生鸡的盆和板洗干净。",
+        "鸡块、姜片和约1.5升热水下锅，煮开转小火，盖盖炖约40分钟。最厚处避开骨头测到74°C，肉也软了，再下松茸。",
+        "松茸只煮8–10分钟，香气还在就加盐。煮太久香气散掉，汤也会浑。"
+      ],
+      "minutes": 80,
+      "servings": "3–4人",
+      "hook": "竹丝鸡先炖软，松茸最后下，香气才留得住。",
+      "method": "boil",
+      "decide": "weekend",
+      "pairs": [
+        "choy-sum-garlic"
+      ]
+    },
+    {
+      "id": "scallion-sea-cucumber",
+      "name_cn": "葱烧红刺参",
+      "name_en": "Scallion Braised Sea Cucumber",
+      "aliases": [
+        "葱烧红刺参",
+        "葱烧海参",
+        "冰海参",
+        "Scallion Braised Sea Cucumber"
+      ],
+      "section": "seafood",
+      "kind": "dish",
+      "priority": 96,
+      "image": "assets/images/scallion-sea-cucumber.jpg",
+      "image_credit": "品牌字卡，还没有成品照片",
+      "tags": [
+        "海参",
+        "红刺参",
+        "海鲜"
+      ],
+      "ingredients": [
+        {
+          "label": "冰海参（加拿大红刺参）",
+          "qty": "1磅",
+          "code": "0729",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "4根",
+          "code": "HFCXCXC",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约25分钟，另计解冻，2–3人份。冰海参提前冷藏解冻，冲洗干净。这是冻过的刺参，不要大火久煮，一煮散就没有口感。",
+        "小葱切段，葱白和葱绿分开。锅里少放油，小火把葱白和姜片炒香。",
+        "下海参、生抽和两汤匙水，小火加热3–4分钟，到海参热透、捏上去还有弹性。",
+        "撒葱绿，马上出锅。汁留一点，拌饭刚好。"
+      ],
+      "minutes": 25,
+      "servings": "2–3人",
+      "hook": "冻刺参不要久煮，葱油里加热到还有弹性。",
+      "method": "pan",
+      "decide": "weekend",
+      "pairs": [
+        "steamed-blue-crab"
+      ]
+    },
+    {
+      "id": "snow-beef-pepper",
+      "name_cn": "雪花肥牛卷炒青椒",
+      "name_en": "Snow Beef Rolls with Tiger Peppers",
+      "aliases": [
+        "雪花肥牛卷炒青椒",
+        "肥牛卷青椒",
+        "雪花牛五花卷",
+        "Snow Beef Rolls with Tiger Peppers"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 96,
+      "image": "assets/images/snow-beef-pepper.jpg",
+      "image_credit": "品牌字卡，还没有成品照片",
+      "tags": [
+        "肥牛卷",
+        "青椒",
+        "快炒"
+      ],
+      "ingredients": [
+        {
+          "label": "雪花牛五花卷",
+          "qty": "半袋，约1磅",
+          "code": "6292644004467",
+          "required": true
+        },
+        {
+          "label": "虎皮青椒",
+          "qty": "3个，约200g",
+          "code": "Lsj",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约15分钟，2–3人份。肥牛卷半冻时一片片揭开。全化了再撕容易烂。虎皮青椒去籽切块，蒜切片。",
+        "锅烧热，加油，中大火下牛肉，散开快炒到没有粉红色，先盛出来。薄片很快熟，多炒就老。",
+        "原锅下青椒和蒜，炒到断生、还脆，大约2分钟。",
+        "牛肉回锅，加生抽翻匀即可。一袋是2磅，这一碟用半袋，剩下的留着涮火锅。"
+      ],
+      "minutes": 15,
+      "servings": "2–3人",
+      "hook": "肥牛卷半冻时揭开，青椒留一点脆。",
+      "method": "pan",
+      "decide": "quick",
+      "pairs": [
+        "hotpot"
+      ]
+    },
+    {
+      "id": "garlic-crayfish",
+      "name_cn": "蒜蓉小龙虾尾",
+      "name_en": "Garlic Crayfish Tails",
+      "aliases": [
+        "蒜蓉小龙虾尾",
+        "龙虾尾",
+        "Garlic Crayfish Tails"
+      ],
+      "section": "seafood",
+      "kind": "dish",
+      "priority": 96,
+      "image": "assets/images/garlic-crayfish.jpg",
+      "image_credit": "品牌字卡，还没有成品照片",
+      "tags": [
+        "龙虾",
+        "蒜蓉",
+        "海鲜"
+      ],
+      "ingredients": [
+        {
+          "label": "小龙虾尾",
+          "qty": "1袋（680g）",
+          "code": "841624002847",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "6瓣",
+          "code": "0178",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约20分钟，另计解冻，2–3人份。龙虾尾冷藏解冻后冲洗。蒜切末，一半用油小火炒到浅金色，关火拌进另一半生蒜末。",
+        "下龙虾尾和姜片，中火翻炒4–6分钟，加生抽和两汤匙水。",
+        "虾肉完全不透明、最厚处没有透明的心，再出锅。炒过头肉会缩、会柴。",
+        "撒葱花。蒜分两次下，留一半生的，味道才冲。"
+      ],
+      "minutes": 20,
+      "servings": "2–3人",
+      "hook": "虾尾用蒜分两次下，炒到中间没有透明的心。",
+      "method": "pan",
+      "decide": "quick",
+      "pairs": [
+        "steamed-blue-crab"
+      ]
+    },
+    {
+      "id": "arctic-surf-clam",
+      "name_cn": "北极贝",
+      "name_en": "Arctic Surf Clams",
+      "aliases": [
+        "北极贝",
+        "Arctic Surf Clams"
+      ],
+      "section": "seafood",
+      "kind": "dish",
+      "priority": 96,
+      "image": "assets/images/arctic-surf-clam.jpg",
+      "image_credit": "品牌字卡，还没有成品照片",
+      "tags": [
+        "北极贝",
+        "海鲜",
+        "凉菜"
+      ],
+      "ingredients": [
+        {
+          "label": "北极贝",
+          "qty": "半袋，约500g",
+          "code": "BJB",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false
+        }
+      ],
+      "steps": [
+        "约15分钟，另计解冻，2–3人份。整袋是1公斤，这一碟用半袋。放冰箱冷藏化开，不要泡热水，也不要化了再冻。",
+        "冲洗后斜刀切薄片。当天吃完。",
+        "生抽做蘸汁，有芥末就加一点，葱切细撒上。",
+        "不想生吃：水烧开，贝片焯20–30秒就捞。再久就老了。"
+      ],
+      "minutes": 15,
+      "servings": "2–3人",
+      "hook": "北极贝冷藏化开再切片，当天吃完。",
+      "method": "room",
+      "decide": "quick",
+      "pairs": [
+        "matsutake-silkie-soup"
+      ]
     }
   ]
 }
