@@ -123,6 +123,8 @@
       "pairs": [
         "huaxia-hua",
         "moyuwan",
+        "shijinyuwan",
+        "arctic-surf-clam",
         "veg-enoki-cold"
       ]
     },
@@ -259,7 +261,8 @@
         "锅中下油，中火爆香姜片，下牛腩翻炒2分钟。",
         "加生抽、老抽翻炒至肉块均匀上色。",
         "倒入热水至没过牛腩，加入八角，大火烧开后转小火加盖焖煮1.5-2小时至软烂。",
-        "转大火收汁至浓稠，撒上葱花出锅。"
+        "转大火收汁至浓稠，撒上葱花出锅。",
+        "炖好一大锅，分三份：今天红烧、明天加番茄、后天煮河粉，一次买大份牛腩吃三顿。"
       ],
       "ingredients": [
         {
@@ -268,8 +271,9 @@
           "code": "0050",
           "required": true,
           "alt": [
-            "安格斯牛腩",
-            "坑腩"
+            "牛坑腩",
+            "坑腩",
+            "安格斯牛肋条"
           ]
         },
         {
@@ -314,7 +318,7 @@
         {
           "label": "八角",
           "qty": "2颗",
-          "code": null,
+          "code": "6954769010128",
           "required": false
         },
         {
@@ -335,7 +339,8 @@
       "servings": "4人",
       "hook": "牛腩要炖到筷子插得进，周末提前上锅。",
       "pairs": [
-        "cant-haoyou-shengcai"
+        "tomato-beef-brisket",
+        "potato-beef-stew"
       ]
     },
     {
@@ -416,7 +421,7 @@
         {
           "label": "八角",
           "qty": "2颗",
-          "code": null,
+          "code": "6954769010128",
           "required": false
         },
         {
@@ -656,13 +661,13 @@
         {
           "label": "孜然粉",
           "qty": "1.5茶匙",
-          "code": null,
+          "code": "6989210250",
           "required": true
         },
         {
           "label": "孜然粒",
           "qty": "1茶匙",
-          "code": null,
+          "code": "698921023972",
           "required": false
         },
         {
@@ -759,8 +764,9 @@
           "code": "0050",
           "required": true,
           "alt": [
-            "安格斯牛腩",
-            "坑腩"
+            "牛坑腩",
+            "坑腩",
+            "安格斯牛肋条"
           ]
         },
         {
@@ -812,7 +818,8 @@
       "servings": "4人",
       "hook": "番茄把牛腩炖软，汤拌饭就够。",
       "pairs": [
-        "gai-lan-oyster-sauce"
+        "braised-beef-brisket",
+        "beef-brisket-noodle-soup"
       ]
     },
     {
@@ -916,7 +923,11 @@
           "label": "芝麻油",
           "qty": "数滴",
           "code": "742812710905",
-          "required": false
+          "required": false,
+          "alt": [
+            "香油",
+            "小磨香油"
+          ]
         },
         {
           "label": "淀粉（腌肉用）",
@@ -1059,7 +1070,11 @@
           "label": "芝麻油",
           "qty": "几滴",
           "code": "742812710905",
-          "required": false
+          "required": false,
+          "alt": [
+            "香油",
+            "小磨香油"
+          ]
         },
         {
           "label": "食用油",
@@ -1166,7 +1181,7 @@
         {
           "label": "冰糖/白糖",
           "qty": "少许",
-          "code": null,
+          "code": "871392000233",
           "required": false
         },
         {
@@ -1237,8 +1252,9 @@
           "code": "0050",
           "required": true,
           "alt": [
-            "安格斯牛腩",
-            "坑腩"
+            "牛坑腩",
+            "坑腩",
+            "安格斯牛肋条"
           ]
         },
         {
@@ -1271,7 +1287,7 @@
         {
           "label": "白胡椒粉",
           "qty": "少许",
-          "code": null,
+          "code": "698921021831",
           "required": false
         }
       ],
@@ -1280,7 +1296,8 @@
       "servings": "3人",
       "hook": "牛腩汤先炖软，河粉下锅两分钟。",
       "pairs": [
-        "veg-tonghao-garlic"
+        "braised-beef-brisket",
+        "tomato-beef-brisket"
       ]
     },
     {
@@ -1503,7 +1520,11 @@
       "servings": "2人",
       "hook": "冷冻直接蒸，配粥或炒菜都行。",
       "method": "steam",
-      "family": "bun"
+      "family": "bun",
+      "pairs": [
+        "nai-huang-bao-ready",
+        "pumpkin-millet-congee"
+      ]
     },
     {
       "id": "hei-jin-liusha-bao-ready",
@@ -1545,7 +1566,11 @@
       "servings": "2人",
       "hook": "蒸好焖一分钟再开盖，流沙才烫不到。",
       "method": "steam",
-      "family": "bun"
+      "family": "bun",
+      "pairs": [
+        "nai-huang-bao-ready",
+        "cha-shao-bao-ready"
+      ]
     },
     {
       "id": "cha-shao-bao-ready",
@@ -1590,7 +1615,11 @@
       "servings": "2人",
       "hook": "蒸到顶部微微开裂是熟了，不是蒸坏。",
       "method": "steam",
-      "family": "bun"
+      "family": "bun",
+      "pairs": [
+        "xian-rou-dabao-ready",
+        "nai-huang-bao-ready"
+      ]
     },
     {
       "id": "xian-rou-dabao-ready",
@@ -1631,7 +1660,11 @@
       "servings": "2–3人",
       "hook": "一只就顶一顿，蒸好焖两分钟再揭盖。",
       "method": "steam",
-      "family": "bun"
+      "family": "bun",
+      "pairs": [
+        "cha-shao-bao-ready",
+        "shouzhuabing-ready"
+      ]
     },
     {
       "id": "mapo-tofu",
@@ -1678,7 +1711,11 @@
           "label": "猪肉末",
           "qty": "100g",
           "code": "627735189635",
-          "required": true
+          "required": true,
+          "alt": [
+            "肉碎",
+            "绞肉"
+          ]
         },
         {
           "label": "郫县豆瓣酱",
@@ -1729,7 +1766,11 @@
           "label": "芝麻油",
           "qty": "数滴",
           "code": "742812710905",
-          "required": false
+          "required": false,
+          "alt": [
+            "香油",
+            "小磨香油"
+          ]
         },
         {
           "label": "料酒",
@@ -1844,7 +1885,7 @@
         {
           "label": "糖",
           "qty": "1茶匙",
-          "code": null,
+          "code": "063111103541",
           "required": false
         }
       ],
@@ -1891,16 +1932,19 @@
           "label": "猪肉末",
           "qty": "200g",
           "code": "627735189635",
-          "required": true
+          "required": true,
+          "alt": [
+            "肉碎",
+            "绞肉"
+          ]
         },
         {
           "label": "青椒",
           "qty": "3个（约200g）",
-          "code": null,
+          "code": "Lsj",
           "required": true,
           "alt": [
-            "灯笼椒",
-            "柿子椒",
+            "螺丝椒",
             "菜椒"
           ]
         },
@@ -1966,7 +2010,7 @@
     },
     {
       "id": "blanched-choy-sum",
-      "name_cn": "白灼菜心",
+      "name_cn": "白灼菜心（姜葱豉油）",
       "name_en": "Blanched Choy Sum with Soy Sauce",
       "aliases": [
         "白灼菜心",
@@ -2053,7 +2097,7 @@
         {
           "label": "糖",
           "qty": "1/2茶匙",
-          "code": null,
+          "code": "063111103541",
           "required": false
         }
       ],
@@ -2062,8 +2106,8 @@
       "servings": "2人",
       "hook": "菜心烫到碧绿就捞，热油一淋就上桌。",
       "pairs": [
-        "white-cut-chicken",
-        "red-braised-pork"
+        "choy-sum-garlic",
+        "white-cut-chicken"
       ]
     },
     {
@@ -2077,7 +2121,7 @@
         "egg drop soup",
         "紫菜鸡蛋汤"
       ],
-      "section": "other",
+      "section": "soup",
       "kind": "dish",
       "priority": 10,
       "image": "assets/images/seaweed-egg-soup-ai-202609.jpg",
@@ -2139,7 +2183,11 @@
           "label": "芝麻油",
           "qty": "数滴",
           "code": "742812710905",
-          "required": false
+          "required": false,
+          "alt": [
+            "香油",
+            "小磨香油"
+          ]
         },
         {
           "label": "盐",
@@ -2283,7 +2331,11 @@
       "servings": "2人",
       "hook": "常温就能吃，微波二十秒更松软。",
       "method": "microwave",
-      "family": "bun"
+      "family": "bun",
+      "pairs": [
+        "nai-huang-bao-ready",
+        "huajuan-ready"
+      ]
     },
     {
       "id": "veg-celtuce-garlic",
@@ -2524,13 +2576,13 @@
         {
           "label": "醋",
           "qty": "2勺",
-          "code": null,
+          "code": "070641000066",
           "required": false
         },
         {
           "label": "糖",
           "qty": "1勺",
-          "code": null,
+          "code": "063111103541",
           "required": false
         }
       ],
@@ -2552,7 +2604,7 @@
         "蒜苔炒五花",
         "suantai"
       ],
-      "section": "veg",
+      "section": "other",
       "kind": "dish",
       "priority": 80,
       "image": "assets/images/veg-garlic-scape-pork.jpg",
@@ -2673,6 +2725,7 @@
       "servings": "3人",
       "hook": "白菜和豆腐一锅炖，汤留着拌饭。",
       "pairs": [
+        "napa-vermicelli-pot",
         "napa-pork-vermicelli"
       ]
     },
@@ -2802,7 +2855,7 @@
         "娃娃菜",
         "wawacai"
       ],
-      "section": "veg",
+      "section": "soup",
       "kind": "dish",
       "priority": 74,
       "image": "assets/images/veg-wawacai-soup.jpg",
@@ -2937,7 +2990,7 @@
         "冬瓜汤",
         "wintermelon"
       ],
-      "section": "veg",
+      "section": "soup",
       "kind": "dish",
       "priority": 76,
       "image": "assets/images/veg-wintermelon-pork-soup.jpg",
@@ -3433,15 +3486,14 @@
           "code": "Lsj",
           "required": true,
           "alt": [
-            "灯笼椒",
-            "柿子椒",
+            "螺丝椒",
             "菜椒"
           ]
         },
         {
           "label": "洋葱",
           "qty": "半个",
-          "code": null,
+          "code": "1087ycyc",
           "required": false,
           "alt": [
             "圆葱",
@@ -3766,8 +3818,7 @@
           "code": "Lsj",
           "required": false,
           "alt": [
-            "灯笼椒",
-            "柿子椒",
+            "螺丝椒",
             "菜椒"
           ]
         },
@@ -3973,7 +4024,7 @@
         {
           "label": "辣椒油",
           "qty": "少许（可选）",
-          "code": null,
+          "code": "213466668855",
           "required": false
         }
       ],
@@ -4105,7 +4156,7 @@
         {
           "label": "胡萝卜",
           "qty": "半根",
-          "code": null,
+          "code": "1033hlb",
           "required": false,
           "alt": [
             "白萝卜",
@@ -4132,13 +4183,16 @@
         {
           "label": "香醋",
           "qty": "1汤匙",
-          "code": null,
-          "required": false
+          "code": "6901055000011",
+          "required": false,
+          "alt": [
+            "镇江香醋"
+          ]
         },
         {
           "label": "香油",
           "qty": "少许",
-          "code": null,
+          "code": "742812710905",
           "required": false
         }
       ],
@@ -4152,14 +4206,15 @@
     },
     {
       "id": "jidanzheng",
-      "name_cn": "鸡蛋羹",
+      "name_cn": "鸡蛋羹（素蒸蛋）",
       "name_en": "Steamed Egg Custard",
       "aliases": [
+        "鸡蛋羹",
         "蒸蛋",
         "ji dan zheng",
         "steamed egg"
       ],
-      "section": "veg",
+      "section": "other",
       "kind": "dish",
       "priority": 70,
       "image": "assets/images/jidanzheng-ai-202609.jpg",
@@ -4208,7 +4263,7 @@
         {
           "label": "香油",
           "qty": "少许",
-          "code": null,
+          "code": "742812710905",
           "required": false
         }
       ],
@@ -4217,6 +4272,7 @@
       "servings": "2人",
       "hook": "蛋液过筛，小火蒸到表面平、没有流动蛋液。",
       "pairs": [
+        "minced-pork-steamed-egg",
         "pumpkin-millet-congee"
       ]
     },
@@ -4229,7 +4285,7 @@
         "fu zhu chao rou",
         "bean curd sticks pork"
       ],
-      "section": "veg",
+      "section": "other",
       "kind": "dish",
       "priority": 68,
       "image": "assets/images/fuzhu-charou.jpg",
@@ -4436,7 +4492,11 @@
       "servings": "3人",
       "hook": "鲅鱼馅配姜醋，煮熟就捞，不要久煮。",
       "method": "boil",
-      "family": "dumpling"
+      "family": "dumpling",
+      "pairs": [
+        "guantang-xiaoshuijiao",
+        "yangroujiiao"
+      ]
     },
     {
       "id": "yangroujiiao",
@@ -4475,7 +4535,11 @@
       "servings": "3人",
       "hook": "羊肉饺蘸蒜醋，水开下锅，浮起再煮一分钟。",
       "method": "boil",
-      "family": "dumpling"
+      "family": "dumpling",
+      "pairs": [
+        "zhurou-jiucaijiao",
+        "guantang-xiaoshuijiao"
+      ]
     },
     {
       "id": "zhurou-jiucaijiao",
@@ -4861,7 +4925,7 @@
       "servings": "3人",
       "hook": "排骨腌一刻钟，蒸到熟，葱花收尾。",
       "pairs": [
-        "cant-haoyou-jielan"
+        "gai-lan-oyster-sauce"
       ]
     },
     {
@@ -4945,6 +5009,7 @@
       "servings": "2人",
       "hook": "扇贝上铺粉丝和蒜蓉，蒸六到八分钟。",
       "pairs": [
+        "garlic-vermicelli-shrimp",
         "choy-sum-garlic"
       ]
     },
@@ -5010,69 +5075,6 @@
       "pairs": [
         "cant-mizhi-chashao",
         "white-cut-chicken"
-      ]
-    },
-    {
-      "id": "cant-haoyou-jielan",
-      "name_cn": "蚝油芥兰",
-      "name_en": "Gai Lan in Oyster Sauce",
-      "aliases": [
-        "蚝油芥兰",
-        "白灼芥兰",
-        "芥兰",
-        "gai lan"
-      ],
-      "section": "cantonese",
-      "kind": "dish",
-      "priority": 87,
-      "image": "assets/images/cant-haoyou-jielan.jpg",
-      "image_credit": "self",
-      "tags": [
-        "粤菜",
-        "清爽",
-        "素菜"
-      ],
-      "steps": [
-        "芥兰去老叶,焯水至翠绿,摆盘。",
-        "蒜末爆香加蚝油勾薄芡。",
-        "淋在芥兰上,保持脆嫩。"
-      ],
-      "ingredients": [
-        {
-          "label": "芥兰",
-          "qty": "1把",
-          "code": "1006jljl",
-          "required": true,
-          "alt": [
-            "芥蓝",
-            "盖兰菜"
-          ]
-        },
-        {
-          "label": "蚝油",
-          "qty": "1勺",
-          "code": "6922824007468",
-          "required": true
-        },
-        {
-          "label": "蒜",
-          "qty": "2瓣",
-          "code": "0178",
-          "required": false,
-          "alt": [
-            "大蒜",
-            "蒜头",
-            "蒜瓣"
-          ]
-        }
-      ],
-      "nutrition": "高钙高纤·清爽",
-      "minutes": 12,
-      "servings": "2人",
-      "hook": "芥兰焯到翠绿就捞，蚝油只要提鲜。",
-      "pairs": [
-        "cant-douchi-paigu",
-        "gai-lan-oyster-sauce"
       ]
     },
     {
@@ -5210,7 +5212,7 @@
       "servings": "2人",
       "hook": "牛肉滑熟再回蛋液，嫩，配米饭。",
       "pairs": [
-        "cant-haoyou-jielan"
+        "gai-lan-oyster-sauce"
       ]
     },
     {
@@ -5429,7 +5431,7 @@
         "crab",
         "pangxie"
       ],
-      "section": "season",
+      "section": "seafood",
       "kind": "dish",
       "priority": 97,
       "image": "assets/images/steamed-crab.jpg",
@@ -5453,12 +5455,7 @@
           "label": "红蟹",
           "qty": "2 只（约 2lb）",
           "code": "HXHXHX",
-          "required": true,
-          "alt": [
-            "螃蟹",
-            "青蟹",
-            "膏蟹"
-          ]
+          "required": true
         },
         {
           "label": "生姜",
@@ -5466,7 +5463,6 @@
           "code": "1037",
           "required": true,
           "alt": [
-            "姜",
             "老姜"
           ]
         },
@@ -5476,20 +5472,16 @@
           "code": "10636jcjcjc",
           "required": true,
           "alt": [
-            "葱",
-            "小葱",
-            "大葱"
+            "大葱",
+            "香葱",
+            "青葱"
           ]
         },
         {
           "label": "鮮味生抽",
           "qty": "2 汤匙",
           "code": "078895128789",
-          "required": true,
-          "alt": [
-            "生抽",
-            "酱油"
-          ]
+          "required": true
         },
         {
           "label": "料酒",
@@ -5503,18 +5495,17 @@
           "code": "742812710905",
           "required": false,
           "alt": [
-            "芝麻油",
-            "麻油"
+            "香油",
+            "小磨香油"
           ]
         },
         {
           "label": "香醋",
           "qty": "2 汤匙",
-          "code": null,
+          "code": "6901055000011",
           "required": false,
           "alt": [
-            "镇江醋",
-            "米醋"
+            "镇江香醋"
           ]
         }
       ],
@@ -5538,7 +5529,7 @@
         "lotus root soup",
         "outang"
       ],
-      "section": "season",
+      "section": "soup",
       "kind": "dish",
       "priority": 96,
       "image": "assets/images/lotus-pork-bone-soup-ai-202609.jpg",
@@ -5562,23 +5553,13 @@
           "label": "猪筒骨",
           "qty": "2lb",
           "code": "0030",
-          "required": true,
-          "alt": [
-            "筒骨",
-            "大骨",
-            "棒骨"
-          ]
+          "required": true
         },
         {
           "label": "莲藕",
           "qty": "2 节（约 1.5lb）",
           "code": "1043lolo",
-          "required": true,
-          "alt": [
-            "藕",
-            "粉藕",
-            "莲藕"
-          ]
+          "required": true
         },
         {
           "label": "生姜",
@@ -5586,18 +5567,14 @@
           "code": "1037",
           "required": true,
           "alt": [
-            "姜"
+            "老姜"
           ]
         },
         {
           "label": "无核红枣",
           "qty": "6 颗",
           "code": "6941837101611",
-          "required": false,
-          "alt": [
-            "红枣",
-            "大枣"
-          ]
+          "required": false
         },
         {
           "label": "枸杞",
@@ -5639,7 +5616,7 @@
         "tangou",
         "glutinous rice lotus root"
       ],
-      "section": "season",
+      "section": "other",
       "kind": "dish",
       "priority": 94,
       "image": "assets/images/osmanthus-lotus-root-ai-202609.jpg",
@@ -5664,50 +5641,31 @@
           "label": "洪湖粉藕",
           "qty": "2 节",
           "code": "Hhlo",
-          "required": true,
-          "alt": [
-            "莲藕",
-            "粉藕",
-            "藕"
-          ]
+          "required": true
         },
         {
           "label": "香糯米",
           "qty": "1 杯",
           "code": "8715500035866",
-          "required": true,
-          "alt": [
-            "糯米",
-            "江米"
-          ]
+          "required": true
         },
         {
           "label": "糖桂花",
           "qty": "3 汤匙",
           "code": "6923585800497",
-          "required": true,
-          "alt": [
-            "桂花酱",
-            "桂花"
-          ]
+          "required": true
         },
         {
           "label": "黄冰糖",
           "qty": "80g",
           "code": "871392000233",
-          "required": true,
-          "alt": [
-            "冰糖"
-          ]
+          "required": true
         },
         {
           "label": "无核红枣",
           "qty": "6 颗",
           "code": "6941837101611",
-          "required": false,
-          "alt": [
-            "红枣"
-          ]
+          "required": false
         }
       ],
       "nutrition": "无油甜品·膳食纤维",
@@ -5758,32 +5716,22 @@
           "code": "0221",
           "required": true,
           "alt": [
-            "五花肉",
-            "带皮猪肉",
-            "三层肉"
+            "三层肉",
+            "腩肉",
+            "猪腩肉"
           ]
         },
         {
           "label": "小芋头",
           "qty": "1.5lb",
           "code": "1041xyt",
-          "required": true,
-          "alt": [
-            "芋头",
-            "芋艿",
-            "荔浦芋"
-          ]
+          "required": true
         },
         {
           "label": "华生原味腐乳",
           "qty": "3 块",
           "code": "800794307619",
-          "required": true,
-          "alt": [
-            "腐乳",
-            "南乳",
-            "豆腐乳"
-          ]
+          "required": true
         },
         {
           "label": "老抽",
@@ -5795,11 +5743,7 @@
           "label": "鮮味生抽",
           "qty": "2 汤匙",
           "code": "078895128789",
-          "required": true,
-          "alt": [
-            "生抽",
-            "酱油"
-          ]
+          "required": true
         },
         {
           "label": "料酒",
@@ -5813,17 +5757,14 @@
           "code": "1037",
           "required": true,
           "alt": [
-            "姜"
+            "老姜"
           ]
         },
         {
           "label": "黄冰糖",
           "qty": "1 小块",
           "code": "871392000233",
-          "required": false,
-          "alt": [
-            "冰糖"
-          ]
+          "required": false
         }
       ],
       "nutrition": "团圆硬菜·蒸制少油",
@@ -5871,42 +5812,25 @@
           "label": "贝贝南瓜 PK",
           "qty": "2 个",
           "code": "10455bbng",
-          "required": true,
-          "alt": [
-            "贝贝南瓜",
-            "南瓜",
-            "小南瓜"
-          ]
+          "required": true
         },
         {
           "label": "山藥",
           "qty": "1 根",
           "code": "6976936600277",
-          "required": true,
-          "alt": [
-            "山药",
-            "淮山",
-            "铁棍山药"
-          ]
+          "required": true
         },
         {
           "label": "糖桂花",
           "qty": "2 汤匙",
           "code": "6923585800497",
-          "required": true,
-          "alt": [
-            "桂花酱",
-            "桂花"
-          ]
+          "required": true
         },
         {
           "label": "黄冰糖",
           "qty": "适量",
           "code": "871392000233",
-          "required": false,
-          "alt": [
-            "冰糖"
-          ]
+          "required": false
         }
       ],
       "nutrition": "无油低卡·养胃粗粮",
@@ -5938,7 +5862,12 @@
           "label": "土豆",
           "qty": "2个，约400g",
           "code": "10701",
-          "required": true
+          "required": true,
+          "alt": [
+            "马铃薯",
+            "洋芋",
+            "薯仔"
+          ]
         },
         {
           "label": "干辣椒",
@@ -5950,18 +5879,28 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "米醋",
           "qty": "1汤匙",
-          "code": null,
+          "code": "070641000066",
           "required": false
         },
         {
@@ -6013,13 +5952,23 @@
           "label": "传统豆腐",
           "qty": "1块，约400g",
           "code": "777433001200",
-          "required": true
+          "required": true,
+          "alt": [
+            "水豆腐",
+            "嫩豆腐",
+            "老豆腐"
+          ]
         },
         {
           "label": "小葱",
           "qty": "4根",
           "code": "HFCXCXC",
-          "required": true
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -6030,7 +5979,7 @@
         {
           "label": "糖",
           "qty": "1/4茶匙",
-          "code": null,
+          "code": "063111103541",
           "required": false
         },
         {
@@ -6067,7 +6016,7 @@
         "番茄豆腐汤",
         "Tomato and Tofu Soup"
       ],
-      "section": "other",
+      "section": "soup",
       "kind": "dish",
       "priority": 95,
       "image": "assets/images/tomato-tofu-soup-ai-202609.jpg",
@@ -6081,19 +6030,33 @@
           "label": "番茄",
           "qty": "2个，约350g",
           "code": "1032xhs",
-          "required": true
+          "required": true,
+          "alt": [
+            "西红柿",
+            "洋柿子"
+          ]
         },
         {
           "label": "传统豆腐",
           "qty": "300g",
           "code": "777433001200",
-          "required": true
+          "required": true,
+          "alt": [
+            "水豆腐",
+            "嫩豆腐",
+            "老豆腐"
+          ]
         },
         {
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "食用油",
@@ -6129,7 +6092,7 @@
     },
     {
       "id": "napa-vermicelli-pot",
-      "name_cn": "白菜粉丝煲",
+      "name_cn": "白菜粉丝煲（素）",
       "name_en": "Napa Cabbage and Vermicelli Pot",
       "aliases": [
         "白菜粉丝煲",
@@ -6149,19 +6112,32 @@
           "label": "大白菜",
           "qty": "约500g",
           "code": "Sc1003dbc",
-          "required": true
+          "required": true,
+          "alt": [
+            "黄芽白",
+            "绍菜"
+          ]
         },
         {
           "label": "龙口粉丝",
           "qty": "50g干重",
           "code": "6928527900105",
-          "required": true
+          "required": true,
+          "alt": [
+            "冬粉",
+            "细粉"
+          ]
         },
         {
           "label": "蒜",
           "qty": "3瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -6192,7 +6168,8 @@
       "servings": "2–3人",
       "hook": "白菜帮先炒，粉丝后下，留一点汤。",
       "pairs": [
-        "suancai-yu"
+        "napa-pork-vermicelli",
+        "veg-napa-tofu"
       ]
     },
     {
@@ -6217,25 +6194,42 @@
           "label": "猪肉碎",
           "qty": "300g",
           "code": "627735189635",
-          "required": true
+          "required": true,
+          "alt": [
+            "肉末",
+            "绞肉"
+          ]
         },
         {
           "label": "干香菇",
           "qty": "4朵",
           "code": "871392001636",
-          "required": true
+          "required": true,
+          "alt": [
+            "冬菇",
+            "花菇",
+            "香蕈"
+          ]
         },
         {
           "label": "生姜",
           "qty": "2片，切末",
           "code": "1037",
-          "required": false
+          "required": false,
+          "alt": [
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -6291,7 +6285,12 @@
           "label": "排骨",
           "qty": "400g，小块",
           "code": "420011",
-          "required": true
+          "required": true,
+          "alt": [
+            "肋排",
+            "子排",
+            "猪小排"
+          ]
         },
         {
           "label": "贝贝南瓜",
@@ -6303,7 +6302,12 @@
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -6359,25 +6363,44 @@
           "label": "大虾",
           "qty": "10–12只，约400g",
           "code": "209145dxdx827510004140",
-          "required": true
+          "required": true,
+          "alt": [
+            "基围虾",
+            "明虾",
+            "海虾"
+          ]
         },
         {
           "label": "龙口粉丝",
           "qty": "50g干重",
           "code": "6928527900105",
-          "required": true
+          "required": true,
+          "alt": [
+            "冬粉",
+            "细粉"
+          ]
         },
         {
           "label": "蒜",
           "qty": "6瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -6408,6 +6431,7 @@
       "servings": "2–3人",
       "hook": "虾铺在粉丝上，蒸到虾肉不透明。",
       "pairs": [
+        "cant-suanrong-fensi-shanbei",
         "veg-broccoli-oyster"
       ]
     },
@@ -6433,25 +6457,43 @@
           "label": "大虾",
           "qty": "约400g，剥壳去虾线",
           "code": "209145dxdx827510004140",
-          "required": true
+          "required": true,
+          "alt": [
+            "基围虾",
+            "明虾",
+            "海虾"
+          ]
         },
         {
           "label": "传统豆腐",
           "qty": "300g",
           "code": "777433001200",
-          "required": true
+          "required": true,
+          "alt": [
+            "水豆腐",
+            "嫩豆腐",
+            "老豆腐"
+          ]
         },
         {
           "label": "生姜",
           "qty": "3片",
           "code": "1037",
-          "required": false
+          "required": false,
+          "alt": [
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -6513,19 +6555,32 @@
           "label": "猪肉碎",
           "qty": "250g",
           "code": "627735189635",
-          "required": true
+          "required": true,
+          "alt": [
+            "肉末",
+            "绞肉"
+          ]
         },
         {
           "label": "鸡蛋",
           "qty": "1个",
           "code": "2008",
-          "required": false
+          "required": false,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
         },
         {
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -6574,7 +6629,8 @@
       "image_credit": "AI-generated illustration; OpenAI imagegen, 2026-09-29",
       "tags": [
         "黄瓜",
-        "腐竹"
+        "腐竹",
+        "凉菜"
       ],
       "ingredients": [
         {
@@ -6587,13 +6643,22 @@
           "label": "腐竹",
           "qty": "80g干重",
           "code": "6976411130176",
-          "required": true
+          "required": true,
+          "alt": [
+            "支竹",
+            "豆筋"
+          ]
         },
         {
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -6604,14 +6669,18 @@
         {
           "label": "米醋",
           "qty": "2茶匙",
-          "code": null,
+          "code": "070641000066",
           "required": false
         },
         {
           "label": "芝麻油",
           "qty": "1茶匙",
           "code": "742812710905",
-          "required": false
+          "required": false,
+          "alt": [
+            "香油",
+            "小磨香油"
+          ]
         }
       ],
       "steps": [
@@ -6629,7 +6698,7 @@
     },
     {
       "id": "napa-pork-vermicelli",
-      "name_cn": "白菜猪肉炖粉丝",
+      "name_cn": "白菜五花肉炖粉丝",
       "name_en": "Pork and Napa Cabbage Vermicelli Stew",
       "aliases": [
         "白菜猪肉炖粉丝",
@@ -6650,25 +6719,41 @@
           "label": "大白菜",
           "qty": "500g",
           "code": "Sc1003dbc",
-          "required": true
+          "required": true,
+          "alt": [
+            "黄芽白",
+            "绍菜"
+          ]
         },
         {
           "label": "五花肉",
           "qty": "250g",
           "code": "0221",
-          "required": true
+          "required": true,
+          "alt": [
+            "三层肉",
+            "腩肉",
+            "猪腩肉"
+          ]
         },
         {
           "label": "龙口粉丝",
           "qty": "60g干重",
           "code": "6928527900105",
-          "required": true
+          "required": true,
+          "alt": [
+            "冬粉",
+            "细粉"
+          ]
         },
         {
           "label": "生姜",
           "qty": "3片",
           "code": "1037",
-          "required": false
+          "required": false,
+          "alt": [
+            "老姜"
+          ]
         },
         {
           "label": "生抽",
@@ -6694,7 +6779,7 @@
       "hook": "一锅白菜、五花肉和粉丝，三个人够吃，汤也够拌饭。",
       "decide": "family",
       "pairs": [
-        "gai-lan-oyster-sauce",
+        "napa-vermicelli-pot",
         "veg-napa-tofu"
       ]
     },
@@ -6720,19 +6805,32 @@
           "label": "牛腩",
           "qty": "500g",
           "code": "9735",
-          "required": true
+          "required": true,
+          "alt": [
+            "牛肋条",
+            "安格斯牛腩",
+            "坑腩"
+          ]
         },
         {
           "label": "土豆",
           "qty": "2个，约400g",
           "code": "10701",
-          "required": true
+          "required": true,
+          "alt": [
+            "马铃薯",
+            "洋芋",
+            "薯仔"
+          ]
         },
         {
           "label": "生姜",
           "qty": "4片",
           "code": "1037",
-          "required": false
+          "required": false,
+          "alt": [
+            "老姜"
+          ]
         },
         {
           "label": "生抽",
@@ -6743,7 +6841,7 @@
         {
           "label": "糖",
           "qty": "1/2茶匙",
-          "code": null,
+          "code": "063111103541",
           "required": false
         },
         {
@@ -6769,7 +6867,8 @@
       "servings": "3–4人",
       "hook": "牛腩先炖软再下土豆，土豆才不会煮散。",
       "pairs": [
-        "veg-tonghao-garlic"
+        "braised-beef-brisket",
+        "radish-beef-brisket"
       ]
     },
     {
@@ -6780,7 +6879,7 @@
         "冬瓜虾仁汤",
         "Winter Melon and Shrimp Soup"
       ],
-      "section": "other",
+      "section": "soup",
       "kind": "dish",
       "priority": 95,
       "image": "assets/images/wintermelon-shrimp-soup-ai-202609.jpg",
@@ -6794,25 +6893,41 @@
           "label": "冬瓜",
           "qty": "400g",
           "code": "1036dgdg",
-          "required": true
+          "required": true,
+          "alt": [
+            "白瓜"
+          ]
         },
         {
           "label": "大虾",
           "qty": "约300g，剥壳去虾线",
           "code": "209145dxdx827510004140",
-          "required": true
+          "required": true,
+          "alt": [
+            "基围虾",
+            "明虾",
+            "海虾"
+          ]
         },
         {
           "label": "生姜",
           "qty": "3片",
           "code": "1037",
-          "required": false
+          "required": false,
+          "alt": [
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "盐",
@@ -6914,7 +7029,11 @@
           "label": "鸡蛋",
           "qty": "2个",
           "code": "2008",
-          "required": true
+          "required": true,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
         },
         {
           "label": "面粉",
@@ -6926,7 +7045,12 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
-          "required": true
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "水",
@@ -6969,7 +7093,7 @@
         "香菇鸡汤",
         "Chicken and Shiitake Soup"
       ],
-      "section": "season",
+      "section": "soup",
       "kind": "dish",
       "priority": 95,
       "image": "assets/images/shiitake-chicken-soup-ai-202609.jpg",
@@ -6983,19 +7107,31 @@
           "label": "三黄鸡",
           "qty": "半只，约600g，切块",
           "code": "4889shj",
-          "required": true
+          "required": true,
+          "alt": [
+            "光鸡",
+            "土鸡"
+          ]
         },
         {
           "label": "干香菇",
           "qty": "6朵",
           "code": "871392001636",
-          "required": true
+          "required": true,
+          "alt": [
+            "冬菇",
+            "花菇",
+            "香蕈"
+          ]
         },
         {
           "label": "生姜",
           "qty": "4片",
           "code": "1037",
-          "required": false
+          "required": false,
+          "alt": [
+            "老姜"
+          ]
         },
         {
           "label": "盐",
@@ -7045,19 +7181,32 @@
           "label": "鸡蛋",
           "qty": "3个",
           "code": "2008",
-          "required": true
+          "required": true,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
         },
         {
           "label": "猪肉碎",
           "qty": "100g",
           "code": "627735189635",
-          "required": true
+          "required": true,
+          "alt": [
+            "肉末",
+            "绞肉"
+          ]
         },
         {
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -7088,7 +7237,7 @@
       "servings": "2–3人",
       "hook": "蛋羹蒸嫩，肉末另炒熟再铺上去。",
       "pairs": [
-        "veg-wawacai-soup",
+        "jidanzheng",
         "seaweed-egg-soup"
       ]
     },
@@ -7114,13 +7263,21 @@
           "label": "龙口粉丝",
           "qty": "80g干重",
           "code": "6928527900105",
-          "required": true
+          "required": true,
+          "alt": [
+            "冬粉",
+            "细粉"
+          ]
         },
         {
           "label": "猪肉碎",
           "qty": "150g",
           "code": "627735189635",
-          "required": true
+          "required": true,
+          "alt": [
+            "肉末",
+            "绞肉"
+          ]
         },
         {
           "label": "豆瓣酱",
@@ -7132,13 +7289,21 @@
           "label": "生姜",
           "qty": "2片，切末",
           "code": "1037",
-          "required": false
+          "required": false,
+          "alt": [
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -7194,25 +7359,44 @@
           "label": "茄子",
           "qty": "约300g",
           "code": "1017qgqg",
-          "required": true
+          "required": true,
+          "alt": [
+            "矮瓜",
+            "吊菜子"
+          ]
         },
         {
           "label": "传统豆腐",
           "qty": "300g",
           "code": "777433001200",
-          "required": true
+          "required": true,
+          "alt": [
+            "水豆腐",
+            "嫩豆腐",
+            "老豆腐"
+          ]
         },
         {
           "label": "蒜",
           "qty": "3瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -7223,7 +7407,7 @@
         {
           "label": "糖",
           "qty": "1/4茶匙",
-          "code": null,
+          "code": "063111103541",
           "required": false
         },
         {
@@ -7281,19 +7465,31 @@
           "label": "五花肉",
           "qty": "350g",
           "code": "0221",
-          "required": true
+          "required": true,
+          "alt": [
+            "三层肉",
+            "腩肉",
+            "猪腩肉"
+          ]
         },
         {
           "label": "龙口粉丝",
           "qty": "50g干重",
           "code": "6928527900105",
-          "required": true
+          "required": true,
+          "alt": [
+            "冬粉",
+            "细粉"
+          ]
         },
         {
           "label": "生姜",
           "qty": "4片",
           "code": "1037",
-          "required": false
+          "required": false,
+          "alt": [
+            "老姜"
+          ]
         },
         {
           "label": "水",
@@ -7323,7 +7519,7 @@
         "粉葛猪骨汤",
         "Pueraria Root and Pork Bone Soup"
       ],
-      "section": "season",
+      "section": "soup",
       "kind": "dish",
       "priority": 95,
       "image": "assets/images/pueraria-pork-soup-ai-202609.jpg",
@@ -7350,7 +7546,10 @@
           "label": "生姜",
           "qty": "4片",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "老姜"
+          ]
         },
         {
           "label": "无核红枣",
@@ -7393,7 +7592,7 @@
         "蚝油芥兰",
         "Gai Lan with Oyster Sauce"
       ],
-      "section": "veg",
+      "section": "cantonese",
       "kind": "dish",
       "priority": 95,
       "image": "assets/images/gai-lan-oyster-sauce-ai-202609.jpg",
@@ -7408,13 +7607,22 @@
           "label": "芥兰",
           "qty": "400g",
           "code": "1006jljl",
-          "required": true
+          "required": true,
+          "alt": [
+            "芥蓝",
+            "盖兰菜"
+          ]
         },
         {
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "蚝油",
@@ -7477,13 +7685,23 @@
           "label": "菜心",
           "qty": "400g",
           "code": "1018",
-          "required": true
+          "required": true,
+          "alt": [
+            "菜薹",
+            "广东菜心",
+            "心菜"
+          ]
         },
         {
           "label": "蒜",
           "qty": "3瓣",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "食用油",
@@ -7514,8 +7732,8 @@
       "servings": "2–3人",
       "hook": "菜心焯到翠绿就捞，蒜蓉快炒三十秒。",
       "pairs": [
-        "white-cut-chicken",
-        "tomato-egg"
+        "blanched-choy-sum",
+        "white-cut-chicken"
       ]
     },
     {
@@ -7549,19 +7767,30 @@
           "label": "生姜",
           "qty": "1大块",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "香醋",
           "qty": "2汤匙",
-          "code": null,
-          "required": false
+          "code": "6901055000011",
+          "required": false,
+          "alt": [
+            "镇江香醋"
+          ]
         },
         {
           "label": "生抽",
@@ -7596,7 +7825,7 @@
         "竹丝鸡汤",
         "Matsutake and Silkie Chicken Soup"
       ],
-      "section": "season",
+      "section": "soup",
       "kind": "dish",
       "priority": 96,
       "image": "assets/images/matsutake-silkie-soup.jpg",
@@ -7611,7 +7840,12 @@
           "label": "竹丝鸡",
           "qty": "约600g（1只小的）",
           "code": "778621732791",
-          "required": true
+          "required": true,
+          "alt": [
+            "光鸡",
+            "三黄鸡",
+            "土鸡"
+          ]
         },
         {
           "label": "新鲜松茸",
@@ -7623,7 +7857,10 @@
           "label": "生姜",
           "qty": "4片",
           "code": "1037",
-          "required": true
+          "required": true,
+          "alt": [
+            "老姜"
+          ]
         },
         {
           "label": "盐",
@@ -7678,13 +7915,21 @@
           "label": "小葱",
           "qty": "4根",
           "code": "HFCXCXC",
-          "required": true
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生姜",
           "qty": "3片",
           "code": "1037",
-          "required": false
+          "required": false,
+          "alt": [
+            "老姜"
+          ]
         },
         {
           "label": "生抽",
@@ -7745,13 +7990,21 @@
           "label": "虎皮青椒",
           "qty": "3个，约200g",
           "code": "Lsj",
-          "required": true
+          "required": true,
+          "alt": [
+            "螺丝椒"
+          ]
         },
         {
           "label": "蒜",
           "qty": "2瓣",
           "code": "0178",
-          "required": false
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生抽",
@@ -7805,25 +8058,43 @@
           "label": "小龙虾尾",
           "qty": "1袋（680g）",
           "code": "841624002847",
-          "required": true
+          "required": true,
+          "alt": [
+            "基围虾",
+            "明虾",
+            "海虾"
+          ]
         },
         {
           "label": "蒜",
           "qty": "6瓣",
           "code": "0178",
-          "required": true
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
         },
         {
           "label": "生姜",
           "qty": "3片",
           "code": "1037",
-          "required": false
+          "required": false,
+          "alt": [
+            "老姜"
+          ]
         },
         {
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         },
         {
           "label": "生抽",
@@ -7888,7 +8159,12 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
-          "required": false
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
         }
       ],
       "steps": [
@@ -7903,7 +8179,2087 @@
       "method": "room",
       "decide": "quick",
       "pairs": [
+        "hotpot",
         "matsutake-silkie-soup"
+      ]
+    },
+    {
+      "id": "radish-beef-brisket",
+      "name_cn": "萝卜炖牛腩",
+      "name_en": "White Radish and Beef Brisket Stew",
+      "aliases": [
+        "萝卜牛腩",
+        "白萝卜炖牛肉",
+        "luobo niunan",
+        "radish beef stew"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 97,
+      "image": "assets/images/radish-beef-brisket-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "牛肉",
+        "白萝卜",
+        "炖肉",
+        "下饭",
+        "暖身"
+      ],
+      "ingredients": [
+        {
+          "label": "安格斯牛肋条",
+          "qty": "800g",
+          "code": "NknIRL292NLT",
+          "required": true,
+          "alt": [
+            "牛坑腩",
+            "牛腩",
+            "坑腩"
+          ]
+        },
+        {
+          "label": "白萝卜",
+          "qty": "1根，约600g",
+          "code": "1028blb",
+          "required": true,
+          "alt": [
+            "大萝卜"
+          ]
+        },
+        {
+          "label": "姜",
+          "qty": "4片",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        },
+        {
+          "label": "生抽",
+          "qty": "2汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "老抽",
+          "qty": "1汤匙",
+          "code": "722337817020",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "qty": "2汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "八角",
+          "qty": "2颗",
+          "code": "6954769010128",
+          "required": false
+        },
+        {
+          "label": "白砂糖",
+          "qty": "1茶匙",
+          "code": "063111103541",
+          "required": false,
+          "alt": [
+            "白糖"
+          ]
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "约1.5升",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约2.5小时，4人份。牛肋条冷藏解冻后切4cm块；冷水下锅煮开，撇沫再煮3分钟，捞出用温水冲净。",
+        "白萝卜削皮切滚刀块；姜切片，葱切段。",
+        "炖锅加少许油炒香姜片，下牛肋条翻炒，加生抽、老抽、白砂糖和料酒，倒入约1.5升热水没过肉。",
+        "煮开转小火，盖盖炖约2小时，筷子能插入肉块；中途缺水补热水。",
+        "下白萝卜再炖25–30分钟至透明软糯，加盐调味，撒葱花。萝卜后放，吸足肉汤又不煮散。"
+      ],
+      "nutrition": "高蛋白·暖身顶饱",
+      "minutes": 150,
+      "servings": "4人",
+      "hook": "牛肋条炖到软烂再下萝卜，萝卜吸满肉汤。",
+      "pairs": [
+        "potato-beef-stew",
+        "braised-beef-brisket"
+      ]
+    },
+    {
+      "id": "tiger-pepper-stuffed-pork",
+      "name_cn": "虎皮青椒酿肉",
+      "name_en": "Tiger Peppers Stuffed with Pork",
+      "aliases": [
+        "虎皮青椒",
+        "酿青椒",
+        "螺丝椒酿肉",
+        "hujiao niangrou",
+        "tiger pepper stuffed pork"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 96,
+      "image": "assets/images/tiger-pepper-stuffed-pork-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "猪肉",
+        "虎皮青椒",
+        "下饭",
+        "家常菜"
+      ],
+      "ingredients": [
+        {
+          "label": "虎皮青椒",
+          "qty": "6根，约400g",
+          "code": "Lsj",
+          "required": true,
+          "alt": [
+            "螺丝椒"
+          ]
+        },
+        {
+          "label": "猪肉碎",
+          "qty": "250g",
+          "code": "627735189635",
+          "required": true,
+          "alt": [
+            "肉末",
+            "绞肉"
+          ]
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "淀粉",
+          "qty": "1茶匙",
+          "code": "6941837101024",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
+        },
+        {
+          "label": "白砂糖",
+          "qty": "1/2茶匙",
+          "code": "063111103541",
+          "required": false,
+          "alt": [
+            "白糖"
+          ]
+        },
+        {
+          "label": "盐",
+          "qty": "1/4茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "2汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "100ml",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约40分钟，3人份。青椒洗净，从一侧划开去籽；肉碎加生抽、淀粉、盐和少许水，顺一个方向搅上劲。",
+        "把肉馅酿进青椒，填满压实。",
+        "平底锅加油，中小火放青椒，有肉的一面朝下先煎3分钟定型，再翻面煎出虎皮斑。",
+        "加100ml水、白砂糖和蒜末，盖盖小火焖8分钟；肉馅中心达到71°C。",
+        "开盖大火略收汁，酱汁浓了就出锅。馅料饱满、青椒软而不烂。"
+      ],
+      "nutrition": "高蛋白·下饭开胃",
+      "minutes": 40,
+      "servings": "3人",
+      "hook": "青椒煎出虎皮，肉馅酿进去再焖透。",
+      "pairs": [
+        "twice-cooked-pork",
+        "pork-green-pepper"
+      ]
+    },
+    {
+      "id": "braised-beef-tendon",
+      "name_cn": "红烧牛筋",
+      "name_en": "Red-Braised Beef Tendon",
+      "aliases": [
+        "红烧牛蹄筋",
+        "卤牛筋",
+        "niujin",
+        "braised beef tendon"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/braised-beef-tendon-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "牛筋",
+        "红烧",
+        "炖肉",
+        "下饭"
+      ],
+      "ingredients": [
+        {
+          "label": "牛筋",
+          "qty": "600g",
+          "code": "2034njnj",
+          "required": true,
+          "alt": [
+            "牛蹄筋"
+          ]
+        },
+        {
+          "label": "生抽",
+          "qty": "2汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "老抽",
+          "qty": "1汤匙",
+          "code": "722337817020",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "qty": "2汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "4片",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        },
+        {
+          "label": "八角",
+          "qty": "2颗",
+          "code": "6954769010128",
+          "required": false
+        },
+        {
+          "label": "白砂糖",
+          "qty": "1茶匙",
+          "code": "063111103541",
+          "required": false,
+          "alt": [
+            "白糖"
+          ]
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "约1升",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "少许",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约2.5小时，3人份。牛筋冷藏解冻，冷水下锅煮开撇沫，再煮5分钟捞出，温水冲净切段。",
+        "锅中加油炒香姜片，下牛筋翻炒，加生抽、老抽、白砂糖、料酒和八角。",
+        "倒入约1升热水没过牛筋，煮开转小火，盖盖炖约2小时。",
+        "牛筋炖到透明、筷子能轻松夹断，开盖大火收汁到浓稠，加盐调味撒葱花。",
+        "牛筋久炖才起胶，不要心急开大火；收汁时盯着锅，别收干。"
+      ],
+      "nutrition": "胶质丰富·软糯下饭",
+      "minutes": 150,
+      "servings": "3人",
+      "hook": "牛筋炖到透明起胶，拌饭最香。",
+      "pairs": [
+        "soy-braised-beef-shank",
+        "braised-beef-brisket"
+      ]
+    },
+    {
+      "id": "marinated-beef-tripe",
+      "name_cn": "卤水牛金钱肚",
+      "name_en": "Marinated Beef Money-Tripe",
+      "aliases": [
+        "卤牛肚",
+        "凉拌金钱肚",
+        "牛百叶",
+        "lu niudu",
+        "marinated tripe"
+      ],
+      "section": "season",
+      "kind": "dish",
+      "priority": 96,
+      "image": "assets/images/marinated-beef-tripe-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "牛肚",
+        "卤味",
+        "凉拌",
+        "下酒菜"
+      ],
+      "ingredients": [
+        {
+          "label": "牛金钱肚",
+          "qty": "500g",
+          "code": "20591",
+          "required": true,
+          "alt": [
+            "牛肚",
+            "牛百叶"
+          ]
+        },
+        {
+          "label": "生抽",
+          "qty": "3汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "老抽",
+          "qty": "1汤匙",
+          "code": "722337817020",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "qty": "2汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "5片",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "小葱",
+          "qty": "3根",
+          "code": "HFCXCXC",
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        },
+        {
+          "label": "八角",
+          "qty": "2颗",
+          "code": "6954769010128",
+          "required": false
+        },
+        {
+          "label": "干辣椒",
+          "qty": "3个",
+          "code": "6971005993144",
+          "required": false
+        },
+        {
+          "label": "香醋",
+          "qty": "1汤匙",
+          "code": "6901055000011",
+          "required": false,
+          "alt": [
+            "镇江香醋"
+          ]
+        },
+        {
+          "label": "辣椒油",
+          "qty": "1茶匙",
+          "code": "213466668855",
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "适量",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "约1.5升",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约90分钟，另计浸泡，3人份。金钱肚冷藏解冻，冷水下锅煮开撇沫，煮5分钟捞出冲净。",
+        "锅中加约1.5升水，放金钱肚、姜片、葱段、生抽、老抽、料酒和八角，大火烧开撇沫。",
+        "转小火加盖卤约1小时，筷子能穿透、口感爽脆不柴。",
+        "关火在卤汁里继续泡30分钟以上（冷藏泡一夜更入味），取出切片。",
+        "香醋、辣椒油和少许卤汁调成蘸汁，浇在肚丝上，撒干辣椒段点缀。切薄片才爽口。"
+      ],
+      "nutrition": "脆嫩爽口·下酒好菜",
+      "minutes": 90,
+      "servings": "3人",
+      "hook": "金钱肚卤好切片，冷藏泡一夜更入味。",
+      "pairs": [
+        "soy-braised-beef-shank",
+        "liangban-gandoufu"
+      ]
+    },
+    {
+      "id": "beef-ball-greens-soup",
+      "name_cn": "牛肉丸青菜汤",
+      "name_en": "Beef Ball and Greens Soup",
+      "aliases": [
+        "牛肉丸汤",
+        "青菜牛肉丸汤",
+        "niurouwan tang",
+        "beef ball soup"
+      ],
+      "section": "soup",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/beef-ball-greens-soup-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "牛肉丸",
+        "青菜",
+        "喝汤",
+        "暖胃",
+        "快手菜"
+      ],
+      "ingredients": [
+        {
+          "label": "潮州牛肉丸",
+          "qty": "300g",
+          "code": "00330",
+          "required": true,
+          "alt": [
+            "手打牛肉丸",
+            "潮汕牛肉丸"
+          ]
+        },
+        {
+          "label": "上海苗",
+          "qty": "250g",
+          "code": "10251",
+          "required": true,
+          "alt": [
+            "上海青",
+            "鸡毛菜"
+          ]
+        },
+        {
+          "label": "姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "白胡椒粉",
+          "qty": "少许",
+          "code": "698921021831",
+          "required": false
+        },
+        {
+          "label": "盐",
+          "qty": "约1/2茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "水",
+          "qty": "约1升",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "芝麻油",
+          "qty": "数滴",
+          "code": "742812710905",
+          "required": false,
+          "alt": [
+            "香油",
+            "小磨香油"
+          ]
+        }
+      ],
+      "steps": [
+        "约20分钟，3人份。牛肉丸提前冷藏解冻；上海苗洗净，姜切片。",
+        "锅中加约1升水和姜片，大火烧开，下牛肉丸煮至全部浮起。",
+        "转中小火再煮3分钟，丸子熟透Q弹。",
+        "下上海苗烫1–2分钟至软，加盐、白胡椒粉，滴芝麻油出锅。青菜最后下，颜色才翠绿。"
+      ],
+      "nutrition": "清爽暖胃·快手喝汤",
+      "minutes": 20,
+      "servings": "3人",
+      "hook": "牛肉丸煮到浮起，青菜最后下锅烫软。",
+      "pairs": [
+        "wintermelon-shrimp-soup",
+        "seaweed-egg-soup"
+      ]
+    },
+    {
+      "id": "pan-fried-hairtail",
+      "name_cn": "干煎带鱼",
+      "name_en": "Pan-Fried Hairtail",
+      "aliases": [
+        "煎带鱼",
+        "带鱼段",
+        "daiyu",
+        "pan-fried cutlassfish"
+      ],
+      "section": "seafood",
+      "kind": "dish",
+      "priority": 94,
+      "image": "assets/images/pan-fried-hairtail-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "带鱼",
+        "海鲜",
+        "香煎",
+        "下饭"
+      ],
+      "ingredients": [
+        {
+          "label": "冷冻野生带鱼",
+          "qty": "500g",
+          "code": "990488000039",
+          "required": true,
+          "alt": [
+            "带鱼段",
+            "牙带鱼",
+            "大牙带鱼"
+          ]
+        },
+        {
+          "label": "姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        },
+        {
+          "label": "料酒",
+          "qty": "1汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "盐",
+          "qty": "1/2茶匙",
+          "code": null,
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "qty": "3汤匙",
+          "code": null,
+          "required": false
+        }
+      ],
+      "steps": [
+        "约25分钟，3人份。带鱼冷藏解冻，去内脏洗净，剪成约6cm段，两面斜划几刀。",
+        "用厨房纸吸干水分，抹盐和料酒，加姜片腌15分钟。",
+        "平底锅烧热加油，中火放带鱼段，每面煎约4分钟至金黄。",
+        "鱼肉雪白、能轻松离骨就是熟了，撒葱花出锅。擦干是关键，带水下锅必粘。"
+      ],
+      "nutrition": "肉嫩味鲜·香到酥脆",
+      "minutes": 25,
+      "servings": "3人",
+      "hook": "带鱼擦干再下锅，煎到两面金黄。",
+      "pairs": [
+        "qingzheng-luyu",
+        "steamed-crab"
+      ]
+    },
+    {
+      "id": "shrimp-dumpling-ready",
+      "name_cn": "虾饺皇",
+      "name_en": "Shrimp Dumplings (Ready to Steam)",
+      "aliases": [
+        "虾饺",
+        "虾饺王",
+        "xiajiao",
+        "shrimp dumplings"
+      ],
+      "section": "breakfast",
+      "kind": "ready",
+      "priority": 93,
+      "image": "assets/images/shrimp-dumpling-ready-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "早餐",
+        "速食",
+        "蒸食",
+        "粤式点心"
+      ],
+      "ingredients": [
+        {
+          "label": "蝦餃皇",
+          "qty": "1袋，400g",
+          "code": "827510006212",
+          "required": true,
+          "alt": [
+            "虾饺",
+            "虾饺王",
+            "虾饺皇"
+          ]
+        }
+      ],
+      "steps": [
+        "约12分钟，2人份。从冷冻取出，无需解冻，蒸笼垫纸或刷薄油。",
+        "水开后放虾饺，大火蒸约8–10分钟。",
+        "蒸到皮透出虾仁的红就可以吃，蘸生抽或辣酱。别蒸太久，皮破了就不漂亮了。"
+      ],
+      "nutrition": "皮薄馅鲜·早茶味",
+      "minutes": 12,
+      "servings": "2人",
+      "hook": "不用解冻，蒸到皮透出虾仁的红。",
+      "method": "steam",
+      "pairs": [
+        "shumai-ready",
+        "cheung-fun-ready"
+      ]
+    },
+    {
+      "id": "roast-duck-ready",
+      "name_cn": "广式烧鸭",
+      "name_en": "Cantonese Roast Duck (Ready to Eat)",
+      "aliases": [
+        "烧鸭",
+        "烤鸭",
+        "广式烤鸭",
+        "shaoya",
+        "roast duck"
+      ],
+      "section": "tonight",
+      "kind": "ready",
+      "priority": 91,
+      "image": "assets/images/roast-duck-ready-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "烧味",
+        "熟食",
+        "粤菜",
+        "即食"
+      ],
+      "ingredients": [
+        {
+          "label": "广式烧鸭",
+          "qty": "1只，450g",
+          "code": "800794308487",
+          "required": true,
+          "alt": [
+            "烤鸭",
+            "广式烤鸭"
+          ]
+        }
+      ],
+      "steps": [
+        "约15分钟，3人份。烧鸭室温回温10分钟，斩件摆盘就能吃。",
+        "想吃脆皮：烤箱预热180°C，烧鸭放烤架烤8分钟，皮会重新变脆。",
+        "配白饭、一碟菜心就是一桌。斩件时顺着骨缝下刀，肉才整齐。"
+      ],
+      "nutrition": "皮脆肉嫩·斩件上桌",
+      "minutes": 15,
+      "servings": "3人",
+      "hook": "斩件摆盘就能吃，烤箱复烤皮更脆。",
+      "method": "room",
+      "pairs": [
+        "white-cut-chicken",
+        "cant-mizhi-chashao"
+      ]
+    },
+    {
+      "id": "suantang-feiniu",
+      "name_cn": "酸汤肥牛",
+      "name_en": "Beef Slices in Sour Soup",
+      "aliases": [
+        "酸汤肥牛",
+        "酸汤牛肉",
+        "suantang feiniu",
+        "sour soup beef"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 94,
+      "image": "assets/images/suantang-feiniu-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "牛肉",
+        "快手菜",
+        "下饭",
+        "开胃"
+      ],
+      "ingredients": [
+        {
+          "label": "牛肉卷",
+          "qty": "1盒，635g",
+          "code": "0723nrj",
+          "required": true,
+          "alt": [
+            "肥牛",
+            "肥牛卷",
+            "涮牛肉"
+          ]
+        },
+        {
+          "label": "酸汤肥牛",
+          "qty": "1袋，100g",
+          "code": "6920143506808",
+          "required": true
+        },
+        {
+          "label": "金针菇",
+          "qty": "200g",
+          "code": "6931787400001",
+          "required": true
+        },
+        {
+          "label": "娃娃菜",
+          "qty": "1棵",
+          "code": "WWC",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣",
+          "code": "0178",
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
+        },
+        {
+          "label": "姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "黄灯笼辣酱",
+          "qty": "1汤匙（加辣用）",
+          "code": "6921464025887",
+          "required": false
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        }
+      ],
+      "steps": [
+        "约25分钟，3人份。牛肉卷回温10分钟，不要全解冻，微冻才好分片；金针菇去根撕开，娃娃菜切块。",
+        "金针菇、娃娃菜焯1分钟铺碗底。",
+        "锅中加油爆香蒜姜，加酸汤料和约800ml水煮沸；先尝咸淡，调料已有咸酸味，一般不用加盐，要辣加1汤匙黄灯笼。",
+        "牛肉一片片下锅，变色30–60秒立刻关火，久煮必老。",
+        "连汤浇在配菜上，撒葱花。汤拌饭比肉还抢手。"
+      ],
+      "nutrition": "开胃·快手下饭",
+      "minutes": 25,
+      "servings": "3人",
+      "hook": "酸汤料店里有现成的，肥牛下锅一分钟，汤都能拌饭。",
+      "pairs": [
+        "shuizhu-niurou",
+        "hotpot"
+      ]
+    },
+    {
+      "id": "congbao-yangrou",
+      "name_cn": "葱爆羊肉",
+      "name_en": "Scallion Lamb Stir-Fry",
+      "aliases": [
+        "葱爆羊肉",
+        "葱爆羊肩肉",
+        "congbao yangrou",
+        "scallion lamb"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 91,
+      "image": "assets/images/congbao-yangrou-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "羊肉",
+        "快手菜",
+        "下饭"
+      ],
+      "ingredients": [
+        {
+          "label": "羊肩肉",
+          "qty": "500g，切薄片",
+          "code": "6944",
+          "required": true
+        },
+        {
+          "label": "京葱",
+          "qty": "2根",
+          "code": "10636jcjcjc",
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "qty": "1汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "淀粉",
+          "qty": "1茶匙",
+          "code": "6941837101024",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
+        },
+        {
+          "label": "芝麻油",
+          "qty": "数滴",
+          "code": "742812710905",
+          "required": false,
+          "alt": [
+            "香油",
+            "小磨香油"
+          ]
+        }
+      ],
+      "steps": [
+        "约20分钟，3人份。羊肩肉逆纹切薄片，加生抽、淀粉抓浆腌10分钟；京葱斜切段。",
+        "锅烧到冒烟加油，羊肉滑炒变色立刻盛出。",
+        "留底油爆京葱到边缘微焦，下姜蒜炒香。",
+        "羊肉回锅，沿锅边淋料酒，大火翻匀，滴芝麻油出锅。"
+      ],
+      "nutrition": "高蛋白·爆炒够镬气",
+      "minutes": 20,
+      "servings": "3人",
+      "hook": "羊肩肉切片配京葱大火一爆，北方馆子味。",
+      "pairs": [
+        "cumin-lamb",
+        "twice-cooked-pork"
+      ]
+    },
+    {
+      "id": "shuizhu-roupian",
+      "name_cn": "水煮肉片",
+      "name_en": "Sichuan Boiled Pork Slices",
+      "aliases": [
+        "水煮肉片",
+        "水煮猪肉",
+        "shuizhu roupian",
+        "boiled pork slices"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 92,
+      "image": "assets/images/shuizhu-roupian-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "猪肉",
+        "川菜",
+        "下饭",
+        "香辣"
+      ],
+      "ingredients": [
+        {
+          "label": "梅头猪肉卷",
+          "qty": "约400g",
+          "code": "700953767868",
+          "required": true
+        },
+        {
+          "label": "郫县豆瓣",
+          "qty": "2汤匙",
+          "code": "6909003200193",
+          "required": true
+        },
+        {
+          "label": "豆芽",
+          "qty": "300g",
+          "code": "1024",
+          "required": true,
+          "alt": [
+            "银芽",
+            "芽菜",
+            "黄豆芽",
+            "绿豆芽"
+          ]
+        },
+        {
+          "label": "生菜",
+          "qty": "1颗",
+          "code": "Yscysc",
+          "required": true,
+          "alt": [
+            "唛仔菜",
+            "西生菜",
+            "玻璃生菜"
+          ]
+        },
+        {
+          "label": "干辣椒",
+          "qty": "8个",
+          "code": "6971005993144",
+          "required": true
+        },
+        {
+          "label": "花椒粉",
+          "qty": "1茶匙",
+          "code": "6948691110063",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "4瓣",
+          "code": "0178",
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
+        },
+        {
+          "label": "姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "qty": "1汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "淀粉",
+          "qty": "1汤匙",
+          "code": "6941837101024",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        }
+      ],
+      "steps": [
+        "约30分钟，3–4人份。肉片加生抽、料酒、淀粉上浆腌15分钟；豆芽生菜焯水铺碗底。",
+        "锅中加油炒郫县豆瓣出红油，加约800ml水煮沸，加盐调味。",
+        "转小火保持微沸，肉片一片片下锅，变白浮起就连汤倒进碗里。",
+        "面上撒蒜末、干辣椒段和花椒粉，烧3汤匙热油浇香，撒葱花。"
+      ],
+      "nutrition": "香辣·下饭第一名",
+      "minutes": 30,
+      "servings": "3–4人",
+      "hook": "肉片上浆再下锅，碗底豆芽吸满红汤比肉还抢手。",
+      "pairs": [
+        "shuizhu-niurou",
+        "mapo-tofu"
+      ]
+    },
+    {
+      "id": "jinzhen-feiniu-juan",
+      "name_cn": "金针菇肥牛卷",
+      "name_en": "Enoki Beef Rolls",
+      "aliases": [
+        "金针菇肥牛卷",
+        "肥牛金针菇卷",
+        "feiniu juan",
+        "beef enoki rolls"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 93,
+      "image": "assets/images/jinzhen-feiniu-juan-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "牛肉",
+        "快手菜",
+        "下饭"
+      ],
+      "ingredients": [
+        {
+          "label": "牛肉卷",
+          "qty": "1盒，635g",
+          "code": "0723nrj",
+          "required": true,
+          "alt": [
+            "肥牛",
+            "肥牛卷",
+            "涮牛肉"
+          ]
+        },
+        {
+          "label": "金针菇",
+          "qty": "2包",
+          "code": "6931787400001",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "qty": "2汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "蚝油",
+          "qty": "1汤匙",
+          "code": "6922824007468",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": false,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
+        },
+        {
+          "label": "小葱",
+          "qty": "1根",
+          "code": "HFCXCXC",
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        },
+        {
+          "label": "白砂糖",
+          "qty": "1茶匙",
+          "code": "063111103541",
+          "required": false,
+          "alt": [
+            "白糖"
+          ]
+        }
+      ],
+      "steps": [
+        "约20分钟，2–3人份。金针菇去根分成12束，每片牛肉卷一束，收口朝下。",
+        "生抽2汤匙、蚝油1汤匙、白砂糖和半碗水调成汁。",
+        "平底锅加少许油，肉卷收口朝下煎定型再翻面。",
+        "倒汁加盖焖3分钟，开盖收浓，撒葱花蒜末。"
+      ],
+      "nutrition": "一荤一素·快手配齐",
+      "minutes": 20,
+      "servings": "2–3人",
+      "hook": "一盒牛肉卷加两包金针菇，20分钟一盘。",
+      "pairs": [
+        "suantang-feiniu",
+        "ants-climbing-tree"
+      ]
+    },
+    {
+      "id": "yangzhou-chaofan",
+      "name_cn": "扬州炒饭",
+      "name_en": "Yangzhou Fried Rice",
+      "aliases": [
+        "扬州炒饭",
+        "什锦炒饭",
+        "chaofan",
+        "yangzhou fried rice"
+      ],
+      "section": "staple",
+      "kind": "dish",
+      "priority": 92,
+      "image": "assets/images/yangzhou-chaofan-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "主食",
+        "米饭",
+        "快手菜"
+      ],
+      "ingredients": [
+        {
+          "label": "香米",
+          "qty": "约600g隔夜冷饭",
+          "code": "628774325817",
+          "required": true
+        },
+        {
+          "label": "鸡蛋",
+          "qty": "3个",
+          "code": "2008",
+          "required": true,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
+        },
+        {
+          "label": "大虾",
+          "qty": "8–10只，去壳",
+          "code": "209145dxdx827510004140",
+          "required": true,
+          "alt": [
+            "基围虾",
+            "明虾",
+            "海虾"
+          ]
+        },
+        {
+          "label": "腊肠",
+          "qty": "2根，切丁",
+          "code": "074545300215",
+          "required": true,
+          "alt": [
+            "香肠",
+            "广式香肠",
+            "膶肠"
+          ]
+        },
+        {
+          "label": "小葱",
+          "qty": "3根",
+          "code": "HFCXCXC",
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        },
+        {
+          "label": "生菜",
+          "qty": "2片，切丝",
+          "code": "Yscysc",
+          "required": false,
+          "alt": [
+            "唛仔菜",
+            "西生菜",
+            "玻璃生菜"
+          ]
+        },
+        {
+          "label": "白胡椒粉",
+          "qty": "少许",
+          "code": "698921021831",
+          "required": false
+        }
+      ],
+      "steps": [
+        "约20分钟，3–4人份。大虾去壳去线抓少许淀粉；鸡蛋打散；腊肠切丁；冷饭压散。",
+        "先炒虾仁变色盛出，再炒鸡蛋凝固盛出。",
+        "腊肠丁炒出油，下冷饭大火压散，炒到粒粒分明。",
+        "蛋虾回锅，加盐和白胡椒粉，下生菜丝和葱花翻匀出锅。"
+      ],
+      "nutrition": "一盘顶一顿·粒粒分明",
+      "minutes": 20,
+      "servings": "3–4人",
+      "hook": "剩饭的最好去处，一盘就是一顿正经饭。",
+      "pairs": [
+        "cant-lawei-baozaifan",
+        "zhajianmian"
+      ]
+    },
+    {
+      "id": "pidan-shourou-zhou",
+      "name_cn": "皮蛋瘦肉粥",
+      "name_en": "Century Egg and Pork Congee",
+      "aliases": [
+        "皮蛋瘦肉粥",
+        "皮蛋粥",
+        "zhou",
+        "congee"
+      ],
+      "section": "staple",
+      "kind": "dish",
+      "priority": 90,
+      "image": "assets/images/pidan-shourou-zhou-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "主食",
+        "粥",
+        "早餐"
+      ],
+      "ingredients": [
+        {
+          "label": "皮蛋",
+          "qty": "2个",
+          "code": "6920775217509",
+          "required": true
+        },
+        {
+          "label": "猪肉碎",
+          "qty": "150g",
+          "code": "627735189635",
+          "required": true,
+          "alt": [
+            "肉末",
+            "绞肉"
+          ]
+        },
+        {
+          "label": "香米",
+          "qty": "150g",
+          "code": "628774325817",
+          "required": true
+        },
+        {
+          "label": "姜",
+          "qty": "1小块，切丝",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        },
+        {
+          "label": "白胡椒粉",
+          "qty": "少许",
+          "code": "698921021831",
+          "required": false
+        },
+        {
+          "label": "芝麻油",
+          "qty": "数滴",
+          "code": "742812710905",
+          "required": false,
+          "alt": [
+            "香油",
+            "小磨香油"
+          ]
+        },
+        {
+          "label": "料酒",
+          "qty": "1茶匙",
+          "code": "6907592001245",
+          "required": false
+        },
+        {
+          "label": "淀粉",
+          "qty": "1茶匙",
+          "code": "6941837101024",
+          "required": false
+        }
+      ],
+      "steps": [
+        "约50分钟，4人份。香米洗净拌少许油和盐腌20分钟；皮蛋切块；肉碎加料酒淀粉抓匀。",
+        "水开下米，大火10分钟转小火熬35–40分钟，熬到开花绵滑，中途多搅防糊底。",
+        "一半皮蛋先下锅煮出味，肉碎拨散下锅煮3分钟。",
+        "剩下皮蛋最后下锅保形状，加盐、白胡椒粉，撒葱花姜丝，滴芝麻油。"
+      ],
+      "nutrition": "绵滑·暖胃顶饿",
+      "minutes": 50,
+      "servings": "4人",
+      "hook": "米先拌油再下锅，40分钟熬出绵滑。",
+      "pairs": [
+        "pumpkin-millet-congee",
+        "xian-rou-dabao-ready"
+      ]
+    },
+    {
+      "id": "congyou-banmian",
+      "name_cn": "上海葱油拌面",
+      "name_en": "Shanghai Scallion Oil Noodles",
+      "aliases": [
+        "葱油拌面",
+        "葱油面",
+        "banmian",
+        "scallion oil noodles"
+      ],
+      "section": "staple",
+      "kind": "dish",
+      "priority": 91,
+      "image": "assets/images/congyou-banmian-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "主食",
+        "面条",
+        "快手菜"
+      ],
+      "ingredients": [
+        {
+          "label": "拉面",
+          "qty": "2份",
+          "code": "800794206004",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "1大把，约150g",
+          "code": "HFCXCXC",
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        },
+        {
+          "label": "生抽",
+          "qty": "3汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "老抽",
+          "qty": "1汤匙",
+          "code": "722337817020",
+          "required": true
+        },
+        {
+          "label": "白砂糖",
+          "qty": "1汤匙",
+          "code": "063111103541",
+          "required": true,
+          "alt": [
+            "白糖"
+          ]
+        },
+        {
+          "label": "食用油",
+          "qty": "80ml",
+          "code": null,
+          "required": true
+        }
+      ],
+      "steps": [
+        "约25分钟，2人份。小葱洗净擦干，有水下锅会溅；葱白葱绿分开切段。",
+        "冷油下葱白小火熬5分钟，再下葱绿熬到焦黄酥脆，捞出葱酥。",
+        "葱油加生抽、老抽和白砂糖搅匀成酱汁，多余的装瓶冷藏一周。",
+        "面煮熟捞出，每碗浇2汤匙酱汁拌匀，铺葱酥。"
+      ],
+      "nutrition": "葱香·拌面天花板",
+      "minutes": 25,
+      "servings": "2人",
+      "hook": "葱油多熬点存冰箱，忙时10分钟拌一碗。",
+      "pairs": [
+        "niurou-lamian",
+        "zhajianmian"
+      ]
+    },
+    {
+      "id": "xingzhou-chaomifen",
+      "name_cn": "星洲炒米粉",
+      "name_en": "Singapore Chow Mei Fun",
+      "aliases": [
+        "星洲炒米粉",
+        "星洲米粉",
+        "chaomifen",
+        "singapore noodles"
+      ],
+      "section": "staple",
+      "kind": "dish",
+      "priority": 90,
+      "image": "assets/images/xingzhou-chaomifen-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "主食",
+        "米粉",
+        "快手菜"
+      ],
+      "ingredients": [
+        {
+          "label": "新竹米粉",
+          "qty": "300g",
+          "code": "4712862612074",
+          "required": true
+        },
+        {
+          "label": "大虾",
+          "qty": "8只，去壳",
+          "code": "209145dxdx827510004140",
+          "required": true,
+          "alt": [
+            "基围虾",
+            "明虾",
+            "海虾"
+          ]
+        },
+        {
+          "label": "腊肠",
+          "qty": "2根，切片",
+          "code": "074545300215",
+          "required": true,
+          "alt": [
+            "香肠",
+            "广式香肠",
+            "膶肠"
+          ]
+        },
+        {
+          "label": "鸡蛋",
+          "qty": "2个",
+          "code": "2008",
+          "required": true,
+          "alt": [
+            "鸡子",
+            "土鸡蛋"
+          ]
+        },
+        {
+          "label": "豆芽",
+          "qty": "150g",
+          "code": "1024",
+          "required": true,
+          "alt": [
+            "银芽",
+            "芽菜",
+            "黄豆芽",
+            "绿豆芽"
+          ]
+        },
+        {
+          "label": "韭菜",
+          "qty": "1小把",
+          "code": "1015",
+          "required": true,
+          "alt": [
+            "扁菜",
+            "起阳草"
+          ]
+        },
+        {
+          "label": "洋葱",
+          "qty": "半个",
+          "code": "1087ycyc",
+          "required": true,
+          "alt": [
+            "圆葱",
+            "球葱"
+          ]
+        },
+        {
+          "label": "咖喱粉",
+          "qty": "1大匙",
+          "code": "HCLF",
+          "required": true
+        }
+      ],
+      "steps": [
+        "约25分钟，3–4人份。新竹米粉温水泡15分钟，捞出剪两刀；鸡蛋虾仁腊肠分别炒好盛出。",
+        "锅中加油爆香洋葱，下米粉，沿锅边淋少许水防干。",
+        "撒咖喱粉1大匙炒匀，炒到米粉金黄干爽。",
+        "全部回锅，豆芽韭菜最后下锅翻匀，加盐调味。"
+      ],
+      "nutrition": "咖喱香·根根分明",
+      "minutes": 25,
+      "servings": "3–4人",
+      "hook": "咖喱粉是灵魂，米粉炒到干爽根根分明。",
+      "pairs": [
+        "beef-chow-fun",
+        "xihongshi-jidan-mian"
+      ]
+    },
+    {
+      "id": "lamb-daikon-soup",
+      "name_cn": "白萝卜羊肉汤",
+      "name_en": "Lamb and Daikon Soup",
+      "aliases": [
+        "白萝卜羊肉汤",
+        "羊肉萝卜汤",
+        "yangrou tang",
+        "lamb daikon soup"
+      ],
+      "section": "soup",
+      "kind": "dish",
+      "priority": 94,
+      "image": "assets/images/lamb-daikon-soup-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "羊肉",
+        "白萝卜",
+        "喝汤",
+        "暖身"
+      ],
+      "ingredients": [
+        {
+          "label": "羊肩肉",
+          "qty": "约800g",
+          "code": "6944",
+          "required": true
+        },
+        {
+          "label": "白萝卜",
+          "qty": "1根，约600g",
+          "code": "1028blb",
+          "required": true,
+          "alt": [
+            "大萝卜"
+          ]
+        },
+        {
+          "label": "姜",
+          "qty": "1大块",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "枸杞",
+          "qty": "1小把",
+          "code": "698921027979",
+          "required": false
+        },
+        {
+          "label": "料酒",
+          "qty": "2汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "白胡椒粉",
+          "qty": "1茶匙",
+          "code": "698921021831",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        }
+      ],
+      "steps": [
+        "约90分钟，4人份。羊肩肉切块冷水下锅，焯5分钟洗净；姜拍松。",
+        "约2升热水下羊肉和姜，小火炖60分钟，撇净浮沫。",
+        "白萝卜切滚刀块下锅，再炖25分钟到能戳透。",
+        "加盐和白胡椒粉，枸杞最后2分钟下锅，撒葱花。"
+      ],
+      "nutrition": "清炖不膻·连汤带肉",
+      "minutes": 90,
+      "servings": "4人",
+      "hook": "萨省冬天就靠这锅，清炖不膻，连汤带肉一锅端。",
+      "pairs": [
+        "shiitake-chicken-soup",
+        "pickled-cabbage-pork-pot"
+      ]
+    },
+    {
+      "id": "pepper-pork-tripe-chicken-soup",
+      "name_cn": "胡椒猪肚鸡汤",
+      "name_en": "White Pepper Chicken Soup",
+      "aliases": [
+        "胡椒猪肚鸡汤",
+        "猪肚鸡汤",
+        "zhuduji",
+        "pepper chicken soup"
+      ],
+      "section": "soup",
+      "kind": "dish",
+      "priority": 93,
+      "image": "assets/images/pepper-pork-tripe-chicken-soup-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "鸡",
+        "喝汤",
+        "暖身",
+        "胡椒"
+      ],
+      "ingredients": [
+        {
+          "label": "三黄鸡",
+          "qty": "半只，约600g",
+          "code": "4889shj",
+          "required": true,
+          "alt": [
+            "光鸡",
+            "土鸡"
+          ]
+        },
+        {
+          "label": "猪肚鸡汤料",
+          "qty": "1袋，190g",
+          "code": "6976760276723",
+          "required": true
+        },
+        {
+          "label": "白胡椒粉",
+          "qty": "1茶匙",
+          "code": "698921021831",
+          "required": true
+        },
+        {
+          "label": "干香菇",
+          "qty": "6朵",
+          "code": "871392001636",
+          "required": true,
+          "alt": [
+            "冬菇",
+            "花菇",
+            "香蕈"
+          ]
+        },
+        {
+          "label": "红枣",
+          "qty": "6颗",
+          "code": "6941837101611",
+          "required": false
+        },
+        {
+          "label": "枸杞",
+          "qty": "1小把",
+          "code": "698921027979",
+          "required": false
+        },
+        {
+          "label": "姜",
+          "qty": "1大块",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "料酒",
+          "qty": "1汤匙",
+          "code": "6907592001245",
+          "required": true
+        }
+      ],
+      "steps": [
+        "约100分钟，4人份。三黄鸡斩块焯水；干香菇泡发；这是汤料简版，肉柜若有新鲜猪肚，切条在炖鸡时一同下锅即升级正版。",
+        "鸡块加姜和约2升水，小火炖50分钟。",
+        "下猪肚鸡汤料、香菇、红枣和枸杞，再炖15分钟。",
+        "白胡椒先加1茶匙尝着加，加盐调味，胡椒味够正才出锅。"
+      ],
+      "nutrition": "胡椒暖胃·汤鲜料足",
+      "minutes": 100,
+      "servings": "4人",
+      "hook": "汤料打底胡椒够正，不用自己处理猪肚。",
+      "pairs": [
+        "matsutake-silkie-soup",
+        "white-cut-chicken"
+      ]
+    },
+    {
+      "id": "shuizhu-niurou",
+      "name_cn": "水煮牛肉",
+      "name_en": "Sichuan Boiled Beef Slices",
+      "aliases": [
+        "水煮牛肉",
+        "水煮牛肋条",
+        "shuizhu niurou",
+        "boiled beef"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 95,
+      "image": "assets/images/shuizhu-niurou-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "牛肉",
+        "川菜",
+        "下饭",
+        "香辣"
+      ],
+      "ingredients": [
+        {
+          "label": "安格斯牛肋条",
+          "qty": "500g，逆纹薄片",
+          "code": "NknIRL292NLT",
+          "required": true,
+          "alt": [
+            "牛坑腩",
+            "牛腩",
+            "坑腩"
+          ]
+        },
+        {
+          "label": "郫县豆瓣",
+          "qty": "2汤匙",
+          "code": "6909003200193",
+          "required": true
+        },
+        {
+          "label": "豆芽",
+          "qty": "300g",
+          "code": "1024",
+          "required": true,
+          "alt": [
+            "银芽",
+            "芽菜",
+            "黄豆芽",
+            "绿豆芽"
+          ]
+        },
+        {
+          "label": "生菜",
+          "qty": "1颗",
+          "code": "Yscysc",
+          "required": true,
+          "alt": [
+            "唛仔菜",
+            "西生菜",
+            "玻璃生菜"
+          ]
+        },
+        {
+          "label": "干辣椒",
+          "qty": "8个",
+          "code": "6971005993144",
+          "required": true
+        },
+        {
+          "label": "花椒粉",
+          "qty": "1茶匙",
+          "code": "6948691110063",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "4瓣",
+          "code": "0178",
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
+        },
+        {
+          "label": "姜",
+          "qty": "3片",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "qty": "1汤匙",
+          "code": "6907592001245",
+          "required": true
+        },
+        {
+          "label": "淀粉",
+          "qty": "1汤匙",
+          "code": "6941837101024",
+          "required": true
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": false,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        }
+      ],
+      "steps": [
+        "约30分钟，3–4人份。牛肋条逆纹切薄片，加生抽、料酒、淀粉上浆腌15分钟，图省事可用牛肉卷；豆芽生菜焯水铺碗底。",
+        "锅中加油炒郫县豆瓣出红油，加约800ml水煮沸。",
+        "小火微沸下牛肉片，变色连汤倒碗。",
+        "面上撒蒜末辣椒花椒，热油浇香，撒葱花。和水煮肉片同一套，学会一个等于会两个。"
+      ],
+      "nutrition": "香辣·嫩牛肉片",
+      "minutes": 30,
+      "servings": "3–4人",
+      "hook": "和水煮肉片同一套做法，学会一个等于会两个。",
+      "pairs": [
+        "shuizhu-roupian",
+        "suantang-feiniu"
+      ]
+    },
+    {
+      "id": "hongyou-chaoshou",
+      "name_cn": "红油抄手",
+      "name_en": "Wontons in Chili Oil",
+      "aliases": [
+        "红油抄手",
+        "抄手",
+        "馄饨",
+        "hongyou chaoshou",
+        "chili wontons"
+      ],
+      "section": "dumpling",
+      "kind": "dish",
+      "priority": 92,
+      "image": "assets/images/hongyou-chaoshou-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; Muse Image, 2026-10-31",
+      "tags": [
+        "馄饨",
+        "川菜",
+        "现包",
+        "香辣"
+      ],
+      "ingredients": [
+        {
+          "label": "馄饨皮",
+          "qty": "1袋，454g",
+          "code": "066279008116",
+          "required": true
+        },
+        {
+          "label": "猪肉碎",
+          "qty": "250g",
+          "code": "627735189635",
+          "required": true,
+          "alt": [
+            "肉末",
+            "绞肉"
+          ]
+        },
+        {
+          "label": "姜",
+          "qty": "1小块",
+          "code": "1037",
+          "required": true,
+          "alt": [
+            "生姜",
+            "老姜"
+          ]
+        },
+        {
+          "label": "小葱",
+          "qty": "3根",
+          "code": "HFCXCXC",
+          "required": true,
+          "alt": [
+            "大葱",
+            "香葱",
+            "青葱"
+          ]
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "花椒粉",
+          "qty": "1/2茶匙",
+          "code": "6948691110063",
+          "required": true
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣",
+          "code": "0178",
+          "required": true,
+          "alt": [
+            "大蒜",
+            "蒜头",
+            "蒜瓣"
+          ]
+        },
+        {
+          "label": "辣椒油",
+          "qty": "2汤匙",
+          "code": "213466668855",
+          "required": true
+        },
+        {
+          "label": "香醋",
+          "qty": "1汤匙",
+          "code": "6901055000011",
+          "required": true,
+          "alt": [
+            "镇江香醋"
+          ]
+        },
+        {
+          "label": "芝麻油",
+          "qty": "1茶匙",
+          "code": "742812710905",
+          "required": false,
+          "alt": [
+            "香油",
+            "小磨香油"
+          ]
+        },
+        {
+          "label": "料酒",
+          "qty": "1茶匙",
+          "code": "6907592001245",
+          "required": false
+        },
+        {
+          "label": "白胡椒粉",
+          "qty": "少许",
+          "code": "698921021831",
+          "required": false
+        }
+      ],
+      "steps": [
+        "约35分钟，约30个，3人份。肉碎加生抽、料酒、白胡椒粉和葱姜水，朝一个方向搅上胶。",
+        "1茶匙馅包一个元宝形；多包的平铺冷冻，随吃随煮。",
+        "碗底先调红油汁：辣椒油、香醋、蒜末、花椒粉和少许煮馄饨的原汤。",
+        "水开下锅，浮起再煮1分钟，连汤舀进碗化开酱汁拌匀。"
+      ],
+      "nutrition": "皮薄馅嫩·红油拌",
+      "minutes": 35,
+      "servings": "3人",
+      "hook": "皮薄馅嫩，红油汁一拌就是成都街头那碗。",
+      "pairs": [
+        "zhurou-jiucaijiao",
+        "suancai-roujiiao"
       ]
     }
   ]
