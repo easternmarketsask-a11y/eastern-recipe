@@ -25,8 +25,8 @@ import recipe_lib as rl
 import static_pages as sp
 
 OUT_DIR = "r"
-CSS_V = "20"
-ASSET_V = "1"
+CSS_V = "21"
+ASSET_V = "2"
 DELIVERY_URL = "https://easternmarket.ca/group-order"
 
 GRP_ICON = {"新鲜蔬菜": "🥬", "新鲜水果": "🍎", "冷冻食品": "🧊", "豆腐蛋品": "🥚",
@@ -84,7 +84,7 @@ def head(title, desc, canonical, image, extra=""):
     <a class="hdr__logobtn" href="https://easternmarket.ca" aria-label="东方超市 · 进入主网首页">
       <img class="hdr__logo" src="/assets/logo-horizontal.png?v=%(av)s" alt="东方超市 Eastern Market" width="1080" height="556">
     </a>
-    <a class="hdr__name" href="/" style="text-decoration:none">天天新鲜 家常食谱</a>
+    <a class="hdr__name" href="/" style="text-decoration:none"><img class="hdr__wordmark" src="/assets/dongfang-shipu-wordmark.png?v=1" alt="东方食谱" width="800" height="283"></a>
   </div>
 </header>
 <main>
@@ -95,7 +95,7 @@ def head(title, desc, canonical, image, extra=""):
 
 FOOT = """</main>
 <footer class="ftr">
-  <strong>Eastern Market 东方超市</strong><br>
+  <strong>东方食谱 · Eastern Market 东方超市</strong><br>
   133-412 Willowgrove Square, Saskatoon<br>
   周一至周六 10am–6:30pm<br>
   <a href="https://maps.google.com/?q=Eastern+Market,+412+Willowgrove+Square,+Saskatoon" target="_blank" rel="noopener">📍 地图导航</a>　·　<a href="https://easternmarket.ca">🛒 网上超市</a>　·　<a href="/r/">📖 全部食谱</a><br>
@@ -136,7 +136,7 @@ def recipe_page(r, pidx, all_recipes):
     rid = r["id"]
     name = r.get("name_cn") or ""
     is_ready = r.get("kind") == "ready"
-    title = "%s%s · 东方超市家常食谱" % (name, "" if is_ready else "的做法")
+    title = "%s%s · 东方食谱" % (name, "" if is_ready else "的做法")
     desc = sp.meta_description(r)
 
     parts = [head(title, desc, sp.recipe_url(rid), r.get("image"),
@@ -207,8 +207,8 @@ def recipe_page(r, pidx, all_recipes):
 def index_page(all_recipes):
     """全部食谱目录：爬虫从这里能一跳走到每一道菜。"""
     n = len(all_recipes)
-    title = "全部 %d 道家常食谱 · 东方超市" % n
-    desc = ("东方超市家常食谱目录，共 %d 道：应季、今晚吃什么、粤菜、家常蔬菜、"
+    title = "全部 %d 道菜 · 东方食谱" % n
+    desc = ("东方食谱目录，共 %d 道：应季、今晚吃什么、粤菜、家常蔬菜、"
             "海鲜河鲜、早餐包点、饺子馄饨等。食材在店里都买得到。" % n)[:155]
     parts = [head(title, desc, "%s/r/" % sp.SITE, None)]
     parts.append('<nav class="pg-crumb"><a href="/">首页</a> › 全部食谱</nav>')
