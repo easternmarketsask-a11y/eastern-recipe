@@ -49,6 +49,10 @@ try {
 
   const seasonVisible = await page.isVisible('#seasonBlock');
   ok('首页出现「暖冬」板块', seasonVisible);
+  const docTitle = await page.title();
+  ok('标题是东方食谱', docTitle.includes('东方食谱'), docTitle);
+  const wm = await page.$eval('.hdr__wordmark', (e) => e.alt + '|' + e.currentSrc + '|' + e.naturalWidth);
+  ok('页头挂东方食谱字标', wm.startsWith('东方食谱|') && wm.includes('dongfang-shipu-wordmark') && !wm.endsWith('|0'), wm);
 
   // setupLoop 会把卡片复制三份做无缝循环，所以按 data-id 去重才是真实菜数
   const seasonIds = await page.$$eval('#season .card', (els) =>
