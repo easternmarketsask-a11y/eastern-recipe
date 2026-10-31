@@ -160,13 +160,31 @@ test('buildShoppingList: 空收藏返回空结构', () => {
 
 const catalog = require('../data/recipes.json').recipes;
 
+test('matchRecipes: 命中多道时热卖优先', () => {
+  const r = RecipeLogic.matchRecipes('豆腐', catalog);
+  assert.ok(r.length >= 5);
+  const pris = r.map((x) => x.priority || 0);
+  assert.deepEqual(pris, [...pris].sort((a, b) => b - a));
+});
+
 test('decisionBoard: 三种吃法各一道，按快手、一家、周末排', () => {
   const board = RecipeLogic.decisionBoard(catalog);
   assert.deepEqual(board.map((x) => x.role), ['quick', 'family', 'weekend']);
+  // 快手取 priority 最高（tomato-egg 已降到 10，不再是第一）
   assert.deepEqual(board.map((x) => x.recipe.id), [
-    'tomato-egg', 'napa-pork-vermicelli', 'hotpot',
+    'steamed-blue-crab', 'napa-pork-vermicelli', 'hotpot',
   ]);
   assert.deepEqual(board.map((x) => x.title), ['快手上桌', '一家三口', '周末多做一点']);
+});
+
+test('decisionBoard: 传 seed 同一天稳定、不同天轮换', () => {
+  const a = RecipeLogic.decisionBoard(catalog, '2026-11-01');
+  const b = RecipeLogic.decisionBoard(catalog, '2026-11-01');
+  assert.deepEqual(a.map((x) => x.recipe.id), b.map((x) => x.recipe.id));
+  assert.deepEqual(a.map((x) => x.role), ['quick', 'family', 'weekend']);
+  const days = ['2026-11-01', '2026-11-02', '2026-11-03', '2026-11-04', '2026-11-05']
+    .map((s) => RecipeLogic.decisionBoard(catalog, s).map((x) => x.recipe.id).join(','));
+  assert.ok(new Set(days).size > 1);
 });
 
 test('relatedRecipes: 先放这道菜点名的下一道', () => {

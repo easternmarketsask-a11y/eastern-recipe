@@ -307,7 +307,7 @@
 
   // 「查看全部」：把某分类全部食谱铺在结果区（网格），带返回首页
   var SEC_TITLE = {
-    season: '🍂 应季',
+    season: '❄️ 暖冬', soup: '🍲 汤羹',
     tonight: '🔥 今晚吃什么', cantonese: '🥢 粤菜 · 广式', seafood: '🐟 海鲜河鲜', staple: '🍚 主食 · 面饭',
     dumpling: '🥟 饺子 · 馄饨', fresh: '🍜 鲜河粉 · 鲜肠粉', breakfast: '🌅 早餐包点', veg: '🥗 家常蔬菜',
     other: '🍳 家常菜'
@@ -315,10 +315,11 @@
   // 首页很长，这条快捷条让人直接跳到某个板块，不用一路横滑过去
   var JUMPS = [
     { id: 'tonightBlock', label: '今晚' },
-    { id: 'seasonBlock', label: '应季' },
-    { id: 'tonightBlock', label: '今晚' },
+    { id: 'seasonBlock', label: '暖冬' },
+    { id: 'soupBlock', label: '汤羹' },
     { id: 'cantoneseBlock', label: '粤菜' },
     { id: 'vegBlock', label: '蔬菜' },
+    { id: 'liangcaiBlock', label: '凉菜' },
     { id: 'seafoodBlock', label: '海鲜' },
     { id: 'freshBlock', label: '河粉' },
     { id: 'breakfastBlock', label: '早餐' },
@@ -415,7 +416,9 @@
   function renderDecide() {
     var el = $('decide');
     if (!el) return;
-    var board = RL.decisionBoard(state.recipes);
+    // 按天轮换：同一天看到同一组，第二天换一组
+    var today = new Date().toISOString().slice(0, 10);
+    var board = RL.decisionBoard(state.recipes, today);
     el.innerHTML = board.map(function (item) {
       var r = item.recipe;
       var img = r.image
@@ -438,10 +441,14 @@
   }
 
   function renderHome() {
-    // 🍂 应季仍在。中秋月饼已下架，明年应节再加回来。首页第一块是今晚的三种吃法。
+    // ❄️ 暖冬：热汤炖菜季（蟹、桂花藕已移回海鲜/家常）。首页第一块是今晚的三种吃法。
     var season = bySection('season');
     $('seasonBlock').hidden = !season.length;
     fillCards('season', season);
+    // 🍲 汤羹：煲汤炖汤集中在这里
+    var soup = bySection('soup');
+    $('soupBlock').hidden = !soup.length;
+    fillCards('soup', soup);
 
     // 今晚吃什么：三种吃法各一道，全部硬菜仍从「查看全部」进
     renderDecide();
@@ -474,6 +481,10 @@
     var veg = bySection('veg');
     $('vegBlock').hidden = !veg.length;
     fillCards('veg', veg);
+    // 🥒 凉菜：按标签筛（不是板块，没有“查看全部”页）
+    var liangcai = state.recipes.filter(function (r) { return (r.tags || []).indexOf('凉菜') !== -1; });
+    $('liangcaiBlock').hidden = !liangcai.length;
+    fillCards('liangcai', liangcai);
 
     // 🥬 chips（主料 → 以货找菜）
     var chips = featuredIngredientChips(10);

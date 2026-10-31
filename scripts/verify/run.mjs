@@ -48,19 +48,23 @@ try {
   await page.waitForSelector('#season .card', { timeout: 15000 });
 
   const seasonVisible = await page.isVisible('#seasonBlock');
-  ok('首页出现「应季」板块', seasonVisible);
+  ok('首页出现「暖冬」板块', seasonVisible);
 
   // setupLoop 会把卡片复制三份做无缝循环，所以按 data-id 去重才是真实菜数
   const seasonIds = await page.$$eval('#season .card', (els) =>
     [...new Set(els.map((e) => e.dataset.id))]);
-  ok('应季板块有 10 道菜，含粉葛汤且不含月饼', seasonIds.length === 10 && seasonIds.includes('pueraria-pork-soup') && !seasonIds.includes('mooncake-ready'), seasonIds.join(', '));
+  ok('暖冬 9 道，含萝卜牛腩土豆牛腩，不含月饼和莲藕粉葛汤', seasonIds.length === 9 && seasonIds.includes('radish-beef-brisket') && seasonIds.includes('potato-beef-stew') && !seasonIds.includes('mooncake-ready') && !seasonIds.includes('lotus-pork-bone-soup') && !seasonIds.includes('pueraria-pork-soup'), seasonIds.join(', '));
+  const soupIds = await page.$$eval('#soup .card', (els) => [...new Set(els.map((e) => e.dataset.id))]);
+  ok('汤羹 12 道，含猪肚鸡汤莲藕汤', soupIds.length === 12 && soupIds.includes('pepper-pork-tripe-chicken-soup') && soupIds.includes('lotus-pork-bone-soup'), soupIds.join(', '));
+  const liangcaiIds = await page.$$eval('#liangcai .card', (els) => [...new Set(els.map((e) => e.dataset.id))]);
+  ok('凉菜 6 道（按标签筛）', liangcaiIds.length === 6 && liangcaiIds.includes('pidan-doufu'), liangcaiIds.join(', '));
 
   const usesCatalog = requested.some((u) => u.includes('/data/catalog.json'));
   const usesFullCatalog = requested.some((u) => u.includes('/data/products.json'));
   ok('首页下载精简目录，不下载全库商品', usesCatalog && !usesFullCatalog);
 
   const jumpText = await page.$eval('#jump', (e) => e.textContent);
-  ok('首页有板块快捷条', jumpText.includes('应季') && jumpText.includes('粤菜') && jumpText.includes('饺子') && !jumpText.includes('中秋'), jumpText);
+  ok('首页有板块快捷条', jumpText.includes('暖冬') && jumpText.includes('汤羹') && jumpText.includes('凉菜') && jumpText.includes('粤菜') && jumpText.includes('饺子') && !jumpText.includes('中秋') && (jumpText.match(/今晚/g) || []).length === 1, jumpText);
 
   const desk = await browser.newContext({ viewport: { width: 1280, height: 800 } });
   const dp = await desk.newPage();
@@ -82,17 +86,19 @@ try {
   const decide = await page.$$eval('#decide .decide__card', (els) => els.map((e) => ({
     id: e.dataset.id,
     role: (e.querySelector('.decide__role') || {}).textContent || '',
+    name: (e.querySelector('.decide__name') || {}).textContent || '',
   })));
+  // 三种吃法按天轮换，这里只锁定结构（三种角色各一），不锁定具体是哪道菜
   ok('首页三种吃法各一道',
     decide.length === 3
-      && decide[0].id === 'tomato-egg' && decide[0].role.includes('快手上桌')
-      && decide[1].id === 'napa-pork-vermicelli' && decide[1].role.includes('一家三口')
-      && decide[2].id === 'hotpot' && decide[2].role.includes('周末多做一点'),
+      && decide[0].role.includes('快手上桌')
+      && decide[1].role.includes('一家三口')
+      && decide[2].role.includes('周末多做一点'),
     decide.map((d) => d.role + ':' + d.id).join(' / '));
-  await page.click('#decide .decide__card[data-id="tomato-egg"]');
+  await page.click('#decide .decide__card >> nth=0');
   await page.waitForSelector('#detail:not([hidden]) .detail__title', { timeout: 10000 });
   const quickTitle = await page.$eval('.detail__title', (e) => e.textContent.trim());
-  ok('点快手上桌打开番茄炒蛋', quickTitle.includes('番茄炒蛋'), quickTitle);
+  ok('点快手上桌能打开对应详情', decide[0].name !== '' && quickTitle.includes(decide[0].name), quickTitle);
   await page.goBack();
   await page.waitForSelector('#season .card', { timeout: 10000 });
 
@@ -121,7 +127,7 @@ try {
   await page.evaluate(() => window.scrollTo(0, 0));
 
   // ── 详情页 ──────────────────────────────────────────────────────────────
-  await page.click('#season .card[data-id="lotus-pork-bone-soup"]');
+  await page.click('#soup .card[data-id="lotus-pork-bone-soup"]');
   await page.waitForSelector('#detail:not([hidden])', { timeout: 10000 });
   const title = await page.$eval('.detail__title', (e) => e.textContent.trim());
   ok('点卡片能打开详情页', title.includes('莲藕筒骨汤'), title);
@@ -210,7 +216,8 @@ try {
   const idx = await p2.goto(BASE + '/r/', { waitUntil: 'domcontentloaded' });
   ok('全部食谱目录页返回 200', idx.status() === 200);
   const links = await p2.$$eval('.pg-seclist a', (e) => e.length);
-  ok('目录页链出全部 101 道菜', links === 101, links + ' 条');
+  // r/ 是 build_static_pages.py 的生成物（126 道）
+  ok('目录页链出全部 126 道菜', links === 126, links + ' 条');
   for (const [id, name] of [
     ['pueraria-pork-soup', '粉葛猪骨汤'],
     ['gai-lan-oyster-sauce', '蚝油芥兰'],

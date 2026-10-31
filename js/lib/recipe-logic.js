@@ -17,10 +17,11 @@
   function matchRecipes(query, recipes) {
     const q = normalizeQuery(query);
     if (!q) return [];
+    // 热卖优先：命中的菜按 priority 排，免得搜“豆腐”一次列出 9 道吓人
     return (recipes || []).filter(function (r) {
       const hay = [r.name_cn, r.name_en].concat(r.aliases || []).map(normalizeQuery);
       return hay.some(function (h) { return h.indexOf(q) !== -1; });
-    });
+    }).sort(function (a, b) { return (b.priority || 0) - (a.priority || 0); });
   }
 
   function buildProductIndex(items) {
@@ -160,12 +161,15 @@
     { id: 'weekend', title: '周末多做一点', note: '慢慢做，够分' }
   ];
 
-  function decisionBoard(recipes) {
+  // seed 可选：不传取每种吃法 priority 最高（旧行为，测试锁定）；
+  // 传了（YYYY-MM-DD）当天轮换一组，同一天稳定。
+  function decisionBoard(recipes, seed) {
     return DECIDE_ROLES.map(function (role) {
       var list = (recipes || []).filter(function (r) { return r.decide === role.id; });
       list.sort(function (a, b) { return (b.priority || 0) - (a.priority || 0); });
       if (!list.length) return null;
-      return { role: role.id, title: role.title, note: role.note, recipe: list[0] };
+      var pick = seed ? todaysPicks(list, seed + ':' + role.id, 1)[0] : list[0];
+      return { role: role.id, title: role.title, note: role.note, recipe: pick };
     }).filter(Boolean);
   }
 
