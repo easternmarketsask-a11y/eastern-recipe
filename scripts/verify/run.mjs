@@ -68,7 +68,7 @@ try {
   ok('首页下载精简目录，不下载全库商品', usesCatalog && !usesFullCatalog);
 
   const jumpText = await page.$eval('#jump', (e) => e.textContent);
-  ok('首页有板块快捷条', jumpText.includes('暖冬') && jumpText.includes('汤羹') && jumpText.includes('凉菜') && jumpText.includes('粤菜') && jumpText.includes('饺子') && !jumpText.includes('中秋') && (jumpText.match(/今晚/g) || []).length === 1, jumpText);
+  ok('首页有板块快捷条', jumpText.includes('暖冬') && jumpText.includes('汤羹') && jumpText.includes('凉菜') && jumpText.includes('粤菜') && jumpText.includes('饺子') && !jumpText.includes('中秋') && (jumpText.match(/美味/g) || []).length === 1, jumpText);
 
   const desk = await browser.newContext({ viewport: { width: 1280, height: 800 } });
   const dp = await desk.newPage();
@@ -85,7 +85,7 @@ try {
   await desk.close();
 
   const firstBlock = await page.$eval('.home .block .block__title', (e) => e.textContent.trim());
-  ok('今晚吃什么排在首页第一位', firstBlock.includes('今晚吃什么'), firstBlock);
+  ok('天天美味排在首页第一位', firstBlock.includes('天天美味'), firstBlock);
 
   const decide = await page.$$eval('#decide .decide__card', (els) => els.map((e) => ({
     id: e.dataset.id,

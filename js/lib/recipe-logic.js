@@ -206,7 +206,7 @@
     return bits.join(' · ');
   }
 
-  // 今晚吃什么：按 seed 确定性轮换取 n 道
+  // 天天美味：按 seed 确定性轮换取 n 道
   function todaysPicks(recipes, seed, n) {
     const list = (recipes || []).slice();
     if (!list.length) return [];

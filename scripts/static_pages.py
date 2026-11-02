@@ -19,7 +19,7 @@ STORE_ADDR = "133-412 Willowgrove Square, Saskatoon, Saskatchewan"
 SEC_TITLE = {
     "season": "❄️ 暖冬",
     "soup": "🍲 汤羹",
-    "tonight": "🔥 今晚吃什么",
+    "tonight": "🔥 天天美味",
     "cantonese": "🥢 粤菜 · 广式",
     "veg": "🥗 家常蔬菜",
     "seafood": "🐟 海鲜河鲜",
