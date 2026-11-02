@@ -84,7 +84,7 @@ def head(title, desc, canonical, image, extra=""):
     <a class="hdr__logobtn" href="https://easternmarket.ca" aria-label="东方超市 · 进入主网首页">
       <img class="hdr__logo" src="/assets/logo-horizontal.png?v=%(av)s" alt="东方超市 Eastern Market" width="1080" height="556">
     </a>
-    <a class="hdr__name" href="/" style="text-decoration:none"><img class="hdr__wordmark" src="/assets/dongfang-shipu-wordmark.png?v=1" alt="东方食谱" width="800" height="283"></a>
+    <a class="hdr__name" href="/" style="text-decoration:none"><img class="hdr__wordmark" src="/assets/dongfang-shipu-wordmark.png?v=2" alt="东方食谱" width="559" height="205"></a>
   </div>
 </header>
 <main>
