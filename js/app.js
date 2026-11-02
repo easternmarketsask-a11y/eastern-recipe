@@ -1,4 +1,4 @@
-/* app.js — 逛发现首页(今晚吃什么/食材chips/想做清单) + 统一搜索(菜名/以货找菜) + 食谱详情
+/* app.js — 逛发现首页(天天美味/食材chips/想做清单) + 统一搜索(菜名/以货找菜) + 食谱详情
    + 到店购物清单 + hash 路由(每道菜可分享链接、返回键可用)。
    渲染薄层，计算全调 RecipeLogic；收藏/勾选存 localStorage。 */
 (function () {
@@ -308,13 +308,13 @@
   // 「查看全部」：把某分类全部食谱铺在结果区（网格），带返回首页
   var SEC_TITLE = {
     season: '❄️ 暖冬', soup: '🍲 汤羹',
-    tonight: '🔥 今晚吃什么', cantonese: '🥢 粤菜 · 广式', seafood: '🐟 海鲜河鲜', staple: '🍚 主食 · 面饭',
+    tonight: '🔥 天天美味', cantonese: '🥢 粤菜 · 广式', seafood: '🐟 海鲜河鲜', staple: '🍚 主食 · 面饭',
     dumpling: '🥟 饺子 · 馄饨', fresh: '🍜 鲜河粉 · 鲜肠粉', breakfast: '🌅 早餐包点', veg: '🥗 家常蔬菜',
     other: '🍳 家常菜'
   };
   // 首页很长，这条快捷条让人直接跳到某个板块，不用一路横滑过去
   var JUMPS = [
-    { id: 'tonightBlock', label: '今晚' },
+    { id: 'tonightBlock', label: '美味' },
     { id: 'seasonBlock', label: '暖冬' },
     { id: 'soupBlock', label: '汤羹' },
     { id: 'cantoneseBlock', label: '粤菜' },
@@ -374,7 +374,7 @@
     return state.recipes.filter(function (r) { return r.section === sec; })
       .sort(function (a, b) { return (b.priority || 0) - (a.priority || 0); });
   }
-  // 快捷 chips：取"今晚吃什么 + 鲜河粉肠粉"里每道菜的主料（第一个必需且在售的食材），引导到高营业额菜
+  // 快捷 chips：取"天天美味 + 鲜河粉肠粉"里每道菜的主料（第一个必需且在售的食材），引导到高营业额菜
   function featuredIngredientChips(max) {
     var seen = {}, arr = [];
     bySection('tonight').concat(bySection('fresh')).forEach(function (r) {
@@ -450,7 +450,7 @@
     $('soupBlock').hidden = !soup.length;
     fillCards('soup', soup);
 
-    // 今晚吃什么：三种吃法各一道，全部硬菜仍从「查看全部」进
+    // 天天美味：三种吃法各一道，全部硬菜仍从「查看全部」进
     renderDecide();
 
     // 🥢 粤菜
