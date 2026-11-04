@@ -17,10 +17,10 @@ STORE_ADDR = "133-412 Willowgrove Square, Saskatoon, Saskatchewan"
 
 # 与 index.html / app.js 的 SEC_TITLE 保持一致
 SEC_TITLE = {
-    "season": "❄️ 暖冬",
     "soup": "🍲 汤羹",
-    "tonight": "🔥 让家人天天享美食",
     "cantonese": "🥢 粤菜 · 广式",
+    "tonight": "🔥 让家人天天享美食",
+    "season": "❄️ 暖冬",
     "veg": "🥗 家常蔬菜",
     "seafood": "🐟 海鲜河鲜",
     "fresh": "🍜 鲜河粉 · 鲜肠粉",

@@ -314,10 +314,10 @@
   };
   // 首页很长，这条快捷条让人直接跳到某个板块，不用一路横滑过去
   var JUMPS = [
-    { id: 'tonightBlock', label: '美味' },
-    { id: 'seasonBlock', label: '暖冬' },
     { id: 'soupBlock', label: '汤羹' },
     { id: 'cantoneseBlock', label: '粤菜' },
+    { id: 'tonightBlock', label: '美味' },
+    { id: 'seasonBlock', label: '暖冬' },
     { id: 'vegBlock', label: '蔬菜' },
     { id: 'liangcaiBlock', label: '凉菜' },
     { id: 'seafoodBlock', label: '海鲜' },
@@ -441,7 +441,7 @@
   }
 
   function renderHome() {
-    // ❄️ 暖冬：热汤炖菜季（蟹、桂花藕已移回海鲜/家常）。首页第一块是今晚的三种吃法。
+    // 首页顺序：🍲 汤羹 → 🥢 粤菜 → 今晚三种吃法 → ❄️ 暖冬 → 其余。DOM 顺序即展示顺序。
     var season = bySection('season');
     $('seasonBlock').hidden = !season.length;
     fillCards('season', season);
