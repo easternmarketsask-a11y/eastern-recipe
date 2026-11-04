@@ -308,7 +308,7 @@
   // 「查看全部」：把某分类全部食谱铺在结果区（网格），带返回首页
   var SEC_TITLE = {
     season: '❄️ 暖冬', soup: '🍲 汤羹',
-    tonight: '🔥 天天美味', cantonese: '🥢 粤菜 · 广式', seafood: '🐟 海鲜河鲜', staple: '🍚 主食 · 面饭',
+    tonight: '🔥 让家人天天享美食', cantonese: '🥢 粤菜 · 广式', seafood: '🐟 海鲜河鲜', staple: '🍚 主食 · 面饭',
     dumpling: '🥟 饺子 · 馄饨', fresh: '🍜 鲜河粉 · 鲜肠粉', breakfast: '🌅 早餐包点', veg: '🥗 家常蔬菜',
     other: '🍳 家常菜'
   };
