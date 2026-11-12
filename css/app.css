@@ -106,8 +106,10 @@ picture{display:contents}
 .ftr strong{color:var(--green-d);font-size:13px}
 .ftr a{color:var(--green);text-decoration:none}
 .ftr__fine{font-size:12px;color:var(--muted)}
-/* 详情页次级操作（复制链接/看购物清单/网上下单） */
-.detail__actions{display:flex;gap:8px;margin:0 0 4px}
+/* 详情页次级操作（复制链接/分享到社区/看购物清单/网上下单） */
+.detail__actions{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 4px}
+.detail__actions .mini-btn{flex:1 1 40%}
+.detail__video{width:100%;border-radius:var(--radius);margin:6px 0 12px;display:block;background:#000}
 .mini-btn{flex:1;min-height:38px;border-radius:var(--radius);border:1px solid var(--line);
   background:var(--card);color:var(--green-d);font-size:13px;cursor:pointer;
   display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:0 8px}

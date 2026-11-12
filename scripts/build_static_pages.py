@@ -45,6 +45,7 @@ PAGE_CSS = """
 .pg-cta{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
 .pg-cta .mini-btn{flex:1 1 42%}
 .pg-cta .mini-btn--go{background:var(--green);color:#fff;border-color:var(--green)}
+.detail__video{width:100%;border-radius:8px;margin:6px 0 12px;display:block;background:#000}
 .pg-more{margin:22px 0 8px}
 .pg-allrecipes{display:block;text-align:center;margin:22px 0 4px;color:var(--green);font-size:13px}
 .pg-secgrp{margin:22px 0}
@@ -149,6 +150,13 @@ def recipe_page(r, pidx, all_recipes):
                  % (sp.h(sec), sp.h(sec_title), sp.h(name)))
 
     parts.append(picture(r.get("image"), "hero", "detail__img", name))
+    if r.get("video"):
+        # 短视频位：有才渲染，无视频不占位
+        parts.append('<video class="detail__video" controls preload="none"%s>'
+                     '<source src="%s"></video>'
+                     % ((' poster="%s"' % sp.h(sp.absolute(r.get("video_cover") or r.get("image") or "")))
+                        if (r.get("video_cover") or r.get("image")) else "",
+                        sp.h(r["video"])))
     parts.append('<h1 class="pg-h1">%s%s</h1>'
                  % (sp.h(name),
                     ('<small>%s</small>' % sp.h(r["name_en"])) if r.get("name_en") else ""))
@@ -187,7 +195,9 @@ def recipe_page(r, pidx, all_recipes):
     parts.append('<div class="pg-cta">'
                  '<a class="mini-btn mini-btn--go" href="%s">♡ 加入想做 · 凑购物清单</a>'
                  '<a class="mini-btn" href="%s" target="_blank" rel="noopener">🚚 网上下单</a>'
-                 '</div>' % (sp.h(sp.app_url(rid)), sp.h(DELIVERY_URL)))
+                 '<a class="mini-btn" href="%s">💬 分享到社区</a>'
+                 '</div>' % (sp.h(sp.app_url(rid)), sp.h(DELIVERY_URL),
+                             sp.h(sp.community_share_url(r))))
 
     # 做法
     parts.append('<h2 class="pg-h2">%s</h2>' % ("怎么吃" if is_ready else "做法"))

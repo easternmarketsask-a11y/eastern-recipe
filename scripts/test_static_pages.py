@@ -54,6 +54,27 @@ def test_app_url_points_back_into_the_hash_app():
     assert sp.app_url("mapo-tofu") == "https://recipe.easternmarket.ca/#/r/mapo-tofu"
 
 
+def test_community_share_url_carries_same_params_as_frontend_codec():
+    url = sp.community_share_url(DISH)
+    assert url.startswith("https://easternmarket.ca/community?share=recipe")
+    assert "rid=mapo-tofu" in url
+    assert "url=https%3A%2F%2Frecipe.easternmarket.ca%2Fr%2Fmapo-tofu.html" in url
+    # 中文菜名 URL 编码后可还原，且封面走绝对地址
+    import urllib.parse as up
+    q = dict(up.parse_qsl(up.urlsplit(url).query))
+    assert q["title"] == "麻婆豆腐"
+    assert q["img"] == "https://recipe.easternmarket.ca/assets/images/mapo-tofu.jpg"
+    assert q["titleEn"] == "Mapo Tofu"
+    assert "video" not in q  # 没短视频不占位
+
+
+def test_community_share_url_passes_video_through_when_present():
+    import urllib.parse as up
+    dish = dict(DISH, video="https://cdn.example/v/mapo.mp4")
+    q = dict(up.parse_qsl(up.urlsplit(sp.community_share_url(dish)).query))
+    assert q["video"] == "https://cdn.example/v/mapo.mp4"
+
+
 def test_absolute_turns_site_relative_asset_into_full_url():
     assert sp.absolute("assets/images/x.jpg") == "https://recipe.easternmarket.ca/assets/images/x.jpg"
     # 已经是绝对地址的原样返回

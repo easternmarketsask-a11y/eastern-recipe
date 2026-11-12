@@ -86,9 +86,22 @@
 
   // 分享出去的地址用静态菜页（/r/<id>.html）：它有自己的大图预览，也能被搜索收录。
   // 站内导航仍走 hash 路由，两者内容一致。
+  function siteBase() {
+    return location.origin + location.pathname.replace(/[^/]*$/, '');
+  }
   function shareUrl(id) {
-    return location.origin + location.pathname.replace(/[^/]*$/, '') +
-      'r/' + encodeURIComponent(id) + '.html';
+    return siteBase() + 'r/' + encodeURIComponent(id) + '.html';
+  }
+  // 社区分享直链：官网社区页读同一套参数名自动备好帖子。
+  // 与 frontend-web/src/utils/recipeShare.ts、scripts/static_pages.py 同口径。
+  function communityShareUrl(recipe) {
+    var q = ['share=recipe', 'rid=' + encodeURIComponent(recipe.id),
+      'title=' + encodeURIComponent(recipe.name_cn || ''),
+      'url=' + encodeURIComponent(shareUrl(recipe.id))];
+    if (recipe.name_en) q.push('titleEn=' + encodeURIComponent(recipe.name_en));
+    if (recipe.image) q.push('img=' + encodeURIComponent(siteBase() + recipe.image));
+    if (recipe.video) q.push('video=' + encodeURIComponent(recipe.video));
+    return 'https://easternmarket.ca/community?' + q.join('&');
   }
 
   // ---- 图片：优先 WebP（体积约为 JPEG 的 1/5），浏览器不认就回退原 .jpg ----
@@ -155,8 +168,15 @@
     }
     var stepsTitle = recipe.kind === 'ready' ? '怎么吃' : '做法';
     var hero = recipe.image ? picture(recipe.image, 'hero', 'detail__img', recipe.name_cn, false) : '';
+    // 短视频位：有才渲染，无视频不占位（video/video_cover 字段预留）
+    if (recipe.video) {
+      hero += '<video class="detail__video" controls preload="none"' +
+        (recipe.video_cover ? ' poster="' + esc(recipe.video_cover) + '"' : '') +
+        '><source src="' + esc(recipe.video) + '"></video>';
+    }
     var actions = '<div class="detail__actions">' +
       '<button class="mini-btn" id="copylink">🔗 复制链接</button>' +
+      '<a class="mini-btn" id="sharecomm" href="' + esc(communityShareUrl(recipe)) + '">💬 分享到社区</a>' +
       (faved ? '<button class="mini-btn" id="tolist">🧾 看购物清单</button>' : '') +
       (DELIVERY.enabled ? '<a class="mini-btn" href="' + esc(DELIVERY.url) + '" target="_blank" rel="noopener">🚚 网上下单</a>' : '') +
       '</div>';
