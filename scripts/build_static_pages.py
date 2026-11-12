@@ -25,7 +25,7 @@ import recipe_lib as rl
 import static_pages as sp
 
 OUT_DIR = "r"
-CSS_V = "24"
+CSS_V = "25"
 ASSET_V = "2"
 DELIVERY_URL = "https://easternmarket.ca/group-order"
 
