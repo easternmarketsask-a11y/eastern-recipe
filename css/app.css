@@ -91,6 +91,14 @@ picture{display:contents}
 .back{background:none;border:none;color:var(--green);font-size:15px;padding:8px 0;cursor:pointer}
 .detail__title{margin:4px 0 12px;font-size:22px;color:var(--green-d)}
 .detail__title small{font-size:14px;color:var(--muted);font-weight:400}
+/* 菜名右侧的分享箭头：标题行横排，图标 44px 触控区，箭头只描边（空心） */
+.detail__title-row{display:flex;align-items:center;gap:10px;margin:4px 0 12px}
+.detail__title-row .detail__title{flex:1;min-width:0;margin:0}
+.share-icon-btn{flex:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);
+  background:var(--card);color:var(--green);display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.share-icon-btn:active{background:#eef6f0}
+.share-icon-btn:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+.share-icon-btn svg{width:26px;height:26px;display:block}
 .ings{list-style:none;margin:0 0 12px;padding:0;background:var(--card);
   border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
 .ing{display:flex;align-items:center;gap:8px;padding:11px 14px;border-bottom:1px solid var(--line)}

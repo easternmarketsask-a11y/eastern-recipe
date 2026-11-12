@@ -152,13 +152,17 @@ try {
   const deliver = await page.$('#detail a.mini-btn[href*="group-order"]');
   ok('详情页出现「网上下单」按钮', !!deliver);
 
-  const shareComm = await page.$('#sharecomm');
+  const shareComm = await page.$('#detail .detail__title-row #sharecomm');
   const shareHref = shareComm ? await shareComm.getAttribute('href') : '';
-  ok('详情页有「分享到社区」直链（带 rid/菜名/做法链接）',
+  const shareSvg = shareComm
+    ? await shareComm.$eval('svg', (e) => e.getAttribute('viewBox') + '|' + e.innerHTML.length)
+    : '';
+  ok('菜名右侧有绿色空心分享箭头（直链带 rid/菜名/做法链接）',
     !!shareComm && shareHref.includes('/community?share=recipe')
       && shareHref.includes('rid=lotus-pork-bone-soup')
       && shareHref.includes(encodeURIComponent('莲藕筒骨汤').slice(0, 12))
-      && shareHref.includes('%2Fr%2Flotus-pork-bone-soup.html'),
+      && shareHref.includes('%2Fr%2Flotus-pork-bone-soup.html')
+      && shareSvg.startsWith('0 0 24 24|'),
     (shareHref || '').slice(0, 120));
 
   // 复制链接：要复制静态页网址，不是 hash 地址
@@ -208,9 +212,11 @@ try {
     ld.recipeInstructions.length + ' 步');
   const canon = await p2.$eval('link[rel=canonical]', (e) => e.href);
   ok('静态菜页有 canonical', /\/r\/hotpot\.html$/.test(canon), canon);
-  const staticShare = await p2.$eval('.pg-cta a.mini-btn[href*="community?share=recipe"]', (e) => e.href);
-  ok('静态菜页有社区分享直链', /\/community\?share=recipe/.test(staticShare)
-    && staticShare.includes('rid=hotpot'), staticShare.slice(0, 100));
+  const staticShare = await p2.$eval('.pg-title-row a[href*="community?share=recipe"]', (e) => e.href);
+  const staticShareSvg = await p2.$eval('.pg-title-row a[href*="community?share=recipe"] svg', (e) => e.outerHTML.slice(0, 120));
+  ok('静态菜页菜名右侧有分享箭头', /\/community\?share=recipe/.test(staticShare)
+    && staticShare.includes('rid=hotpot')
+    && staticShareSvg.includes('fill="none"'), staticShare.slice(0, 100));
   const dump = await p2.goto(BASE + '/r/guantang-xiaoshuijiao.html', { waitUntil: 'domcontentloaded' });
   const dumpFacts = await p2.$eval('.pg-facts', (e) => e.textContent);
   const dumpMeta = await p2.$eval('meta[name=description]', (e) => e.content);

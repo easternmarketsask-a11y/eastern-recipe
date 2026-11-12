@@ -58,6 +58,15 @@ def app_url(rid):
 
 COMMUNITY_URL = "https://easternmarket.ca/community"
 
+# 菜名右侧的分享箭头：绿色空心弯箭头，SVG 描边（与 js/app.js 内联的同一图形）。
+# 只描边不填充 = 空心；颜色走 currentColor，由 .share-icon-btn 定成品牌绿。
+SHARE_ARROW_SVG = (
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"'
+    ' stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+    '<path d="M4.5 19.5C4.5 13 8 9.5 15 9"/>'
+    '<path d="M15.5 5.5L19 9l-3.5 3.5"/></svg>'
+)
+
 
 def community_share_url(recipe):
     """这道菜的社区分享直链：官网社区页读同一套参数名自动备好帖子。

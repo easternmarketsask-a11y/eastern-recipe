@@ -75,6 +75,15 @@ def test_community_share_url_passes_video_through_when_present():
     assert q["video"] == "https://cdn.example/v/mapo.mp4"
 
 
+def test_share_arrow_is_hollow_green_curved_line_icon():
+    svg = sp.SHARE_ARROW_SVG
+    assert "<svg" in svg and "</svg>" in svg
+    assert 'fill="none"' in svg  # 空心：只描边不填充
+    assert 'stroke="currentColor"' in svg  # 绿色由 .share-icon-btn 定
+    assert "<path" in svg and "C" in svg  # 弯的：含曲线命令
+    assert "💬" not in svg  # 不用 emoji 当图标
+
+
 def test_absolute_turns_site_relative_asset_into_full_url():
     assert sp.absolute("assets/images/x.jpg") == "https://recipe.easternmarket.ca/assets/images/x.jpg"
     # 已经是绝对地址的原样返回

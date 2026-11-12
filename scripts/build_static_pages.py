@@ -25,7 +25,7 @@ import recipe_lib as rl
 import static_pages as sp
 
 OUT_DIR = "r"
-CSS_V = "21"
+CSS_V = "23"
 ASSET_V = "2"
 DELIVERY_URL = "https://easternmarket.ca/group-order"
 
@@ -45,6 +45,8 @@ PAGE_CSS = """
 .pg-cta{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
 .pg-cta .mini-btn{flex:1 1 42%}
 .pg-cta .mini-btn--go{background:var(--green);color:#fff;border-color:var(--green)}
+.pg-title-row{display:flex;align-items:center;gap:10px}
+.pg-title-row .pg-h1{flex:1;min-width:0}
 .detail__video{width:100%;border-radius:8px;margin:6px 0 12px;display:block;background:#000}
 .pg-more{margin:22px 0 8px}
 .pg-allrecipes{display:block;text-align:center;margin:22px 0 4px;color:var(--green);font-size:13px}
@@ -157,9 +159,11 @@ def recipe_page(r, pidx, all_recipes):
                      % ((' poster="%s"' % sp.h(sp.absolute(r.get("video_cover") or r.get("image") or "")))
                         if (r.get("video_cover") or r.get("image")) else "",
                         sp.h(r["video"])))
-    parts.append('<h1 class="pg-h1">%s%s</h1>'
+    parts.append('<div class="pg-title-row"><h1 class="pg-h1">%s%s</h1>'
+                 '<a class="share-icon-btn" href="%s" aria-label="分享到社区">%s</a></div>'
                  % (sp.h(name),
-                    ('<small>%s</small>' % sp.h(r["name_en"])) if r.get("name_en") else ""))
+                    ('<small>%s</small>' % sp.h(r["name_en"])) if r.get("name_en") else "",
+                    sp.h(sp.community_share_url(r)), sp.SHARE_ARROW_SVG))
     facts = sp.fact_line(r)
     if facts:
         parts.append('<p class="pg-facts">%s</p>' % sp.h(facts))
@@ -195,9 +199,7 @@ def recipe_page(r, pidx, all_recipes):
     parts.append('<div class="pg-cta">'
                  '<a class="mini-btn mini-btn--go" href="%s">♡ 加入想做 · 凑购物清单</a>'
                  '<a class="mini-btn" href="%s" target="_blank" rel="noopener">🚚 网上下单</a>'
-                 '<a class="mini-btn" href="%s">💬 分享到社区</a>'
-                 '</div>' % (sp.h(sp.app_url(rid)), sp.h(DELIVERY_URL),
-                             sp.h(sp.community_share_url(r))))
+                 '</div>' % (sp.h(sp.app_url(rid)), sp.h(DELIVERY_URL)))
 
     # 做法
     parts.append('<h2 class="pg-h2">%s</h2>' % ("怎么吃" if is_ready else "做法"))
