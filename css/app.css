@@ -95,7 +95,7 @@ picture{display:contents}
 .detail__title-row{display:flex;align-items:center;gap:10px;margin:4px 0 12px}
 .detail__title-row .detail__title{flex:1;min-width:0;margin:0}
 .share-icon-btn{flex:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);
-  background:var(--card);color:var(--green);display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+  background:var(--card);color:#378a59;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
 .share-icon-btn:active{background:#eef6f0}
 .share-icon-btn:focus-visible{outline:2px solid var(--green);outline-offset:2px}
 .share-icon-btn svg{width:26px;height:26px;display:block}

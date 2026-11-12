@@ -177,9 +177,9 @@
     // 菜名右侧的绿色空心弯箭头（SVG 描边，与 scripts/static_pages.py 的 SHARE_ARROW_SVG 同形）
     var shareIcon = '<a class="share-icon-btn" id="sharecomm" href="' + esc(communityShareUrl(recipe)) + '"' +
       ' aria-label="分享到社区">' +
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55"' +
       ' stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-      '<path d="M4.5 19.5C4.5 13 8 9.5 15 9"/><path d="M15.5 5.5L19 9l-3.5 3.5"/></svg></a>';
+      '<path d="M3.5 19 C4 11.5 8.6 8 14.5 7.8 L14.5 4.2 L21 10 L14.5 15.8 L14.5 12.4 C9.8 12.4 6.2 14.3 3.5 19 Z"/></svg></a>';
     var actions = '<div class="detail__actions">' +
       '<button class="mini-btn" id="copylink">🔗 复制链接</button>' +
       (faved ? '<button class="mini-btn" id="tolist">🧾 看购物清单</button>' : '') +
