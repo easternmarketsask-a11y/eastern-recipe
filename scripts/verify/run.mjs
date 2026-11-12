@@ -85,7 +85,7 @@ try {
   await desk.close();
 
   const firstBlock = await page.$eval('.home .block .block__title', (e) => e.textContent.trim());
-  ok('天天美味排在首页第一位', firstBlock.includes('天天美味'), firstBlock);
+  ok('汤羹排在首页第一位（当前首页顺序）', firstBlock.includes('汤羹'), firstBlock);
 
   const decide = await page.$$eval('#decide .decide__card', (els) => els.map((e) => ({
     id: e.dataset.id,
