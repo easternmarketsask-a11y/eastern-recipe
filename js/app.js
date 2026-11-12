@@ -174,9 +174,14 @@
         (recipe.video_cover ? ' poster="' + esc(recipe.video_cover) + '"' : '') +
         '><source src="' + esc(recipe.video) + '"></video>';
     }
+    // 菜名右侧的绿色空心弯箭头（SVG 描边，与 scripts/static_pages.py 的 SHARE_ARROW_SVG 同形）
+    var shareIcon = '<a class="share-icon-btn" id="sharecomm" href="' + esc(communityShareUrl(recipe)) + '"' +
+      ' aria-label="分享到社区">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"' +
+      ' stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+      '<path d="M4.5 19.5C4.5 13 8 9.5 15 9"/><path d="M15.5 5.5L19 9l-3.5 3.5"/></svg></a>';
     var actions = '<div class="detail__actions">' +
       '<button class="mini-btn" id="copylink">🔗 复制链接</button>' +
-      '<a class="mini-btn" id="sharecomm" href="' + esc(communityShareUrl(recipe)) + '">💬 分享到社区</a>' +
       (faved ? '<button class="mini-btn" id="tolist">🧾 看购物清单</button>' : '') +
       (DELIVERY.enabled ? '<a class="mini-btn" href="' + esc(DELIVERY.url) + '" target="_blank" rel="noopener">🚚 网上下单</a>' : '') +
       '</div>';
@@ -193,8 +198,8 @@
     d.innerHTML =
       '<button class="back" id="back">← 返回</button>' +
       hero +
-      '<h2 class="detail__title">' + esc(recipe.name_cn) +
-        ' <small>' + esc(recipe.name_en || '') + '</small></h2>' +
+      '<div class="detail__title-row"><h2 class="detail__title">' + esc(recipe.name_cn) +
+        ' <small>' + esc(recipe.name_en || '') + '</small></h2>' + shareIcon + '</div>' +
       (facts ? '<p class="detail__facts">' + esc(facts) + '</p>' : '') +
       (recipe.hook ? '<p class="detail__hook">' + esc(recipe.hook) + '</p>' : '') +
       (recipe.nutrition ? '<div class="detail__nutri">🌿 营养 · ' + esc(recipe.nutrition) + '</div>' : '') +
