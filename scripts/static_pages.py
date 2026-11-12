@@ -56,6 +56,31 @@ def app_url(rid):
     return "%s/#/r/%s" % (SITE, rid)
 
 
+COMMUNITY_URL = "https://easternmarket.ca/community"
+
+
+def community_share_url(recipe):
+    """这道菜的社区分享直链：官网社区页读同一套参数名自动备好帖子。
+
+    参数 share=recipe & rid & title & url & img? & titleEn? & video?
+    与 frontend-web/src/utils/recipeShare.ts 同口径；video 预留短视频。
+    """
+    from urllib.parse import urlencode
+    rid = recipe.get("id") or ""
+    params = [("share", "recipe"),
+              ("rid", rid),
+              ("title", recipe.get("name_cn") or ""),
+              ("url", recipe_url(rid))]
+    if recipe.get("name_en"):
+        params.append(("titleEn", recipe["name_en"]))
+    img = absolute(recipe.get("image") or "")
+    if img:
+        params.append(("img", img))
+    if recipe.get("video"):
+        params.append(("video", recipe["video"]))
+    return "%s?%s" % (COMMUNITY_URL, urlencode(params))
+
+
 def absolute(path):
     """站内相对路径 → 绝对网址；已是绝对地址的原样返回（og:image 必须绝对）。"""
     if not path:
