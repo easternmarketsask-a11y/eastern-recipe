@@ -160,6 +160,14 @@
         mates.map(recipeCard).join('') + '</div>';
     }
     var stepsTitle = recipe.kind === 'ready' ? '怎么吃' : '做法';
+    var english = recipe.steps_en && recipe.steps_en.length
+      ? '<details lang="en"><summary>English recipe</summary><h3 class="detail__h3">Ingredients</h3><ul>' +
+        recipe.ingredients.map(function (ing) {
+          return '<li>' + esc(ing.qty_en) + ' ' + esc(ing.label_en) + '</li>';
+        }).join('') + '</ul><h3 class="detail__h3">Method</h3><ol class="steps">' +
+        recipe.steps_en.map(function (step) { return '<li>' + esc(step) + '</li>'; }).join('') +
+        '</ol></details>'
+      : '';
     var hero = recipe.image ? picture(recipe.image, 'hero', 'detail__img', recipe.name_cn, false) : '';
     // 短视频位：有才渲染，无视频不占位（video/video_cover 字段预留）
     if (recipe.video) {
@@ -203,6 +211,7 @@
       '<ol class="steps">' + (recipe.steps || []).map(function (s) {
         return '<li>' + esc(s) + '</li>';
       }).join('') + '</ol>' +
+      english +
       nextHtml;
     wireCards(d);
     $('back').onclick = goBack;

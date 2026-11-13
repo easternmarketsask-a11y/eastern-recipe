@@ -209,6 +209,14 @@ def recipe_page(r, pidx, all_recipes):
     parts.append('<h2 class="pg-h2">%s</h2>' % ("怎么吃" if is_ready else "做法"))
     parts.append('<ol class="steps">%s</ol>'
                  % "".join('<li>%s</li>' % sp.h(s) for s in (r.get("steps") or [])))
+    if r.get("steps_en"):
+        ingredients_en = "".join('<li>%s %s</li>' % (sp.h(ing["qty_en"]), sp.h(ing["label_en"]))
+                                 for ing in r["ingredients"])
+        steps_en = "".join('<li>%s</li>' % sp.h(step) for step in r["steps_en"])
+        parts.append('<details lang="en"><summary>English recipe</summary>'
+                     '<h2 class="pg-h2">Ingredients</h2><ul>%s</ul>'
+                     '<h2 class="pg-h2">Method</h2><ol class="steps">%s</ol></details>'
+                     % (ingredients_en, steps_en))
 
     mate_ids = {x["id"] for x in mates}
     rel = [x for x in sp.related(r, all_recipes, 8) if x["id"] not in mate_ids][:6]

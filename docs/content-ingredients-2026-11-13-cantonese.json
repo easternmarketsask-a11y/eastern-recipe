@@ -1,0 +1,183 @@
+{
+  "checked_at_utc": "2026-11-13T18:08:36.530908+00:00",
+  "source": "StockWise targeted public searches and exact-code Firestore reads",
+  "scope": "Active catalog records for shelf binding. Some SKUs are unpublished in the online storefront. Catalog presence does not guarantee physical inventory.",
+  "products": [
+    {
+      "id": "l9N6w7i9BeIDGLDiXDdt",
+      "code": "0178",
+      "is_published": false,
+      "name": "Peeled Garlic 脱皮蒜头 pk",
+      "category": "新鲜蔬菜",
+      "isActive": true
+    },
+    {
+      "id": "VWTYEo8LYkZCxOQZ3gZW",
+      "code": "057864000011",
+      "is_published": false,
+      "name": "Tofu Med Firm 454g 中硬豆腐",
+      "category": "豆腐蛋品",
+      "isActive": true
+    },
+    {
+      "id": "bOXGdlwfdjWFjvS7iBsB",
+      "code": "060629010132",
+      "is_published": true,
+      "name": "DF Chinese Sausage 白油肠 375g",
+      "category": "冷冻食品",
+      "isActive": true
+    },
+    {
+      "id": "52xSRAJFy6UE2htC1BQu",
+      "code": "063111103541",
+      "is_published": false,
+      "name": "Rogers Granulated Sugar 1kg 白砂糖",
+      "category": "干货调料",
+      "isActive": true
+    },
+    {
+      "id": "8RnkOCA9CFyGru2iu0HP",
+      "code": "063211043891",
+      "is_published": false,
+      "name": "Swanson Chicken Broth 412ml 鸡汤",
+      "category": "干货调料",
+      "isActive": true
+    },
+    {
+      "code": "078895128789",
+      "name": "LKK Soy Sauce 鮮味生抽 500ml",
+      "name_cn": null,
+      "name_en": null,
+      "id": "NKWykr4sdQiWDtwr7shZ",
+      "isActive": true,
+      "category": "干货调料"
+    },
+    {
+      "code": "1018",
+      "name": "You Choy 油菜心",
+      "name_cn": null,
+      "name_en": null,
+      "id": "StSGNIMSW0IqMg5L37vz",
+      "isActive": true,
+      "category": "新鲜蔬菜"
+    },
+    {
+      "code": "1037",
+      "name": "Ginger 生姜",
+      "name_cn": null,
+      "name_en": null,
+      "id": "jKYJ8Etu2Tqj4Gim16IN",
+      "isActive": true,
+      "category": "新鲜蔬菜"
+    },
+    {
+      "id": "ds0wG1KFq2q7oU56x1p4",
+      "code": "189635",
+      "is_published": false,
+      "name": "Ground Pork  猪肉碎2LB/BAG",
+      "category": "冷冻食品",
+      "isActive": true
+    },
+    {
+      "code": "400020qj",
+      "name": "Bell Pepper 灯笼椒",
+      "name_cn": null,
+      "name_en": null,
+      "id": "TNL4xcmjJntjPqxsp1us",
+      "isActive": true,
+      "category": "新鲜蔬菜"
+    },
+    {
+      "code": "4745",
+      "name": "Dried Shrimp 大干虾米 1lb",
+      "name_cn": null,
+      "name_en": null,
+      "id": "DIUob9s3WrTIL4PxeXnr",
+      "isActive": true,
+      "category": "干货调料"
+    },
+    {
+      "id": "cq3NgPpsZsmp9xbQOukR",
+      "code": "4889shj",
+      "is_published": true,
+      "name": "Yellow Feather Chicken 三黄鸡",
+      "category": "冷冻食品",
+      "isActive": true
+    },
+    {
+      "id": "UQN6RtKrdruxaDxG44qp",
+      "code": "6907592001245",
+      "is_published": false,
+      "name": "WZH Culinary Wine 500ml 料酒",
+      "category": "干货调料",
+      "isActive": true
+    },
+    {
+      "id": "1Cn9PUQ31gVG9zFVehHQ",
+      "code": "6909003105085",
+      "is_published": true,
+      "name": "JCDS BLACK SOYBEANS 豆豉300G",
+      "category": "干货调料",
+      "isActive": true
+    },
+    {
+      "id": "CIbXa81P0HTBklZkjRJF",
+      "code": "6941837101024",
+      "is_published": false,
+      "name": "SWF Potato Starch 土豆淀粉 250g",
+      "category": "米面粮油",
+      "isActive": true
+    },
+    {
+      "id": "8hLfjmXN0XQqW042Ful1",
+      "code": "800794005157",
+      "is_published": true,
+      "name": "Presered Duck Eggs 360g 神丹松花皮蛋",
+      "category": "豆腐蛋品",
+      "isActive": true
+    },
+    {
+      "id": "nQTKOs0PT2P6XO30WGZj",
+      "code": "800794005294",
+      "is_published": true,
+      "name": "SD SALTED DUCK EGG 熟咸蛋372G",
+      "category": "豆腐蛋品",
+      "isActive": true
+    },
+    {
+      "code": "827510003884",
+      "name": "SEARAY COOKED WHOLE CLAM 花蛤",
+      "name_cn": null,
+      "name_en": null,
+      "id": "ZjAKYemODyYzo5xjyVnt",
+      "isActive": true,
+      "category": "冷冻食品"
+    },
+    {
+      "code": "871392001636",
+      "name": "Tastie Dried Mushrooms 227g 干香菇",
+      "name_cn": null,
+      "name_en": null,
+      "id": "R1GX4SF1vcXQ19VTD0NF",
+      "isActive": true,
+      "category": "干货调料"
+    },
+    {
+      "code": "8715500035866",
+      "name": "Dragon Glutinous Rice 香糯米 1kg",
+      "name_cn": null,
+      "name_en": null,
+      "id": "rwtbPKkC4k0ErC8eEJ9T",
+      "isActive": true,
+      "category": "米面粮油"
+    },
+    {
+      "id": "muxD7B3T7Dn6wwsUeFkv",
+      "code": "HFCXCXC",
+      "is_published": false,
+      "name": "Green Onion 小葱 BOX",
+      "category": "新鲜蔬菜",
+      "isActive": true
+    }
+  ]
+}
