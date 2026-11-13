@@ -22,12 +22,6 @@
   function getFaves() {
     try { return JSON.parse(localStorage.getItem(FAVE_KEY)) || []; } catch (e) { return []; }
   }
-  function isFave(id) { return getFaves().indexOf(id) !== -1; }
-  function toggleFave(id) {
-    var f = getFaves(), i = f.indexOf(id);
-    if (i === -1) f.push(id); else f.splice(i, 1);
-    try { localStorage.setItem(FAVE_KEY, JSON.stringify(f)); } catch (e) {}
-  }
   // ---- 购物清单勾选状态（localStorage）----
   function getDone() {
     try { return JSON.parse(localStorage.getItem(DONE_KEY)) || {}; } catch (e) { return {}; }
@@ -153,7 +147,6 @@
 
   function renderDetail(recipe) {
     var d = $('detail');
-    var faved = isFave(recipe.id);
     var a = RL.associateRecipe(recipe, state.productIndex);
     var how = RL.METHOD_LABEL[recipe.method] || '';
     var bodyHtml = '';
@@ -182,8 +175,8 @@
       '<div class="recipe-share__options"><button type="button" data-copy-recipe="' + esc(shareUrl(recipe.id)) + '">复制链接</button>' +
       '<a href="' + esc(communityShareUrl(recipe)) + '">分享到社区</a><span role="status"></span></div></details>';
     var actions = '<div class="detail__actions">' +
-      (faved ? '<button class="mini-btn" id="tolist">🧾 看购物清单</button>' : '') +
-      (DELIVERY.enabled ? '<a class="mini-btn" href="' + esc(DELIVERY.url) + '" target="_blank" rel="noopener">🚚 网上下单</a>' : '') +
+      '<button class="mini-btn" id="tolist">🧾 看购物清单</button>' +
+      (DELIVERY.enabled ? '<a class="mini-btn mini-btn--buy" data-buy-recipe="' + esc(recipe.id) + '" href="' + esc(DELIVERY.url) + '?recipe=' + encodeURIComponent(recipe.id) + '">一键购买全部食材</a>' : '') +
       '</div>';
     var mateIds = {};
     mates.forEach(function (r) { mateIds[r.id] = 1; });
@@ -199,13 +192,12 @@
       '<button class="back" id="back">← 返回</button>' +
       hero +
       '<div class="detail__title-row"><h2 class="detail__title">' + esc(recipe.name_cn) +
-        ' <small>' + esc(recipe.name_en || '') + '</small></h2>' + shareIcon + '</div>' +
+        ' <small>' + esc(recipe.name_en || '') + '</small></h2>' +
+        '<button type="button" class="share-icon-btn favourite-icon" data-favorite-recipe="' + esc(recipe.id) + '" aria-label="收藏食谱" aria-pressed="false" title="收藏"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>' + shareIcon + '</div>' +
       (facts ? '<p class="detail__facts">' + esc(facts) + '</p>' : '') +
       (recipe.hook ? '<p class="detail__hook">' + esc(recipe.hook) + '</p>' : '') +
       (recipe.nutrition ? '<div class="detail__nutri">🌿 营养 · ' + esc(recipe.nutrition) + '</div>' : '') +
       bodyHtml +
-      '<button class="fave-btn' + (faved ? ' is-on' : '') + '" id="fave">' +
-        (faved ? '♥ 已收藏' : '♡ 收藏') + '</button>' +
       actions +
       '<h3 class="detail__h3">' + stepsTitle + '</h3>' +
       '<ol class="steps">' + (recipe.steps || []).map(function (s) {
@@ -214,7 +206,7 @@
       nextHtml;
     wireCards(d);
     $('back').onclick = goBack;
-    $('fave').onclick = function () { toggleFave(recipe.id); renderDetail(recipe); };
+    window.RecipeActions.syncFavorites();
     if ($('tolist')) $('tolist').onclick = function () { nav('#/list'); };
     show('detail');
     $('back').focus();   // 无障碍：详情打开后把焦点移到返回按钮

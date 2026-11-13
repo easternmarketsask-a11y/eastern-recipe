@@ -150,7 +150,7 @@ try {
   ok('食材带超市分区（说明条码绑定有效）', cats.length >= 4, [...new Set(cats)].join(' '));
 
   const deliver = await page.$('#detail a.mini-btn[href*="group-order"]');
-  ok('详情页出现「网上下单」按钮', !!deliver);
+  ok('详情页出现「一键购买全部食材」按钮', !!deliver);
 
   const shareComm = await page.$('#detail .detail__title-row .recipe-share__options a');
   const shareHref = shareComm ? await shareComm.getAttribute('href') : '';
@@ -167,15 +167,15 @@ try {
 
   // 复制链接：要复制静态页网址，不是 hash 地址
   await ctx.grantPermissions(['clipboard-read', 'clipboard-write']);
-  await page.click('#detail .share-icon-btn');
+  await page.click('#detail summary.share-icon-btn');
   await page.click('#detail [data-copy-recipe]');
   await page.waitForTimeout(300);
   const copied = await page.evaluate(() => navigator.clipboard.readText());
   ok('复制链接复制的是静态菜页网址',
     /\/r\/lotus-pork-bone-soup\.html$/.test(copied), copied);
 
-  // 加入想做 → 购物清单
-  await page.click('#fave');
+  // 爱心收藏 → 购物清单
+  await page.click('#detail [data-favorite-recipe]');
   await page.waitForSelector('#tolist', { timeout: 5000 });
   await page.click('#tolist');
   await page.waitForSelector('.shopgrp', { timeout: 10000 });
