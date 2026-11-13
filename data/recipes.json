@@ -10362,6 +10362,619 @@
         "zhurou-jiucaijiao",
         "suancai-roujiiao"
       ]
+    },
+    {
+      "id": "cant-congyou-ji",
+      "name_cn": "葱油鸡",
+      "name_en": "Scallion Oil Chicken",
+      "aliases": [
+        "姜葱鸡",
+        "蔥油雞",
+        "ginger scallion chicken"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 93,
+      "image": "assets/images/cant-congyou-ji-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; OpenAI ImageGen, 2026-11",
+      "tags": [
+        "粤菜",
+        "家常菜"
+      ],
+      "ingredients": [
+        {
+          "label": "带皮鸡腿",
+          "qty": "约500克，取自三黄鸡",
+          "code": "4889shj",
+          "required": true,
+          "label_en": "Skin-on chicken thighs",
+          "qty_en": "about 500 g, from a whole yellow-feather chicken"
+        },
+        {
+          "label": "小葱",
+          "qty": "4根",
+          "code": "HFCXCXC",
+          "required": true,
+          "label_en": "Scallions",
+          "qty_en": "4"
+        },
+        {
+          "label": "姜",
+          "qty": "20克",
+          "code": "1037",
+          "required": true,
+          "label_en": "Ginger",
+          "qty_en": "20 g"
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true,
+          "label_en": "Light soy sauce",
+          "qty_en": "1 tbsp"
+        },
+        {
+          "label": "食用油",
+          "qty": "3汤匙",
+          "code": null,
+          "required": true,
+          "label_en": "Neutral oil",
+          "qty_en": "3 tbsp",
+          "pantry": true
+        },
+        {
+          "label": "盐",
+          "qty": "1/2茶匙",
+          "code": null,
+          "required": true,
+          "label_en": "Salt",
+          "qty_en": "1/2 tsp",
+          "pantry": true
+        },
+        {
+          "label": "水",
+          "qty": "约1升",
+          "code": null,
+          "required": true,
+          "label_en": "Water",
+          "qty_en": "about 1 L",
+          "pantry": true
+        }
+      ],
+      "steps": [
+        "一半姜切片，一根葱切段，加水煮开。放鸡腿，补水至刚没过。",
+        "小火微沸约20–25分钟，鸡肉最厚处离骨测温达到74°C。捞出静置5分钟，去骨切片。",
+        "剩余姜葱切细，与盐放进耐热碗。油烧至微微泛波纹，关火后浇在姜葱上。拌入生抽和1汤匙煮鸡的汤，淋在鸡肉上。"
+      ],
+      "steps_en": [
+        "Slice half the ginger and cut one scallion into lengths. Bring them to a boil in the water. Add the thighs and top up with just enough water to cover.",
+        "Simmer gently for about 20–25 minutes, until the thickest part reaches 74°C away from the bone. Rest for 5 minutes, then debone and slice.",
+        "Finely chop the remaining ginger and scallions and put them in a heatproof bowl with the salt. Heat the oil until shimmering, turn off the heat and pour it over the aromatics. Add the soy sauce and 1 tbsp poaching liquid, then spoon over the chicken."
+      ],
+      "minutes": 35,
+      "servings": "3人",
+      "hook": "鸡腿浸煮至熟，姜葱用热油激香。"
+    },
+    {
+      "id": "cant-donggu-huaji",
+      "name_cn": "冬菇滑鸡煲",
+      "name_en": "Clay Pot Chicken with Shiitake Mushrooms",
+      "aliases": [
+        "香菇滑鸡",
+        "冬菇滑雞煲",
+        "shiitake chicken clay pot"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 93,
+      "image": "assets/images/cant-donggu-huaji-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; OpenAI ImageGen, 2026-11",
+      "tags": [
+        "粤菜",
+        "家常菜"
+      ],
+      "ingredients": [
+        {
+          "label": "鸡腿",
+          "qty": "约500克，取自三黄鸡",
+          "code": "4889shj",
+          "required": true,
+          "label_en": "Chicken thighs",
+          "qty_en": "about 500 g, from a whole yellow-feather chicken"
+        },
+        {
+          "label": "干香菇",
+          "qty": "25克",
+          "code": "871392001636",
+          "required": true,
+          "label_en": "Dried shiitake mushrooms",
+          "qty_en": "25 g"
+        },
+        {
+          "label": "姜",
+          "qty": "15克",
+          "code": "1037",
+          "required": true,
+          "label_en": "Ginger",
+          "qty_en": "15 g"
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": true,
+          "label_en": "Scallions",
+          "qty_en": "2"
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true,
+          "label_en": "Light soy sauce",
+          "qty_en": "1 tbsp"
+        },
+        {
+          "label": "料酒",
+          "qty": "1汤匙",
+          "code": "6907592001245",
+          "required": true,
+          "label_en": "Cooking wine",
+          "qty_en": "1 tbsp"
+        },
+        {
+          "label": "淀粉",
+          "qty": "2茶匙",
+          "code": "6941837101024",
+          "required": true,
+          "label_en": "Potato starch",
+          "qty_en": "2 tsp"
+        },
+        {
+          "label": "白砂糖",
+          "qty": "1/2茶匙",
+          "code": "063111103541",
+          "required": true,
+          "label_en": "Sugar",
+          "qty_en": "1/2 tsp"
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": true,
+          "label_en": "Neutral oil",
+          "qty_en": "1 tbsp",
+          "pantry": true
+        },
+        {
+          "label": "水",
+          "qty": "120毫升，用于炖煮",
+          "code": null,
+          "required": true,
+          "label_en": "Water",
+          "qty_en": "120 mL, for braising",
+          "pantry": true
+        }
+      ],
+      "steps": [
+        "干香菇提前用温水泡软，去蒂切片。鸡腿去骨切成约3厘米的块，用生抽、料酒、糖和淀粉冷藏腌15分钟。",
+        "用可上炉的砂锅或厚底锅，中火用油炒香姜片和葱白。下鸡块炒至表面变色。",
+        "加香菇和水，煮开后盖盖小火焖10–15分钟，直到鸡肉最厚处达到74°C。开盖略收汁，撒葱绿。"
+      ],
+      "steps_en": [
+        "Soak the mushrooms ahead in warm water until soft, then stem and slice them. Debone the thighs, cut into 3 cm pieces, and marinate with soy sauce, cooking wine, sugar and starch in the refrigerator for 15 minutes.",
+        "In a stovetop-safe clay pot or heavy saucepan, fry sliced ginger and scallion whites in oil over medium heat. Add the chicken and stir until opaque on the outside.",
+        "Add mushrooms and water. Bring to a boil, cover and simmer for 10–15 minutes until the thickest piece reaches 74°C. Uncover to reduce the sauce briefly and scatter with scallion greens."
+      ],
+      "minutes": 40,
+      "servings": "3人",
+      "hook": "冬菇提前泡软，鸡腿肉腌好再入煲。"
+    },
+    {
+      "id": "cant-chili-black-bean-clams",
+      "name_cn": "豉椒炒花蛤",
+      "name_en": "Clams with Peppers and Fermented Black Beans",
+      "aliases": [
+        "豉椒炒蜆",
+        "豉椒炒蚬",
+        "豆豉花蛤",
+        "black bean clams"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 93,
+      "image": "assets/images/cant-chili-black-bean-clams-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; OpenAI ImageGen, 2026-11",
+      "tags": [
+        "粤菜",
+        "家常菜"
+      ],
+      "ingredients": [
+        {
+          "label": "带壳熟冻花蛤",
+          "qty": "400克",
+          "code": "827510003884",
+          "required": true,
+          "label_en": "Frozen cooked shell-on clams",
+          "qty_en": "400 g"
+        },
+        {
+          "label": "豆豉",
+          "qty": "1汤匙",
+          "code": "6909003105085",
+          "required": true,
+          "label_en": "Fermented black beans",
+          "qty_en": "1 tbsp"
+        },
+        {
+          "label": "灯笼椒",
+          "qty": "1个",
+          "code": "400020qj",
+          "required": true,
+          "label_en": "Bell pepper",
+          "qty_en": "1"
+        },
+        {
+          "label": "蒜",
+          "qty": "3瓣",
+          "code": "0178",
+          "required": true,
+          "label_en": "Garlic",
+          "qty_en": "3 cloves"
+        },
+        {
+          "label": "姜",
+          "qty": "10克",
+          "code": "1037",
+          "required": true,
+          "label_en": "Ginger",
+          "qty_en": "10 g"
+        },
+        {
+          "label": "生抽",
+          "qty": "1茶匙",
+          "code": "078895128789",
+          "required": true,
+          "label_en": "Light soy sauce",
+          "qty_en": "1 tsp"
+        },
+        {
+          "label": "料酒",
+          "qty": "1汤匙",
+          "code": "6907592001245",
+          "required": true,
+          "label_en": "Cooking wine",
+          "qty_en": "1 tbsp"
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": true,
+          "label_en": "Neutral oil",
+          "qty_en": "1 tbsp",
+          "pantry": true
+        },
+        {
+          "label": "水",
+          "qty": "60毫升",
+          "code": null,
+          "required": true,
+          "label_en": "Water",
+          "qty_en": "60 mL",
+          "pantry": true
+        }
+      ],
+      "steps": [
+        "按包装说明处理花蛤。豆豉快冲后沥干略切，灯笼椒切条，姜蒜切末。",
+        "炒锅中火热油，炒香豆豉和姜蒜。下灯笼椒炒1–2分钟，喜欢辣味可加几圈红辣椒。",
+        "下花蛤、料酒、生抽和水，盖盖按包装说明复热至蛤肉达到74°C。开盖翻匀，去掉仍未张口的蛤。"
+      ],
+      "steps_en": [
+        "Prepare the clams according to their package. Briefly rinse, drain and chop the black beans. Slice the pepper and mince the ginger and garlic.",
+        "Heat oil in a wok over medium heat. Fry the black beans, ginger and garlic until fragrant. Add the bell pepper and fry for 1–2 minutes, adding a few red chili rings if desired.",
+        "Add clams, cooking wine, soy sauce and water. Cover and reheat following package directions until the clam meat reaches 74°C. Toss to coat and discard any clams that remain closed."
+      ],
+      "minutes": 20,
+      "servings": "2–3人",
+      "hook": "带壳熟冻花蛤裹上豆豉和灯笼椒炒出的香汁。"
+    },
+    {
+      "id": "cant-hakka-stuffed-tofu",
+      "name_cn": "客家酿豆腐",
+      "name_en": "Hakka Pork-Stuffed Tofu",
+      "aliases": [
+        "客家釀豆腐",
+        "猪肉酿豆腐",
+        "stuffed bean curd"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 93,
+      "image": "assets/images/cant-hakka-stuffed-tofu-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; OpenAI ImageGen, 2026-11",
+      "tags": [
+        "粤菜",
+        "家常菜"
+      ],
+      "ingredients": [
+        {
+          "label": "中硬豆腐",
+          "qty": "1盒，454克",
+          "code": "057864000011",
+          "required": true,
+          "label_en": "Medium-firm tofu",
+          "qty_en": "1 pack (454 g)"
+        },
+        {
+          "label": "猪肉碎",
+          "qty": "180克",
+          "code": "189635",
+          "required": true,
+          "label_en": "Ground pork",
+          "qty_en": "180 g"
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": true,
+          "label_en": "Scallions",
+          "qty_en": "2"
+        },
+        {
+          "label": "姜",
+          "qty": "10克",
+          "code": "1037",
+          "required": true,
+          "label_en": "Ginger",
+          "qty_en": "10 g"
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true,
+          "label_en": "Light soy sauce",
+          "qty_en": "1 tbsp"
+        },
+        {
+          "label": "淀粉",
+          "qty": "2茶匙",
+          "code": "6941837101024",
+          "required": true,
+          "label_en": "Potato starch",
+          "qty_en": "2 tsp"
+        },
+        {
+          "label": "食用油",
+          "qty": "2汤匙",
+          "code": null,
+          "required": true,
+          "label_en": "Neutral oil",
+          "qty_en": "2 tbsp",
+          "pantry": true
+        },
+        {
+          "label": "水",
+          "qty": "150毫升",
+          "code": null,
+          "required": true,
+          "label_en": "Water",
+          "qty_en": "150 mL",
+          "pantry": true
+        }
+      ],
+      "steps": [
+        "豆腐沥干切成8块，每块挖浅槽，底部留厚。猪肉碎拌姜末、一半葱花、1茶匙生抽和1茶匙淀粉，压进槽里。",
+        "平底锅中火热油，肉面朝下先煎约3分钟定型，轻翻再煎约3分钟。",
+        "加水和余下生抽，盖盖小火焖约8–10分钟，肉馅中心达到71°C。用少量冷水调开余下淀粉，倒入锅中煮至汁略稠，撒葱花。"
+      ],
+      "steps_en": [
+        "Drain the tofu and cut into 8 blocks. Scoop out shallow pockets, leaving thick bases. Mix pork with minced ginger, half the scallions, 1 tsp soy sauce and 1 tsp starch, then press into the pockets.",
+        "Heat oil in a skillet over medium heat. Sear filling-side down for about 3 minutes, then gently turn and sear for about 3 more minutes.",
+        "Add water and the remaining soy sauce. Cover and simmer about 8–10 minutes until the filling reaches 71°C. Mix the remaining starch with a splash of cold water, stir into the pan and simmer until slightly thickened. Finish with scallions."
+      ],
+      "minutes": 35,
+      "servings": "3人",
+      "hook": "中硬豆腐挖浅槽酿肉，肉面先煎定型。"
+    },
+    {
+      "id": "cant-gold-silver-egg-greens",
+      "name_cn": "金银蛋浸时蔬",
+      "name_en": "Choy Sum in Broth with Salted and Century Eggs",
+      "aliases": [
+        "金銀蛋浸時蔬",
+        "双蛋菜心",
+        "上汤菜心",
+        "choy sum with century egg"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 93,
+      "image": "assets/images/cant-gold-silver-egg-greens-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; OpenAI ImageGen, 2026-11",
+      "tags": [
+        "粤菜",
+        "家常菜"
+      ],
+      "ingredients": [
+        {
+          "label": "油菜心",
+          "qty": "350克",
+          "code": "1018",
+          "required": true,
+          "label_en": "Choy sum",
+          "qty_en": "350 g"
+        },
+        {
+          "label": "熟咸鸭蛋",
+          "qty": "1个",
+          "code": "800794005294",
+          "required": true,
+          "label_en": "Cooked salted duck egg",
+          "qty_en": "1"
+        },
+        {
+          "label": "皮蛋",
+          "qty": "1个",
+          "code": "800794005157",
+          "required": true,
+          "label_en": "Century egg",
+          "qty_en": "1"
+        },
+        {
+          "label": "鸡汤",
+          "qty": "250毫升",
+          "code": "063211043891",
+          "required": true,
+          "label_en": "Chicken broth",
+          "qty_en": "250 mL"
+        },
+        {
+          "label": "蒜",
+          "qty": "2瓣",
+          "code": "0178",
+          "required": true,
+          "label_en": "Garlic",
+          "qty_en": "2 cloves"
+        },
+        {
+          "label": "食用油",
+          "qty": "2茶匙",
+          "code": null,
+          "required": true,
+          "label_en": "Neutral oil",
+          "qty_en": "2 tsp",
+          "pantry": true
+        },
+        {
+          "label": "水",
+          "qty": "100毫升",
+          "code": null,
+          "required": true,
+          "label_en": "Water",
+          "qty_en": "100 mL",
+          "pantry": true
+        }
+      ],
+      "steps": [
+        "菜心洗净，粗茎对半切。熟咸鸭蛋剥壳，蛋黄压碎、蛋白切丁。皮蛋剥壳切块。",
+        "小火热油，炒香蒜片和咸蛋黄。加入鸡汤和水煮开，放咸蛋白和皮蛋煮约1分钟。",
+        "菜心茎先煮约1分钟，再放叶煮1–2分钟，试味后连汤盛出。"
+      ],
+      "steps_en": [
+        "Wash the choy sum and halve thick stems lengthwise. Peel the cooked salted egg, mash the yolk and dice the white. Peel and cut the century egg into chunks.",
+        "Heat oil over low heat. Fry sliced garlic and salted egg yolk until fragrant. Bring the broth and water to a boil, then add diced egg white and century egg and simmer for about 1 minute.",
+        "Cook the stems for about 1 minute, then add the leaves and cook for another 1–2 minutes. Taste and serve with the broth."
+      ],
+      "minutes": 20,
+      "servings": "3人",
+      "hook": "咸蛋黄炒香，菜心在双蛋汤里煮到刚断生。"
+    },
+    {
+      "id": "cant-savory-sticky-rice",
+      "name_cn": "广式糯米饭",
+      "name_en": "Cantonese Savoury Sticky Rice",
+      "aliases": [
+        "廣式糯米飯",
+        "腊味糯米饭",
+        "lap cheong sticky rice"
+      ],
+      "section": "cantonese",
+      "kind": "dish",
+      "priority": 93,
+      "image": "assets/images/cant-savory-sticky-rice-ai-202611.jpg",
+      "image_credit": "AI-generated illustration; OpenAI ImageGen, 2026-11",
+      "tags": [
+        "粤菜",
+        "家常菜"
+      ],
+      "ingredients": [
+        {
+          "label": "糯米",
+          "qty": "300克",
+          "code": "8715500035866",
+          "required": true,
+          "label_en": "Glutinous rice",
+          "qty_en": "300 g"
+        },
+        {
+          "label": "广式腊肠",
+          "qty": "100克",
+          "code": "060629010132",
+          "required": true,
+          "label_en": "Chinese sausage (lap cheong)",
+          "qty_en": "100 g"
+        },
+        {
+          "label": "干香菇",
+          "qty": "20克",
+          "code": "871392001636",
+          "required": true,
+          "label_en": "Dried shiitake mushrooms",
+          "qty_en": "20 g"
+        },
+        {
+          "label": "虾米",
+          "qty": "20克",
+          "code": "4745",
+          "required": true,
+          "label_en": "Dried shrimp",
+          "qty_en": "20 g"
+        },
+        {
+          "label": "小葱",
+          "qty": "2根",
+          "code": "HFCXCXC",
+          "required": true,
+          "label_en": "Scallions",
+          "qty_en": "2"
+        },
+        {
+          "label": "生抽",
+          "qty": "1汤匙",
+          "code": "078895128789",
+          "required": true,
+          "label_en": "Light soy sauce",
+          "qty_en": "1 tbsp"
+        },
+        {
+          "label": "食用油",
+          "qty": "1汤匙",
+          "code": null,
+          "required": true,
+          "label_en": "Neutral oil",
+          "qty_en": "1 tbsp",
+          "pantry": true
+        },
+        {
+          "label": "水",
+          "qty": "2汤匙，用于拌炒",
+          "code": null,
+          "required": true,
+          "label_en": "Water",
+          "qty_en": "2 tbsp, for tossing",
+          "pantry": true
+        }
+      ],
+      "steps": [
+        "糯米洗净，提前冷藏浸泡4小时或隔夜，沥干。冬菇和虾米分别用温水泡软，冬菇去蒂切丁，虾米沥干。",
+        "糯米铺在垫蒸布的蒸屉里，水沸后大火蒸25–35分钟，中途翻松一次，蒸至米粒透亮且没有硬芯。",
+        "腊肠切薄片，用热油和冬菇、虾米炒香。按包装说明煮透腊肠，生猪肉腊肠中心达到71°C。",
+        "拌入糯米、生抽和水，中火翻拌约2分钟，撒葱花。"
+      ],
+      "steps_en": [
+        "Rinse the rice, soak in the refrigerator for 4 hours or overnight, then drain. Soak mushrooms and shrimp separately in warm water until soft. Stem and dice the mushrooms and drain the shrimp.",
+        "Spread rice in a cloth-lined steamer. Steam over boiling water for 25–35 minutes, fluffing once, until the grains are translucent with no hard centre.",
+        "Thinly slice the sausage and fry in oil with mushrooms and shrimp until fragrant. Follow the package directions to cook the sausage through. Raw pork sausage should reach 71°C.",
+        "Fold in the rice, soy sauce and water. Toss over medium heat for about 2 minutes and finish with chopped scallions."
+      ],
+      "minutes": 45,
+      "servings": "3–4人",
+      "hook": "糯米提前泡透，蒸熟再拌腊肠、冬菇和虾米。"
     }
   ]
 }

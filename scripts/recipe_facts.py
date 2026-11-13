@@ -311,6 +311,12 @@ FACTS = {
                           pairs=("shuizhu-roupian", "suantang-feiniu")),
     "hongyou-chaoshou": _row(35, "3人", "皮薄馅嫩，红油汁一拌就是成都街头那碗。",
                              pairs=("zhurou-jiucaijiao", "suancai-roujiiao")),
+    "cant-congyou-ji": _row(35, "3人", "鸡腿浸煮至熟，姜葱用热油激香。"),
+    "cant-donggu-huaji": _row(40, "3人", "冬菇提前泡软，鸡腿肉腌好再入煲。"),
+    "cant-chili-black-bean-clams": _row(20, "2–3人", "带壳熟冻花蛤裹上豆豉和灯笼椒炒出的香汁。"),
+    "cant-hakka-stuffed-tofu": _row(35, "3人", "中硬豆腐挖浅槽酿肉，肉面先煎定型。"),
+    "cant-gold-silver-egg-greens": _row(20, "3人", "咸蛋黄炒香，菜心在双蛋汤里煮到刚断生。"),
+    "cant-savory-sticky-rice": _row(45, "3–4人", "糯米提前泡透，蒸熟再拌腊肠、冬菇和虾米。"),
 }
 
 

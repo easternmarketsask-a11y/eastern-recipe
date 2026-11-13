@@ -67,6 +67,19 @@ try {
   const usesFullCatalog = requested.some((u) => u.includes('/data/products.json'));
   ok('首页下载精简目录，不下载全库商品', usesCatalog && !usesFullCatalog);
 
+  const cantonese = await page.$$eval('#cantonese .card', (cards) =>
+    [...new Set(cards.map((card) => card.dataset.id))]);
+  const additions = [
+    ['cant-congyou-ji', '葱油鸡', 'Scallion Oil Chicken'],
+    ['cant-donggu-huaji', '冬菇滑鸡煲', 'Clay Pot Chicken with Shiitake Mushrooms'],
+    ['cant-chili-black-bean-clams', '豉椒炒花蛤', 'Clams with Peppers and Fermented Black Beans'],
+    ['cant-hakka-stuffed-tofu', '客家酿豆腐', 'Hakka Pork-Stuffed Tofu'],
+    ['cant-gold-silver-egg-greens', '金银蛋浸时蔬', 'Choy Sum in Broth with Salted and Century Eggs'],
+    ['cant-savory-sticky-rice', '广式糯米饭', 'Cantonese Savoury Sticky Rice'],
+  ];
+  ok('粤菜首页有 16 道，包含本批新增六道',
+    cantonese.length === 16 && additions.every(([id]) => cantonese.includes(id)));
+
   const jumpText = await page.$eval('#jump', (e) => e.textContent);
   ok('首页有板块快捷条', jumpText.includes('暖冬') && jumpText.includes('汤羹') && jumpText.includes('凉菜') && jumpText.includes('粤菜') && jumpText.includes('饺子') && !jumpText.includes('中秋') && (jumpText.match(/美味/g) || []).length === 1, jumpText);
 
@@ -201,6 +214,33 @@ try {
   const byIng = await page.$$eval('#results .card__name', (e) => e.map((x) => x.textContent.trim()));
   ok('搜食材「莲藕」能反查到菜', byIng.length >= 2, byIng.slice(0, 4).join('、'));
 
+  const section = await ctx.newPage();
+  await section.goto(BASE + '/#/sec/cantonese');
+  await section.waitForSelector('#results:not([hidden]) .card');
+  ok('粤菜专区列出 16 道', await section.locator('#results .card').count() === 16);
+  for (const [id, cn, en] of additions) {
+    const card = page.locator('#results:not([hidden]) [data-id="' + id + '"]');
+    await page.fill('#q', cn);
+    await card.waitFor();
+    await page.fill('#q', en);
+    await card.click();
+    const detail = page.locator('#detail:not([hidden])');
+    await detail.locator('details[lang="en"] summary').click();
+    await detail.locator('details[lang="en"] ol li').first().waitFor();
+    await detail.locator('.recipe-share summary').click();
+    await detail.locator('[data-copy-recipe]').click();
+    const url = await page.evaluate(() => navigator.clipboard.readText());
+    const response = await section.goto(BASE + '/r/' + id + '.html');
+    const og = await section.locator('meta[property="og:image"]').getAttribute('content');
+    const image = await section.request.get(BASE + new URL(og).pathname);
+    const englishSteps = await section.locator('details[lang="en"] ol li').count();
+    ok(cn + '：中英文搜索、英文做法、复制分享、静态页和预览图',
+      url.endsWith('/r/' + id + '.html') && response.ok() && image.ok() && englishSteps > 0);
+    await page.goBack();
+    await page.locator('#q').waitFor();
+  }
+  await section.close();
+
   // ── 静态 SEO 页 ─────────────────────────────────────────────────────────
   const p2 = await ctx.newPage();
   const resp = await p2.goto(BASE + '/r/hotpot.html', { waitUntil: 'domcontentloaded' });
@@ -239,8 +279,8 @@ try {
   const idx = await p2.goto(BASE + '/r/', { waitUntil: 'domcontentloaded' });
   ok('全部食谱目录页返回 200', idx.status() === 200);
   const links = await p2.$$eval('.pg-seclist a', (e) => e.length);
-  // r/ 是 build_static_pages.py 的生成物（126 道）
-  ok('目录页链出全部 126 道菜', links === 126, links + ' 条');
+  // r/ 是 build_static_pages.py 的生成物（132 道）
+  ok('目录页链出全部 132 道菜', links === 132, links + ' 条');
   for (const [id, name] of [
     ['pueraria-pork-soup', '粉葛猪骨汤'],
     ['gai-lan-oyster-sauce', '蚝油芥兰'],

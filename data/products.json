@@ -24372,6 +24372,24 @@
       "image_url": "",
       "on_sale": true,
       "sold_90d": 0
+    },
+    {
+      "code": "6909003105085",
+      "name_cn": "豆豉300G",
+      "name_en": "JCDS BLACK SOYBEANS",
+      "category": "干货调料",
+      "image_url": "",
+      "on_sale": true,
+      "sold_90d": 0
+    },
+    {
+      "code": "800794005294",
+      "name_cn": "熟咸蛋372G",
+      "name_en": "SD SALTED DUCK EGG",
+      "category": "豆腐蛋品",
+      "image_url": "",
+      "on_sale": true,
+      "sold_90d": 0
     }
   ]
 }
