@@ -95,10 +95,21 @@ picture{display:contents}
 .detail__title-row{display:flex;align-items:center;gap:10px;margin:4px 0 12px}
 .detail__title-row .detail__title{flex:1;min-width:0;margin:0}
 .share-icon-btn{flex:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);
-  background:var(--card);color:var(--green);display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+  background:transparent;color:#378a59;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
 .share-icon-btn:active{background:#eef6f0}
 .share-icon-btn:focus-visible{outline:2px solid var(--green);outline-offset:2px}
 .share-icon-btn svg{width:26px;height:26px;display:block}
+.recipe-share{position:relative;flex:none}
+.recipe-share summary{list-style:none}
+.recipe-share summary::-webkit-details-marker{display:none}
+.recipe-share__options{position:absolute;z-index:5;inset-inline-end:0;top:calc(100% + 6px);
+  min-width:145px;padding:4px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.recipe-share__options button,.recipe-share__options a{display:block;width:100%;box-sizing:border-box;
+  padding:10px;border:0;border-radius:8px;background:transparent;color:var(--green-d);
+  font:inherit;text-align:start;text-decoration:none;white-space:nowrap;cursor:pointer}
+.recipe-share__options button:hover,.recipe-share__options a:hover{background:#eef6f0}
+.recipe-share__options [role=status]:not(:empty){display:block;padding:6px 10px;font-size:12px}
+.recipe-share__options input{box-sizing:border-box;width:100%;margin-top:4px}
 .ings{list-style:none;margin:0 0 12px;padding:0;background:var(--card);
   border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
 .ing{display:flex;align-items:center;gap:8px;padding:11px 14px;border-bottom:1px solid var(--line)}

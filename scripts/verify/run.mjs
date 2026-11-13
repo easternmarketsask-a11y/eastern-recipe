@@ -152,10 +152,10 @@ try {
   const deliver = await page.$('#detail a.mini-btn[href*="group-order"]');
   ok('详情页出现「网上下单」按钮', !!deliver);
 
-  const shareComm = await page.$('#detail .detail__title-row #sharecomm');
+  const shareComm = await page.$('#detail .detail__title-row .recipe-share__options a');
   const shareHref = shareComm ? await shareComm.getAttribute('href') : '';
   const shareSvg = shareComm
-    ? await shareComm.$eval('svg', (e) => e.getAttribute('viewBox') + '|' + e.innerHTML.length)
+    ? await page.$eval('#detail .share-icon-btn svg', (e) => e.getAttribute('viewBox') + '|' + e.innerHTML.length)
     : '';
   ok('菜名右侧有绿色空心分享箭头（直链带 rid/菜名/做法链接）',
     !!shareComm && shareHref.includes('/community?share=recipe')
@@ -167,7 +167,8 @@ try {
 
   // 复制链接：要复制静态页网址，不是 hash 地址
   await ctx.grantPermissions(['clipboard-read', 'clipboard-write']);
-  await page.click('#copylink');
+  await page.click('#detail .share-icon-btn');
+  await page.click('#detail [data-copy-recipe]');
   await page.waitForTimeout(300);
   const copied = await page.evaluate(() => navigator.clipboard.readText());
   ok('复制链接复制的是静态菜页网址',
@@ -213,7 +214,7 @@ try {
   const canon = await p2.$eval('link[rel=canonical]', (e) => e.href);
   ok('静态菜页有 canonical', /\/r\/hotpot\.html$/.test(canon), canon);
   const staticShare = await p2.$eval('.pg-title-row a[href*="community?share=recipe"]', (e) => e.href);
-  const staticShareSvg = await p2.$eval('.pg-title-row a[href*="community?share=recipe"] svg', (e) => e.outerHTML.slice(0, 120));
+  const staticShareSvg = await p2.$eval('.pg-title-row .share-icon-btn svg', (e) => e.outerHTML.slice(0, 120));
   ok('静态菜页菜名右侧有分享箭头', /\/community\?share=recipe/.test(staticShare)
     && staticShare.includes('rid=hotpot')
     && staticShareSvg.includes('fill="none"'), staticShare.slice(0, 100));

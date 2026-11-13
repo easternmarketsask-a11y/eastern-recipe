@@ -90,10 +90,10 @@
     return location.origin + location.pathname.replace(/[^/]*$/, '');
   }
   function shareUrl(id) {
-    return siteBase() + 'r/' + encodeURIComponent(id) + '.html';
+    return 'https://recipe.easternmarket.ca/r/' + encodeURIComponent(id) + '.html';
   }
   // 社区分享直链：官网社区页读同一套参数名自动备好帖子。
-  // 与 frontend-web/src/utils/recipeShare.ts、scripts/static_pages.py 同口径。
+  // 与 frontend-web/src/pages/Community.tsx、scripts/static_pages.py 同口径。
   function communityShareUrl(recipe) {
     var q = ['share=recipe', 'rid=' + encodeURIComponent(recipe.id),
       'title=' + encodeURIComponent(recipe.name_cn || ''),
@@ -175,13 +175,13 @@
         '><source src="' + esc(recipe.video) + '"></video>';
     }
     // 菜名右侧的绿色空心弯箭头（SVG 描边，与 scripts/static_pages.py 的 SHARE_ARROW_SVG 同形）
-    var shareIcon = '<a class="share-icon-btn" id="sharecomm" href="' + esc(communityShareUrl(recipe)) + '"' +
-      ' aria-label="分享到社区">' +
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"' +
+    var shareIcon = '<details class="recipe-share"><summary class="share-icon-btn" aria-label="分享食谱">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55"' +
       ' stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
-      '<path d="M4.5 19.5C4.5 13 8 9.5 15 9"/><path d="M15.5 5.5L19 9l-3.5 3.5"/></svg></a>';
+      '<path d="M3.5 19 C4 11.5 8.6 8 14.5 7.8 L14.5 4.2 L21 10 L14.5 15.8 L14.5 12.4 C9.8 12.4 6.2 14.3 3.5 19 Z"/></svg></summary>' +
+      '<div class="recipe-share__options"><button type="button" data-copy-recipe="' + esc(shareUrl(recipe.id)) + '">复制链接</button>' +
+      '<a href="' + esc(communityShareUrl(recipe)) + '">分享到社区</a><span role="status"></span></div></details>';
     var actions = '<div class="detail__actions">' +
-      '<button class="mini-btn" id="copylink">🔗 复制链接</button>' +
       (faved ? '<button class="mini-btn" id="tolist">🧾 看购物清单</button>' : '') +
       (DELIVERY.enabled ? '<a class="mini-btn" href="' + esc(DELIVERY.url) + '" target="_blank" rel="noopener">🚚 网上下单</a>' : '') +
       '</div>';
@@ -215,9 +215,6 @@
     wireCards(d);
     $('back').onclick = goBack;
     $('fave').onclick = function () { toggleFave(recipe.id); renderDetail(recipe); };
-    $('copylink').onclick = function () {
-      copyText(shareUrl(recipe.id), function () { $('copylink').textContent = '✅ 已复制，发给家人吧'; });
-    };
     if ($('tolist')) $('tolist').onclick = function () { nav('#/list'); };
     show('detail');
     $('back').focus();   // 无障碍：详情打开后把焦点移到返回按钮
