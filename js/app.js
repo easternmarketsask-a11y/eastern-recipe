@@ -205,7 +205,7 @@
       (recipe.nutrition ? '<div class="detail__nutri">🌿 营养 · ' + esc(recipe.nutrition) + '</div>' : '') +
       bodyHtml +
       '<button class="fave-btn' + (faved ? ' is-on' : '') + '" id="fave">' +
-        (faved ? '♥ 已加入想做' : '♡ 加入想做') + '</button>' +
+        (faved ? '♥ 已收藏' : '♡ 收藏') + '</button>' +
       actions +
       '<h3 class="detail__h3">' + stepsTitle + '</h3>' +
       '<ol class="steps">' + (recipe.steps || []).map(function (s) {
@@ -228,7 +228,7 @@
     var html = '<button class="back" id="listback">← 返回首页</button>' +
       '<h2 class="block__title">🧾 到店购物清单</h2>';
     if (!faves.length) {
-      el.innerHTML = html + '<p class="empty">还没有收藏的菜～<br>看到想做的菜点「♡ 加入想做」，这里就会帮你把食材汇总好。</p>';
+      el.innerHTML = html + '<p class="empty">还没有收藏的菜～<br>看到想做的菜点「♡ 收藏」，这里就会帮你把食材汇总好。</p>';
       $('listback').onclick = goBack;
       show('results'); window.scrollTo(0, 0); return;
     }

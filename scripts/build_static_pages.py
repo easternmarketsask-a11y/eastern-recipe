@@ -200,7 +200,7 @@ def recipe_page(r, pidx, all_recipes):
                      % "".join(card_html(x) for x in mates))
 
     parts.append('<div class="pg-cta">'
-                 '<a class="mini-btn mini-btn--go" href="%s">♡ 加入想做 · 凑购物清单</a>'
+                 '<a class="mini-btn mini-btn--go" href="%s">♡ 收藏 · 凑购物清单</a>'
                  '<a class="mini-btn" href="%s" target="_blank" rel="noopener">🚚 网上下单</a>'
                  '</div>' % (sp.h(sp.app_url(rid)), sp.h(DELIVERY_URL)))
 
