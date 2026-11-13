@@ -3391,7 +3391,7 @@
       "name_en": "CUMIN SEED POWDER 150G",
       "category": "干货调料",
       "image_url": "",
-      "on_sale": true,
+      "on_sale": false,
       "sold_90d": 0
     },
     {
@@ -8382,7 +8382,7 @@
     },
     {
       "code": "628719016176",
-      "name_cn": "鲜肉大包子 510g",
+      "name_cn": "北美鹿鲜肉大包子 510g",
       "name_en": "CP Pork Buns",
       "category": "冷冻食品",
       "image_url": "",
@@ -9851,7 +9851,7 @@
       "code": "6921665714436",
       "name_cn": "手抓饼 450g",
       "name_en": "SN Scallion Pancakes",
-      "category": "零食饮料",
+      "category": "冷冻食品",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/RSLIsPhkLkksfAIM8Uh6_ddfbff02.jpg",
       "on_sale": true,
       "sold_90d": 0
@@ -10281,8 +10281,8 @@
     },
     {
       "code": "Lsj",
-      "name_cn": "虎皮青椒（螺丝椒）",
-      "name_en": "Tiger Peppers",
+      "name_cn": "虎皮椒 lb",
+      "name_en": "Tiger Skin Pepper",
       "category": "新鲜蔬菜",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/z64WHA32gutVkl31xHRY_2890dc35.jpg",
       "on_sale": true,
@@ -10650,8 +10650,8 @@
     },
     {
       "code": "859855001027",
-      "name_cn": "干豆腐 280g",
-      "name_en": "Beancurd Sheet",
+      "name_cn": "丰业干豆腐 280g",
+      "name_en": "Feng Ye Beancurd Sheet",
       "category": "豆腐蛋品",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/xRJlSWKw1DDrpvOOY6Ne_fd87f8a3.jpg",
       "on_sale": true,
@@ -10839,7 +10839,7 @@
     },
     {
       "code": "1063qsm",
-      "name_cn": "蒜苗",
+      "name_cn": "青蒜苗 lb",
       "name_en": "Garlic Sprout",
       "category": "新鲜蔬菜",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/wUV1mbT1xlUexeDKOQQn_fbe57d37.jpg",
@@ -11550,7 +11550,7 @@
     },
     {
       "code": "1036dgdg",
-      "name_cn": "冬瓜",
+      "name_cn": "冬瓜 lb",
       "name_en": "Winter Melon",
       "category": "新鲜蔬菜",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/tZsso4Pw47zLKu5IvYgX_f2a35920.jpg",
@@ -12774,8 +12774,8 @@
     },
     {
       "code": "10251",
-      "name_cn": "上海苗",
-      "name_en": "Shanghai Bok Choy Mue",
+      "name_cn": "上海苗 lb",
+      "name_en": "Shanghai Baby Bok Choy",
       "category": "新鲜蔬菜",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/nS0xH24g3q5dtVPrz5RC_631663db.jpg",
       "on_sale": true,
@@ -14236,7 +14236,7 @@
       "name_en": "Beef Belly Plate Irish Box",
       "category": "冷冻食品",
       "image_url": "",
-      "on_sale": true,
+      "on_sale": false,
       "sold_90d": 0
     },
     {
@@ -14875,7 +14875,7 @@
       "name_en": "Ground Pork 1lb",
       "category": "冷冻食品",
       "image_url": "",
-      "on_sale": true,
+      "on_sale": false,
       "sold_90d": 0
     },
     {
@@ -15573,8 +15573,8 @@
     },
     {
       "code": "10636jcjcjc",
-      "name_cn": "京葱",
-      "name_en": "Peking Green Onion",
+      "name_cn": "京葱 lb",
+      "name_en": "Leek China",
       "category": "新鲜蔬菜",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/as7VMnNv5b1FkebSeE7E_330e25d3.jpg",
       "on_sale": true,
@@ -15771,8 +15771,8 @@
     },
     {
       "code": "Sc1003dbc",
-      "name_cn": "大白菜",
-      "name_en": "Siu Choy",
+      "name_cn": "大白菜 lb",
+      "name_en": "Chinese Cabbage",
       "category": "新鲜蔬菜",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/Zwf3HQwkarqrkGGkirCK_851a495d.jpg",
       "on_sale": true,
@@ -16644,8 +16644,8 @@
     },
     {
       "code": "859855001171",
-      "name_cn": "五香干",
-      "name_en": "Spiced Tofu ea",
+      "name_cn": "丰业五香豆干 包",
+      "name_en": "Spiced Tofu",
       "category": "豆腐蛋品",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/WC5d0SO2cgFx5zRvIEVo_344d59e8.jpg",
       "on_sale": true,
@@ -17087,7 +17087,7 @@
       "code": "6907592001245",
       "name_cn": "料酒",
       "name_en": "WZH Culinary Wine 500ml",
-      "category": "零食饮料",
+      "category": "干货调料",
       "image_url": "",
       "on_sale": true,
       "sold_90d": 0
@@ -17400,7 +17400,7 @@
     },
     {
       "code": "1018",
-      "name_cn": "菜心",
+      "name_cn": "油菜心",
       "name_en": "You Choy",
       "category": "新鲜蔬菜",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/StSGNIMSW0IqMg5L37vz_6ca3db9c.jpg",
@@ -18759,8 +18759,8 @@
     },
     {
       "code": "1033hlb",
-      "name_cn": "胡蘿蔔 LB",
-      "name_en": "Carrot CN",
+      "name_cn": "中国胡萝卜 lb",
+      "name_en": "Carrot China",
       "category": "新鲜蔬菜",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/NDF0bE0SXEvC4KZBPxu8_2a5f66f8.jpg",
       "on_sale": true,
@@ -18993,7 +18993,7 @@
     },
     {
       "code": "10455bbng",
-      "name_cn": "贝贝南瓜 PK",
+      "name_cn": "贝贝南瓜 EA 个",
       "name_en": "",
       "category": "新鲜蔬菜",
       "image_url": "",
@@ -19020,7 +19020,7 @@
     },
     {
       "code": "4028ymc",
-      "name_cn": "油麦菜",
+      "name_cn": "油麦菜 lb",
       "name_en": "A Choy",
       "category": "新鲜蔬菜",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/M44E73dV81MQQ9N6X9El_f481ce05.jfif",
@@ -19902,8 +19902,8 @@
     },
     {
       "code": "1030",
-      "name_cn": "西兰花",
-      "name_en": "Crow Broccoli",
+      "name_cn": "西兰花 lb",
+      "name_en": "Red Songhee Broccoli",
       "category": "新鲜蔬菜",
       "image_url": "",
       "on_sale": true,
@@ -20003,7 +20003,7 @@
       "code": "6902265111719",
       "name_cn": "蒸鱼豉油 450mL",
       "name_en": "HT Soy Sauce For Seafood",
-      "category": "冷冻食品",
+      "category": "干货调料",
       "image_url": "",
       "on_sale": true,
       "sold_90d": 0
@@ -20298,8 +20298,8 @@
     },
     {
       "code": "800794392721",
-      "name_cn": "脆皖鱼片 200G",
-      "name_en": "GRASS CARP SLICES (bones)",
+      "name_cn": "北洋海产免浆脆肉鲩鱼片 200g",
+      "name_en": "NSF Frozen Battered Grass Carp Slices 200 g",
       "category": "冷冻食品",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/GqnAVYDQcs1u8AjjKaXa_fd95369e.jpg",
       "on_sale": true,
@@ -20930,7 +20930,7 @@
       "code": "213466668855",
       "name_cn": "辣椒油",
       "name_en": "LKK Chili Oil 207ml",
-      "category": "新鲜蔬菜",
+      "category": "干货调料",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/E04zQJfq9sGEMc19vLi3_50267ef3.jpg",
       "on_sale": true,
       "sold_90d": 0
@@ -21333,7 +21333,7 @@
     },
     {
       "code": "6944",
-      "name_cn": "羊肩肉(无骨)",
+      "name_cn": "羊肩肉 lb",
       "name_en": "Lamb Shoulder Meat",
       "category": "冷冻食品",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/CXdvcgM87lpkOiR0tELQ_3d562f75.jpg",
@@ -21540,7 +21540,7 @@
     },
     {
       "code": "800794222080",
-      "name_cn": "蛋黄燒賣 300g",
+      "name_cn": "蛋黄烧卖 300g",
       "name_en": "AC FRZ Glutinous Rice & Shitake Shumai",
       "category": "冷冻食品",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/BvhKb4RHGP762mMGLdOf_05efd8e9.jpg",
@@ -22800,8 +22800,8 @@
     },
     {
       "code": "4039thth",
-      "name_cn": "茼蒿",
-      "name_en": "Tong Ho Crown Daisy",
+      "name_cn": "茼蒿 lb",
+      "name_en": "Crown Daisy",
       "category": "新鲜蔬菜",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/6IZA619tju5m0uaPAvjQ_6a97a921.jpg",
       "on_sale": true,
@@ -23187,7 +23187,7 @@
     },
     {
       "code": "800794022406",
-      "name_cn": "灌湯小籠包 310g",
+      "name_cn": "灌汤小笼包 310g",
       "name_en": "Steamed Pork Soup Dumpling",
       "category": "冷冻食品",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/4UFXo7txtW4aZIgsDF6z_204d2863.jpg",
@@ -23385,7 +23385,7 @@
     },
     {
       "code": "1028blb",
-      "name_cn": "白萝卜",
+      "name_cn": "白萝卜 lb",
       "name_en": "Lo Bok White",
       "category": "新鲜蔬菜",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/3mxrVmjup9zkaKfmMeVp_183fe202.jpg",
@@ -23466,7 +23466,7 @@
     },
     {
       "code": "1061wsws",
-      "name_cn": "莴笋",
+      "name_cn": "莴笋 lb",
       "name_en": "Celtuce",
       "category": "新鲜蔬菜",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/3VDnMJz3c623ygfTamV5_bb344a7b.jpg",
@@ -23540,7 +23540,7 @@
       "code": "066279008116",
       "name_cn": "馄饨皮",
       "name_en": "DH Wonton Wrappers 454g",
-      "category": "米面粮油",
+      "category": "冷冻食品",
       "image_url": "",
       "on_sale": true,
       "sold_90d": 0
@@ -23727,7 +23727,7 @@
     },
     {
       "code": "1043lolo",
-      "name_cn": "莲藕",
+      "name_cn": "莲藕 lb",
       "name_en": "Lotus Root",
       "category": "新鲜蔬菜",
       "image_url": "https://storage.googleapis.com/stockwise-486801.firebasestorage.app/products/wm/2J1AsjDxi9b1XamfZna8_e9ec801a.jpg",
@@ -24348,8 +24348,8 @@
     },
     {
       "code": "92294",
-      "name_cn": "新鲜松茸 盒340G",
-      "name_en": "Matsutake",
+      "name_cn": "新鲜松茸 盒装",
+      "name_en": "Premium Matsutake",
       "category": "新鲜蔬菜",
       "image_url": "",
       "on_sale": true,
@@ -24360,6 +24360,15 @@
       "name_cn": "蓝蟹 LB",
       "name_en": "Blue Crab",
       "category": "新鲜蔬菜",
+      "image_url": "",
+      "on_sale": true,
+      "sold_90d": 0
+    },
+    {
+      "code": "189635",
+      "name_cn": "猪肉碎2LB/BAG",
+      "name_en": "Ground Pork",
+      "category": "冷冻食品",
       "image_url": "",
       "on_sale": true,
       "sold_90d": 0
