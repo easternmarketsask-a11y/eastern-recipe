@@ -142,6 +142,8 @@
       "kind": "dish",
       "priority": 95,
       "image": "assets/images/red-braised-pork-bowl.jpg",
+      "video": "https://recipe.easternmarket.ca/assets/videos/red-braised-pork.mp4",
+      "video_cover": "assets/videos/red-braised-pork.png",
       "image_credit": "self",
       "tags": [
         "猪肉",
