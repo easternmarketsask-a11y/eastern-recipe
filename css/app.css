@@ -85,9 +85,6 @@ picture{display:contents}
 .chip{background:var(--card);border:1px solid var(--line);border-radius:18px;
   padding:8px 14px;font-size:14px;color:var(--ink);cursor:pointer;min-height:36px}
 .chip:active{background:#eef6f0;border-color:var(--green)}
-.fave-btn{display:block;width:100%;margin:14px 0 4px;height:44px;border-radius:var(--radius);
-  border:1px solid var(--green);background:var(--card);color:var(--green-d);font-size:15px;cursor:pointer}
-.fave-btn.is-on{background:#eef6f0}
 .back{background:none;border:none;color:var(--green);font-size:15px;padding:8px 0;cursor:pointer}
 .detail__title{margin:4px 0 12px;font-size:22px;color:var(--green-d)}
 .detail__title small{font-size:14px;color:var(--muted);font-weight:400}
@@ -163,3 +160,8 @@ picture{display:contents}
   body.spa .decide__img{min-height:0}
   body.spa .decide__img img{height:160px;min-height:0}
 }
+
+.favourite-icon{border-color:transparent;border-radius:50%;padding:8px}
+.favourite-icon[aria-pressed="true"] svg{fill:currentColor}
+.favourite-icon:hover{background:#eef6f0}
+.mini-btn--buy{background:var(--green);color:#fff;border-color:var(--green)}

@@ -25,7 +25,7 @@ import recipe_lib as rl
 import static_pages as sp
 
 OUT_DIR = "r"
-CSS_V = "26"
+CSS_V = "27"
 ASSET_V = "2"
 DELIVERY_URL = "https://easternmarket.ca/group-order"
 
@@ -105,6 +105,7 @@ FOOT = """</main>
   <span class="ftr__fine">以店内实际供应为准 · 食谱图片含 AI 示意图，仅供参考</span>
 </footer>
 <script src="/js/recipe-share.js?v=1"></script>
+<script src="/js/recipe-actions.js?v=1"></script>
 </body>
 </html>
 """
@@ -161,12 +162,13 @@ def recipe_page(r, pidx, all_recipes):
                         if (r.get("video_cover") or r.get("image")) else "",
                         sp.h(r["video"])))
     parts.append('<div class="pg-title-row"><h1 class="pg-h1">%s%s</h1>'
+                 '<button type="button" class="share-icon-btn favourite-icon" data-favorite-recipe="%s" aria-label="收藏食谱" aria-pressed="false" title="收藏"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>'
                  '<details class="recipe-share"><summary class="share-icon-btn" aria-label="分享食谱">%s</summary>'
                  '<div class="recipe-share__options"><button type="button" data-copy-recipe="%s">复制链接</button>'
                  '<a href="%s">分享到社区</a><span role="status"></span></div></details></div>'
                  % (sp.h(name),
                     ('<small>%s</small>' % sp.h(r["name_en"])) if r.get("name_en") else "",
-                    sp.SHARE_ARROW_SVG, sp.h(sp.recipe_url(r["id"])), sp.h(sp.community_share_url(r))))
+                    sp.h(r["id"]), sp.SHARE_ARROW_SVG, sp.h(sp.recipe_url(r["id"])), sp.h(sp.community_share_url(r))))
     facts = sp.fact_line(r)
     if facts:
         parts.append('<p class="pg-facts">%s</p>' % sp.h(facts))
@@ -200,9 +202,8 @@ def recipe_page(r, pidx, all_recipes):
                      % "".join(card_html(x) for x in mates))
 
     parts.append('<div class="pg-cta">'
-                 '<a class="mini-btn mini-btn--go" href="%s">♡ 加入想做 · 凑购物清单</a>'
-                 '<a class="mini-btn" href="%s" target="_blank" rel="noopener">🚚 网上下单</a>'
-                 '</div>' % (sp.h(sp.app_url(rid)), sp.h(DELIVERY_URL)))
+                 '<a class="mini-btn mini-btn--buy" data-buy-recipe="%s" href="%s?recipe=%s">一键购买全部食材</a>'
+                 '</div>' % (sp.h(rid), sp.h(DELIVERY_URL), sp.h(rid)))
 
     # 做法
     parts.append('<h2 class="pg-h2">%s</h2>' % ("怎么吃" if is_ready else "做法"))
