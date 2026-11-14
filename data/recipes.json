@@ -10975,6 +10975,230 @@
       "minutes": 45,
       "servings": "3–4人",
       "hook": "糯米提前泡透，蒸熟再拌腊肠、冬菇和虾米。"
+    },
+    {
+      "id": "crispy-scallion-pork-intestine",
+      "name_cn": "大葱脆皮肥肠",
+      "name_en": "Crispy Pork Intestine with Scallions",
+      "aliases": [
+        "脆皮大肠",
+        "大腸包蔥",
+        "猪大肠",
+        "pork intestine",
+        "chitterlings"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 80,
+      "image": "assets/images/crispy-scallion-pork-intestine.jpg",
+      "tags": [
+        "家常菜",
+        "猪肉"
+      ],
+      "ingredients": [
+        {
+          "label": "猪大肠",
+          "label_en": "Pork large intestine (chitterlings)",
+          "qty": "600克",
+          "qty_en": "600 g",
+          "code": "3003",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "label_en": "Ginger",
+          "qty": "20克",
+          "qty_en": "20 g",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "label_en": "Chinese cooking wine",
+          "qty": "2汤匙",
+          "qty_en": "2 tbsp",
+          "code": "6928312939938",
+          "required": true
+        },
+        {
+          "label": "水",
+          "label_en": "Water",
+          "qty": "足量，分两次用",
+          "qty_en": "enough to cover, for two batches",
+          "code": null,
+          "required": true,
+          "pantry": true
+        },
+        {
+          "label": "大葱（京葱）",
+          "label_en": "Large scallion or Chinese leek",
+          "qty": "1根",
+          "qty_en": "1 large stalk",
+          "code": "10636jcjcjc",
+          "required": true
+        },
+        {
+          "label": "生抽",
+          "label_en": "Light soy sauce",
+          "qty": "2汤匙",
+          "qty_en": "2 tbsp",
+          "code": "078895128789",
+          "required": true
+        },
+        {
+          "label": "八角",
+          "label_en": "Star anise",
+          "qty": "1颗",
+          "qty_en": "1 pod",
+          "code": "871392005573",
+          "required": true
+        },
+        {
+          "label": "食用油",
+          "label_en": "Neutral cooking oil",
+          "qty": "2汤匙",
+          "qty_en": "2 tbsp",
+          "code": null,
+          "required": true,
+          "pantry": true
+        }
+      ],
+      "steps": [
+        "冷冻猪大肠先在冰箱冷藏室解冻。生大肠入沸水，待水重新沸腾后煮至少5分钟。倒掉焯水，稍凉后翻开，去掉杂质和多余脂肪，轻轻冲净。处理后洗手，并清洗消毒水槽、台面和用具。",
+        "把清理好的大肠放入干净锅里，加新水没过，放姜片、料酒、生抽和八角。煮沸后转小火炖约75–100分钟，至彻底煮熟、筷子能轻松扎入。捞出沥干，擦干表面。",
+        "大葱切成细条，留少许葱绿装盘。大肠切成约6厘米长的段，每段塞入一束细葱条，两头略露出。",
+        "平底锅加油烧热，用中火分批煎大肠，每面约2–3分钟，翻动至外皮金黄酥脆。出锅斜切成小段，撒上葱绿，趁热吃。"
+      ],
+      "steps_en": [
+        "Thaw frozen intestines in the refrigerator. Put the raw intestines in boiling water and boil for at least 5 minutes once the water returns to a boil. Discard the water. When cool enough to handle, turn the pieces inside out, trim debris and excess fat, and rinse gently. Wash your hands and clean and sanitize the sink, work surfaces and utensils.",
+        "Put the cleaned intestines in a clean pot and cover with fresh water. Add sliced ginger, cooking wine, soy sauce and star anise. Bring to a boil, then simmer for about 75–100 minutes until fully cooked and easily pierced with a chopstick. Drain and pat dry.",
+        "Cut the scallion into thin batons, reserving some greens for garnish. Cut the intestines into 6 cm lengths and tuck a bundle of scallion batons into each, leaving a little showing at both ends.",
+        "Heat the oil in a skillet over medium heat. Pan-fry in batches for about 2–3 minutes per side, turning until golden and crisp. Slice diagonally into bite-size pieces, garnish with the scallion greens and serve hot."
+      ],
+      "minutes": 130,
+      "servings": "3–4人",
+      "hook": "肥肠先卤到软嫩，塞进大葱再煎，外皮酥脆，切开一口葱香。"
+    },
+    {
+      "id": "dry-pot-pork-intestine",
+      "name_cn": "干锅肥肠",
+      "name_en": "Sichuan Dry-Pot Pork Intestine",
+      "aliases": [
+        "麻辣肥肠",
+        "干锅大肠",
+        "乾鍋肥腸",
+        "猪大肠",
+        "pork intestine",
+        "chitterlings"
+      ],
+      "section": "tonight",
+      "kind": "dish",
+      "priority": 80,
+      "image": "assets/images/dry-pot-pork-intestine.jpg",
+      "tags": [
+        "川味",
+        "麻辣",
+        "猪肉"
+      ],
+      "ingredients": [
+        {
+          "label": "猪大肠",
+          "label_en": "Pork large intestine (chitterlings)",
+          "qty": "600克",
+          "qty_en": "600 g",
+          "code": "3003",
+          "required": true
+        },
+        {
+          "label": "生姜",
+          "label_en": "Ginger",
+          "qty": "20克",
+          "qty_en": "20 g",
+          "code": "1037",
+          "required": true
+        },
+        {
+          "label": "料酒",
+          "label_en": "Chinese cooking wine",
+          "qty": "2汤匙",
+          "qty_en": "2 tbsp",
+          "code": "6928312939938",
+          "required": true
+        },
+        {
+          "label": "水",
+          "label_en": "Water",
+          "qty": "足量，分两次用",
+          "qty_en": "enough to cover, for two batches",
+          "code": null,
+          "required": true,
+          "pantry": true
+        },
+        {
+          "label": "红绿甜椒",
+          "label_en": "Red and green bell peppers",
+          "qty": "各半个",
+          "qty_en": "½ of each",
+          "code": "400020qj",
+          "required": true
+        },
+        {
+          "label": "蒜头",
+          "label_en": "Garlic",
+          "qty": "4瓣",
+          "qty_en": "4 cloves",
+          "code": "990312084235",
+          "required": true
+        },
+        {
+          "label": "郫县豆瓣酱",
+          "label_en": "Pixian chilli bean paste",
+          "qty": "1汤匙",
+          "qty_en": "1 tbsp",
+          "code": "6909003888018",
+          "required": true
+        },
+        {
+          "label": "干辣椒",
+          "label_en": "Dried red chillies",
+          "qty": "4–6个",
+          "qty_en": "4–6",
+          "code": "6971005993144",
+          "required": false
+        },
+        {
+          "label": "花椒",
+          "label_en": "Sichuan peppercorns",
+          "qty": "½茶匙",
+          "qty_en": "½ tsp",
+          "code": "6954769010104",
+          "required": false
+        },
+        {
+          "label": "食用油",
+          "label_en": "Neutral cooking oil",
+          "qty": "2汤匙",
+          "qty_en": "2 tbsp",
+          "code": null,
+          "required": true,
+          "pantry": true
+        }
+      ],
+      "steps": [
+        "冷冻猪大肠先在冰箱冷藏室解冻。生大肠入沸水，待水重新沸腾后煮至少5分钟。倒掉焯水，稍凉后翻开，去掉杂质和多余脂肪，轻轻冲净。处理后洗手，并清洗消毒水槽、台面和用具。",
+        "另起干净锅，加新水没过大肠，放姜片和料酒，煮沸后小火炖约75–100分钟，至彻底煮熟、筷子能轻松扎入。捞出沥干，擦干后切成约2厘米宽的小段。",
+        "甜椒去籽切块，蒜切片，干辣椒剪段。炒锅放一半油，用中大火把肥肠炒至边缘微焦，盛出。",
+        "调到中火，加剩余的油，炒香豆瓣酱、蒜、干辣椒和花椒。加入甜椒翻炒约1分钟，倒回肥肠再炒1–2分钟，炒匀后趁热上桌。"
+      ],
+      "steps_en": [
+        "Thaw frozen intestines in the refrigerator. Put the raw intestines in boiling water and boil for at least 5 minutes once the water returns to a boil. Discard the water. When cool enough to handle, turn the pieces inside out, trim debris and excess fat, and rinse gently. Wash your hands and clean and sanitize the sink, work surfaces and utensils.",
+        "In a clean pot, cover the intestines with fresh water. Add sliced ginger and cooking wine, bring to a boil and simmer for about 75–100 minutes until fully cooked and easily pierced with a chopstick. Drain, pat dry and cut into 2 cm pieces.",
+        "Deseed and chop the peppers, slice the garlic and snip the dried chillies into pieces. Heat half the oil in a wok over medium-high heat and fry the intestines until the edges brown. Transfer to a plate.",
+        "Reduce to medium heat and add the remaining oil. Fry the chilli bean paste, garlic, dried chillies and peppercorns until fragrant. Toss in the bell peppers for about 1 minute, then return the intestines and toss for 1–2 minutes. Serve hot."
+      ],
+      "minutes": 125,
+      "servings": "3–4人",
+      "hook": "肥肠煸出焦边，和红绿甜椒、豆瓣酱一起炒，麻辣鲜香，配米饭正好。"
     }
   ]
 }
