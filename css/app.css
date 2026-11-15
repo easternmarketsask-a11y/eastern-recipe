@@ -9,6 +9,10 @@ body{margin:0;background:var(--bg);color:var(--ink);
   font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.5}
 .hdr{padding:9px 16px 11px;background:var(--card);border-bottom:1px solid var(--line);
   position:sticky;top:0;z-index:50;box-shadow:0 1px 6px rgba(30,42,34,.06)}
+@media (max-width:899px){
+  body.spa > .hdr{position:static}
+  body.spa .block{scroll-margin-top:12px}
+}
 .hdr__top{display:flex;align-items:center;gap:10px;margin:0}
 .hdr__logobtn{flex:0 0 auto;display:inline-flex;align-items:center;padding:0;border:none;background:none;cursor:pointer;line-height:0}
 .hdr__logo{height:36px;width:auto;display:block}
