@@ -202,7 +202,7 @@ def recipe_page(r, pidx, all_recipes):
                      % "".join(card_html(x) for x in mates))
 
     parts.append('<div class="pg-cta">'
-                 '<a class="mini-btn mini-btn--buy" data-buy-recipe="%s" href="%s?recipe=%s">一键购买全部食材</a>'
+                 '<a class="mini-btn mini-btn--buy" data-buy-recipe="%s" href="%s?recipe=%s">选择食材</a>'
                  '</div>' % (sp.h(rid), sp.h(DELIVERY_URL), sp.h(rid)))
 
     # 做法

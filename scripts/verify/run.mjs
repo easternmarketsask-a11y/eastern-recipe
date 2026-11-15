@@ -163,7 +163,7 @@ try {
   ok('食材带超市分区（说明条码绑定有效）', cats.length >= 4, [...new Set(cats)].join(' '));
 
   const deliver = await page.$('#detail a.mini-btn[href*="group-order"]');
-  ok('详情页出现「一键购买全部食材」按钮', !!deliver);
+  ok('详情页出现「选择食材」按钮', !!deliver);
 
   const shareComm = await page.$('#detail .detail__title-row .recipe-share__options a');
   const shareHref = shareComm ? await shareComm.getAttribute('href') : '';

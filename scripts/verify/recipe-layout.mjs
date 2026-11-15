@@ -38,7 +38,7 @@ try {
       assert.equal(await page.locator('.fave-btn').count(), 0);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
       const buy = page.locator('[data-buy-recipe="mapo-tofu"]');
-      assert.equal(await buy.innerText(), '一键购买全部食材');
+      assert.equal(await buy.innerText(), '选择食材');
       // Suppress navigation only; the real delegated click handler still builds the purchase URL.
       await page.evaluate(() => document.addEventListener('click', event => { if (event.target.closest('[data-buy-recipe]')) event.preventDefault(); }));
       await buy.click();
