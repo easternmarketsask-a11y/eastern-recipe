@@ -387,8 +387,13 @@
     // 在详情/板块/清单页开始搜索：静默清掉 hash（不产生历史记录），视图跟着搜索走
     if (location.hash) history.replaceState(null, '', location.pathname + location.search);
     var q = $('q').value;
-    if (!q || !q.trim()) { show('home'); renderHome(); return; }
-    renderResults(q);
+    if (q && q.trim()) {
+      renderResults(q);
+    } else {
+      show('home');
+      renderHome();
+    }
+    window.scrollTo(0, 0);
   }
 
   // ---- 首页 ----
@@ -515,7 +520,10 @@
       return '<button class="chip" data-ing="' + esc(c) + '">' + esc(c) + '</button>';
     }).join('');
     Array.prototype.forEach.call($('chips').querySelectorAll('.chip'), function (btn) {
-      btn.onclick = function () { $('q').value = btn.dataset.ing; renderResults(btn.dataset.ing); };
+      btn.onclick = function () {
+        $('q').value = btn.dataset.ing;
+        onSearch();
+      };
     });
 
     var faves = getFaves().map(function (id) { return state.byId[id]; }).filter(Boolean);
