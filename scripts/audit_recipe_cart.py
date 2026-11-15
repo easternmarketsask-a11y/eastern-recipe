@@ -4,7 +4,8 @@ from collections import Counter, defaultdict
 import json
 from pathlib import Path
 import sys
-from urllib.parse import urlencode
+from urllib.error import HTTPError
+from urllib.parse import quote, urlencode
 from urllib.request import urlopen
 
 from recipe_lib import score_match
@@ -20,6 +21,18 @@ def public_matches(api, code):
         str(value or "").strip().lower() == code.lower()
         for value in [row.get("code"), row.get("sku"), row.get("alt_code"), *(row.get("alt_codes") or [])]
     )}
+
+
+def public_product(api, product_id):
+    path = f"{api.rstrip('/')}/api/firebase/products/{quote(product_id, safe='')}"
+    try:
+        with urlopen(path, timeout=12) as response:
+            row = json.load(response).get("product")
+    except HTTPError as exc:
+        if exc.code == 404:
+            return {}
+        raise
+    return {product_id: row} if row and row.get("id") == product_id else {}
 
 
 def live_status(rows):
@@ -61,7 +74,13 @@ def main():
             code = (ingredient.get("code") or "").strip()
             label = ingredient["label"]
             required = bool(ingredient.get("required"))
-            if not code:
+            product_id = ingredient.get("product_id")
+            if args.api and product_id:
+                key = ("id", product_id)
+                if key not in cache:
+                    cache[key] = live_status(public_product(args.api, product_id))
+                status = cache[key]
+            elif not code:
                 status = "unbound"
             elif args.api:
                 if code not in cache:

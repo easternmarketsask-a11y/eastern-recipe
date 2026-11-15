@@ -58,7 +58,7 @@
         {
           "label": "龙口粉丝",
           "qty": "100g",
-          "code": "6928527900105",
+          "code": "6902483000062",
           "required": false,
           "alt": [
             "冬粉",
@@ -107,6 +107,7 @@
           "label": "小葱",
           "qty": "3根（切葱花）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -176,7 +177,7 @@
         {
           "label": "老抽",
           "qty": "2汤匙",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": true
         },
         {
@@ -194,7 +195,7 @@
         {
           "label": "料酒",
           "qty": "2汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -211,6 +212,7 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -282,7 +284,7 @@
         {
           "label": "老抽",
           "qty": "2汤匙",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": true
         },
         {
@@ -294,7 +296,7 @@
         {
           "label": "料酒",
           "qty": "2汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -311,6 +313,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -387,7 +390,7 @@
         {
           "label": "老抽",
           "qty": "3汤匙",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": true
         },
         {
@@ -399,7 +402,7 @@
         {
           "label": "料酒",
           "qty": "3汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -416,6 +419,7 @@
           "label": "小葱",
           "qty": "3根（切段）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -506,6 +510,7 @@
           "label": "小葱",
           "qty": "3根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -602,7 +607,7 @@
         {
           "label": "料酒",
           "qty": "1汤匙（煮肉用）",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": false
         },
         {
@@ -705,7 +710,7 @@
         {
           "label": "料酒",
           "qty": "1汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": false
         },
         {
@@ -804,6 +809,7 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -907,6 +913,7 @@
           "label": "小葱",
           "qty": "3根（切段）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -923,7 +930,7 @@
         {
           "label": "老抽",
           "qty": "1汤匙",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": true
         },
         {
@@ -1049,6 +1056,7 @@
           "label": "小葱",
           "qty": "2根（切段）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -1065,7 +1073,7 @@
         {
           "label": "老抽",
           "qty": "少许",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": false
         },
         {
@@ -1168,13 +1176,14 @@
         {
           "label": "老抽",
           "qty": "1茶匙",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": true
         },
         {
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -1287,6 +1296,7 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -1792,7 +1802,7 @@
         {
           "label": "料酒",
           "qty": "1茶匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": false
         },
         {
@@ -1861,7 +1871,7 @@
         {
           "label": "鸡蛋",
           "qty": "3个",
-          "code": "2008",
+          "code": "055799103098",
           "required": true,
           "alt": [
             "鸡子",
@@ -1999,7 +2009,7 @@
         {
           "label": "料酒",
           "qty": "1汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -2174,7 +2184,7 @@
         {
           "label": "鸡蛋",
           "qty": "2个",
-          "code": "2008",
+          "code": "055799103098",
           "required": true,
           "alt": [
             "鸡子",
@@ -2468,6 +2478,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -2529,7 +2540,7 @@
         {
           "label": "鸡蛋",
           "qty": "3个",
-          "code": "2008",
+          "code": "055799103098",
           "required": true,
           "alt": [
             "鸡子",
@@ -2919,7 +2930,7 @@
         {
           "label": "鸡蛋",
           "qty": "1个",
-          "code": "2008",
+          "code": "055799103098",
           "required": false,
           "alt": [
             "鸡子",
@@ -3243,6 +3254,7 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -3343,6 +3355,7 @@
           "label": "小葱",
           "qty": "3根（切丝/段）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -3433,7 +3446,7 @@
         {
           "label": "鸡蛋",
           "qty": "1个（取蛋清）",
-          "code": "2008",
+          "code": "055799103098",
           "required": true,
           "alt": [
             "鸡子",
@@ -3450,6 +3463,7 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -3623,6 +3637,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -3875,6 +3890,7 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -3971,6 +3987,7 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -4035,7 +4052,7 @@
         {
           "label": "皮蛋",
           "qty": "2个",
-          "code": "6920775217509",
+          "code": "800794005157",
           "required": true
         },
         {
@@ -4048,6 +4065,7 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -4271,7 +4289,7 @@
         {
           "label": "鸡蛋",
           "qty": "2个",
-          "code": "2008",
+          "code": "055799103098",
           "required": true,
           "alt": [
             "鸡子",
@@ -4288,6 +4306,7 @@
           "label": "小葱",
           "qty": "1根（切葱花）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -4385,7 +4404,7 @@
         {
           "label": "老抽",
           "qty": "少许（上色）",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": false
         },
         {
@@ -4672,7 +4691,7 @@
         {
           "label": "鸡蛋",
           "qty": "2个",
-          "code": "2008",
+          "code": "055799103098",
           "required": true,
           "alt": [
             "鸡子",
@@ -4683,6 +4702,7 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -4771,6 +4791,7 @@
           "label": "小葱",
           "qty": "2根（切葱花）",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -4787,7 +4808,7 @@
         {
           "label": "老抽",
           "qty": "1汤匙",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": false
         },
         {
@@ -4951,6 +4972,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -5007,7 +5029,7 @@
         {
           "label": "龙口粉丝",
           "qty": "1小把",
-          "code": "6928527900105",
+          "code": "6902483000062",
           "required": true,
           "alt": [
             "冬粉",
@@ -5035,6 +5057,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -5155,7 +5178,7 @@
         {
           "label": "鸡蛋",
           "qty": "3个",
-          "code": "2008",
+          "code": "055799103098",
           "required": true,
           "alt": [
             "鸡子",
@@ -5166,6 +5189,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -5221,7 +5245,7 @@
         {
           "label": "鸡蛋",
           "qty": "3个",
-          "code": "2008",
+          "code": "055799103098",
           "required": true,
           "alt": [
             "鸡子",
@@ -5238,6 +5262,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -5447,7 +5472,7 @@
         {
           "label": "老抽",
           "qty": "半勺",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": false
         }
       ],
@@ -5526,7 +5551,7 @@
         {
           "label": "料酒",
           "qty": "1 汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -5625,7 +5650,7 @@
         {
           "label": "料酒",
           "qty": "1 汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": false
         },
         {
@@ -5777,7 +5802,7 @@
         {
           "label": "老抽",
           "qty": "2 汤匙",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": true
         },
         {
@@ -5789,7 +5814,7 @@
         {
           "label": "料酒",
           "qty": "2 汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -5920,6 +5945,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -6006,6 +6032,7 @@
           "label": "小葱",
           "qty": "4根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -6096,6 +6123,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -6169,7 +6197,7 @@
         {
           "label": "龙口粉丝",
           "qty": "50g干重",
-          "code": "6928527900105",
+          "code": "6902483000062",
           "required": true,
           "alt": [
             "冬粉",
@@ -6274,6 +6302,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -6425,7 +6454,7 @@
         {
           "label": "龙口粉丝",
           "qty": "50g干重",
-          "code": "6928527900105",
+          "code": "6902483000062",
           "required": true,
           "alt": [
             "冬粉",
@@ -6447,6 +6476,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -6542,6 +6572,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -6620,7 +6651,7 @@
         {
           "label": "鸡蛋",
           "qty": "1个",
-          "code": "2008",
+          "code": "055799103098",
           "required": false,
           "alt": [
             "鸡子",
@@ -6631,6 +6662,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -6796,7 +6828,7 @@
         {
           "label": "龙口粉丝",
           "qty": "60g干重",
-          "code": "6928527900105",
+          "code": "6902483000062",
           "required": true,
           "alt": [
             "冬粉",
@@ -6982,6 +7014,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -7091,7 +7124,7 @@
         {
           "label": "鸡蛋",
           "qty": "2个",
-          "code": "2008",
+          "code": "055799103098",
           "required": true,
           "alt": [
             "鸡子",
@@ -7108,6 +7141,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -7248,7 +7282,7 @@
         {
           "label": "鸡蛋",
           "qty": "3个",
-          "code": "2008",
+          "code": "055799103098",
           "required": true,
           "alt": [
             "鸡子",
@@ -7269,6 +7303,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -7332,7 +7367,7 @@
         {
           "label": "龙口粉丝",
           "qty": "80g干重",
-          "code": "6928527900105",
+          "code": "6902483000062",
           "required": true,
           "alt": [
             "冬粉",
@@ -7368,6 +7403,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -7463,6 +7499,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -7549,7 +7586,7 @@
         {
           "label": "龙口粉丝",
           "qty": "50g干重",
-          "code": "6928527900105",
+          "code": "6902483000062",
           "required": true,
           "alt": [
             "冬粉",
@@ -7858,6 +7895,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -7998,6 +8036,7 @@
           "label": "小葱",
           "qty": "4根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -8174,6 +8213,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -8245,6 +8285,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -8326,6 +8367,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -8342,13 +8384,13 @@
         {
           "label": "老抽",
           "qty": "1汤匙",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": true
         },
         {
           "label": "料酒",
           "qty": "2汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -8549,13 +8591,13 @@
         {
           "label": "老抽",
           "qty": "1汤匙",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": true
         },
         {
           "label": "料酒",
           "qty": "2汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -8572,6 +8614,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -8674,13 +8717,13 @@
         {
           "label": "老抽",
           "qty": "1汤匙",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": true
         },
         {
           "label": "料酒",
           "qty": "2汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -8697,6 +8740,7 @@
           "label": "小葱",
           "qty": "3根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -8908,6 +8952,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -8918,7 +8963,7 @@
         {
           "label": "料酒",
           "qty": "1汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -9131,6 +9176,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -9202,7 +9248,7 @@
         {
           "label": "料酒",
           "qty": "1汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -9357,7 +9403,7 @@
         {
           "label": "料酒",
           "qty": "1汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -9370,6 +9416,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -9458,6 +9505,7 @@
           "label": "小葱",
           "qty": "1根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -9520,7 +9568,7 @@
         {
           "label": "鸡蛋",
           "qty": "3个",
-          "code": "2008",
+          "code": "055799103098",
           "required": true,
           "alt": [
             "鸡子",
@@ -9553,6 +9601,7 @@
           "label": "小葱",
           "qty": "3根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -9617,7 +9666,7 @@
         {
           "label": "皮蛋",
           "qty": "2个",
-          "code": "6920775217509",
+          "code": "800794005157",
           "required": true
         },
         {
@@ -9650,6 +9699,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -9676,7 +9726,7 @@
         {
           "label": "料酒",
           "qty": "1茶匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": false
         },
         {
@@ -9732,6 +9782,7 @@
           "label": "小葱",
           "qty": "1大把，约150g",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -9748,7 +9799,7 @@
         {
           "label": "老抽",
           "qty": "1汤匙",
-          "code": "722337817020",
+          "code": "078895126389",
           "required": true
         },
         {
@@ -9835,7 +9886,7 @@
         {
           "label": "鸡蛋",
           "qty": "2个",
-          "code": "2008",
+          "code": "055799103098",
           "required": true,
           "alt": [
             "鸡子",
@@ -9952,7 +10003,7 @@
         {
           "label": "料酒",
           "qty": "2汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -9965,6 +10016,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -10068,7 +10120,7 @@
         {
           "label": "料酒",
           "qty": "1汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         }
       ],
@@ -10191,7 +10243,7 @@
         {
           "label": "料酒",
           "qty": "1汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true
         },
         {
@@ -10204,6 +10256,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": false,
           "alt": [
             "大葱",
@@ -10280,6 +10333,7 @@
           "label": "小葱",
           "qty": "3根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "alt": [
             "大葱",
@@ -10338,7 +10392,7 @@
         {
           "label": "料酒",
           "qty": "1茶匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": false
         },
         {
@@ -10394,6 +10448,7 @@
           "label": "小葱",
           "qty": "4根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "label_en": "Scallions",
           "qty_en": "4"
@@ -10503,6 +10558,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "label_en": "Scallions",
           "qty_en": "2"
@@ -10518,7 +10574,7 @@
         {
           "label": "料酒",
           "qty": "1汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true,
           "label_en": "Cooking wine",
           "qty_en": "1 tbsp"
@@ -10643,7 +10699,7 @@
         {
           "label": "料酒",
           "qty": "1汤匙",
-          "code": "6907592001245",
+          "code": "6902265451815",
           "required": true,
           "label_en": "Cooking wine",
           "qty_en": "1 tbsp"
@@ -10720,6 +10776,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "label_en": "Scallions",
           "qty_en": "2"
@@ -10929,6 +10986,7 @@
           "label": "小葱",
           "qty": "2根",
           "code": "HFCXCXC",
+          "product_id": "MZsuzPa1FRxGHG77tEQZ",
           "required": true,
           "label_en": "Scallions",
           "qty_en": "2"
