@@ -184,7 +184,7 @@
       '<a href="' + esc(communityShareUrl(recipe)) + '">分享到社区</a><span role="status"></span></div></details>';
     var actions = '<div class="detail__actions">' +
       '<button class="mini-btn" id="tolist">🧾 看购物清单</button>' +
-      (DELIVERY.enabled ? '<a class="mini-btn mini-btn--buy" data-buy-recipe="' + esc(recipe.id) + '" href="' + esc(DELIVERY.url) + '?recipe=' + encodeURIComponent(recipe.id) + '">一键购买全部食材</a>' : '') +
+      (DELIVERY.enabled ? '<a class="mini-btn mini-btn--buy" data-buy-recipe="' + esc(recipe.id) + '" href="' + esc(DELIVERY.url) + '?recipe=' + encodeURIComponent(recipe.id) + '">选择食材</a>' : '') +
       '</div>';
     var mateIds = {};
     mates.forEach(function (r) { mateIds[r.id] = 1; });

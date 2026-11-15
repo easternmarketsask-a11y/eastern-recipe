@@ -682,7 +682,7 @@
         {
           "label": "蒜",
           "qty": "5瓣（切片）",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -1037,7 +1037,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -1753,7 +1753,7 @@
         {
           "label": "蒜",
           "qty": "3瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -1982,7 +1982,7 @@
         {
           "label": "蒜",
           "qty": "3瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -2397,7 +2397,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -2456,7 +2456,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -2587,7 +2587,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -2678,7 +2678,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -2795,7 +2795,7 @@
         {
           "label": "蒜",
           "qty": "3瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -2857,7 +2857,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -2908,7 +2908,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -2980,7 +2980,7 @@
         {
           "label": "蒜",
           "qty": "3瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -3113,7 +3113,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -3171,7 +3171,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -3259,7 +3259,7 @@
         {
           "label": "蒜",
           "qty": "3瓣（切末）",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -3422,7 +3422,7 @@
         {
           "label": "蒜",
           "qty": "4瓣（切末）",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -3534,7 +3534,7 @@
         {
           "label": "蒜",
           "qty": "3瓣（切末）",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -3857,7 +3857,7 @@
         {
           "label": "蒜",
           "qty": "3瓣（切末）",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -3947,7 +3947,7 @@
         {
           "label": "蒜",
           "qty": "4瓣（切末）",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -4113,7 +4113,7 @@
         {
           "label": "蒜",
           "qty": "2瓣（切片）",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -4201,7 +4201,7 @@
         {
           "label": "蒜",
           "qty": "3瓣（切末）",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -4362,7 +4362,7 @@
         {
           "label": "蒜",
           "qty": "3瓣（切末）",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -4921,13 +4921,13 @@
         {
           "label": "豆豉",
           "qty": "1勺",
-          "code": "253853773359",
+          "code": "6909003105085",
           "required": true
         },
         {
           "label": "蒜",
           "qty": "3瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -4944,7 +4944,7 @@
         {
           "label": "淀粉",
           "qty": "少许",
-          "code": "6941837101024",
+          "code": "8852019002641",
           "required": false
         },
         {
@@ -5017,7 +5017,7 @@
         {
           "label": "蒜",
           "qty": "4瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -5098,7 +5098,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -5930,7 +5930,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -6179,7 +6179,7 @@
         {
           "label": "蒜",
           "qty": "3瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -6352,7 +6352,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -6435,7 +6435,7 @@
         {
           "label": "蒜",
           "qty": "6瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -6709,7 +6709,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -7451,7 +7451,7 @@
         {
           "label": "蒜",
           "qty": "3瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -7693,7 +7693,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -7774,7 +7774,7 @@
         {
           "label": "蒜",
           "qty": "3瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -8082,7 +8082,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -8153,7 +8153,7 @@
         {
           "label": "蒜",
           "qty": "6瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -8454,7 +8454,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -9103,7 +9103,7 @@
         {
           "label": "蒜",
           "qty": "3瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -9224,7 +9224,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -9330,7 +9330,7 @@
         {
           "label": "蒜",
           "qty": "4瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -9446,7 +9446,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": false,
           "alt": [
             "大蒜",
@@ -10164,7 +10164,7 @@
         {
           "label": "蒜",
           "qty": "4瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -10302,7 +10302,7 @@
         {
           "label": "蒜",
           "qty": "3瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "alt": [
             "大蒜",
@@ -10436,7 +10436,7 @@
           "label": "水",
           "qty": "约1升",
           "code": null,
-          "required": true,
+          "required": false,
           "label_en": "Water",
           "qty_en": "about 1 L",
           "pantry": true
@@ -10552,7 +10552,7 @@
           "label": "水",
           "qty": "120毫升，用于炖煮",
           "code": null,
-          "required": true,
+          "required": false,
           "label_en": "Water",
           "qty_en": "120 mL, for braising",
           "pantry": true
@@ -10619,7 +10619,7 @@
         {
           "label": "蒜",
           "qty": "3瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "label_en": "Garlic",
           "qty_en": "3 cloves"
@@ -10661,7 +10661,7 @@
           "label": "水",
           "qty": "60毫升",
           "code": null,
-          "required": true,
+          "required": false,
           "label_en": "Water",
           "qty_en": "60 mL",
           "pantry": true
@@ -10761,7 +10761,7 @@
           "label": "水",
           "qty": "150毫升",
           "code": null,
-          "required": true,
+          "required": false,
           "label_en": "Water",
           "qty_en": "150 mL",
           "pantry": true
@@ -10836,7 +10836,7 @@
         {
           "label": "蒜",
           "qty": "2瓣",
-          "code": "0178",
+          "code": "804264004787",
           "required": true,
           "label_en": "Garlic",
           "qty_en": "2 cloves"
@@ -10854,7 +10854,7 @@
           "label": "水",
           "qty": "100毫升",
           "code": null,
-          "required": true,
+          "required": false,
           "label_en": "Water",
           "qty_en": "100 mL",
           "pantry": true
@@ -10954,7 +10954,7 @@
           "label": "水",
           "qty": "2汤匙，用于拌炒",
           "code": null,
-          "required": true,
+          "required": false,
           "label_en": "Water",
           "qty_en": "2 tbsp, for tossing",
           "pantry": true
